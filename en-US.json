@@ -82,7 +82,6 @@
         "DEPARTMENT_ACCESS": {
             "TITLE": "Department access",
             "DESCRIPTION": "Choose which departments can see this record.",
-            "MANAGE": "Manage",
             "NO_OTHER_DEPARTMENTS": "There are no other departments to assign.",
             "PICK_DEPARTMENTS": "Pick the departments that get access…",
             "VISIBILITY": {
@@ -131,7 +130,6 @@
         "ATTACH_ENTITY": "Attach {{entity}}",
         "GENERIC_ERROR": "Something went wrong",
         "CHARGES": {
-            "TITLE": "Charges",
             "ADD_CHARGE": "Add charge",
             "NO_CHARGES_FILED": "No charges filed",
             "SUMMARY_TITLE": "Charges summary",
@@ -145,27 +143,19 @@
             "ISSUE_CHARGES": "Issue charges",
             "TOASTS": {
                 "ISSUING": "Issuing charges…",
-                "ISSUED": "Charges issued",
                 "REMOVING": "Removing charge…",
                 "REMOVED": "Charge removed"
             }
         },
         "ROLES": {
-            "PLAYER": "Suspect",
-            "VICTIM": "Victim",
-            "COP": "Officer",
             "OWNER": "Owner"
         },
         "IMAGE_GALLERY": "Image Gallery",
         "SUBMITTING": "Submitting...",
-        "LOADING": "Loading…",
         "YOU_SUFFIX": " (You)",
         "NO_RESULTS_FOUND": "No results found",
         "ACTIVITY_LOG": {
-            "TITLE": "Activity Log",
             "EMPTY": "No activity recorded yet",
-            "TODAY": "Today",
-            "YESTERDAY": "Yesterday",
             "COUNT_one": "{{formatted}} entry",
             "COUNT_other": "{{formatted}} entries",
             "COLLAPSE": "Collapse",
@@ -177,28 +167,23 @@
             "ENTRIES_other": "{{formatted}} entries, newest first"
         },
         "ATTACHABLE_SECTION": {
-            "OPEN_RECORD": "Open record",
             "DETACH_RECORD": "Detach record",
             "DETACH_HINT": "Detach from this record. The record itself isn't deleted.",
-            "EMPTY_DEFAULT": "None attached yet",
             "REMOVE_CONFIRM_TITLE": "Remove {{entity}}?",
             "REMOVE_CONFIRM_DESCRIPTION": "This unlinks {{title}} from this record. It doesn't delete the record itself."
         },
         "ATTACHMENTS_SECTION": {
-            "COPY_LINK": "Copy image link",
-            "LINK_COPIED": "Image link copied",
             "REMOVE_IMAGE": "Remove image",
             "TITLE_DEFAULT": "Attachments",
             "EMPTY": "No attachments on record",
             "REMOVE_ARIA": "Remove attachment",
-            "ADDED_BY": "Added by {{name}}",
             "ADD_DIALOG_TITLE": "Add Attachment",
-            "ADD_DIALOG_CONFIRM": "Add Image",
             "ADD_PHOTO": "Add image",
             "COUNT_one": "{{formatted}} image",
             "COUNT_other": "{{formatted}} images",
             "REMOVE_CONFIRM_TITLE": "Remove attachment?",
-            "REMOVE_CONFIRM_DESCRIPTION": "This image will be permanently removed from the record. This action cannot be undone."
+            "REMOVE_CONFIRM_DESCRIPTION": "This image will be permanently removed from the record. This action cannot be undone.",
+            "SET_PROFILE": "Use as profile photo"
         },
         "ATTACH_RECORD_DIALOG": {
             "DESCRIPTION": "Search and select a record to link."
@@ -217,45 +202,27 @@
             },
             "EMPTY_STATE": "Pick articles from the penal code on the left to charge them here.",
             "PRESETS": {
-                "MIN": "Min",
                 "LENIENT": "Lenient",
-                "DEFAULT": "Default",
-                "STRICT": "Strict",
-                "MAX": "Max",
-                "CUSTOM": "Custom"
+                "STRICT": "Strict"
             },
             "SUMMARY": {
                 "TITLE": "Summary",
                 "DELTA_HINT": "How far the total fine sits from the sum of every charged article's default fine.",
                 "PRISON_SENTENCE": "Prison sentence",
-                "COMMUNITY_SERVICE": "Community service",
-                "TOTAL_FINE": "Total fine",
-                "LICENSE_SUSPENDED": "License suspended"
+                "TOTAL_FINE": "Total fine"
             },
             "CUSTOM_CHARGE": {
-                "TRIGGER": "Custom",
                 "TITLE": "Custom charge",
                 "DESCRIPTION": "Add a one-off fine, jail time, or community service with no penal code article behind it.",
-                "LABEL_FIELD": "Label",
-                "LABEL_PLACEHOLDER": "e.g. Court-ordered restitution",
-                "ADD": "Add charge"
+                "LABEL_PLACEHOLDER": "e.g. Court-ordered restitution"
             }
         },
         "CHARGE_ROW": {
             "STACKABLE_TITLE": "Stackable — expand to change the quantity",
-            "FINE": "Fine",
-            "JAIL": "Jail",
             "COMMUNITY_SERVICE": "Comm. Service",
             "COMMUNITY_SERVICE_SUPERSEDED_HINT": "Won't be served — this charge already carries jail time, and a player can only serve one or the other.",
-            "BAIL": "Bail",
-            "POINTS": "Points",
-            "QTY": "Qty",
             "LICENCE": "Licence",
-            "SUSPEND_LICENCE": "Suspend {{license}} licence",
-            "LICENSE_SUSPENDED": "License suspended",
-            "FINE_SUFFIX": "fine",
-            "BAIL_SUFFIX": "bail",
-            "TOTAL_SUFFIX": "total"
+            "SUSPEND_LICENCE": "Suspend {{license}} licence"
         },
         "CHARGE_DIALOG": {
             "TITLE": "Issue charge — {{name}}",
@@ -272,15 +239,12 @@
             "SUSPENDS": "Suspends {{license}}",
             "COUNT_one": "{{count}} charge",
             "COUNT_other": "{{count}} charges",
-            "DIALOG_TITLE": "Penal Code",
             "DIALOG_DESCRIPTION": "Browse articles and adjust fines, jail time, and other sanctions."
         },
         "IMAGE_DIALOG": {
-            "DEFAULT_TITLE": "Add Image",
             "DEFAULT_DESCRIPTION": "Paste a URL or take a photo in-game.",
             "TAB_URL": "URL",
             "TAB_TAKE_PICTURE": "Take picture",
-            "TAB_GALLERY": "Gallery",
             "URL_PLACEHOLDER": "https://i.imgur.com/",
             "INVALID_URL": "Invalid URL",
             "LOAD_FAILED": "Failed to load image",
@@ -303,25 +267,19 @@
         },
         "PROFILE_IMAGE": {
             "CHANGE_PICTURE": "Change picture",
-            "COPY_LINK": "Copy image link",
-            "LINK_COPIED": "Image link copied",
             "REMOVE_PICTURE": "Remove picture",
             "REMOVE_CONFIRM_TITLE": "Remove picture?",
-            "REMOVE_CONFIRM_DESCRIPTION": "This removes the profile picture from the record. It can be set again at any time."
+            "REMOVE_CONFIRM_DESCRIPTION": "This removes the profile picture from the record. It can be set again at any time.",
+            "DIALOG_DESCRIPTION": "Add a link or take a picture directly in-game."
         },
         "RECORD_GRAPH": {
             "TITLE": "Relationship graph",
             "LEGEND": "Legend",
-            "VIEW": "Relationship graph",
             "SEARCH_PLACEHOLDER": "Find a record...",
-            "NO_MATCHES": "None",
-            "CLEAR_SEARCH": "Clear search",
             "FILTERS": "Filters & layout",
             "FILTERS_DEPTH": "Hops from record",
             "FILTERS_RELATIONS": "Relations",
-            "DEPTH_ALL": "All",
             "NO_RELATIONS": "No connections yet.",
-            "CLEAR_FILTERS": "Clear filters",
             "TOGGLE_KIND": "Show or hide {{kind}}",
             "MINIMAP": "Minimap",
             "EXPORT": "Export as image",
@@ -329,11 +287,8 @@
             "SNAPSHOT_TITLE": "Graph snapshot",
             "SNAPSHOT_DESCRIPTION": "The image was uploaded. Copy the link to share it.",
             "SNAPSHOT_LINK": "Image link",
-            "COPY_LINK": "Copy link",
-            "LINK_COPIED": "Link copied",
             "LINK_COPY_FAILED": "Couldn't copy the link.",
             "TIMELINE": "Timeline",
-            "TIMELINE_RESET": "Reset",
             "TIMELINE_HINT": "Only shows records created within this period. Records without a date, such as citizens and vehicles, stay while a dated record they connect through does.",
             "LAYOUT": "Layout",
             "FOCUS": "Focus on record",
@@ -352,28 +307,19 @@
             "RECORDS_one": "{{count}} record",
             "RECORDS_other": "{{count}} records",
             "HINT": "Scroll to zoom · drag to pan · click a record to trace its path",
-            "ZOOM_IN": "Zoom in",
-            "ZOOM_OUT": "Zoom out",
             "FIT": "Fit to view",
             "EXPAND_ALL": "Show the next level of connections",
             "RESET": "Reset graph",
             "PATH": "Path",
             "SHOW_CONNECTIONS": "Show connections",
             "CENTER": "Center on record",
-            "OPEN_RECORD": "Open record",
             "NO_CONNECTIONS": "No connections on record",
             "NO_MORE": "No further connections.",
             "TRUNCATED": "This record has more connections than can be shown at once.",
             "LIMIT_REACHED": "Graph limit reached ({{count}} records). Reset to start over.",
             "LOAD_FAILED": "Couldn't load connections.",
             "RELATIONS": {
-                "SUSPECT": "Suspect",
-                "VICTIM": "Victim",
-                "COP": "Officer",
-                "OWNER": "Owner",
-                "SUBJECT": "Subject",
                 "TARGET": "Target",
-                "OWNS": "Owns",
                 "LINKED": "Linked",
                 "LAB_MATCH": "Lab match"
             }
@@ -381,11 +327,14 @@
         "NOTES_SECTION": {
             "COPY_NOTE": "Copy note",
             "NOTE_COPIED": "Note copied",
-            "DEFAULT_TITLE": "Notes",
+            "DELETE_NOTE": "Delete note",
+            "DELETE_CONFIRM_TITLE": "Delete this note?",
+            "DELETE_CONFIRM_DESCRIPTION": "The note is removed from the record for everyone. This can't be undone.",
+            "DELETING": "Deleting note…",
+            "DELETED": "Note deleted",
             "ADD_NOTE": "Add note",
             "PLACEHOLDER": "What did you find?",
             "EMPTY": "No notes recorded yet",
-            "EXPIRES_LABEL": "Expires",
             "EXPIRES_HINT": "Expired notes are hidden from the record",
             "EXPIRY": {
                 "NEVER": "Never",
@@ -400,16 +349,10 @@
             "COUNT_one": "{{formatted}} note",
             "COUNT_other": "{{formatted}} notes"
         },
-        "OWNER_CARD": {
-            "DEFAULT_TITLE": "Owner"
-        },
         "SUBJECT_CARD": {
-            "DEFAULT_TITLE": "Subject",
             "PICK_DESCRIPTION": "Search and select the subject.",
             "KIND_LABELS": {
-                "citizen": "Person",
-                "vehicle": "Vehicle",
-                "property": "Property"
+                "citizen": "Person"
             }
         },
         "TAG_PICKER": {
@@ -421,9 +364,6 @@
             "CREATE_NAMED": "Create \"{{name}}\"",
             "NEW_TAG": "New tag",
             "NEW_TAG_DIALOG_DESCRIPTION": "Create a tag to categorize records.",
-            "NAME_LABEL": "Name",
-            "COLOR_LABEL": "Color",
-            "DESCRIPTION_LABEL": "Description",
             "DESCRIPTION_TOOLTIP_HINT": "(shown as a tooltip)",
             "DESCRIPTION_PLACEHOLDER": "What does this tag mean?",
             "NAME_PLACEHOLDER": "e.g. Firearm",
@@ -437,7 +377,6 @@
             "REMOVE_ARIA": "Remove {{name}} tag"
         },
         "RECORD_LIST": {
-            "OPEN_RECORD": "Open record",
             "DETACH": "Detach from record"
         },
         "PERMISSION_GATE": {
@@ -445,6 +384,27 @@
             "ACCESS_DENIED_DESCRIPTION": "You lack the required permissions to access this content. If you were redirected here unexpectedly, please contact staff for assistance.",
             "MISSING_PERMISSION_one": "Missing permission",
             "MISSING_PERMISSION_other": "Missing permissions"
+        },
+        "PAGE_LOADING": {
+            "TITLE": "Loading",
+            "DESCRIPTION": "Fetching page content, please wait..."
+        },
+        "PAGE_ERROR": {
+            "TITLE": "System Failure",
+            "DESCRIPTION": "An unexpected error has occurred. If the issue persists, please contact staff for assistance.",
+            "DETAILS": "Error details",
+            "STACK_TRACE": "Stack trace",
+            "NEXT_STEPS": "What to do next",
+            "STEPS": {
+                "CONTACT": "Contact your server developer",
+                "CONTACT_DESCRIPTION": "Report this error to the developer of your FiveM server",
+                "INVESTIGATE": "Developer investigates",
+                "INVESTIGATE_DESCRIPTION": "They trace the error, identify the root cause and attempt a local fix",
+                "TICKET": "Developer opens a ticket",
+                "TICKET_DESCRIPTION": "If unresolved, your developer opens a support ticket",
+                "SOLUTION": "We provide a solution",
+                "SOLUTION_DESCRIPTION": "Our team investigates and pushes a fix shortly"
+            }
         },
         "UPDATING_STATUS": "Updating status…",
         "STATUS_CHANGED_TO": "Status changed to {{status}}",
@@ -473,12 +433,20 @@
             "RESET": "Reset",
             "LOCK_POSITION": "Lock position",
             "UNLOCK_POSITION": "Unlock position",
-            "MORE": "More actions"
+            "MORE": "More actions",
+            "REGISTER": "Register",
+            "REPLACE": "Replace",
+            "JOIN": "Join",
+            "DISCARD": "Discard",
+            "COPY_TEXT": "Copy text",
+            "MANAGE": "Manage",
+            "COPY_IMAGE_LINK": "Copy image link",
+            "ADD_IMAGE": "Add Image",
+            "CLEAR_SEARCH": "Clear search",
+            "COPY_LINK": "Copy link",
+            "ZOOM_IN": "Zoom in",
+            "ZOOM_OUT": "Zoom out"
         },
-        "DESCRIPTION": "Description",
-        "TAGS": "Tags",
-        "AUTHOR": "Author",
-        "CREATED": "Created",
         "UPDATED": "Updated",
         "ACCESS": "Access",
         "CLEAR_FILTERS": "Clear filters",
@@ -491,18 +459,13 @@
         "CALLSIGN_INPUT": {
             "NEXT_FREE": "Next free callsign",
             "NEXT_FREE_VALUE": "Use {{callsign}}, the next free one",
-            "FORMAT_HINT": "Format for this rank: {{format}} (# = a digit)"
+            "FORMAT_HINT": "Format for this rank: {{format}} (# = a digit)",
+            "PLACEHOLDER": "e.g. 1-ADAM-12",
+            "UPDATING": "Updating callsign…"
         },
         "NO_DEPARTMENT": "No department configuration found for “{{job}}”.",
         "NO_SUBJECT_ATTACHED": "No subject attached",
         "IMPORTANT_NOTICE": "Important Notice",
-        "NEARBY_PLAYER": "Nearby player",
-        "METRICS": {
-            "FINE": "Fine",
-            "BAIL": "Bail",
-            "JAIL": "Jail",
-            "POINTS": "Points"
-        },
         "UNITS": {
             "MONTHS": "{{formatted}} mo",
             "POINTS_one": "{{formatted}} pt",
@@ -519,10 +482,16 @@
             "EXPIRED_AT": "Expired At",
             "TYPE": "Type",
             "PRIORITY": "Priority",
-            "UNDETERMINED": "Undetermined"
+            "UNDETERMINED": "Undetermined",
+            "TYPE_PLACEHOLDER": "Select a type",
+            "SUBJECT_TYPE": "Subject type",
+            "INVESTIGATORS": "Investigators",
+            "OWNERS": "Owners",
+            "ISSUED_BY": "Issued by",
+            "REGISTERED_BY": "Registered by"
         },
         "DATA_TABLE": {
-            "RANGE": "{{from}}–{{to}} of {{total}} {{label}}",
+            "RANGE": "{{label}} · {{from}}–{{to}} of {{total}}",
             "FIRST_PAGE": "First page",
             "PREVIOUS_PAGE": "Previous page",
             "NEXT_PAGE": "Next page",
@@ -532,10 +501,6 @@
             "CLEAR": "Clear",
             "ANY_DATE": "Any date",
             "ANY": "Any",
-            "SEARCH_PLACEHOLDER": "Search…",
-            "NO_RESULTS": "No results found",
-            "LOADING": "Loading…",
-            "N_SELECTED": "{{count}} selected",
             "NO_TAGS": "No tags yet",
             "LAST_DAYS_one": "Last {{count}} day",
             "LAST_DAYS_other": "Last {{count}} days",
@@ -569,48 +534,150 @@
                 "RECORDS_ASC": "Records: Least first"
             },
             "FILTERS_FIELDS": {
-                "CREATED": "Created",
                 "CREATED_BY": "Created by",
-                "EXPIRES": "Expires",
-                "SUBJECT_TYPE": "Subject type",
-                "CITIZEN": "Citizen",
-                "VEHICLE": "Vehicle",
-                "PROPERTY": "Property",
-                "OFFICERS": "Officers",
-                "INVESTIGATORS": "Investigators",
-                "SUSPECTS": "Suspects",
-                "VICTIMS": "Victims",
-                "OWNERS": "Owners",
-                "VEHICLES": "Vehicles",
-                "WEAPONS": "Weapons",
-                "EVIDENCE": "Evidence",
-                "CHARGES": "Charges",
                 "COLLECTED_BY": "Collected by",
-                "ISSUED_BY": "Issued by",
-                "REGISTERED_BY": "Registered by",
                 "AGE": "Age",
-                "OWNS": "Owns",
                 "OWNS_VEHICLE": "A vehicle",
                 "OWNS_WEAPON": "A weapon",
                 "OCCUPANCY": "Occupancy",
                 "OWNED": "Owned",
                 "VACANT": "Vacant"
             },
-            "MIN": "Min",
-            "MAX": "Max"
+            "SEARCH_TITLE_REF_SUBJECT": "Search by title, ref or subject…"
         },
         "INSURANCE": {
             "TITLE": "Insurance",
-            "NO_EXPIRY": "No expiry date on file",
-            "EXPIRES_ON": "Expires {{date}}",
-            "EXPIRED_ON": "Expired {{date}}"
+            "NO_EXPIRY": "No expiry date on file"
         },
         "FORM_SECTIONS": {
             "PEOPLE": "People involved",
             "LINKED_RECORDS": "Linked records",
-            "SUBJECT": "Subject",
             "ITEMS_AND_PHOTOS": "Items and photos",
             "PROFILE": "Profile"
+        },
+        "COLOR_PICKER": {
+            "PRESETS": "Presets",
+            "EYEDROPPER": "Pick a color from the screen"
+        },
+        "ICON_PICKER": {
+            "PLACEHOLDER": "Pick an icon",
+            "SEARCH": "Search icons…",
+            "SUGGESTED": "Suggested",
+            "ALL": "All icons",
+            "EMPTY": "No icons match your search",
+            "COUNT_one": "{{value}} icon",
+            "COUNT_other": "{{value}} icons"
+        },
+        "GENERAL": {
+            "EVIDENCE": "Evidence",
+            "WEAPON": "Weapon",
+            "VEHICLE": "Vehicle",
+            "CHARGES": "Charges",
+            "LOADING": "Loading…",
+            "TODAY": "Today",
+            "OPEN_RECORD": "Open record",
+            "NONE_ATTACHED_YET": "None attached yet",
+            "DEFAULT": "Default",
+            "CUSTOM": "Custom",
+            "COMMUNITY_SERVICE": "Community service",
+            "LICENSE_SUSPENDED": "License suspended",
+            "LABEL": "Label",
+            "GALLERY": "Gallery",
+            "NONE": "None",
+            "ALL": "All",
+            "SUBJECT": "Subject",
+            "NAME": "Name",
+            "COLOR": "Color",
+            "DESCRIPTION": "Description",
+            "TAGS": "Tags",
+            "AUTHOR": "Author",
+            "CREATED": "Created",
+            "SUSPECTS": "Suspects",
+            "VICTIMS": "Victims",
+            "ERROR": "Error: {{error}}",
+            "STATUS": "Status",
+            "CALLSIGN": "Callsign",
+            "CHANNEL": "Channel",
+            "CATEGORY": "Category",
+            "DELETE_CONFIRM_TITLE": "Delete \"{{name}}\"?",
+            "UNITS": "Units",
+            "BODYCAM": "Bodycam",
+            "CAMERA": "Camera",
+            "LOCATION": "Location",
+            "PLACEHOLDERS": "Placeholders",
+            "ZONE": "Zone",
+            "RANK": "Rank",
+            "REASON": "Reason",
+            "PHONE": "Phone",
+            "DEPARTMENT": "Department",
+            "LEADERBOARD": "Leaderboard",
+            "YOU": "You",
+            "ON_DUTY": "On Duty",
+            "ACTIVE": "Active",
+            "LINKS": "Links",
+            "LINKED_INCIDENTS": "Linked Incidents",
+            "NOTIFICATIONS": "Notifications",
+            "DATE": "Date",
+            "PLATE": "Plate",
+            "WANTED": "Wanted",
+            "REGISTERED": "Registered",
+            "TITLE": "Title",
+            "ID": "ID",
+            "CREATE_BOLO": "Create BOLO",
+            "NIGHT_VISION": "Night Vision",
+            "DELETE_CONFIRM_LABEL": "Delete \"{{label}}\"?",
+            "CODE": "Code",
+            "NOT_CONNECTED": "Not connected",
+            "SNIPPETS": "Snippets",
+            "OVERVIEW": "Overview",
+            "LOGS": "Logs",
+            "HOURS_ON_DUTY": "Hours on duty",
+            "LINKED_WARRANTS": "Linked Warrants",
+            "DATE_BY": "{{date}} by {{name}}",
+            "NO_DESCRIPTION": "No description",
+            "COMMUNITY_SERVICE_TASKS": "Community service (tasks)",
+            "SENTENCE": "Sentence",
+            "PHOTOS": "Photos",
+            "UNNAMED": "Unnamed",
+            "CONNECTING": "Connecting…",
+            "CHARGES_ISSUED": "Charges issued",
+            "YESTERDAY": "Yesterday",
+            "ADDED_BY": "Added by {{name}}",
+            "MIN": "Min",
+            "MAX": "Max",
+            "FINE": "Fine",
+            "JAIL": "Jail",
+            "BAIL": "Bail",
+            "POINTS": "Points",
+            "QTY": "Qty",
+            "OWNS": "Owns",
+            "NOTES": "Notes",
+            "SEARCH_PLACEHOLDER": "Search…",
+            "N_SELECTED": "{{count}} selected",
+            "EXPIRES_ON": "Expires {{date}}",
+            "EXPIRED_ON": "Expired {{date}}"
+        },
+        "CATEGORY": {
+            "CREATE": "Create category",
+            "PLACEHOLDER": "Select a category",
+            "EDIT": "Edit category"
+        },
+        "LOCATION_ACTIONS": {
+            "SET_WAYPOINT": "Set waypoint",
+            "COPY_COORDS": "Copy coordinates",
+            "COORDS_COPIED": "Coordinates copied",
+            "SETTING_WAYPOINT": "Setting waypoint…"
+        },
+        "TOASTS": {
+            "SAVING_DESCRIPTION": "Saving description…",
+            "DESCRIPTION_UPDATED": "Description updated",
+            "REMOVING_TAG": "Removing tag…",
+            "TAG_REMOVED": "Tag removed",
+            "ATTACHING_SUBJECT": "Attaching subject…",
+            "SUBJECT_ATTACHED": "Subject attached",
+            "MESSAGE_COPIED": "Message copied",
+            "IMAGE_LINK_COPIED": "Image link copied",
+            "LINK_COPIED": "Link copied"
         }
     },
     "ERRORS": {
@@ -706,7 +773,10 @@
             "RANGE_ORDER": "{{name}}: the lowest value of a range can't be higher than the highest.",
             "NO_MODELS": "At least one camera model has to stay.",
             "MODEL_IN_USE": "\"{{name}}\" is used by placed cameras, so it can't be removed. Delete those cameras first.",
-            "NOT_KEY": "\"{{value}}\" isn't a key FiveM can bind"
+            "NOT_KEY": "\"{{value}}\" isn't a key FiveM can bind",
+            "NOT_LOCALE": "\"{{value}}\" isn't a language code, e.g. fi-FI",
+            "NO_LOCALE_FILE": "There's no {{value}}.json in nui/dist/locales",
+            "DEFAULT_LOCALE_REMOVED": "That's the server language. Pick another server language first."
         },
         "INVALID_JOBS": "Pick at least one valid department",
         "TOO_SHORT": "This is too short",
@@ -769,9 +839,10 @@
         "INVALID_JOB": "That department doesn't exist",
         "NOT_RECRUITABLE": "Only unemployed citizens can be recruited",
         "NOT_VIEWING_CAMERA": "You're not viewing a camera",
-        "PLAYER_OFFLINE": "That person needs to be online",
         "POLL_CLOSED": "This poll is closed",
-        "TARGET_NOT_ELIGIBLE": "That person can't be picked for this"
+        "TARGET_NOT_ELIGIBLE": "That person can't be picked for this",
+        "CITIZEN_ALREADY_REGISTERED": "This citizen is already registered",
+        "VEHICLE_ALREADY_REGISTERED": "A vehicle with this plate is already registered"
     },
     "ACTIVITY": {
         "LINKED_INCIDENT": "linked incident {{title}}",
@@ -815,7 +886,6 @@
     "CAMERAS": {
         "HEADING": "CCTV Cameras",
         "TABS": {
-            "CAMERAS": "Cameras",
             "BODYCAMS": "Bodycams",
             "DASHCAMS": "Dashcams"
         },
@@ -832,9 +902,7 @@
         },
         "EMPTY": {
             "NO_MATCH_TITLE": "No cameras match this view",
-            "NO_MATCH_SUBTITLE": "Try a different status filter or search term",
-            "NO_CAMERAS_TITLE": "No cameras installed",
-            "NO_CAMERAS_SUBTITLE": "Deployed CCTV units will appear here"
+            "NO_CAMERAS_TITLE": "No cameras installed"
         },
         "CREATE_BUTTON": {
             "TRIGGER": "New Camera",
@@ -846,7 +914,6 @@
             "POSITION": "Position",
             "PROP": "Model",
             "NAME": {
-                "LABEL": "Name",
                 "PLACEHOLDER": "Mission Row lobby"
             },
             "TOASTS": {
@@ -855,8 +922,6 @@
                 "ERROR": "Failed to create camera"
             },
             "POSITION_FIELD": {
-                "UPDATE_BUTTON": "Update Position",
-                "CAPTURE_BUTTON": "Capture from Player",
                 "CLEAR_BUTTON": "Clear captured position",
                 "UPDATING": "Updating…",
                 "CAPTURING": "Capturing…",
@@ -864,11 +929,9 @@
                     "UPDATING": "Updating position…",
                     "CAPTURING": "Capturing position…",
                     "UPDATED": "Position updated",
-                    "CAPTURED": "Position captured",
-                    "ERROR": "Error: {{error}}"
+                    "CAPTURED": "Position captured"
                 },
                 "EMPTY": "No position captured yet",
-                "POSITION_LABEL": "Position",
                 "ROTATION_LABEL": "Rotation"
             },
             "PLACEMENT": {
@@ -894,16 +957,13 @@
         "CAPABILITIES": {
             "LABEL": "Capabilities",
             "MOVEABLE": "Moveable",
-            "ZOOM": "Zoom",
-            "NIGHT_VISION": "Night Vision"
+            "ZOOM": "Zoom"
         },
-        "PREVIEW_NOT_AVAILABLE": "Preview not available",
         "UNATTENDED": "Unattended",
         "DETAIL": {
             "ENABLE": "Enable",
             "DISABLE": "Disable",
             "DELETE_TOOLTIP": "Delete camera",
-            "DELETE_CONFIRM_TITLE": "Delete \"{{label}}\"?",
             "DELETE_CONFIRM_DESCRIPTION": "This removes the camera permanently and can't be undone.",
             "DISABLE_CONFIRM_TITLE": "Disable \"{{label}}\"?",
             "DISABLE_CONFIRM_DESCRIPTION": "This camera will stop streaming immediately.",
@@ -919,7 +979,6 @@
                 "STATUS": "Status",
                 "SIGNAL": "Signal",
                 "UPTIME": "Uptime",
-                "CALLSIGN": "Callsign",
                 "ACTIVE_SINCE": "Active Since",
                 "DRIVER": "Driver"
             },
@@ -954,21 +1013,14 @@
             }
         },
         "GALLERY": {
-            "LABEL": "Gallery",
             "OPEN": "Open →",
-            "LOADING": "Loading…",
             "EMPTY": "Nothing recorded or captured yet",
             "FILTER_ALL": "All",
             "CLIP_LABEL": "Clip #{{id}}",
-            "COPY_LINK": "Copy link",
-            "LINK_COPIED": "Link copied",
             "TYPE": {
                 "VIDEO": "Video",
                 "PHOTO": "Photo"
             }
-        },
-        "COLUMNS": {
-            "STATUS": "Status"
         },
         "NO_BROKEN_NEARBY": "No broken camera nearby",
         "NO_CAMERA_NEARBY": "No camera nearby",
@@ -983,23 +1035,17 @@
             "CONNECTED": "Connected",
             "EMPTY": "Pin channels for one-click access"
         },
-        "HEADING": "Radio",
         "SUBHEADING_one": "{{count}} channel available",
         "SUBHEADING_other": "{{count}} channels available",
         "HEADER_ACTIONS": {
             "KEYBINDS": "Keybinds",
-            "CHANNEL": "Channel",
-            "CHANNEL_NEEDS_CATEGORY": "Create a category first",
-            "CATEGORY": "Category"
+            "CHANNEL_NEEDS_CATEGORY": "Create a category first"
         },
         "CATEGORY_DIALOG": {
             "CREATE_TITLE": "New Radio Category",
             "EDIT_TITLE": "Edit Radio Category",
             "DESCRIPTION": "Add a category to keep your radio stations organized and easy to find.",
-            "LABEL_FIELD": "Label",
             "LABEL_PLACEHOLDER": "SWAT Interventions",
-            "COLOR_FIELD": "Color",
-            "SUBMIT": "Create category",
             "TOASTS": {
                 "CREATED": "Category \"{{name}}\" created",
                 "SAVED": "Category \"{{name}}\" saved"
@@ -1010,10 +1056,7 @@
             "EDIT_TITLE": "Edit Radio Channel",
             "CREATE_DESCRIPTION": "Add a channel officers can tune into.",
             "EDIT_DESCRIPTION": "Update this channel's name or frequency.",
-            "NAME_FIELD": "Name",
             "NAME_PLACEHOLDER": "SWAT Command",
-            "CATEGORY_FIELD": "Category",
-            "CATEGORY_PLACEHOLDER": "Select a category",
             "FREQUENCY_FIELD": "Frequency (MHz)",
             "FREQUENCY_PLACEHOLDER": "498.510",
             "SUBMIT": "Create channel",
@@ -1028,7 +1071,6 @@
                 "CODES": "Codes"
             },
             "SEARCH_PLACEHOLDER": "Search channels or frequencies…",
-            "MANAGE_TOGGLE": "Manage",
             "MANAGE_TOGGLE_TITLE": "Reveal edit, delete, and drag-to-reorganize controls",
             "MANAGE_HINT": "Manage mode — drag the grip handles to reorder categories or move channels between them.",
             "EMPTY_TITLE": "No radio channels yet",
@@ -1038,31 +1080,22 @@
         "CHANNEL_ROW": {
             "DRAG_TITLE": "Drag to move to another category",
             "LEAVE_TITLE": "Leave channel",
-            "TRANSMIT_PRIMARY_TITLE": "Hold to talk",
-            "TRANSMIT_SECONDARY_TITLE": "Hold to speak here — you'll return to your primary channel on release",
             "AUDIO_UNMUTE_TITLE": "Unmute — restore radio volume",
             "AUDIO_MUTE_TITLE": "Mute — silences your radio audio",
-            "PTT_LOCK_TITLE": "Lock — disable PTT on this channel",
             "LIVE": "Live",
-            "DELETE_CONFIRM_TITLE": "Delete \"{{name}}\"?",
             "DELETE_CONFIRM_DESCRIPTION": "This permanently removes the channel ({{freq}}). This can't be undone."
         },
         "CATEGORY_SECTION": {
             "DRAG_TITLE": "Drag to reorder categories",
             "ADD_CHANNEL_TITLE": "Add channel to this category",
-            "EDIT": "Edit category",
             "DELETE": "Delete category",
             "DROP_HERE": "Drop to move here",
             "NO_CHANNELS": "No channels yet",
-            "DELETE_CONFIRM_TITLE": "Delete \"{{label}}\"?",
             "DELETE_CONFIRM_DESCRIPTION": "This removes the category and all of its channels. This can't be undone."
         },
         "ON_AIR_PANEL": {
             "QUICK_TALK": "Quick Talk",
-            "TUNE_PLACEHOLDER": "Tune to frequency…",
-            "TUNE_BUTTON": "Tune",
-            "PTT": "PTT",
-            "UNLOCK_TITLE": "Unlock PTT"
+            "PTT": "PTT"
         },
         "KEYBINDS_DIALOG": {
             "TITLE": "Radio Keybinds",
@@ -1070,25 +1103,20 @@
             "EMPTY": "No keybinds configured yet.",
             "ADD_NEW": "Add New Keybind",
             "ADD_DESCRIPTION": "Choose a name, press a key to capture it, then pick the target channel.",
-            "NAME_LABEL": "Name",
             "NAME_PLACEHOLDER": "Main channel",
             "KEY_LABEL": "Key",
             "LISTENING": "Listening…",
             "CLICK_TO_CAPTURE": "Click to capture a key",
             "CAPTURING_HINT": "Press any key — Escape to cancel.",
             "CLICK_HINT": "Click the field above and press any key.",
-            "CHANNEL_LABEL": "Channel",
             "CHANNEL_PLACEHOLDER": "Select a channel",
             "SAVE": "Save Keybind"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "New Radio Code",
             "EDIT_TITLE": "Edit Radio Code",
-            "CODE_FIELD": "Code",
             "CODE_PLACEHOLDER": "1-20",
-            "NAME_FIELD": "Name",
             "NAME_PLACEHOLDER": "Officer Down",
-            "DESCRIPTION_FIELD": "Description",
             "OPTIONAL": "optional",
             "DESCRIPTION_PLACEHOLDER": "When should this code be used?",
             "CREATE_DESCRIPTION": "Add a code that officers can reference on the radio.",
@@ -1105,7 +1133,6 @@
             "DELETE_CONFIRM_DESCRIPTION": "This removes the radio code for everyone. It can't be undone."
         },
         "FLOATING_PANEL": {
-            "TOGGLE_MEMBERS": "Toggle member list",
             "TALK": "Talk",
             "LEAVE": "Leave",
             "ACTIVE_COUNT": "Active · {{count}}",
@@ -1124,21 +1151,16 @@
         },
         "CONSOLE": {
             "TRANSMITTING": "Transmitting",
-            "PTT_TITLE": "Hold to talk",
             "HOLD_TO_TALK": "Hold to talk",
-            "IDLE_TITLE": "Not connected",
             "IDLE_DESCRIPTION": "Connect to a channel below to transmit and see who is on it.",
             "TITLE": "Transmitter",
-            "FREQUENCY": "Frequency",
-            "CHANNEL": "Channel",
-            "STATE": "Status"
+            "FREQUENCY": "Frequency"
         },
         "ACTIONS": {
             "DISCONNECT": "Disconnect"
         },
         "BOARD": {
             "DROP_OFFICER": "Drop to reassign",
-            "ADD_CHANNEL": "Channel",
             "VIEW_CARDS": "Card view",
             "VIEW_LIST": "List view",
             "NO_MATCH_TITLE": "No matching channels",
@@ -1146,7 +1168,6 @@
         }
     },
     "DISPATCH": {
-        "HEADING": "Dispatch",
         "SUBHEADING": "Live calls and officer positions on the map",
         "LAYERS": {
             "HIDE_HEATMAP": "Hide call density heatmap",
@@ -1161,26 +1182,18 @@
             "SHOW_LABELS": "Show blip labels"
         },
         "BLIP_CARD": {
-            "UNITS": "Units",
             "UNASSIGNED": "Unassigned",
-            "VEHICLE": "Vehicle",
-            "BODYCAM": "Bodycam",
-            "STATUS": "Status",
             "TRAVELLING": "Travelling",
-            "ON_DUTY": "On duty",
             "RESPONDING_TO": "Responding to"
         },
         "COVERAGE": {
             "BUTTON_LABEL": "Coverage — {{count}} on duty",
             "TITLE": "Coverage",
-            "ON_DUTY_COUNT": "{{count}} on duty",
             "EMPTY": "No officers on duty."
         },
         "ASSIGN_POPOVER": {
             "BUTTON": "Assign",
-            "SEARCH_PLACEHOLDER": "Search officers…",
-            "UNITS": "Units",
-            "OFFICERS": "Officers"
+            "SEARCH_PLACEHOLDER": "Search officers…"
         },
         "UNIT_AVATAR_STACK": {
             "NONE_ASSIGNED": "No units assigned",
@@ -1194,7 +1207,6 @@
             "LOW": "Low"
         },
         "CALL_CARD": {
-            "UNITS_ASSIGNED": "{{count}} assigned",
             "REPORTED_MULTIPLE_TIMES": "Reported multiple times nearby",
             "BUMP_PRIORITY": "Bump priority",
             "RESOLVE_CALL": "Resolve call",
@@ -1218,12 +1230,6 @@
             "FIELDS": {
                 "CONTENT": "Content",
                 "CALLER": "Caller",
-                "VEHICLE": "Vehicle",
-                "SUSPECT": "Suspect",
-                "WEAPON": "Weapon",
-                "CAMERA": "Camera",
-                "LOCATION": "Location",
-                "OFFICER": "Officer",
                 "HEALTH": "{{value}}% health",
                 "RECEIVED": "Received",
                 "CLOSED": "Closed",
@@ -1281,7 +1287,6 @@
             "TITLE": "Recent calls",
             "SORT_BY": "Sort by",
             "NEWEST_FIRST": "Newest first",
-            "PRIORITY": "Priority",
             "UNASSIGNED_ONLY": "Unassigned only",
             "MY_CALLS": "My calls",
             "HISTORY": "Call history",
@@ -1298,7 +1303,6 @@
             },
             "RESPONDING": "Responding",
             "RESPOND": "Respond",
-            "MORE_ACTIONS": "More actions",
             "UNACKNOWLEDGE": "Un-acknowledge",
             "ACKNOWLEDGE": "Acknowledge",
             "STOP_ROUTING": "Stop routing",
@@ -1365,16 +1369,12 @@
         },
         "TEMPLATE_SELECTOR": {
             "TRIGGER_PLACEHOLDER": "Template…",
-            "SEARCH_PLACEHOLDER": "Search…",
-            "TEMPLATES": "Templates",
-            "SNIPPETS": "Snippets",
             "SNIPPETS_HINT": "Tip: type / in the text to add a snippet.",
             "NO_RESULTS": "Nothing matches your search.",
             "PREVIEW_HINT": "Hover a template to preview it.",
             "PREVIEW_EMPTY": "This template is empty.",
             "REPLACE_TITLE": "Replace what you wrote?",
             "REPLACE_DESCRIPTION": "\"{{name}}\" will replace the current text. Insert it at the cursor to keep both.",
-            "REPLACE": "Replace",
             "INSERT_AT_CURSOR": "Insert at cursor",
             "SLASH_HINT": "Add a snippet"
         },
@@ -1403,7 +1403,6 @@
             }
         },
         "TAG_TOKENS": {
-            "TOOLBAR_TRIGGER": "Placeholders",
             "INSERT_HINT": "Insert a placeholder",
             "TO_INSERT_HINT": "to insert",
             "POPOVER": {
@@ -1447,16 +1446,11 @@
                 "game": "Game"
             }
         },
-        "ZOOM_IN": "Zoom in",
-        "ZOOM_OUT": "Zoom out",
         "RECENTER": "Recenter",
         "FOLLOW": {
             "FOLLOW": "Follow",
             "STOP_FOLLOWING": "Stop following",
             "NOT_ON_MAP": "You're not on this map"
-        },
-        "COORDINATE_READOUT": {
-            "COPY_TOOLTIP": "Copy coordinates"
         },
         "OPERATIONS_TOOLBAR": {
             "TOOLS": {
@@ -1484,7 +1478,6 @@
         }
     },
     "OFFICERS": {
-        "HEADING": "Officers",
         "SUBHEADING": "Active personnel",
         "SEARCH_PLACEHOLDER": "Search name or citizen ID…",
         "ONLINE_COUNT_one": "{{count}} online",
@@ -1496,13 +1489,11 @@
             "RECORDING_SINCE": "Recording {{time}}"
         },
         "UNITS_PANEL": {
-            "TITLE": "Units",
             "ADD_UNIT": "Add unit",
             "EMPTY": "Create one to start grouping officers into teams.",
             "DRAG_TITLE": "Drag onto another unit to reassign",
             "REMOVE_TITLE": "Remove from unit",
             "NO_MEMBERS": "No officers assigned",
-            "DELETE_CONFIRM_TITLE": "Delete \"{{name}}\"?",
             "DELETE_CONFIRM_DESCRIPTION": "This removes the unit and unassigns every officer in it. This can't be undone.",
             "NO_UNASSIGNED": "Every online officer is in a unit",
             "START_UNIT": "Start unit",
@@ -1521,11 +1512,8 @@
             },
             "ACTIONS": {
                 "SHOW_ON_MAP": "Show on map",
-                "WAYPOINT": "Set waypoint",
-                "JOIN_RADIO": "Join radio {{freq}}",
                 "ATTACH_CALL": "Put on a call",
                 "PAGE": "Page unit…",
-                "STATUS_CHECK": "Status check",
                 "SET_STATUS": "Set status",
                 "SET_ZONE": "Set zone",
                 "MERGE": "Merge into",
@@ -1533,16 +1521,12 @@
                 "LEAVE": "Leave unit",
                 "DISBAND": "Disband"
             },
-            "NO_ZONE": "No zone",
             "MERGE_HINT": "Move everyone in {{name}} to",
-            "OFF_DUTY": "Off duty",
             "STALE": "No update",
             "STALE_HINT": "Status unchanged for over {{minutes}} minutes",
             "CHECK_BY": "Asked by {{by}}",
-            "CHECK_PENDING": "Status check",
             "CHECK_OVERDUE": "No answer",
             "ON_CHANNEL": "On channel",
-            "JOIN_CHANNEL": "Join",
             "WAYPOINT_SET": "Waypoint set to {{name}}",
             "STATUS_CHECK_SENT": "Status check sent to {{name}}",
             "STATUS_CHECK_ALL": "Status check all",
@@ -1550,12 +1534,6 @@
             "STATUS_CHECK_ALL_SENT_other": "Status check sent to {{count}} units",
             "ZONE_SHORT": "Below the minimum of {{min}} units",
             "SEARCH_PLACEHOLDER": "Search units, officers, plates…",
-            "GROUP_BY": {
-                "NONE": "All",
-                "STATUS": "Status",
-                "ZONE": "Zone",
-                "TYPE": "Type"
-            },
             "GROUP_NONE": {
                 "STATUS": "Off duty",
                 "ZONE": "No zone",
@@ -1579,12 +1557,7 @@
             "MEMBERS_one": "{{count}} member",
             "MEMBERS_other": "{{count}} members",
             "FIELDS": {
-                "STATUS": "Status",
-                "CALL": "Call",
-                "LOCATION": "Location",
-                "VEHICLE": "Vehicle",
-                "RADIO": "Radio",
-                "ZONE": "Zone"
+                "CALL": "Call"
             }
         },
         "UNIT_DIALOG": {
@@ -1592,30 +1565,19 @@
             "CREATE_DESCRIPTION": "Set up a unit officers can join, like a patrol car, a K9 team or a tactical squad.",
             "EDIT_TITLE": "Edit Unit",
             "EDIT_DESCRIPTION": "Change the unit's name, type, radio or color.",
-            "NAME_FIELD": "Name",
             "NAME_PLACEHOLDER": "1-ADAM-12",
-            "COLOR_FIELD": "Color",
             "SHIFT_DESCRIPTION": "Start a unit for your shift. You lead it, and it's removed when everyone leaves.",
-            "TYPE_FIELD": "Type",
             "RADIO_FIELD": "Unit radio",
             "RADIO_HINT": "A channel from the Radio page that members can join from the unit's menu.",
-            "NO_RADIO": "None",
             "PERMANENT_FIELD": "Keep after the shift",
             "PERMANENT_HINT": "Saved, and stays when everyone leaves. Off: a shift unit, removed once it's empty."
         },
-        "COUNT_LABEL": "officers",
         "TABS": {
-            "ROSTER": "Roster",
-            "UNITS": "Units"
+            "ROSTER": "Roster"
         },
         "COLUMNS": {
-            "OFFICER": "Officer",
-            "RANK": "Rank",
-            "CALLSIGN": "Callsign",
-            "STATUS": "Status",
             "UNIT": "Unit",
-            "DUTY": "Duty",
-            "BODYCAM": "Bodycam"
+            "DUTY": "Duty"
         },
         "UNIT_TYPES": {
             "patrol": "Patrol",
@@ -1644,17 +1606,10 @@
         "NO_CALLSIGN": "no callsign",
         "BADGE_PREFIX": "Badge #",
         "CITIZEN_PROFILE": "Citizen profile",
-        "MANAGE": "Manage",
         "TABS": {
-            "OVERVIEW": "Overview",
-            "RECORDS": "Records",
-            "SHIFTS": "Shifts",
-            "PERFORMANCE": "Performance",
-            "HR_NOTES": "HR Notes",
-            "LOGS": "Logs"
+            "PERFORMANCE": "Performance"
         },
         "LOGS_TAB": {
-            "TITLE": "Activity Log",
             "EMPTY": "No logged activity yet"
         },
         "OVERVIEW_TAB": {
@@ -1664,62 +1619,88 @@
                 "DEMOTED": "Demoted"
             },
             "THIS_WEEK": "This week",
-            "ON_DUTY_SUB": "On duty",
             "TOTAL_HOURS": "Total hours",
             "ALL_TIME": "All time",
             "TENURE": "Tenure",
             "SINCE": "Since {{date}}",
             "DUTY_SESSIONS": "Duty sessions",
-            "AVG_SUFFIX": "~{{mins}}m avg",
+            "AVG_SESSION": "{{duration}} avg per session",
             "STANDING": {
                 "PEER_SCORE": "Peer review score",
-                "REVIEW_COUNT_one": "{{count}} review",
-                "REVIEW_COUNT_other": "{{count}} reviews",
+                "REVIEW_COUNT_one": "{{value}} review",
+                "REVIEW_COUNT_other": "{{value}} reviews",
                 "OPEN_HR_ITEMS": "Open HR items",
-                "NOTES_ON_FILE_one": "{{count}} note on file",
-                "NOTES_ON_FILE_other": "{{count}} notes on file"
+                "NOTES_ON_FILE_one": "{{value}} note on file",
+                "NOTES_ON_FILE_other": "{{value}} notes on file"
             },
             "ACHIEVEMENTS": "Achievements",
-            "ACHIEVEMENTS_EARNED": "{{count}} / {{total}} earned",
+            "EARNED": "Earned",
+            "VIEW_PROGRESS": "Next up",
+            "VIEW_ALL": "All",
+            "NO_ACHIEVEMENTS": "No achievements set up for this department",
             "RANK_HISTORY": "Rank History",
-            "RANK_CHANGE_TO": "{{kind}} to {{grade}}",
-            "CHANGED_BY": "by {{name}}",
-            "COLUMNS": {
-                "CHANGE": "Change",
-                "RANK": "Rank",
-                "BY": "By",
-                "DATE": "Date"
-            }
+            "RECORDS_FILED": "Records filed",
+            "CERTIFICATIONS": "Certifications",
+            "NO_CERTIFICATIONS": "No certifications held"
         },
         "RECORDS_TAB": {
-            "TITLE": "Involved Records",
-            "FILTER_ALL": "All",
-            "EMPTY": "No records of this type",
-            "RECORDS_COUNT_one": "{{count}} record",
-            "RECORDS_COUNT_other": "{{count}} records"
+            "TITLE": "Records",
+            "SEARCH_PLACEHOLDER": "Search by title…",
+            "INVOLVED_HINT": "{{value}} as an involved officer",
+            "AS_LEAD": "{{value}} as lead officer",
+            "COLLECTED_HINT": "{{value}} collected themselves",
+            "EXECUTED_HINT": "{{value}} executed",
+            "PEOPLE_CHARGED_one": "To {{formatted}} person",
+            "PEOPLE_CHARGED_other": "To {{formatted}} people",
+            "RECORDS_PER_DAY": "Records per day",
+            "RECORDS_PER_WEEK": "Records per week",
+            "EMPTY": "No records in this period.",
+            "NO_MATCHES": "No records match this filter.",
+            "ROLES": {
+                "LEAD": "Lead officer",
+                "INVOLVED": "Involved officer",
+                "COLLECTED": "Collected",
+                "REQUESTED": "Requested",
+                "EXECUTED": "Executed",
+                "ISSUED": "Issued"
+            }
         },
         "PERFORMANCE_TAB": {
             "TITLE": "Peer Reviews",
-            "SUMMARY": "Summary",
-            "OVERALL_SCORE": "Overall score",
-            "NOT_ENOUGH_FOR_TREND": "Not enough reviews yet for a trend",
-            "REVIEW_COUNT_one": "{{count}} review",
-            "REVIEW_COUNT_other": "{{count}} reviews",
+            "AVERAGE_SCORE": "Average score",
+            "REVIEW_COUNT_one": "{{formatted}} review",
+            "REVIEW_COUNT_other": "{{formatted}} reviews",
+            "FROM_REVIEWERS_one": "{{reviews}} from {{formatted}} officer",
+            "FROM_REVIEWERS_other": "{{reviews}} from {{formatted}} officers",
+            "LATEST_SCORE": "Latest score",
+            "ABOVE_AVERAGE": "{{value}} above their average",
+            "BELOW_AVERAGE": "{{value}} below their average",
+            "SAME_AS_AVERAGE": "In line with their average",
+            "ONLY_REVIEW": "Their only review so far",
+            "LAST_REVIEW": "Last review",
+            "BY_REVIEWER": "By {{name}}",
+            "STRONGEST": "Strongest area",
+            "WEAKEST": "Weakest area",
+            "RATING_VALUE": "{{value}} / 5",
+            "NO_REVIEWS_YET": "No reviews yet",
+            "SCORE_OVER_TIME": "Score over time",
+            "BY_CATEGORY": "By category",
+            "EDITED": "Edited",
             "REVIEWER_NOTES": "Comments",
             "NOTES_PLACEHOLDER": "What stood out about their work?",
-            "REVIEWED_ON": "Reviewed {{date}}",
-            "REVIEWED_ON_EDITED": "Reviewed {{date}} · edited",
             "NO_REVIEWS": "No peer reviews on file yet.",
             "WRITE_REVIEW": "Write Review",
             "CANNOT_REVIEW_SELF": "You can't review yourself",
-            "EDIT_REVIEW": "Edit review",
-            "EDIT_LOCKED_TOOLTIP": "Only the officer who wrote this review can edit it",
-            "SCORE_LABEL": "Overall Score",
+            "SCORE_LABEL": "Score",
+            "RATINGS_LABEL": "Ratings",
+            "RATE_ALL": "Rate every category",
             "SUBMIT_REVIEW": "Submit Review",
             "WRITE_DIALOG_TITLE": "Write a Review",
             "WRITE_DIALOG_DESCRIPTION": "File a peer review for {{name}}.",
             "EDIT_DIALOG_TITLE": "Edit Review",
             "EDIT_DIALOG_DESCRIPTION": "Edit your review of {{name}}.",
+            "DELETE_CONFIRM_TITLE": "Delete this review?",
+            "DELETE_CONFIRM_DESCRIPTION": "The review by {{name}} is removed for good and stops counting toward their score.",
             "CATEGORIES": {
                 "COMMUNICATION": "Communication",
                 "TEAMWORK": "Teamwork",
@@ -1731,21 +1712,28 @@
                 "SUBMITTING": "Submitting review…",
                 "SUBMITTED": "Review submitted",
                 "SAVING": "Saving review…",
-                "SAVED": "Review updated"
+                "SAVED": "Review updated",
+                "DELETING": "Deleting review…",
+                "DELETED": "Review deleted"
             }
         },
         "HR_NOTES_TAB": {
             "TITLE": "HR Notes",
-            "PEER_AVG_SCORE": "Peer avg. score",
-            "NOTES_ON_FILE": "Notes on file",
-            "OPEN_ITEMS": "Open items",
             "NEW_NOTE": "New Note",
             "EMPTY": "No HR notes on file yet.",
-            "TYPE_LABEL": "Type",
+            "NOTHING_ACTIVE": "Nothing needs action. Every note is resolved.",
+            "NO_MATCHES": "No notes match this filter.",
+            "FILTER_ACTIVE": "Needs action",
+            "FILTER_ALL": "All",
+            "BY_TYPE": "By type",
+            "FOLLOW_UP_COUNT_one": "{{formatted}} follow-up",
+            "FOLLOW_UP_COUNT_other": "{{formatted}} follow-ups",
             "SEVERITY_LABEL": "Severity",
             "BODY_LABEL": "Note",
             "BODY_PLACEHOLDER": "What happened, and any context a future manager should know…",
             "SUBMIT_NOTE": "Add Note",
+            "DELETE_CONFIRM_TITLE": "Delete this HR note?",
+            "DELETE_CONFIRM_DESCRIPTION": "The note and its follow-ups are removed from {{name}}'s file. This can't be undone.",
             "WRITTEN_BY": "Written by {{author}}",
             "WRITTEN_BY_EDITED": "Written by {{author}} · last edited by {{editor}}",
             "FOLLOW_UPS": "Follow-ups",
@@ -1772,20 +1760,21 @@
                 "CREATING": "Adding note…",
                 "CREATED": "Note added",
                 "SAVING": "Saving note…",
-                "SAVED": "Note updated"
+                "SAVED": "Note updated",
+                "DELETED": "Note deleted"
             }
         },
         "STRIKES_CARD": {
             "TITLE": "Strikes",
-            "COUNT": "{{count}}/{{max}}",
+            "REMAINING_one": "{{formatted}} more before the limit",
+            "REMAINING_other": "{{formatted}} more before the limit",
+            "AT_LIMIT": "Strike limit reached",
             "ADD": "Add Strike",
             "REMOVE": "Remove strike",
             "EMPTY": "No strikes on file.",
             "DIALOG_TITLE": "Add a Strike",
             "DIALOG_DESCRIPTION": "Record a disciplinary strike for {{name}}. This never fires them automatically — you'd still do that yourself from the Manage menu.",
-            "REASON_LABEL": "Reason",
             "REASON_PLACEHOLDER": "What happened…",
-            "SUBMIT": "Add Strike",
             "TOASTS": {
                 "ADDING": "Adding strike…",
                 "ADDED": "Strike added",
@@ -1794,34 +1783,29 @@
             }
         },
         "SHIFTS_TAB": {
-            "SHOWING_LAST_DAYS": "Showing the last {{count}} days",
-            "SHOWING_RANGE": "Showing {{from}} – {{to}}",
-            "VS_PREVIOUS_PERIOD": "vs. previous period",
-            "TOTAL_HOURS": "Total hours",
-            "DAY_TOTAL": "{{count}}-day total",
+            "PER_ACTIVE_DAY": "{{value}} per active day",
             "SHIFTS": "Shifts",
-            "COMPLETED": "Completed",
-            "AVG_SHIFT": "Avg shift",
-            "PER_SESSION": "Per session",
-            "LONGEST": "Longest",
-            "SINGLE_SHIFT": "Single shift",
+            "DAYS_ACTIVE": "Days active",
+            "DAYS_ACTIVE_VALUE": "{{active}} / {{total}}",
+            "DAYS_ACTIVE_HINT": "{{percent}} of the range",
+            "DEPARTMENT_AVG": "Department average",
+            "ABOVE_AVG": "They worked {{value}} more",
+            "BELOW_AVG": "They worked {{value}} less",
+            "SAME_AS_AVG": "They worked about the same",
+            "SHORT_SESSIONS": "Short sessions",
+            "SHORT_SESSIONS_HINT": "Under a minute, not counted",
             "HOURS_PER_DAY": "Hours per day",
-            "NO_SHIFTS": "No shifts in this period",
-            "SHIFT_LOG": "Shift Log",
-            "SHIFTS_COUNT_one": "{{count}} shift",
-            "SHIFTS_COUNT_other": "{{count}} shifts",
-            "COUNT_LABEL": "shifts",
-            "COLUMNS": {
-                "DATE": "Date",
-                "CLOCK_IN": "Clock in",
-                "CLOCK_OUT": "Clock out",
-                "DURATION": "Duration"
-            },
-            "HOURS_ON_DUTY": "{{hours}}h on duty"
+            "HOURS_PER_WEEK": "Hours per week",
+            "WHEN_ON_DUTY": "When they're on duty",
+            "ON_DUTY_TIME": "{{value}} on duty",
+            "SHIFT_LOG": "Shift log",
+            "SHOW_SHORT": "Show {{value}} short",
+            "HIDE_SHORT": "Hide {{value}} short",
+            "ON_DUTY_NOW": "On duty now",
+            "NO_SHIFTS": "No shifts in this period"
         }
     },
     "EMPLOYEES": {
-        "HEADING": "Employees",
         "SUBHEADING": "Personnel roster",
         "SUBHEADING_WITH_DEPT": "{{department}} · personnel roster",
         "SEARCH_PLACEHOLDER": "Search name, callsign or phone…",
@@ -1833,23 +1817,11 @@
         "TOOLBAR": {
             "EMPLOYEES_COUNT_one": "{{count}} employee",
             "EMPLOYEES_COUNT_other": "{{count}} employees",
-            "ONLINE_COUNT": "{{count}} online",
-            "ON_DUTY_COUNT": "{{count}} on duty"
-        },
-        "COLUMNS": {
-            "EMPLOYEE": "Employee",
-            "RANK": "Rank",
-            "CALLSIGN": "Callsign",
-            "PHONE": "Phone",
-            "STATUS": "Status",
-            "THIS_WEEK": "This week"
+            "ONLINE_COUNT": "{{count}} online"
         },
         "EMPTY": "No employees found",
-        "COUNT_LABEL": "employees",
-        "DEPARTMENT_LABEL": "Department",
         "ROW": {
-            "VIEW_RECORD": "View record",
-            "CITIZEN_PROFILE": "Citizen profile"
+            "VIEW_RECORD": "View record"
         },
         "ACTIONS": {
             "PROMOTE": "Promote",
@@ -1863,10 +1835,7 @@
             "RANK_CHANGE_CONFIRM_TITLE": "{{action}} {{name}}?",
             "RANK_CHANGE_CONFIRM_DESCRIPTION": "{{name}} will move from {{from}} to {{to}}.",
             "CALLSIGN_DIALOG_DESCRIPTION": "Set the radio callsign for {{name}}.",
-            "CALLSIGN_LABEL": "Callsign",
-            "CALLSIGN_PLACEHOLDER": "e.g. 1-ADAM-12",
             "BADGE_DIALOG_DESCRIPTION": "Set the badge number for {{name}}.",
-            "BADGE_LABEL": "Badge #",
             "BADGE_PLACEHOLDER": "e.g. 4021",
             "FIRE_CONFIRM_TITLE": "Fire {{name}}?",
             "FIRE_CONFIRM_DESCRIPTION": "This removes {{name}} ({{grade}}) from the department. They lose all access immediately. This can't be undone.",
@@ -1878,7 +1847,6 @@
                 "DEMOTING": "Demoting {{name}}…",
                 "PROMOTED": "{{name}} promoted to {{grade}}",
                 "DEMOTED": "{{name}} demoted to {{grade}}",
-                "UPDATING_CALLSIGN": "Updating callsign…",
                 "CALLSIGN_UPDATED": "{{name}}'s callsign set to {{callsign}}",
                 "UPDATING_BADGE": "Updating badge #…",
                 "BADGE_UPDATED": "{{name}}'s badge # set to {{badge}}",
@@ -1894,39 +1862,26 @@
             }
         },
         "LEADERBOARD": {
-            "TRIGGER": "Leaderboard",
-            "TITLE": "Leaderboard",
             "DESCRIPTION": "Duty-hour rankings and your personal clock history.",
             "TABS": {
-                "LEADERBOARD": "Leaderboard",
                 "MY_HISTORY": "My History"
             },
             "PERIODS": {
-                "DAILY": "Today",
-                "WEEKLY": "This week",
                 "MONTHLY": "This month",
                 "YEARLY": "This year"
             },
-            "DEPARTMENT_LABEL": "Department",
-            "YOU": "You",
             "EMPTY": "No duty hours logged for this period yet."
         }
     },
     "MANAGEMENT": {
-        "HEADING": "Management",
         "SUBHEADING": "Department funds and rank permissions",
         "TABS": {
-            "OVERVIEW": "Overview",
             "ANALYTICS": "Analytics",
             "FINANCE": "Finance",
-            "TAGS": "Tags",
-            "PERMISSIONS": "Permissions",
-            "DISPATCH": "Dispatch"
+            "PERMISSIONS": "Permissions"
         },
         "FUNDS_PANEL": {
-            "TITLE": "Society Funds",
             "CURRENT_BALANCE": "Current Balance",
-            "RECENT_ACTIVITY": "Recent Activity",
             "NO_TRANSACTIONS": "No transactions yet",
             "DEPOSIT_FALLBACK_REASON": "Deposit",
             "WITHDRAWAL_FALLBACK_REASON": "Withdrawal"
@@ -1955,11 +1910,7 @@
         "RECRUIT_DIALOG": {
             "TRIGGER": "Recruit",
             "TITLE": "Recruit a citizen",
-            "DESCRIPTION": "Select an online citizen to add to {{department}}. They join as {{rank}} with an auto-assigned callsign.",
-            "SEARCH_PLACEHOLDER": "Search online citizens…",
-            "NO_MATCHING": "No matching citizens online",
-            "NO_CITIZENS": "No online citizens available to recruit",
-            "JOINS_AS": "Joins as {{rank}} · callsign assigned automatically",
+            "DESCRIPTION": "Select an unemployed citizen, online or offline, to add to {{department}}. They join as {{rank}} with an auto-assigned callsign.",
             "RECRUIT_NAMED": "Recruit {{name}}",
             "DEFAULT_RANK_FALLBACK": "Recruit",
             "TOASTS": {
@@ -1967,18 +1918,17 @@
                 "RECRUITED": "{{name}} was recruited as {{rank}}"
             }
         },
+        "RECOGNITION": {
+            "SEARCH": "Search by name…",
+            "NO_MATCH": "Nothing matches your search."
+        },
         "ACHIEVEMENTS_PANEL": {
             "TITLE": "Achievements",
             "NEW_TITLE": "New achievement",
             "EDIT_TITLE": "Edit achievement",
-            "SUBTITLE": "Unlocked automatically from each officer's real stats",
             "DIALOG_DESCRIPTION": "Achievements are scored live against real employee stats — nothing is manually awarded.",
-            "ALL": "All",
-            "PREVIEW": "Preview",
-            "RULE_SENTENCE": "Unlocks at {{target}} {{metric}}",
-            "EMPTY_TIER": "No {{tier}} achievements yet — click to add one.",
+            "EMPTY_TIER": "No {{tier}} achievements yet.",
             "EMPTY": "No achievements yet — create one to get started.",
-            "NAME_LABEL": "Name",
             "NAME_PLACEHOLDER": "e.g. Case Closer",
             "DESCRIPTION_LABEL": "Description",
             "DESCRIPTION_PLACEHOLDER": "What earns this achievement?",
@@ -1986,6 +1936,11 @@
             "TIER_LABEL": "Tier",
             "TARGET_LABEL": "Target",
             "METRIC_LABEL": "Tracks",
+            "CREATE_BUTTON": "Create achievement",
+            "SECTIONS": {
+                "REQUIREMENT": "Requirement",
+                "APPEARANCE": "Appearance"
+            },
             "TIERS": {
                 "BRONZE": "Bronze",
                 "SILVER": "Silver",
@@ -1993,7 +1948,6 @@
             },
             "METRICS": {
                 "SHIFTS": "Duty sessions completed",
-                "HOURS": "Hours on duty",
                 "TENURE_DAYS": "Days of tenure",
                 "REVIEW_SCORE": "Average peer review score",
                 "REVIEW_COUNT": "Peer reviews received",
@@ -2018,16 +1972,11 @@
             "TITLE": "Certifications",
             "NEW_TITLE": "New certification",
             "EDIT_TITLE": "Edit certification",
-            "SUBTITLE": "Granted per officer from the Employee page",
             "DIALOG_DESCRIPTION": "Certification types can be granted or revoked per employee from the Employee page.",
-            "COLOR_LABEL": "Color",
-            "PREVIEW": "Preview",
-            "PREVIEW_HINT": "Shown on the profile of every officer who holds it",
+            "HOLDERS": "Holders",
+            "CREATE_BUTTON": "Create certification",
             "EMPTY": "No certification types yet — create one to get started.",
-            "NAME_LABEL": "Name",
             "NAME_PLACEHOLDER": "e.g. K9 Handler",
-            "ICON_LABEL": "Icon",
-            "DELETE_CONFIRM_TITLE": "Delete {{name}}?",
             "DELETE_CONFIRM_DESCRIPTION": "This removes the certification type and revokes it from anyone who held it. It can't be undone.",
             "TOASTS": {
                 "CREATING": "Creating certification…",
@@ -2039,142 +1988,104 @@
             }
         },
         "TAG_MODERATION_PANEL": {
-            "ADD": "Add tag",
-            "DRAG": "Drag to copy into another box",
             "EMPTY": "No tags yet",
-            "NEW_TITLE": "New tag",
             "EDIT_TITLE": "Edit tag",
-            "DELETE_CONFIRM_TITLE": "Delete {{name}}?",
             "DELETE_CONFIRM_DESCRIPTION": "This removes the tag from every record it's attached to. It can't be undone.",
             "TOASTS": {
-                "CREATING": "Creating tag…",
                 "CREATED": "Tag created",
                 "SAVING": "Saving tag…",
                 "SAVED": "Tag updated",
                 "DELETING": "Deleting tag…",
                 "DELETED": "{{name}} deleted",
                 "COPYING": "Copying tags…",
-                "COPIED": "Copied {{count}} to {{type}}",
-                "COPY_NONE": "{{type}} already has those tags",
-                "DELETED_MANY": "{{count}} tags deleted"
+                "COPIED": "{{name}} copied to {{type}}",
+                "COPY_EXISTS": "{{type}} already has {{name}}"
             },
-            "HINT": "Drag a tag by its handle into another box to copy it there.",
             "SEARCH": "Search tags…",
-            "SELECTED": "{{count}} selected",
-            "PREVIEW": "Preview",
-            "DELETE_MANY_TITLE": "Delete {{count}} tags?"
+            "DIALOG_DESCRIPTION": "Tags label records so officers can spot them at a glance.",
+            "RECORD_TYPE": "Record type",
+            "HINT": "Click a tag to edit it. Drag it onto another record type to copy it there."
         },
+        "PEAK_AT": "Peak: {{day}} {{hour}}",
         "ANALYTICS_TAB": {
-            "SCOPE_HINT": "Showing {{job}} department activity for the selected range",
-            "ARRESTS": "Arrests",
-            "TREND_TITLE": "Records Over Time",
-            "TOP_CHARGES_TITLE": "Top Charges",
-            "TOP_CHARGES_HINT": "Charges issued and served in this range, ranked by count",
             "NO_DATA": "No data in this range",
-            "STATUS_BREAKDOWN_TITLE": "Status Breakdown",
-            "COLUMNS": {
-                "TYPE": "Type",
-                "RECORDS": "Records",
-                "SHARE": "Share",
-                "NAME": "Name",
-                "CITIZEN": "Citizen ID",
-                "CHARGES": "Charges",
-                "PRIORITY": "Priority"
-            },
-            "TOP_OFFENDERS_TITLE": "Top Offenders",
-            "CHARGE_COUNT_one": "{{count}} charge",
-            "CHARGE_COUNT_other": "{{count}} charges",
-            "EMPLOYEES_SECTION": "Employees",
-            "SHIFT_TREND_TITLE": "Shift Activity",
+            "NET_CHANGE": "Net change",
+            "CHARGES": "Charges",
+            "DUTY_HOURS": "Duty hours",
             "HOURS_VALUE": "{{hours}}h",
-            "EMPLOYEE_STATS_TITLE": "Employee Leaderboard",
-            "RECORDS_BY_TYPE_TITLE": "Records by Type",
-            "BOLO_PRIORITY_TITLE": "BOLO Priority",
-            "HOURLY_ACTIVITY_TITLE": "Hourly Activity",
-            "ACTIVITY_PROFILE_TITLE": "Activity Profile",
-            "HOUR_LABEL": "{{hour}}:00",
-            "TOTAL_FINES": "Fines Assessed",
-            "TOTAL_BAIL": "Bail Assessed",
-            "DEPOSITS": "Deposits",
-            "WITHDRAWALS": "Withdrawals",
-            "NET_CHANGE": "Net Change",
-            "REVENUE_TREND_TITLE": "Fines & Bail Over Time",
-            "TRANSACTIONS_TREND_TITLE": "Fund Deposits & Withdrawals",
-            "TOP_REVENUE_CHARGES_TITLE": "Top Charges by Revenue",
-            "SERIES": {
-                "INCIDENTS": "Incidents",
-                "WARRANTS": "Warrants",
-                "BOLOS": "BOLOs",
-                "FINES": "Fines",
-                "BAIL": "Bail",
-                "DEPOSITS": "Deposits",
-                "WITHDRAWALS": "Withdrawals"
-            }
+            "CLEARED_HINT": "{{value}} resolved or closed",
+            "SERVED_HINT": "{{value}} served",
+            "LOCATED_HINT": "{{value}} located",
+            "CUSTODY_HINT": "{{value}} in custody",
+            "CITIZENS_CHARGED_one": "{{value}} citizen charged",
+            "CITIZENS_CHARGED_other": "{{value}} citizens charged",
+            "OFFICERS_ON_DUTY_one": "{{value}} officer on duty",
+            "OFFICERS_ON_DUTY_other": "{{value}} officers on duty",
+            "RECORDS_COUNT_one": "{{value}} record",
+            "RECORDS_COUNT_other": "{{value}} records",
+            "ACTIVITY_TITLE": "Activity",
+            "VIEW_RECORDS": "Records",
+            "OUTCOMES_TITLE": "Case outcomes",
+            "PEAK_TITLE": "Busiest hours",
+            "OFFICERS_TITLE": "Officers",
+            "MOST_CHARGED_TITLE": "Most charged",
+            "VIEW_CHARGES": "Charges",
+            "VIEW_OFFENDERS": "Offenders"
         },
         "FINANCE_TAB": {
-            "SHARE_OF_ASSESSED": "{{percent}}% of assessed",
-            "SHARE_OF_MOVEMENT": "{{percent}}% of movement",
+            "LIVE_BALANCE": "Live account balance",
+            "INCOME": "Income",
+            "EXPENSES": "Expenses",
+            "FINES_ISSUED": "Fines issued",
+            "DEPOSITS_COUNT_one": "{{value}} deposit",
+            "DEPOSITS_COUNT_other": "{{value}} deposits",
+            "WITHDRAWALS_COUNT_one": "{{value}} withdrawal",
+            "WITHDRAWALS_COUNT_other": "{{value}} withdrawals",
+            "CHARGES_COUNT_one": "{{value}} charge",
+            "CHARGES_COUNT_other": "{{value}} charges",
             "SURPLUS": "Surplus this period",
             "DEFICIT": "Deficit this period",
             "BREAK_EVEN": "Break-even",
             "CASHFLOW_TITLE": "Cashflow",
             "NET_CASHFLOW": "Net cashflow",
-            "TIME_INTERVAL": "Time interval",
             "INTERVAL_DAY": "Daily",
             "INTERVAL_WEEK": "Weekly",
             "INTERVAL_MONTH": "Monthly",
-            "TOTAL": "Total",
-            "ASSESSED_TITLE": "Fines vs bail",
-            "OWN_ONLY": "balance and transactions always show your own department"
+            "INCOME_SOURCES_TITLE": "Income sources",
+            "SOURCE_CHARGES": "Charge payments",
+            "SOURCE_MANUAL": "Manual deposits",
+            "TOP_EARNERS_TITLE": "Top earners",
+            "TRANSACTIONS_TITLE": "Transactions",
+            "DIRECTION_IN": "In",
+            "DIRECTION_OUT": "Out",
+            "OWN_ONLY": "Funds can only be moved and reviewed in your own department."
         },
         "PERMISSION_MANAGER": {
-            "TITLE": "Rank Permissions",
-            "YOU": "you",
             "SEARCH_PLACEHOLDER": "Search permissions…",
-            "NO_MATCH": "No permissions match “{{query}}”",
-            "RANKS": "Ranks",
+            "ALL_CATEGORIES": "All categories",
             "NOBODY": "Nobody",
-            "GRANTED_COUNT": "{{granted}}/{{total}} permissions",
-            "MEMBERS": "{{count}} members",
-            "HINT": "Tick a rank to grant a permission from that rank up. Higher ranks inherit it automatically (dimmed).",
-            "PERMISSIONS": "Permissions",
-            "FILTER_ALL": "All",
-            "FILTER_GRANTED": "Granted",
-            "FILTER_LOCKED": "Locked",
-            "VIEWING": "Showing access for {{rank}}",
-            "SET_ALL": "Set all to…",
-            "INHERITED": "inherited from {{rank}}"
+            "EVERYONE": "Every rank",
+            "FROM_RANK": "{{rank}} and up",
+            "MIXED": "Mixed",
+            "LOWEST_RANK": "Lowest rank with access",
+            "SET_ALL": "Set all",
+            "SET_GROUP": "Every permission in {{group}}",
+            "RANK_ACCESS": "Rank access",
+            "RANK_ACCESS_DESCRIPTION": "Everything a rank can and can't do.",
+            "ACCESS_COUNT": "{{granted}} of {{total}} permissions",
+            "ALLOWED": "Allowed",
+            "DENIED": "No access",
+            "NOTHING_SHOWN": "No permissions in this view",
+            "NO_MATCH_TITLE": "No permissions found",
+            "NO_MATCH": "No permissions match “{{query}}”"
         },
         "PERMISSION_CATALOG": {
             "CATEGORIES": {
-                "DASHBOARD": "Dashboard",
-                "INCIDENTS": "Incidents",
-                "EVIDENCES": "Evidence",
-                "OFFICERS": "Officers",
-                "BOLOS": "BOLOs",
-                "DISPATCH": "Dispatch",
-                "CITIZENS": "Citizens",
                 "SUSPECT": "Suspect Interactions",
-                "VEHICLES": "Vehicles",
-                "HOUSES": "Properties",
-                "WEAPONS": "Weapons",
-                "ANNOUNCEMENTS": "Announcements",
-                "CONFIG": "Configuration",
                 "STASH": "Stash",
-                "GALLERY": "Gallery",
-                "EMPLOYEES": "Employees",
-                "MANAGEMENT": "Management",
-                "PENALCODE": "Penal Code",
-                "OPERATIONPLANS": "Operations",
-                "WARRANTS": "Warrants",
-                "RADIO": "Radio",
-                "CAMERAS": "Cameras",
-                "LOGS": "Logs",
-                "TEMPLATES": "Templates",
                 "CHAT": "Chat",
                 "PROPS": "Props",
-                "K9": "K9",
-                "UNITS": "Units"
+                "K9": "K9"
             },
             "DESCRIPTIONS": {
                 "DASHBOARD_VIEW": "See the dashboard overview and statistics.",
@@ -2209,6 +2120,7 @@
                 "CITIZENS_PHONE_RECORDS": "Read a citizen phone records.",
                 "SUSPECT_INTERACT": "Use suspect interactions such as cuff, search and escort.",
                 "GALLERY_EDIT": "Add and remove gallery images.",
+                "NOTES_DELETE": "Delete notes other officers wrote on records and HR notes other managers filed. Officers can always delete their own.",
                 "VEHICLES_VIEW": "Search vehicles and read their details.",
                 "VEHICLES_REGISTER": "Register new vehicles.",
                 "VEHICLES_EDIT": "Edit vehicle details and flags.",
@@ -2303,47 +2215,50 @@
             }
         },
         "DISPATCH_TAB": {
-            "SCOPE_HINT": "Dispatch work of the {{job}} department for the selected range",
-            "KPIS": {
+            "STATS": {
                 "CALLS": "Calls handled",
-                "RESPONSES": "Responses",
-                "ACKNOWLEDGED": "Acknowledged",
-                "RESOLVED": "Resolved",
+                "RESOLUTION_RATE": "Resolution rate",
                 "AVG_RESPONSE": "Avg. response",
-                "AVG_SCENE": "Avg. on call"
+                "AVG_SCENE": "Avg. time on call",
+                "OFFICERS": "Officers responding"
             },
-            "TREND_TITLE": "Calls per day",
-            "TYPES_TITLE": "Most handled call types",
-            "OFFICERS_TITLE": "Officers",
-            "UNITS_TITLE": "Units",
+            "RESPONSES_COUNT_one": "{{value}} officer response",
+            "RESPONSES_COUNT_other": "{{value}} officer responses",
+            "RESOLVED_COUNT_one": "{{value}} call resolved",
+            "RESOLVED_COUNT_other": "{{value}} calls resolved",
+            "UNITS_COUNT_one": "Across {{value}} unit",
+            "UNITS_COUNT_other": "Across {{value}} units",
+            "CALLS_COUNT_one": "{{value}} call",
+            "CALLS_COUNT_other": "{{value}} calls",
+            "OFFICERS_COUNT_one": "{{value}} officer",
+            "OFFICERS_COUNT_other": "{{value}} officers",
+            "RESPONSE_HINT": "From assignment to arrival",
+            "SCENE_HINT": "From arrival to the call closing",
+            "TREND_TITLE": "Call volume",
+            "VIEW_CALLS": "Calls",
+            "VIEW_RESPONSE": "Response time",
+            "SERIES_CALLS": "Calls",
+            "SERIES_RESOLVED": "Resolved",
+            "PRIORITY_TITLE": "By priority",
+            "AVG_RESPONSE_SHORT": "avg. response",
+            "PEAK_TITLE": "Busiest hours",
+            "LEADERBOARD_TITLE": "Leaderboard",
+            "VIEW_OFFICERS": "Officers",
+            "VIEW_UNITS": "Units",
+            "TYPES_TITLE": "Call types",
             "COLUMNS": {
-                "OFFICER": "Officer",
                 "UNIT": "Unit",
                 "CALLS": "Calls",
-                "OFFICERS": "Officers",
-                "TAKEN": "Taken",
-                "ACKNOWLEDGED": "Acknowledged",
-                "ARRIVED": "Arrived",
                 "RESOLVED": "Resolved",
-                "AVG_RESPONSE": "Avg. response",
-                "AVG_SCENE": "Avg. on call"
-            },
-            "FOOTNOTE": "Response time runs from being put on a call to arriving at it. Time on call runs from arrival (or from being put on it) to the call closing. Units are listed by the name they had at the time."
+                "AVG_RESPONSE": "Avg. response"
+            }
         }
     },
     "HOUSE": {
         "INDEX": {
             "PROPERTY_DETAILS_LABEL": "Property Details",
-            "VIEW_LINKS": "Links",
             "VIEW_LINKS_HINT": "Open a graph of the records, people and vehicles linked to this property",
-            "LOCATION_LABEL": "Location",
-            "SET_WAYPOINT": "Set waypoint",
             "WAYPOINT_SET": "Waypoint set on your GPS",
-            "COPY_COORDS": "Copy coordinates",
-            "COORDS_COPIED": "Coordinates copied",
-            "LINKED_WARRANTS": "Linked Warrants",
-            "LINKED_INCIDENTS": "Linked Incidents",
-            "EMPTY_ATTACHED": "None attached yet",
             "FIELDS": {
                 "OWNED_SINCE": "Owned since",
                 "FEATURES": "Features"
@@ -2361,12 +2276,10 @@
                 "SALE_ONLY": "Listed for sale",
                 "RENT_ONLY": "Listed for rent",
                 "SALE_AND_RENT": "Listed for sale and rent"
-            },
-            "SETTING_WAYPOINT": "Setting waypoint…"
+            }
         }
     },
     "DASHBOARD": {
-        "HEADING": "Dashboard",
         "SUBHEADING": "Your shift, alerts and department activity at a glance",
         "FEATURED_ANNOUNCEMENT_EMPTY": "No announcements",
         "START_COLLAB_BUTTON": "Start Collab",
@@ -2375,39 +2288,30 @@
             "HIGH_PRIORITY_COUNT": "{{count}} High"
         },
         "ON_DUTY": {
-            "TITLE": "On Duty",
             "EMPTY_TITLE": "No one on duty",
             "EMPTY_DESCRIPTION": "Officers will show up here as soon as they clock in."
         },
         "PLAYER_CARD": {
             "GROUPS": {
-                "ACTIVE": "Active",
                 "ELEVATED": "Elevated",
                 "UNAVAILABLE": "Unavailable"
             },
-            "CALLSIGN_LABEL": "Callsign",
             "NO_UNIT": "Unassigned",
-            "ON_DUTY": "On Duty",
             "OFF_DUTY": "Off Duty",
             "DUTY_TIME_HM": "{{hours}}h {{minutes}}m",
             "DUTY_TIME_M": "{{minutes}}m",
             "CALLSIGN_DIALOG_TITLE": "Change callsign",
             "CALLSIGN_DIALOG_DESCRIPTION": "Update your radio callsign.",
-            "CALLSIGN_PLACEHOLDER": "e.g. 1-ADAM-12",
             "TOASTS": {
                 "DUTY_SUCCESS": "Duty toggled",
                 "DUTY_LOADING": "Toggling duty…",
                 "STATUS_SUCCESS": "Status updated",
-                "STATUS_LOADING": "Updating status…",
-                "CALLSIGN_SUCCESS": "Callsign updated",
-                "CALLSIGN_LOADING": "Updating callsign…",
-                "ERROR": "Error: {{error}}"
+                "CALLSIGN_SUCCESS": "Callsign updated"
             }
         }
     },
     "CUSTOM": {
-        "PROVIDED_BY": "Provided by {{resource}}",
-        "LOADING": "Loading…"
+        "PROVIDED_BY": "Provided by {{resource}}"
     },
     "FORM": {
         "ITEM_PICKER": {
@@ -2415,7 +2319,6 @@
             "SLOT_LABEL": "Slot",
             "SLOTS": "Slots",
             "SLOTS_VALUE": "{{used}}/{{max}}",
-            "UNITS": "Units",
             "WEIGHT": "Weight",
             "ADD_ITEMS": "Add items",
             "REMOVE_ITEM": "Remove {{label}}",
@@ -2441,8 +2344,7 @@
             },
             "AMOUNT_DIALOG": {
                 "LABEL": "Amount to log",
-                "AVAILABLE": "Available: {{formatted}}",
-                "ALL": "All"
+                "AVAILABLE": "Available: {{formatted}}"
             }
         },
         "CHARGES_FIELD": {
@@ -2485,7 +2387,6 @@
                 "OFFICER_UNITS": "Units"
             },
             "PERMISSIONS": {
-                "HINT": "Pick a job, then set the lowest grade that gets each permission.",
                 "NO_JOBS": "No whitelisted jobs yet."
             },
             "SETTINGS": {
@@ -2621,7 +2522,12 @@
                     "PHONE_RECORDS": "Show citizens' phone records",
                     "PHONE_RECORDS_HINT": "Shows the phone records button (calls and messages) next to a citizen's phone number. Turn off if your server doesn't want officers reading phone data.",
                     "RESIDENTS": "Show who lives at a property",
-                    "RESIDENTS_HINT": "Shows tenants and co-owners on property records, when your housing resource provides them."
+                    "RESIDENTS_HINT": "Shows tenants and co-owners on property records, when your housing resource provides them.",
+                    "HIDDEN_JOBS": "Hidden jobs",
+                    "HIDDEN_JOBS_HINT": "Jobs officers never see on citizens, like gangs. Members show the job below instead, and the Citizens filter can't find them by it.",
+                    "HIDDEN_JOBS_PLACEHOLDER": "Pick a job",
+                    "HIDDEN_JOBS_SHOWN_AS": "Show hidden jobs as",
+                    "HIDDEN_JOBS_SHOWN_AS_HINT": "The job members of a hidden job appear to have, usually your framework's unemployed job."
                 },
                 "LIMITS": {
                     "TITLE": "Limits",
@@ -2669,12 +2575,6 @@
                     "LIST": "Categories",
                     "LIST_HINT": "A category that's already used can't be deleted, turn it off instead.",
                     "LIST_FIELDS": {
-                        "NAME": "Internal name",
-                        "NAME_HINT": "Saved on every record that uses it. Lowercase letters, numbers, _ and - only. Filled in from the label for you.",
-                        "LABEL": "Label",
-                        "LABEL_HINT": "What officers see. Changing it renames the entry everywhere, old records included.",
-                        "DISABLED": "Turned off",
-                        "DISABLED_HINT": "Hidden when officers pick one for a new record. Records that already use it keep it.",
                         "FLAGGED": "Contraband",
                         "FLAGGED_HINT": "Modifications in this category get a red \"Flagged\" mark on the vehicle page."
                     }
@@ -2684,6 +2584,11 @@
                 "REGION": {
                     "TITLE": "Language & formats",
                     "DESCRIPTION": "Server defaults. Every officer can still pick their own language, currency and formats in their MDT settings; these are what someone gets before they do.",
+                    "SUPPORTED_LOCALES": "Available languages",
+                    "SUPPORTED_LOCALES_HINT": "The languages officers can pick in their MDT settings. Only languages with a translation file in nui/dist/locales can be added.",
+                    "SUPPORTED_LOCALES_CHOICES_HINT": "Missing a language? Put its file in nui/dist/locales (named like fi-FI.json) and restart the MDT.",
+                    "SUPPORTED_LOCALES_LOCKED": "This is the server language, so it can't be removed. Pick another server language first.",
+                    "SUPPORTED_LOCALES_PLACEHOLDER": "Add a language",
                     "LOCALE": "Server language",
                     "LOCALE_HINT": "Used for messages shown in the game (notifications, cameras) and logs, and as the MDT language for officers who haven't picked one.",
                     "CURRENCY_HINT": "The currency fines, bank balances and department funds are shown in.",
@@ -2720,13 +2625,9 @@
                     "LIST_HINT": "Add your own or change the color, icon and name of any status. Turned-off or deleted statuses disappear from the status menu and officers using one are moved to the default status.",
                     "LIST_LOCKED": "This is the default status, so it can't be turned off or deleted. Pick another default status first.",
                     "LIST_FIELDS": {
-                        "NAME": "Internal name",
                         "NAME_HINT": "Lowercase letters, numbers, _ and - only. Filled in from the label for you.",
-                        "LABEL": "Label",
                         "LABEL_HINT": "What officers see. Leave it empty on a built-in status to keep its translated name in every language.",
-                        "COLOR": "Color",
                         "COLOR_HINT": "Used for the icon and the dot next to an officer.",
-                        "ICON": "Icon",
                         "ICON_HINT": "Any Lucide icon name from lucide.dev/icons, e.g. siren, dog or coffee.",
                         "GROUP": "Menu section",
                         "GROUP_HINT": "Where it's listed in the status menu.",
@@ -2735,7 +2636,6 @@
                             "ELEVATED": "Elevated",
                             "UNAVAILABLE": "Unavailable"
                         },
-                        "DISABLED": "Turned off",
                         "DISABLED_HINT": "Officers can't pick it. Officers using it are moved to the default status."
                     },
                     "DEFAULT": "Default status",
@@ -2781,8 +2681,10 @@
                 "NATIONALITIES": {
                     "TITLE": "Nationalities",
                     "LIST": "Nationalities",
-                    "PLACEHOLDER": "e.g. American",
-                    "LIST_HINT": "The choices when registering a citizen and in the Citizens page filter. Removing one doesn't change citizens who already have it."
+                    "DESCRIPTION": "Used in two places: the Nationality filter on the Citizens page, and the Nationality field when an officer registers a citizen by hand (only while \"List everyone from the database\" is off). With it on, a citizen's nationality comes from their character in your framework. ESX characters have none, so the field and the filter are hidden there.",
+                    "PLACEHOLDER": "Add a nationality",
+                    "LIST_HINT": "Removing one doesn't change citizens who already have it, they just can't be filtered by it anymore.",
+                    "CHOICES_HINT": "Pick one from the list, or type any name and add it as it is."
                 }
             },
             "JUSTICE": {
@@ -2846,29 +2748,13 @@
                     "TITLE": "Evidence types",
                     "DESCRIPTION": "The kinds of evidence officers pick from when they log evidence, like firearm or narcotics. Each record has one type; use tags for extra details.",
                     "LIST": "Types",
-                    "LIST_HINT": "A type that's already used can't be deleted, turn it off instead. At least one has to stay on.",
-                    "LIST_FIELDS": {
-                        "NAME": "Internal name",
-                        "NAME_HINT": "Saved on every record that uses it. Lowercase letters, numbers, _ and - only. Filled in from the label for you.",
-                        "LABEL": "Label",
-                        "LABEL_HINT": "What officers see. Changing it renames the entry everywhere, old records included.",
-                        "DISABLED": "Turned off",
-                        "DISABLED_HINT": "Hidden when officers pick one for a new record. Records that already use it keep it."
-                    }
+                    "LIST_HINT": "A type that's already used can't be deleted, turn it off instead. At least one has to stay on."
                 },
                 "ANALYSES": {
                     "TITLE": "Lab analyses",
                     "DESCRIPTION": "The tests officers can request on a piece of evidence, like DNA or ballistics. Officers with the lab permission record the results.",
                     "LIST": "Analyses",
-                    "LIST_HINT": "An analysis that's already been requested can't be deleted, turn it off instead. At least one has to stay on.",
-                    "LIST_FIELDS": {
-                        "NAME": "Internal name",
-                        "NAME_HINT": "Saved on every record that uses it. Lowercase letters, numbers, _ and - only. Filled in from the label for you.",
-                        "LABEL": "Label",
-                        "LABEL_HINT": "What officers see. Changing it renames the entry everywhere, old records included.",
-                        "DISABLED": "Turned off",
-                        "DISABLED_HINT": "Hidden when officers pick one for a new record. Records that already use it keep it."
-                    }
+                    "LIST_HINT": "An analysis that's already been requested can't be deleted, turn it off instead. At least one has to stay on."
                 }
             },
             "COMMS": {
@@ -3299,6 +3185,16 @@
                     "AUDIO_RADIUS": "Hearing range",
                     "AUDIO_RADIUS_HINT": "Officers watching a feed hear players talking this close to the camera."
                 },
+                "DETECTION": {
+                    "TITLE": "Auto-detect",
+                    "DESCRIPTION": "Officers watching a CCTV camera can aim at a vehicle or player to look them up.",
+                    "RANGE": "Detection range",
+                    "RANGE_HINT": "How far from the camera a vehicle or player can be read.",
+                    "PLATE_VISIBLE": "Plate has to be visible",
+                    "PLATE_VISIBLE_HINT": "A vehicle is only read while its plate faces the camera with nothing in front of it. Off: any part of the vehicle works.",
+                    "MASK": "Masks block identification",
+                    "MASK_HINT": "Players wearing a mask can't be identified."
+                },
                 "BODYCAM": {
                     "TITLE": "Bodycams",
                     "METHOD": "How officers turn it on",
@@ -3495,6 +3391,12 @@
                 "JUSTICE": "Justice & money",
                 "OPERATIONS": "Operations"
             },
+            "CHOICES": {
+                "ADD": "Add one",
+                "SEARCH": "Search...",
+                "EMPTY": "Nothing left to add.",
+                "USE_TYPED": "Add \"{{value}}\""
+            },
             "PERMISSION_PICKER": {
                 "SEARCH": "Search permissions or type your own...",
                 "EMPTY": "No permission matches. Type a name like myplugin.view to use your own.",
@@ -3518,13 +3420,23 @@
                 "ENABLED_HINT": "On: officers can pick it. Turn off to stop new use without touching old records.",
                 "DISABLED_HINT": "Off: officers can't pick it for new records, old records still show it."
             },
+            "LIST_FIELDS": {
+                "NAME": "Internal name",
+                "NAME_HINT": "Saved on every record that uses it. Lowercase letters, numbers, _ and - only. Filled in from the label for you.",
+                "LABEL": "Label",
+                "LABEL_HINT": "What officers see. Changing it renames the entry everywhere, old records included.",
+                "DISABLED": "Turned off",
+                "DISABLED_HINT": "Hidden when officers pick one for a new record. Records that already use it keep it.",
+                "COLOR": "Color",
+                "ICON": "Icon"
+            },
             "INTERFACE": {
                 "THEME": {
                     "TITLE": "Default theme",
                     "DESCRIPTION": "The look every officer gets until they pick another theme in their MDT settings. Changes show up right away for everyone using it.",
                     "EDIT": "Edit colors",
                     "EDIT_TITLE": "Edit the default theme",
-                    "EDIT_DESCRIPTION": "Pick each color and see the preview update. Officers can still choose or make their own themes.",
+                    "EDIT_DESCRIPTION": "Pick a starting point and an accent color, then fine-tune any color in the preview. Officers can still choose or make their own themes.",
                     "COPY_PLACEHOLDER": "Copy one of my themes...",
                     "COPY_TITLE": "Use the colors of \"{{name}}\"?",
                     "COPY_DESCRIPTION": "The default theme takes this theme's colors and roundness. Its name stays the same.",
@@ -3538,7 +3450,8 @@
                     "TITLE": "Disabled pages",
                     "DESCRIPTION": "Pages turned off for everyone: hidden from the sidebar and links to them open the home page instead. Their data is kept, turn a page back on any time.",
                     "LIST": "Hidden pages",
-                    "LIST_HINT": "Pick the pages your server doesn't use, like Cameras or Radio."
+                    "LIST_HINT": "Pick the pages your server doesn't use, like Cameras or Radio.",
+                    "PLACEHOLDER": "Hide a page"
                 },
                 "PAGES": {
                     "TITLE": "Custom pages",
@@ -3546,13 +3459,11 @@
                     "LIST": "Pages",
                     "LIST_HINT": "Each page needs a name, the text shown in the sidebar and the address of the website to open.",
                     "LIST_FIELDS": {
-                        "NAME": "Internal name",
                         "NAME_HINT": "Part of the page's address in the MDT. Lowercase letters, numbers, _ and - only.",
                         "LABEL": "Sidebar text",
                         "LABEL_HINT": "What officers see in the sidebar.",
                         "URL": "Website address",
                         "URL_HINT": "Starts with https://. For a page inside a resource use https://cfx-nui-<resource>/path.",
-                        "ICON": "Icon",
                         "ICON_HINT": "An icon name from lucide.dev/icons, e.g. book-open. The box on the right shows it.",
                         "CATEGORY": "Sidebar group",
                         "CATEGORY_HINT": "Pages with the same group are listed together. Empty: \"custom\".",
@@ -3804,11 +3715,8 @@
                     "LIST": "Types",
                     "LIST_HINT": "Add your own or change any type. A type saved units still use can't be removed.",
                     "LIST_FIELDS": {
-                        "NAME": "Internal name",
                         "NAME_HINT": "Lowercase letters, numbers, _ and - only.",
-                        "LABEL": "Label",
                         "LABEL_HINT": "What officers see. Leave it empty on a built-in type to keep its translated name.",
-                        "ICON": "Icon",
                         "ICON_HINT": "Any Lucide icon name from lucide.dev/icons, e.g. car, dog or plane.",
                         "SEATS": "Seats",
                         "SEATS_HINT": "Most members at once. 0 = no limit."
@@ -3850,10 +3758,8 @@
                     "LIST": "Zones",
                     "LIST_HINT": "Name, color and the fewest units a zone should have.",
                     "LIST_FIELDS": {
-                        "NAME": "Internal name",
                         "NAME_HINT": "Lowercase letters, numbers, _ and - only.",
-                        "LABEL": "Label",
-                        "COLOR": "Color",
+                        "LABEL_HINT": "What officers see.",
                         "MINUNITS": "Minimum units",
                         "MINUNITS_HINT": "Below this the zone shows as understaffed. 0 = never."
                     }
@@ -3866,9 +3772,7 @@
             }
         },
         "CAMERA_OVERLAY": {
-            "BODYCAM_LABEL": "Bodycam",
             "DASHCAM_LABEL": "Dashcam",
-            "CAMERA_LABEL": "Camera",
             "REC_BADGE": "Rec",
             "HUD": {
                 "RECORDING": "Recording",
@@ -3904,22 +3808,26 @@
             },
             "MODES": {
                 "NORMAL": "Normal",
-                "NIGHT_VISION": "Night Vision",
                 "THERMAL": "Thermal"
             },
             "READOUT": {
-                "CHECKING_VEHICLE": "Checking Vehicle",
-                "VEHICLE_CHECK": "Vehicle Check",
-                "CHECKING_PERSON": "Checking Person",
+                "CHECKING": "Checking",
+                "VEHICLE_CHECK": "Vehicle check",
+                "PERSON_CHECK": "Person check",
+                "PLATE": "Plate",
+                "NAME": "Name",
+                "MODEL": "Model",
                 "OWNER_LABEL": "Owner",
                 "JOB_LABEL": "Job",
-                "MDT_RECORD_LABEL": "MDT Record",
+                "REASON": "Reason",
                 "FLAGGED": "Flagged",
-                "NORMAL_STATUS": "Normal",
+                "NORMAL_STATUS": "Clear",
+                "NOT_REGISTERED": "Not registered",
+                "NOT_REGISTERED_HINT": "No vehicle on file with this plate.",
+                "NO_RECORD_HINT": "No MDT record for this person.",
                 "UNKNOWN": "Unknown",
                 "UNIDENTIFIED": "Unidentified",
-                "FOUND": "Found",
-                "NO_RECORD_FOUND": "No MDT record found"
+                "NO_RECORD": "No record"
             },
             "RECORDING": {
                 "MAX_DURATION": "Longest recording reached, saving the clip",
@@ -3968,7 +3876,6 @@
             },
             "HINTS": {
                 "PLACE": "Place",
-                "BACK": "Back",
                 "CANCEL": "Stop"
             },
             "CHECKS": {
@@ -4297,7 +4204,6 @@
                 "DIRECTIONS": "Directions",
                 "ACKNOWLEDGED": "Acknowledged"
             },
-            "UNITS": "Units",
             "NO_UNITS": "None yet",
             "ETA": "ETA {{minutes}} min"
         },
@@ -4535,7 +4441,6 @@
     },
     "CONFIG": {
         "INDEX": {
-            "HEADING": "Configuration",
             "SUBHEADING": "Customize the MDT to your liking",
             "CATEGORIES": {
                 "REGIONAL": {
@@ -4547,7 +4452,6 @@
                     "DESCRIPTION": "Notifications and how the MDT looks and behaves."
                 },
                 "APPEARANCE": {
-                    "LABEL": "Appearance",
                     "DESCRIPTION": "Themes and colors."
                 }
             },
@@ -4555,7 +4459,6 @@
                 "LANGUAGE_CURRENCY": "Language & Currency",
                 "DATE_TIME": "Date & Time",
                 "UNITS_NUMBERS": "Units & Numbers",
-                "NOTIFICATIONS": "Notifications",
                 "SEE_THROUGH": "See-Through Mode",
                 "SEE_THROUGH_DESCRIPTION": "Fade the MDT out of the way to watch the game behind it, without closing it.",
                 "DISPLAY": "Display"
@@ -4674,7 +4577,6 @@
             },
             "INTERFACE_SCALES": {
                 "SMALL": "Small",
-                "DEFAULT": "Default",
                 "LARGE": "Large"
             },
             "SECONDS_one": "{{count}} second",
@@ -4685,7 +4587,6 @@
                 "HINT": "Preview a notification at the position and duration above",
                 "BUTTON": "Preview notification"
             },
-            "SEE_THROUGH_PREVIEW_LABEL": "MDT",
             "SEE_THROUGH_PREVIEW_HINT": "Preview — how faded the MDT looks at this level"
         },
         "THEME": {
@@ -4693,32 +4594,32 @@
             "IMPORT_BUTTON": "Import",
             "NEW_THEME_BUTTON": "New theme",
             "COLOR_GROUPS": {
-                "BASE": "Base",
-                "PRIMARY": "Primary",
-                "SURFACES": "Surfaces",
-                "STATE": "State",
-                "STRUCTURE": "Structure"
+                "PAGE": "Page",
+                "PANELS": "Sidebar, cards and menus",
+                "BRAND": "Brand",
+                "CONTROLS": "Buttons and lines",
+                "DANGER": "Danger"
             },
             "COLOR_LABELS": {
-                "BACKGROUND": "Background",
-                "FOREGROUND": "Foreground",
-                "CARD": "Card",
-                "CARD_FOREGROUND": "Card Text",
-                "POPOVER": "Popover",
-                "POPOVER_FOREGROUND": "Popover Text",
+                "BACKGROUND": "Page background",
+                "FOREGROUND": "Text",
+                "MUTED_FOREGROUND": "Quiet text",
+                "CARD": "Sidebar and cards",
+                "CARD_FOREGROUND": "Text on cards",
+                "POPOVER": "Menus",
+                "POPOVER_FOREGROUND": "Text in menus",
+                "MUTED": "Lists and quiet fills",
                 "PRIMARY": "Primary",
-                "PRIMARY_FOREGROUND": "Primary Text",
-                "SECONDARY": "Secondary",
-                "SECONDARY_FOREGROUND": "Secondary Text",
-                "MUTED": "Muted",
-                "MUTED_FOREGROUND": "Muted Text",
-                "ACCENT": "Accent",
-                "ACCENT_FOREGROUND": "Accent Text",
-                "DESTRUCTIVE": "Destructive",
-                "DESTRUCTIVE_FOREGROUND": "Destructive Text",
-                "BORDER": "Border",
-                "INPUT": "Input",
-                "RING": "Ring / Focus"
+                "PRIMARY_FOREGROUND": "Text on primary",
+                "RING": "Focus ring",
+                "SECONDARY": "Secondary buttons",
+                "SECONDARY_FOREGROUND": "Text on secondary buttons",
+                "ACCENT": "Hovered menu item",
+                "ACCENT_FOREGROUND": "Text on hovered item",
+                "BORDER": "Borders",
+                "INPUT": "Field borders",
+                "DESTRUCTIVE": "Danger",
+                "DESTRUCTIVE_FOREGROUND": "Text on danger"
             },
             "SORT_OPTIONS": {
                 "TOP_RATED": "Top rated",
@@ -4726,45 +4627,77 @@
                 "NEWEST": "Newest"
             },
             "EDITOR": {
-                "LIVE_PREVIEW": "Live preview",
-                "NAME_LABEL": "Name",
                 "NAME_PLACEHOLDER": "Theme name",
                 "ROUNDNESS_LABEL": "Roundness",
-                "HINT": "Click any swatch on the right to open the color picker. The preview updates as you edit."
+                "SCENE_HINT": "Hover any part of the preview to see its color, click it to change it.",
+                "SCENE_CLICK": "Click to change it. Everything outlined uses this color.",
+                "START_FROM": "Start from",
+                "PRESETS": {
+                    "DEFAULT": "Default",
+                    "MIDNIGHT": "Midnight",
+                    "FOREST": "Forest",
+                    "EMBER": "Ember",
+                    "CRIMSON": "Crimson",
+                    "AMETHYST": "Amethyst",
+                    "SAND": "Sand",
+                    "DAYLIGHT": "Daylight"
+                },
+                "ACCENT": "Accent color",
+                "CUSTOM_COLOR": "Pick any color",
+                "SURFACES": "Surfaces",
+                "SURFACES_HINT": "Changing these rebuilds the surface and text colors. Fine-tune single colors below afterwards.",
+                "MODE": "Mode",
+                "MODES": {
+                    "DARK": "Dark",
+                    "LIGHT": "Light"
+                },
+                "TONE": "Tone",
+                "TONES": {
+                    "NEUTRAL": "Neutral",
+                    "NEUTRAL_HINT": "Plain grays",
+                    "COOL": "Cool",
+                    "COOL_HINT": "Grays with a hint of blue",
+                    "WARM": "Warm",
+                    "WARM_HINT": "Grays with a hint of brown",
+                    "TINTED": "Tinted",
+                    "TINTED_HINT": "Grays tinted with the accent color"
+                },
+                "DEPTH": "Depth",
+                "LOW_CONTRAST": "Hard to read",
+                "LOW_CONTRAST_HINT": "Contrast {{ratio}}:1 with the color behind it. Aim for 4.5:1 or more.",
+                "UNDO_ALL": "Undo changes"
             },
             "NEW_EDIT_DIALOG": {
-                "DESCRIPTION": "Customize colors and roundness for this theme.",
-                "SAVE_THEME": "Save theme",
-                "NEW_THEME_TITLE": "New Theme",
-                "EDIT_THEME_TITLE": "Edit — {{name}}"
+                "DESCRIPTION": "Pick a starting point and an accent color, then fine-tune any color. The preview shows the result as you go.",
+                "NEW_THEME_NAME": "My theme",
+                "CREATE_THEME": "Create theme",
+                "EDIT_THEME_TITLE": "Edit {{name}}"
             },
             "EXPORT_DIALOG": {
-                "TITLE": "Export — {{name}}",
+                "TITLE": "Export {{name}}",
                 "DESCRIPTION": "Copy the JSON below to share or back up this theme.",
                 "COPIED": "Copied",
                 "COPY_JSON": "Copy JSON"
             },
             "IMPORT_DIALOG": {
-                "TITLE": "Import Theme",
-                "DESCRIPTION": "Paste a JSON export or browse community themes.",
+                "TITLE": "Import a theme",
+                "DESCRIPTION": "Paste a theme someone shared with you, or pick one made by the community.",
                 "PASTE_TAB": "Paste JSON",
                 "COMMUNITY_TAB": "Community",
-                "PASTE_HINT": "Paste a theme JSON exported from this MDT or shared by another user.",
+                "PASTE_HINT": "Paste a theme exported from this MDT, by you or anyone else.",
                 "INVALID_JSON": "Invalid theme JSON. Make sure you pasted a complete theme export.",
                 "PREVIEW_LABEL": "Preview",
                 "PREVIEW_EMPTY": "Paste a theme to preview it",
                 "SEARCH_PLACEHOLDER": "Search by name…",
-                "LIVE": "Live",
                 "TOO_MANY_REQUESTS": "Too many requests — try again in {{seconds}}s",
                 "FAILED_TO_LOAD": "Failed to load themes",
                 "TRY_AGAIN": "Try again",
                 "NO_THEMES_FOUND": "No themes found",
                 "TRY_DIFFERENT_SEARCH": "Try a different search term",
                 "NO_THEMES_PUBLISHED": "No themes published yet",
-                "LOADING": "Loading…",
-                "LOAD_MORE": "Load more ({{remaining}} remaining)",
-                "SHOWING_OF": "Showing {{shown}} of {{total}} themes · redutzu.com",
-                "CONNECT_TO_BROWSE": "Connect to browse themes"
+                "SHOWING_OF": "Showing {{shown}} of {{total}} themes from redutzu.com",
+                "FAILED_HINT": "The community library on redutzu.com couldn't be reached.",
+                "IMPORTED": "\"{{name}}\" added to your themes"
             },
             "CARD": {
                 "IMPORTED": "Imported",
@@ -4772,13 +4705,32 @@
                 "BY_AUTHOR": "by {{author}}",
                 "USE": "Use",
                 "ACTIVE": "Active",
-                "EXPORT_TITLE": "Export",
-                "EDIT_TITLE": "Edit",
-                "DELETE_TITLE": "Delete",
                 "OFFICIAL_TITLE": "Official theme",
                 "DOWNLOADS_TITLE": "Downloads",
-                "STARS_TITLE": "Stars",
-                "PUBLISHED_TITLE": "Published"
+                "STARS_TITLE": "Stars"
+            },
+            "PREVIEW": {
+                "BRAND": "MDT",
+                "SUBHEADING": "Every report filed by your department",
+                "SECONDARY": "Export",
+                "PRIMARY": "New incident",
+                "SEARCH": "Search incidents...",
+                "FOCUSED": "Status: Open",
+                "ROW_1": "Armed robbery at Fleeca Bank",
+                "ROW_1_META": "John Doe  2 hours ago",
+                "ROW_2": "Pursuit on Great Ocean Hwy",
+                "ROW_2_META": "Maria Ruiz  5 hours ago",
+                "ROW_3": "Traffic stop on Route 68",
+                "ROW_3_META": "Alex Kim  yesterday",
+                "WANTED": "Wanted",
+                "DETAILS": "Details",
+                "OFFICER": "Lead officer",
+                "OFFICER_VALUE": "Sgt. Maria Ruiz",
+                "STATUS": "Status",
+                "STATUS_VALUE": "Under investigation",
+                "SWITCH": "Notify units",
+                "OUTLINE": "Assign",
+                "DUPLICATE": "Duplicate"
             }
         }
     },
@@ -4794,8 +4746,6 @@
         "HEADING": "Activity Log",
         "SUBHEADING": "System activity and audit trail",
         "COLUMNS": {
-            "TIMESTAMP": "Date",
-            "AUTHOR": "Author",
             "ACTION": "Action",
             "MESSAGE": "Message"
         },
@@ -4807,7 +4757,6 @@
         },
         "SEARCH_PLACEHOLDER": "Search logs...",
         "EMPTY": "No log entries match the current filters",
-        "COUNT_LABEL": "entries",
         "ACTIONS": {
             "duty_on": "Duty On",
             "duty_off": "Duty Off",
@@ -4839,6 +4788,7 @@
             "citizen_image_change": "Citizen Photo Changed",
             "charges_issued": "Charges Issued",
             "note_added": "Note Added",
+            "note_removed": "Note Removed",
             "employee_grade_change": "Grade Changed",
             "employee_callsign_change": "Callsign Assigned",
             "employee_fired": "Employee Fired",
@@ -4853,8 +4803,10 @@
             "achievement_deleted": "Achievement Deleted",
             "review_created": "Review Filed",
             "review_updated": "Review Edited",
+            "review_deleted": "Review Deleted",
             "hr_note_created": "HR Note Filed",
             "hr_note_updated": "HR Note Edited",
+            "hr_note_deleted": "HR Note Deleted",
             "funds_adjusted": "Funds Adjusted",
             "permission_rank_changed": "Permission Rank Changed",
             "dispatch_created": "Dispatch Created",
@@ -4920,6 +4872,7 @@
             "CITIZEN_IMAGE_CHANGE": "Updated profile picture for {{identifier}}",
             "CHARGES_ISSUED": "Issued {{count}} charge(s) on {{entityType}} #{{id}}",
             "NOTE_ADDED": "Added a note to {{entityType}} #{{entityId}}",
+            "NOTE_REMOVED": "Removed a note from {{entityType}} #{{entityId}}",
             "EMPLOYEE_GRADE_CHANGE": "Set {{identifier}}'s grade to {{grade}}",
             "EMPLOYEE_CALLSIGN_CHANGE": "Set callsign {{callsign}} for {{identifier}}",
             "EMPLOYEE_FIRED": "Fired {{identifier}}",
@@ -4934,8 +4887,10 @@
             "ACHIEVEMENT_DELETED": "Deleted achievement #{{id}}",
             "REVIEW_CREATED": "Filed a peer review for {{identifier}}",
             "REVIEW_UPDATED": "Edited peer review #{{id}}",
+            "REVIEW_DELETED": "Deleted peer review #{{id}} for {{identifier}}",
             "HR_NOTE_CREATED": "Filed an HR note for {{identifier}}",
             "HR_NOTE_UPDATED": "Edited HR note #{{id}}",
+            "HR_NOTE_DELETED": "Deleted HR note #{{id}} for {{identifier}}",
             "FUNDS_ADJUSTED": "Adjusted {{job}} funds ({{type}}: {{amount}})",
             "PERMISSION_RANK_CHANGED": "Changed the rank required for {{permission}}",
             "DISPATCH_CREATED": "Created dispatch call {{code}}",
@@ -4993,7 +4948,6 @@
             "SUBMIT": "Create operation"
         },
         "FILTER_ALL": "All plans",
-        "EDIT_DETAILS": "Details",
         "EDIT_DIALOG_TITLE": "Edit operation plan",
         "EDIT_DIALOG_DESCRIPTION": "Change the operation's timing, briefing notes, departments or warrant.",
         "TOASTS": {
@@ -5033,7 +4987,6 @@
             "EDITING": "Pick an area type and draw with the toolbar at the top left of the map. Ctrl+Z undoes a step. Your changes are saved when you finish editing.",
             "SELECTED": "Its areas are shown on the map."
         },
-        "DISCARD": "Discard",
         "AREA_KINDS": {
             "perimeter": "Perimeter",
             "staging": "Staging area",
@@ -5123,7 +5076,6 @@
             "OF_ASSIGNED": "{{done}} of {{total}} assigned"
         },
         "ACTIVE": {
-            "TITLE": "Active operations",
             "OPEN": "Open",
             "YOUR_ASSIGNMENT": "Your assignment: {{places}}"
         },
@@ -5134,16 +5086,11 @@
     "WEAPON": {
         "INDEX": {
             "OWNER_CARD_TITLE": "Current owner",
-            "LINKED_INCIDENTS": "Linked Incidents",
-            "LINKED_EVIDENCE": "Linked Evidence",
-            "EMPTY_ATTACHED": "None attached yet"
+            "LINKED_EVIDENCE": "Linked Evidence"
         },
         "DETAILS_CARD": {
             "TITLE": "Weapon Details",
-            "VIEW_LINKS": "Links",
-            "VIEW_LINKS_HINT": "Open a graph of the records, people and incidents linked to this weapon",
-            "REGISTERED_BY": "Registered by",
-            "REGISTERED": "Registered"
+            "VIEW_LINKS_HINT": "Open a graph of the records, people and incidents linked to this weapon"
         },
         "TRANSFER_HISTORY": {
             "TITLE": "Transfer history",
@@ -5159,84 +5106,58 @@
             "DESCRIPTION": "Register a weapon to a citizen."
         },
         "FORM": {
-            "OWNER_LABEL": "Owner",
-            "MODEL_LABEL": "Weapon",
             "MODEL_PLACEHOLDER": "Select a weapon",
             "SERIAL_LABEL": "Serial number",
             "SERIAL_PLACEHOLDER": "G12345",
             "SERIAL_HINT": "A serial number is generated for you — you can change it now, but not after the weapon is registered.",
-            "SUBMIT": "Register weapon",
             "TOASTS": {
                 "CREATED": "Weapon registered"
             }
         },
         "INDEX": {
-            "HEADING": "Weapons",
             "SUBHEADING": "Search and browse all registered weapons",
             "SEARCH_PLACEHOLDER": "Search by name, serial or owner…",
             "EMPTY": "No weapons found",
-            "COUNT_LABEL": "weapons",
             "COLUMNS": {
-                "SERIAL": "Serial",
-                "WEAPON": "Weapon",
-                "OWNER": "Owner",
-                "CATEGORY": "Category",
-                "STATUS": "Status",
-                "REGISTERED": "Registered"
+                "SERIAL": "Serial"
             }
         }
     },
     "HOUSES": {
         "INDEX": {
-            "HEADING": "Properties",
             "SUBHEADING": "Search and browse all registered properties",
             "SEARCH_PLACEHOLDER": "Search by address or owner…",
             "EMPTY": "No properties found",
-            "COUNT_LABEL": "properties",
             "COLUMNS": {
-                "PROPERTY": "Property",
-                "ADDRESS": "Address",
-                "OWNER": "Owner"
+                "ADDRESS": "Address"
             }
         }
     },
     "TEMPLATES": {
-        "HEADING": "Templates",
         "SUBHEADING": "Reusable text for incidents and announcements, shared with your department.",
-        "UNTITLED_NAME": "Untitled Template",
         "COPY_SUFFIX": "{{name}} (Copy)",
         "LIST": {
             "SEARCH_PLACEHOLDER": "Search templates and snippets…",
-            "ALL_CATEGORIES": "All",
             "NO_RESULTS": "No templates found",
             "CREATE_DIALOG_TITLE": "Create a new template",
             "CREATE_DIALOG_DESCRIPTION": "Start a new reusable document template.",
-            "TITLE": "Templates",
             "NEW_TEMPLATE": "New template",
             "NO_TEMPLATES": "No templates yet",
             "SECTION_STARRED": "Starred",
-            "SECTION_ALL": "All templates",
-            "SECTION_SNIPPETS": "Snippets"
+            "SECTION_ALL": "All templates"
         },
         "SET_DEFAULT": {
             "TITLE": "Replace the default template?",
-            "DESCRIPTION": "\"{{currentName}}\" is currently the default {{category}} template. Making \"{{name}}\" the default will replace it.",
-            "CONFIRM": "Replace"
+            "DESCRIPTION": "\"{{currentName}}\" is currently the default {{category}} template. Making \"{{name}}\" the default will replace it."
         },
         "LIST_ITEM": {
             "STAR_TOOLTIP": "Star",
             "UNSTAR_TOOLTIP": "Unstar",
-            "DEFAULT_BADGE": "Default",
-            "SET_AS_DEFAULT": "Set as default",
-            "UPDATED": "Updated {{time}}",
-            "MORE": "More actions"
+            "SET_AS_DEFAULT": "Set as default"
         },
         "EDITOR": {
             "UNSAVE_FAVORITE": "Unsave from favorites",
             "SAVE_FAVORITE": "Save to favorites",
-            "DEFAULT_BADGE": "Default",
-            "PLACEHOLDERS_TOOLTIP": "Placeholders",
-            "PLACEHOLDERS_HINT_BEFORE": "Type",
             "PLACEHOLDERS_HINT_AFTER": "in the editor. Valid tokens highlight yellow; unknown tokens highlight red.",
             "NO_PLACEHOLDERS": "No placeholders for this category.",
             "LIST_BADGE": "list",
@@ -5244,34 +5165,24 @@
             "AUTOSAVE_SAVING": "Saving draft…",
             "AUTOSAVE_SAVED": "Draft saved locally",
             "UPDATED_AT": "Updated {{time}}",
-            "NAME_LABEL": "Name",
-            "CATEGORY_LABEL": "Category",
             "DEFAULT_ON": "Pre-filled when someone starts a new {{category}}.",
             "DEFAULT_OFF": "Not the default. Each department can have one default per category.",
             "MAKE_DEFAULT": "Make default",
             "UNSAVED": "Unsaved changes",
-            "DISCARD": "Discard",
             "DRAFT_RESTORED": "Restored your unsaved draft from {{time}}.",
             "SAVED_TOAST": "Template saved",
-            "PLACEHOLDERS_BUTTON": "Placeholders",
-            "DEPARTMENTS_LABEL": "Departments",
             "PREVIEW": "Preview",
-            "EDIT": "Edit",
             "SNIPPET_INFO": "Added where the cursor is. Officers pick it from the template menu or type / in the text."
         },
         "FORM": {
             "TITLE": {
-                "LABEL": "Title",
                 "PLACEHOLDER": "Standard incident report"
             },
             "CATEGORY": {
-                "LABEL": "Category",
-                "PLACEHOLDER": "Select a category",
                 "HINT": "Decides which placeholders are available and where the template is offered."
             },
             "SUBMIT_BUTTON_LABEL": "Create template",
             "KIND": {
-                "LABEL": "Type",
                 "HINT": "A template fills in the text of a new record. A snippet is added where the cursor is, from the template menu or by typing / in the text."
             }
         },
@@ -5361,7 +5272,6 @@
             "HINT": "Pick a template from the list to edit it, or create a new one. Templates pre-fill new records so nobody starts from a blank page; snippets add reusable paragraphs anywhere in the text."
         },
         "DELETE": {
-            "TITLE": "Delete \"{{name}}\"?",
             "DESCRIPTION": "The template is removed for good. Records already written from it are not affected."
         },
         "KINDS": {
@@ -5385,10 +5295,7 @@
             "DESCRIPTION": "File a new incident report with the people, records and charges involved."
         },
         "FORM": {
-            "TITLE_LABEL": "Title",
             "TITLE_PLACEHOLDER": "Shooting on Grove Street",
-            "DESCRIPTION_LABEL": "Description",
-            "DESCRIPTION_PLACEHOLDER": "Write what happened",
             "SUSPECTS_LABEL": "Suspects involved",
             "SUSPECTS_PLACEHOLDER": "Select suspects",
             "VICTIMS_LABEL": "Victims involved",
@@ -5401,22 +5308,15 @@
             "EVIDENCES_PLACEHOLDER": "Select evidences",
             "WEAPONS_LABEL": "Weapons involved",
             "WEAPONS_PLACEHOLDER": "Select weapons",
-            "SUBMIT": "Create incident",
             "TOASTS": {
                 "SUCCESS": "Incident {{id}} has been created"
             }
         },
         "INDEX": {
-            "HEADING": "Incidents",
             "SUBHEADING": "Browse and manage all incident reports",
             "SEARCH_PLACEHOLDER": "Search by title or #…",
             "EMPTY": "No incidents found",
-            "COUNT_LABEL": "incidents",
             "COLUMNS": {
-                "ID": "ID",
-                "INCIDENT": "Incident",
-                "STATUS": "Status",
-                "TAGS": "Tags",
                 "REPORTED_BY": "Reported by",
                 "REPORTED": "Reported"
             }
@@ -5425,7 +5325,6 @@
     "INCIDENT": {
         "DETAILS_CARD": {
             "TITLE": "Incident Details",
-            "VIEW_LINKS": "Links",
             "VIEW_LINKS_HINT": "Open a graph of the records, people and vehicles linked to this incident"
         },
         "INDEX": {
@@ -5433,20 +5332,6 @@
             "EDITOR_PLACEHOLDER": "Write what happened",
             "CREATED": "Created {{date}}",
             "UPDATED": "Updated {{date}}",
-            "TOASTS": {
-                "SAVING_DESCRIPTION": "Saving description…",
-                "DESCRIPTION_UPDATED": "Description updated",
-                "REMOVING_TAG": "Removing tag…",
-                "TAG_REMOVED": "Tag removed"
-            },
-            "SECTIONS": {
-                "SUSPECTS": "Suspects",
-                "VICTIMS": "Victims",
-                "OFFICERS": "Officers",
-                "VEHICLES": "Vehicles",
-                "WEAPONS": "Weapons",
-                "EVIDENCE": "Evidence"
-            },
             "EMPTY": {
                 "SUSPECTS": "No suspects linked",
                 "VICTIMS": "No victims linked",
@@ -5457,7 +5342,6 @@
             }
         },
         "DELETE_BUTTON": {
-            "LABEL": "Delete",
             "CONFIRM_TITLE": "Delete this incident?",
             "CONFIRM_DESCRIPTION": "This permanently removes the incident, its charges, links, tags and activity log. This can't be undone.",
             "TOASTS": {
@@ -5468,47 +5352,26 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "TRIGGER": "Create BOLO",
-            "TITLE": "Create BOLO",
             "DESCRIPTION": "Issue a lookout for a person or vehicle. New BOLOs start as drafts."
         },
         "FORM": {
-            "TITLE_LABEL": "Title",
             "TITLE_PLACEHOLDER": "Armed suspect in a black Sultan RS",
-            "PRIORITY_LABEL": "Priority",
-            "SUBJECT_TYPE_LABEL": "Subject type",
-            "SUBJECT_LABEL": "Subject",
-            "DESCRIPTION_LABEL": "Description",
             "DESCRIPTION_PLACEHOLDER": "Where they were last seen, what they look like and why they are wanted",
             "EXPIRES_LABEL": "Expires at",
             "EXPIRES_PLACEHOLDER": "Defaults to 7 days",
-            "SUBMIT": "Create BOLO",
             "TOASTS": {
                 "CREATED": "BOLO created"
             }
         },
         "INDEX": {
-            "HEADING": "BOLOs",
             "SUBHEADING": "Browse and manage all be-on-lookout alerts",
-            "SEARCH_PLACEHOLDER": "Search by title, ref or subject…",
-            "EMPTY": "No BOLOs found",
-            "COUNT_LABEL": "BOLOs",
-            "COLUMNS": {
-                "ID": "ID",
-                "BOLO": "BOLO",
-                "SUBJECT": "Subject",
-                "TYPE": "Type",
-                "PRIORITY": "Priority",
-                "STATUS": "Status",
-                "EXPIRES": "Expires"
-            }
+            "EMPTY": "No BOLOs found"
         }
     },
     "RADAR": {
         "TOAST": {
             "TITLE": "Wanted Plate Detected",
             "OWNER_SUFFIX": "registered owner",
-            "PLATE": "Plate",
             "KIND": {
                 "BOLO": "Active BOLO",
                 "WARRANT": "Active warrant"
@@ -5521,20 +5384,12 @@
         },
         "DETAILS_CARD": {
             "TITLE": "BOLO Details",
-            "VIEW_LINKS": "Links",
             "VIEW_LINKS_HINT": "Open a graph of the records, people and vehicles linked to this BOLO",
             "FIELDS": {
-                "LOCATED": "Located",
-                "LOCATED_BY": "{{date}} by {{name}}"
+                "LOCATED": "Located"
             },
-            "ISSUED_BY": "Issued by",
             "ISSUED": "Issued",
-            "NOT_LOCATED": "Not located yet",
-            "NO_DESCRIPTION": "No description",
-            "TOASTS": {
-                "ATTACHING_SUBJECT": "Attaching subject…",
-                "SUBJECT_ATTACHED": "Subject attached"
-            }
+            "NOT_LOCATED": "Not located yet"
         },
         "MARK_LOCATED": {
             "BUTTON": "Mark located",
@@ -5552,7 +5407,6 @@
             "MESSAGE": "detected near {{location}}"
         },
         "DELETE_BUTTON": {
-            "LABEL": "Delete",
             "CONFIRM_TITLE": "Delete this BOLO?",
             "CONFIRM_DESCRIPTION": "This permanently removes the BOLO, its notes and activity log. This can't be undone.",
             "TOASTS": {
@@ -5565,13 +5419,11 @@
         "INDEX": {
             "HEADING": "Legal Statutes & Penal Code",
             "SUBHEADING": "Official codification of offenses, financial sanctions, and judicial mandates",
-            "CATEGORY_BUTTON": "Category",
             "CATEGORY_DIALOG_TITLE": "New category",
             "CATEGORY_DIALOG_DESCRIPTION": "Add a new legal category to organize your penal code articles and offenses.",
             "ARTICLE_BUTTON": "Article",
             "ARTICLE_DIALOG_TITLE": "New article",
             "ARTICLE_DIALOG_DESCRIPTION": "Define a new legal offense, including its classification, fine amounts, and sentencing guidelines.",
-            "CATEGORY_EDIT_TITLE": "Edit category",
             "CATEGORY_EDIT_DESCRIPTION": "Update the number, name and description of this category.",
             "ARTICLE_EDIT_TITLE": "Edit article",
             "ARTICLE_EDIT_DESCRIPTION": "Update the classification, fine amounts and sentencing guidelines of this offense.",
@@ -5579,37 +5431,28 @@
             "NO_MATCH": "No articles match your search.",
             "EMPTY": "No penal code articles found.",
             "SUSPENDS_LICENSE": "Suspends {{license}} license",
-            "STACKABLE": "Stackable",
             "COMMUNITY_SVC": "Community Svc.",
             "ARTICLE_COUNT_one": "{{count}} article",
             "ARTICLE_COUNT_other": "{{count}} articles",
             "NO_ARTICLES_IN_CATEGORY": "No articles in this category."
         },
         "ARTICLE_FORM": {
-            "CATEGORY_LABEL": "Category",
-            "CODE_LABEL": "Code",
             "CODE_PLACEHOLDER": "PO.6.05",
-            "NAME_LABEL": "Name",
             "NAME_PLACEHOLDER": "Evading Officers (On Foot)",
-            "DESCRIPTION_LABEL": "Description",
             "DESCRIPTION_PLACEHOLDER": "Fleeing from a peace officer on foot.",
             "CLASS_LABEL": "Class",
-            "FINE_AMOUNT_LABEL": "Fine",
             "MIN_FINE_LABEL": "Min fine",
             "MAX_FINE_LABEL": "Max fine",
             "CONFINEMENT_TYPE_LABEL": "Sentence type",
             "CONFINEMENT_JAIL": "Jail time",
-            "CONFINEMENT_COMMUNITY_SERVICE": "Community service",
             "MIN_JAIL_LABEL": "Min jail",
             "MAX_JAIL_LABEL": "Max jail",
-            "COMMUNITY_SERVICE_TASKS_LABEL": "Community service (tasks)",
             "MIN_TASKS_LABEL": "Min tasks",
             "MAX_TASKS_LABEL": "Max tasks",
             "PENALTY_POINTS_LABEL": "Penalty points",
             "MIN_POINTS_LABEL": "Min points",
             "MAX_POINTS_LABEL": "Max points",
             "BAIL_ELIGIBLE_LABEL": "Eligible for bail",
-            "BAIL_AMOUNT_LABEL": "Bail",
             "MIN_BAIL_LABEL": "Min bail",
             "MAX_BAIL_LABEL": "Max bail",
             "CAN_SUSPEND_LICENSE_LABEL": "Can suspend a license",
@@ -5644,20 +5487,15 @@
             "LICENSE_PLACEHOLDER": "Select a license",
             "SUBMIT": "Create article",
             "SECTIONS": {
-                "SENTENCE": "Sentence",
-                "BAIL": "Bail",
                 "OPTIONS": "Options"
             },
             "DELETE": {
-                "TITLE": "Delete \"{{name}}\"?",
                 "DESCRIPTION": "The article is removed from the penal code. Charges already issued keep their amounts."
             }
         },
         "CATEGORY_FORM": {
             "NUMBER_LABEL": "Number",
-            "NAME_LABEL": "Name",
             "NAME_PLACEHOLDER": "Public Order & Conduct",
-            "DESCRIPTION_LABEL": "Description",
             "DESCRIPTION_PLACEHOLDER": "Offences against public order, like disturbing the peace.",
             "TOASTS": {
                 "CREATING": "Creating penal code category...",
@@ -5665,15 +5503,12 @@
                 "SAVING": "Saving category...",
                 "SAVED": "Category saved",
                 "DELETING": "Deleting category...",
-                "DELETED": "Category deleted",
-                "FAILED": "Something went wrong"
+                "DELETED": "Category deleted"
             },
             "ERRORS": {
                 "NUMBER_TAKEN": "Chapter {{number}} already exists — choose a different number"
             },
-            "SUBMIT": "Create category",
             "DELETE": {
-                "TITLE": "Delete \"{{name}}\"?",
                 "DESCRIPTION": "The category and every article in it are removed from the penal code. Charges already issued keep their amounts."
             }
         },
@@ -5681,7 +5516,6 @@
             "TRIGGER": "Issue Fine",
             "TITLE": "Process Fine",
             "DESCRIPTION": "Cite a citizen for one or more offenses. Adjust each charge within its allowed range — the total is billed to them.",
-            "CITIZEN_LABEL": "Citizen",
             "CHANGE": "Change",
             "SEARCH_CITIZEN_PLACEHOLDER": "Search a citizen…",
             "ADD_OFFENSE_LABEL": "Add offense",
@@ -5691,8 +5525,6 @@
             "SUM_OF_CHARGES": "sum of charges",
             "CHARGES_SUMMARY_LABEL": "Charges Summary",
             "CHARGES_EMPTY": "Search above to add offenses, then adjust each fine within its allowed range.",
-            "QTY_LABEL": "Qty",
-            "FINE_LABEL": "Fine",
             "PROCESS_FINE": "Process Fine · {{amount}}",
             "TOASTS": {
                 "PROCESSING": "Processing fine…",
@@ -5703,29 +5535,21 @@
     },
     "PENALTIES": {
         "INDEX": {
-            "HEADING": "Penalties",
             "SUBHEADING": "Issue fines and jail time, and review the penalty log",
             "SEARCH_PLACEHOLDER": "Search by citizen, officer, or reason…",
             "EMPTY": "No penalties on record",
-            "COUNT_LABEL": "penalties",
             "COLUMNS": {
-                "CITIZEN": "Citizen",
-                "PENALTY": "Penalty",
-                "REASON": "Reason",
-                "OFFICER": "Officer",
-                "DATE": "Date"
+                "PENALTY": "Penalty"
             },
             "FILTERS": {
-                "TYPE_LABEL": "Type",
                 "JAIL_RANGE": "Jail time"
             },
             "LICENSE_SUSPENDED": "License Suspended"
         },
         "JAIL_DIALOG": {
-            "TRIGGER": "Jail Nearby",
-            "DIALOG_TITLE": "Jail a nearby player",
-            "DIALOG_DESCRIPTION": "Sentence a player standing next to you without a penal-code charge. It is logged as a penalty.",
-            "NO_PLAYERS": "No players nearby.",
+            "TRIGGER": "Jail",
+            "DIALOG_TITLE": "Jail a citizen",
+            "DIALOG_DESCRIPTION": "Sentence any registered citizen, online or offline, without a penal-code charge. It is logged as a penalty.",
             "JAIL_TIME_LABEL": "Jail time (months)",
             "REASON_LABEL": "Reason (optional)",
             "REASON_PLACEHOLDER": "Resisting arrest",
@@ -5736,24 +5560,12 @@
                 "FAILED": "Failed to jail the player",
                 "SUCCESS_COMMUNITY_SERVICE": "Assigned {{name}} {{duration}} of community service"
             },
-            "SENTENCE": "Sentence",
-            "TYPE_LABEL": "Type",
-            "TYPES": {
-                "JAIL": "Jail",
-                "COMMUNITY_SERVICE": "Community service"
-            },
-            "TASKS_LABEL": "Community service (tasks)",
             "COMMUNITY_SERVICE_BUTTON": "Assign {{duration}}"
         },
         "ISSUE_DIALOG": {
             "TRIGGER": "Issue Penalty",
             "DIALOG_DESCRIPTION": "Select a citizen, browse the penal code, and process the penalty.",
-            "CITIZEN_LABEL": "Citizen",
-            "REASON_LABEL": "Reason",
             "REASON_PLACEHOLDER": "Traffic stop on Route 68",
-            "FINE_SUFFIX": "fine",
-            "JAIL_SUFFIX": "jail",
-            "COMMUNITY_SERVICE_SUFFIX": "comm. service",
             "PROCESS_PENALTY": "Process Penalty",
             "TOASTS": {
                 "PROCESSING": "Processing penalty…",
@@ -5766,9 +5578,7 @@
         "REGISTER_DIALOG": {
             "TRIGGER": "Register Citizen",
             "TITLE": "Register a citizen",
-            "DESCRIPTION": "Pick a nearby player to add them to the MDT.",
-            "NO_NEARBY": "No unregistered players nearby.",
-            "PROFILE_HINT": "Profile — fill in what you know, edit the rest later",
+            "DESCRIPTION": "Pick any character, online or offline, to add them to the MDT.",
             "FIELDS": {
                 "FULL_NAME": "Full name",
                 "DOB": "Date of birth",
@@ -5776,37 +5586,35 @@
                 "GENDER_PLACEHOLDER": "Unknown",
                 "MALE": "Male",
                 "FEMALE": "Female",
-                "PHONE": "Phone number",
                 "NATIONALITY": "Nationality",
                 "NATIONALITY_PLACEHOLDER": "Select nationality",
-                "OCCUPATION": "Occupation",
-                "RANK": "Rank / title",
-                "FINGERPRINT": "Fingerprint"
+                "FINGERPRINT": "Fingerprint",
+                "CHARACTER": "Character",
+                "CHARACTER_INFO": "Characters that are not registered yet, online or offline.",
+                "HEIGHT": "Height",
+                "HEIGHT_UNIT": "cm",
+                "HEIGHT_FEET_UNIT": "ft",
+                "HEIGHT_INCHES_UNIT": "in",
+                "JOB": "Job",
+                "JOB_PLACEHOLDER": "Select a job",
+                "GRADE": "Grade",
+                "GRADE_PLACEHOLDER": "Select a grade"
             },
-            "REGISTER_BUTTON": "Register",
             "TOASTS": {
                 "REGISTERING": "Registering citizen…",
                 "REGISTERED": "{{name}} registered",
                 "FAILED": "Failed to register citizen"
-            }
+            },
+            "FINGERPRINT_HINT": "A fingerprint is generated for you; the phone number is read from the phone automatically."
         },
         "INDEX": {
-            "HEADING": "Citizens",
             "SUBHEADING": "Search and browse all registered citizens",
             "SEARCH_PLACEHOLDER": "Search by name, ID or phone…",
             "EMPTY": "No citizens found",
-            "COUNT_LABEL": "citizens",
-            "UNNAMED": "Unnamed",
             "COLUMNS": {
-                "NAME": "Name",
-                "GENDER": "Gender",
-                "OCCUPATION": "Occupation",
-                "PHONE": "Phone",
-                "STATUS": "Status",
-                "TAGS": "Tags"
+                "GENDER": "Gender"
             },
             "STATUS": {
-                "WANTED": "Wanted",
                 "CAUTION": "Caution",
                 "CLEAR": "Clear"
             }
@@ -5816,16 +5624,19 @@
         "REGISTER_DIALOG": {
             "TRIGGER": "Register Vehicle",
             "TITLE": "Register a vehicle",
-            "DESCRIPTION": "Pick a nearby vehicle to add it to the MDT.",
-            "NEARBY_VEHICLE": "Nearby vehicle",
+            "DESCRIPTION": "Enter the vehicle or fill it from one nearby, then assign its owner.",
+            "NEARBY_VEHICLE": "Fill from a nearby vehicle",
             "NO_NEARBY": "No vehicles nearby.",
-            "PROFILE_HINT": "Profile — fill in what you know, edit the rest later",
             "FIELDS": {
-                "MODEL_LABEL": "Model / label",
-                "COLOR": "Color",
-                "COLOR_PLACEHOLDER": "Matte black"
+                "PLATE_PLACEHOLDER": "ABC123",
+                "MODEL": "Model",
+                "MODEL_PLACEHOLDER": "Select a model",
+                "COLOR": "Primary color",
+                "SECONDARY_COLOR": "Secondary color",
+                "SECONDARY_COLOR_PLACEHOLDER": "Same as primary",
+                "OWNER": "Owner",
+                "OWNER_INFO": "The registered citizen who owns this vehicle."
             },
-            "REGISTER_BUTTON": "Register",
             "TOASTS": {
                 "REGISTERING": "Registering vehicle…",
                 "REGISTERED": "{{label}} ({{plate}}) registered",
@@ -5833,21 +5644,14 @@
             }
         },
         "INDEX": {
-            "HEADING": "Vehicles",
             "SUBHEADING": "Search and browse all registered vehicles",
             "SEARCH_PLACEHOLDER": "Search by plate, model or owner…",
             "EMPTY": "No vehicles found",
-            "COUNT_LABEL": "vehicles",
-            "BOLO_TAG": "BOLO",
             "NOT_FLAGGED": "Not flagged",
             "MODEL_FILTER_PLACEHOLDER": "Any model",
             "COLUMNS": {
-                "PLATE": "Plate",
                 "MODEL": "Model",
-                "OWNER": "Owner",
-                "CLASS": "Class",
-                "STATUS": "Status",
-                "WANTED": "Wanted"
+                "CLASS": "Class"
             },
             "STATUS": {
                 "STOLEN": "Stolen",
@@ -5859,7 +5663,6 @@
     "CITIZEN": {
         "PROFILE_IMAGE": {
             "DIALOG_TITLE": "Change Profile Picture",
-            "DIALOG_DESCRIPTION": "Add a link or take a picture directly in-game.",
             "CONFIRM_LABEL": "Change"
         },
         "LICENSES_CARD": {
@@ -5872,8 +5675,6 @@
             "SUSPENDED": "Suspended",
             "VALID": "Valid",
             "ISSUED": "Issued {{date}}",
-            "EXPIRES": "Expires {{date}}",
-            "EXPIRED": "Expired {{date}}",
             "REINSTATE": "Reinstate",
             "GRANT_DIALOG": {
                 "TITLE": "Grant License",
@@ -5913,7 +5714,6 @@
             "DIALOG_REMOVING_one": "Removes {{amount}} point from the current {{total}}",
             "DIALOG_REMOVING_other": "Removes {{amount}} points from the current {{total}}",
             "DIALOG_SUSPEND_WARNING": "This reaches the threshold and suspends the driver license.",
-            "DIALOG_CONFIRM": "Save",
             "TOASTS": {
                 "UPDATING": "Updating points…",
                 "UPDATED": "Points updated",
@@ -5953,9 +5753,7 @@
             },
             "COLUMNS": {
                 "CONTACT": "Contact",
-                "TYPE": "Type",
-                "DURATION": "Duration",
-                "DATE": "Date"
+                "DURATION": "Duration"
             },
             "CALLS": {
                 "EMPTY_TITLE": "No call history",
@@ -5987,9 +5785,7 @@
                 "EMPTY_DESCRIPTION": "No text message threads found for this number.",
                 "GROUP_TITLE": "Group chat",
                 "SHARED_LOCATION": "Shared location",
-                "WAYPOINT": "Set waypoint",
                 "ATTACHMENT_ALT": "Attachment",
-                "SETTING_WAYPOINT": "Setting waypoint…",
                 "WAYPOINT_SET": "Waypoint set",
                 "GROUP_NAMES_MORE_one": "{{names}} +{{formatted}}",
                 "GROUP_NAMES_MORE_other": "{{names}} +{{formatted}}",
@@ -6002,22 +5798,15 @@
                 "SEARCH": "Search conversations",
                 "NO_MATCHES": "No conversations match",
                 "NO_MATCHES_HINT": "Try a different name, number or word.",
-                "TRUNCATED": "Showing the {{shown}} most recent of {{total}}",
-                "COPY_TEXT": "Copy text",
-                "TEXT_COPIED": "Message copied",
-                "COPY_COORDS": "Copy coordinates",
-                "COORDS_COPIED": "Coordinates copied"
+                "TRUNCATED": "Showing the {{shown}} most recent of {{total}}"
             },
             "OPEN_PROFILE": "Open profile"
         },
         "PENALTIES_CARD": {
             "SERVICE_HINT": "Community service, in hours",
-            "TITLE": "Penalties",
             "ADD": "Issue penalty",
             "NO_PENALTIES": "No penalties on record",
             "ISSUE_DIALOG_TITLE": "Issue Penalty — {{name}}",
-            "BAIL_SUFFIX": "bail",
-            "FINES_SUFFIX": "fines",
             "SUMMARY_RECORDS_one": "{{count}} record",
             "SUMMARY_RECORDS_other": "{{count}} records",
             "POINTS_BADGE_one": "+{{formatted}} point",
@@ -6025,7 +5814,6 @@
             "VIEW_ALL": "View all {{formatted}}",
             "HISTORY_DIALOG_TITLE": "Penalties — {{name}}",
             "COLUMNS": {
-                "DATE": "Date",
                 "OFFENCE": "Offence",
                 "SERVICE": "Service"
             },
@@ -6057,12 +5845,24 @@
                 "REMOVING_TAG": "Removing tag…",
                 "TAG_REMOVED": "Tag removed"
             }
+        },
+        "EDIT_PROFILE_DIALOG": {
+            "TITLE": "Edit profile",
+            "DESCRIPTION": "Update what's on file for {{name}}.",
+            "TOASTS": {
+                "SAVING": "Saving profile…",
+                "SAVED": "Profile updated",
+                "FAILED": "Failed to update the profile"
+            }
         }
     },
     "VEHICLE": {
+        "STOLEN_BOLO": {
+            "TITLE": "Vehicle reported stolen — {{plate}}",
+            "DESCRIPTION": "Marked stolen from the MDT vehicle page."
+        },
         "PROFILE_IMAGE": {
             "DIALOG_TITLE": "Change Vehicle Picture",
-            "DIALOG_DESCRIPTION": "Add a link or take a picture directly in-game.",
             "CONFIRM_LABEL": "Change"
         },
         "MODIFICATIONS_CARD": {
@@ -6071,7 +5871,6 @@
             "EMPTY_TITLE": "No modifications on record",
             "FLAGGED": "Flagged",
             "FLAGGED_HINT": "Often illegal or restricted, worth a closer look during a stop.",
-            "ADDED_BY": "Added by {{name}}",
             "REMOVE_ARIA": "Remove modification",
             "CATEGORIES": {
                 "engine": "Engine",
@@ -6092,12 +5891,10 @@
             "DIALOG": {
                 "TITLE": "Log a modification",
                 "DESCRIPTION": "Record something you observed or confirmed on this vehicle. It's added to the record and to the activity log.",
-                "CATEGORY_LABEL": "Category",
                 "CATEGORY_HINT": "Pick the closest fit. Flagged categories are highlighted for other officers.",
                 "NAME_LABEL": "What was modified?",
                 "NAME_PLACEHOLDER": "Stage 3 turbo",
-                "NAME_HINT": "Be specific: the part, and anything notable about it.",
-                "SUBMIT": "Log modification"
+                "NAME_HINT": "Be specific: the part, and anything notable about it."
             },
             "TOASTS": {
                 "ADDED": "Modification logged",
@@ -6106,25 +5903,24 @@
         },
         "INDEX": {
             "UNLABELED": "Unlabeled vehicle",
-            "SUBHEADING": "Plate",
-            "LINKED_INCIDENTS": "Linked Incidents",
-            "LINKED_BOLOS": "Linked BOLOs",
-            "LINKED_WARRANTS": "Linked Warrants",
-            "EMPTY_ATTACHED": "None attached yet"
+            "LINKED_BOLOS": "Linked BOLOs"
         },
         "DETAILS_CARD": {
             "TITLE": "Vehicle Details",
             "CLASS": "Class",
-            "COLOR": "Color",
             "VIN": "VIN",
-            "VIEW_LINKS": "Links",
             "VIEW_LINKS_HINT": "Open a graph of the records, people and citizens linked to this vehicle",
             "IMPOUNDED": "Impounded",
             "IMPOUNDED_BY": "{{date}} by {{officer}}",
-            "IMPOUNDED_UNKNOWN": "No impound details on record",
+            "IMPOUNDED_UNKNOWN": "No impound details on record"
+        },
+        "EDIT_PROFILE_DIALOG": {
+            "TITLE": "Edit vehicle",
+            "DESCRIPTION": "Update the model, paint and owner on file for {{plate}}.",
             "TOASTS": {
-                "REMOVING_TAG": "Removing tag…",
-                "TAG_REMOVED": "Tag removed"
+                "SAVING": "Saving vehicle…",
+                "SAVED": "Vehicle updated",
+                "FAILED": "Failed to update the vehicle"
             }
         }
     },
@@ -6325,18 +6121,14 @@
         }
     },
     "ANNOUNCEMENTS": {
-        "HEADING": "Announcements",
         "SUBHEADING": "Department-wide notices, directives and alerts",
         "EMPTY_TITLE": "No announcements yet",
         "EMPTY_SUBTITLE": "Department-wide notices will appear here",
-        "CONTENT_LABEL": "Content",
         "LIST": {
             "SEARCH_PLACEHOLDER": "Search title, content or author…",
             "FILTERS": {
-                "ALL": "All",
                 "ALL_TYPES": "All types",
                 "PINNED": "Pinned",
-                "ACTIVE": "Active",
                 "EXPIRED": "Expired"
             },
             "NO_MATCH_TITLE": "No matching announcements",
@@ -6344,7 +6136,6 @@
         },
         "PINNED": "Pinned",
         "PINNED_AT": "Pinned {{date}}",
-        "EXPIRED_BADGE": "Expired",
         "POSTED_RELATIVE": "Posted {{time}}",
         "UPDATED_RELATIVE": "Last updated {{time}}",
         "ACKNOWLEDGED_COUNT": "{{count}}/{{total}} acknowledged",
@@ -6355,12 +6146,8 @@
         "EDIT_CONTENT": "Edit Content",
         "DETAILS_LABEL": "Details",
         "FIELDS": {
-            "TYPE": "Type",
-            "STATUS": "Status",
             "NOT_PINNED": "Not pinned",
-            "AUTHOR": "Author",
-            "POSTED": "Posted",
-            "UPDATED": "Updated"
+            "POSTED": "Posted"
         },
         "ACKNOWLEDGED_BY": {
             "TITLE": "Acknowledged By",
@@ -6412,16 +6199,11 @@
         "FORM": {
             "SUBMIT_BUTTON_LABEL": "Create announcement",
             "TITLE": {
-                "LABEL": "Title",
                 "PLACEHOLDER": "New patrol schedule"
             },
             "CONTENT": {
                 "LABEL": "Content",
                 "PLACEHOLDER": "Write your announcement"
-            },
-            "TYPE": {
-                "LABEL": "Type",
-                "PLACEHOLDER": "Select a type"
             },
             "EXPIRY": {
                 "LABEL": "Expiration date",
@@ -6436,6 +6218,14 @@
         "citizens": {
             "PLACEHOLDER": "Search citizens by name or ID…",
             "EMPTY": "No citizens found"
+        },
+        "characters": {
+            "PLACEHOLDER": "Search characters by name or ID…",
+            "EMPTY": "No unregistered characters found"
+        },
+        "recruits": {
+            "PLACEHOLDER": "Search unemployed citizens by name or ID…",
+            "EMPTY": "No unemployed citizens found"
         },
         "vehicles": {
             "PLACEHOLDER": "Search by plate, model or owner…",
@@ -6478,15 +6268,12 @@
             "EMPTY": "No chapters found"
         },
         "COMMON": {
-            "UNNAMED": "Unnamed",
             "NO_OWNER_FOUND": "No owner found",
             "OWNED_BY": "Owned by {{name}}",
             "REGISTERED_TO": "Registered to {{name}}",
             "CREATED_AGO": "Created {{time}}",
-            "CLEAR_SEARCH": "Clear search",
             "START_TYPING": "Start typing to search…",
             "CLEAR_ALL": "Clear all",
-            "SELECTED_COUNT": "{{count}} selected",
             "SELECTED_OF": "{{count}} of {{max}} selected",
             "REMOVE_ARIA": "Remove {{value}}",
             "MORE_COUNT": "+{{count}} more"
@@ -6499,31 +6286,20 @@
         "INDEX": {
             "SUBHEADING": "Warrant Record",
             "FIELDS": {
-                "SERVED": "Served",
-                "SERVED_BY": "{{date}} by {{name}}"
-            },
-            "SECTIONS": {
-                "INVESTIGATORS": "Investigators",
-                "INCIDENTS": "Incidents",
-                "EVIDENCE": "Evidence"
+                "SERVED": "Served"
             },
             "EMPTY": {
                 "INVESTIGATORS": "No investigators assigned",
-                "INCIDENTS": "No incidents linked",
-                "EVIDENCE": "None attached yet"
+                "INCIDENTS": "No incidents linked"
             }
         },
         "DETAILS_CARD": {
             "TITLE": "Warrant Details",
-            "VIEW_LINKS": "Links",
             "VIEW_LINKS_HINT": "Open a graph of the records, people and evidence linked to this warrant",
             "REQUESTED_BY": "Requested by",
             "REQUESTED": "Requested",
-            "REASON": "Reason",
             "NOT_SERVED": "Not served yet",
             "TOASTS": {
-                "ATTACHING_SUBJECT": "Attaching subject…",
-                "SUBJECT_ATTACHED": "Subject attached",
                 "SAVING_REASON": "Saving reason…",
                 "REASON_UPDATED": "Reason updated"
             },
@@ -6557,7 +6333,6 @@
             "NO_NOTE": "No briefing notes"
         },
         "DELETE_BUTTON": {
-            "LABEL": "Delete",
             "CONFIRM_TITLE": "Delete this warrant?",
             "CONFIRM_DESCRIPTION": "This permanently removes the warrant, its investigators, links, charges, notes and activity log. This can't be undone.",
             "TOASTS": {
@@ -6568,42 +6343,17 @@
     },
     "WARRANTS": {
         "INDEX": {
-            "HEADING": "Warrants",
             "SUBHEADING": "Browse and manage all warrants",
             "CREATE_TRIGGER": "Create Warrant",
             "CREATE_TITLE": "Create a warrant",
             "CREATE_DESCRIPTION": "Request a search or arrest warrant against a citizen, vehicle, or property.",
-            "SEARCH_PLACEHOLDER": "Search by title, ref or subject…",
             "EMPTY": "No warrants found",
-            "COUNT_LABEL": "warrants",
-            "NOT_SERVED": "Not served yet",
-            "NO_EXPIRY": "No expiry",
-            "COLUMNS": {
-                "ID": "ID",
-                "WARRANT": "Warrant",
-                "SUBJECT": "Subject",
-                "TYPE": "Type",
-                "PRIORITY": "Priority",
-                "STATUS": "Status",
-                "SERVED": "Served"
-            }
+            "NO_EXPIRY": "No expiry"
         },
         "FORM": {
-            "TITLE_LABEL": "Title",
             "TITLE_PLACEHOLDER": "Arrest of John Doe for murder",
-            "TYPE_LABEL": "Type",
-            "TYPE_SEARCH": "Search Warrant",
-            "TYPE_ARREST": "Arrest Warrant",
-            "TYPE_PLACEHOLDER": "Select a type",
-            "SUSPECT_LABEL": "Suspect",
-            "VEHICLE_LABEL": "Vehicle",
-            "PROPERTY_LABEL": "Property",
-            "PRIORITY_LABEL": "Priority",
             "REASON_LABEL": "Probable Cause",
             "REASON_PLACEHOLDER": "Why is this warrant needed? Write down the facts.",
-            "INCIDENTS_LABEL": "Incidents",
-            "EVIDENCE_LABEL": "Evidence",
-            "CHARGES_LABEL": "Charges",
             "EXPIRES_LABEL": "Expires At",
             "EXPIRES_PLACEHOLDER": "Pick an expiry date",
             "TOASTS": {
@@ -6618,68 +6368,38 @@
             "DESCRIPTION": "Record a piece of evidence and link it to the people, vehicles and incidents involved."
         },
         "FORM": {
-            "NAME_LABEL": "Name",
             "NAME_PLACEHOLDER": "Pistol found at the scene",
-            "TYPE_LABEL": "Type",
-            "STORAGE_LABEL": "Storage location",
             "STORAGE_PLACEHOLDER": "Locker B12",
-            "DESCRIPTION_LABEL": "Description",
             "DESCRIPTION_PLACEHOLDER": "Where and how it was found, and what state it is in",
-            "SUSPECTS_LABEL": "Suspects",
-            "VICTIMS_LABEL": "Victims",
-            "OWNERS_LABEL": "Owners",
             "SUSPECTS_INFO": "People believed to have used or left this, like the shooter whose casings these are.",
             "VICTIMS_INFO": "People it was used against or taken from.",
             "OWNERS_INFO": "Who it belongs to, without blaming them. For example the owner of a seized phone or the store that handed over its CCTV.",
-            "VEHICLES_LABEL": "Vehicles",
-            "WEAPONS_LABEL": "Weapons",
-            "INCIDENTS_LABEL": "Incidents",
             "ITEMS_LABEL": "Items",
-            "PHOTOS_LABEL": "Photos",
-            "SUBMIT": "Log evidence",
             "TOASTS": {
                 "CREATED": "Evidence logged"
             }
         },
         "INDEX": {
-            "HEADING": "Evidence",
             "SUBHEADING": "Search and browse all recorded evidence",
             "SEARCH_PLACEHOLDER": "Search by name or ref…",
-            "EMPTY": "No evidence found",
-            "COUNT_LABEL": "evidence records",
-            "COLUMNS": {
-                "ID": "ID",
-                "EVIDENCE": "Evidence",
-                "TYPE": "Type",
-                "STATUS": "Status",
-                "TAGS": "Tags"
-            }
+            "EMPTY": "No evidence found"
         }
     },
     "EVIDENCE": {
         "DETAILS_CARD": {
             "TITLE": "Evidence Details",
-            "VIEW_LINKS": "Links",
             "VIEW_LINKS_HINT": "Open a graph of the records, people and vehicles linked to this evidence"
         },
         "INDEX": {
             "SUBHEADING": "Evidence Record",
-            "NO_DESCRIPTION": "No description",
             "ID": "ID",
             "NAME": "Name",
-            "TYPE": "Type",
             "LOGGED": "Logged",
             "LOGGED_BY": "Logged by",
             "CREATED": "Logged {{date}}",
             "UPDATED": "Updated {{date}}",
             "NOTES_TITLE": "Investigator Notes",
             "PHOTOS_TITLE": "Crime Scene Photos",
-            "TOASTS": {
-                "SAVING_DESCRIPTION": "Saving description…",
-                "DESCRIPTION_UPDATED": "Description updated",
-                "REMOVING_TAG": "Removing tag…",
-                "TAG_REMOVED": "Tag removed"
-            },
             "SECTIONS": {
                 "SUSPECTS": "Linked Suspects",
                 "VICTIMS": "Linked Victims",
@@ -6712,16 +6432,13 @@
             "IN_STORAGE": "In storage",
             "IN_STORAGE_AT": "In storage at {{location}}",
             "CHECKED_OUT_TO": "Checked out to {{name}}",
-            "TRANSFER": "Transfer custody",
             "DIALOG_TITLE": "Transfer custody",
             "DIALOG_DESCRIPTION": "Every transfer is written to the chain of custody.",
             "ACTIONS": {
                 "CHECKOUT": "Check out",
                 "RETURN": "Return to storage"
             },
-            "OFFICER_LABEL": "Officer",
             "OFFICER_PLACEHOLDER": "Yourself",
-            "REASON_LABEL": "Reason",
             "LOCATION_LABEL": "Storage location",
             "SUBMIT": "Transfer",
             "TOASTS": {
@@ -6759,8 +6476,7 @@
                 "MATCHED_CITIZEN_LABEL": "Matched citizen",
                 "MATCHED_WEAPON_LABEL": "Matched weapon",
                 "FINDINGS_LABEL": "Findings",
-                "FINDINGS_PLACEHOLDER": "What did the lab find?",
-                "SUBMIT": "Record result"
+                "FINDINGS_PLACEHOLDER": "What did the lab find?"
             },
             "TOASTS": {
                 "REQUESTED": "Lab analysis requested",
@@ -6770,7 +6486,6 @@
             }
         },
         "DELETE_BUTTON": {
-            "LABEL": "Delete",
             "CONFIRM_TITLE": "Delete this evidence record?",
             "CONFIRM_DESCRIPTION": "This permanently removes the evidence record, its links, tags, gallery, notes and activity log. This can't be undone.",
             "TOASTS": {
@@ -6924,16 +6639,13 @@
         "HEADER": {
             "TITLE": "Chat"
         },
-        "CONNECTING": "Connecting…",
         "LOADING": "Loading chat…",
         "TYPING_ONE": "{{name}} is typing…",
         "TYPING_TWO": "{{first}} and {{second}} are typing…",
         "TYPING_MANY": "Several people are typing…",
         "EDITED": "(edited)",
-        "COPY_TOAST": "Message copied",
         "COMPOSER": {
             "PLACEHOLDER": "Message #{{channel}}",
-            "ATTACH": "Attach",
             "ATTACH_LOCATION": "Share location",
             "ATTACH_LIVE_LOCATION": "Share live location",
             "ATTACH_IMAGE": "Upload image",
@@ -6969,12 +6681,9 @@
         },
         "ACTION_BAR": {
             "REPLY": "Reply",
-            "EDIT": "Edit",
             "DELETE_CONFIRM": "Delete this message?"
         },
         "CONTEXT_MENU": {
-            "COPY_TEXT": "Copy text",
-            "REPLY": "Reply",
             "FORWARD": "Forward",
             "FORWARDED_TO": "Forwarded to #{{channel}}",
             "FORWARDED_TO_DM": "Forwarded to {{channel}}",
@@ -6987,8 +6696,7 @@
             "DELETE_MESSAGE": "Delete message"
         },
         "REACTIONS_DIALOG": {
-            "TITLE": "Reactions",
-            "ALL_TAB": "All"
+            "TITLE": "Reactions"
         },
         "MENTION": {
             "POPOVER_LABEL": "Mention a unit",
@@ -7003,7 +6711,6 @@
             "NO_SNIPPET": "—"
         },
         "NOTIFICATIONS": {
-            "PANEL_TITLE": "Notifications",
             "ALWAYS_ALERT_HINT": "Mentions and panic alerts always notify, even on a muted channel.",
             "VIEW": "View"
         },
@@ -7024,7 +6731,6 @@
             "ANSWERS": "Answers",
             "OPTION_PLACEHOLDER": "Option {{n}}",
             "ADD_OPTION": "+ Add option",
-            "CREATE": "Create poll",
             "VOTE_COUNT_one": "{{count}} vote",
             "VOTE_COUNT_other": "{{count}} votes"
         },
@@ -7053,10 +6759,6 @@
             "WARRANT_CREATED": "{{callsign}} issued a warrant — {{title}}",
             "WARRANT_SERVED": "{{callsign}} served a warrant — {{title}}",
             "RADAR_PLATE_HIT": "{{callsign}} got a plate hit on {{vehicle}}"
-        },
-        "DAY": {
-            "TODAY": "Today",
-            "YESTERDAY": "Yesterday"
         }
     },
     "COLLAB": {
@@ -7073,7 +6775,6 @@
         },
         "FOOTER": {
             "ESTABLISHING": "Establishing…",
-            "CREATE_ROOM": "Create room",
             "BROWSE": "Browse",
             "INVITE": "Invite",
             "CLOSE_ROOM": "Close room",
@@ -7082,27 +6783,16 @@
         "CONNECTION": {
             "CONNECTED": "Connected",
             "SYNCING": "Syncing…",
-            "CONNECTING": "Connecting…",
-            "RECONNECTING": "Reconnecting…",
-            "NOT_CONNECTED": "Not connected"
+            "RECONNECTING": "Reconnecting…"
         },
         "ROOM": {
             "DEFAULT_NAME": "Collaboration room",
             "ID_COPIED_TOAST": "Room ID copied",
-            "PRIVATE": "Private",
-            "PUBLIC": "Public",
-            "OFFICERS_LABEL": "Officers",
-            "OWNER_LABEL": "Owner",
             "ROLE_LABEL": "Role",
-            "YOU": "You",
-            "ROLE_OWNER": "Owner",
-            "ROLE_MEMBER": "Member",
             "ONLINE_COUNT": "{{count}} online",
             "COPY_ID": "Copy room ID"
         },
         "MEMBER_ROW": {
-            "YOU_BADGE": "You",
-            "OWNER_BADGE": "Owner",
             "EDITING": "Editing: {{field}}",
             "MAKE_OWNER_TITLE": "Make owner",
             "KICK_TITLE": "Kick"
@@ -7158,8 +6848,7 @@
             "PUBLIC": "Public",
             "PRIVATE": "Private",
             "PUBLIC_HINT": "Visible in browser — anyone can join.",
-            "PRIVATE_HINT": "Invite-only — share the room code directly.",
-            "CREATE": "Create"
+            "PRIVATE_HINT": "Invite-only — share the room code directly."
         },
         "BROWSE_DIALOG": {
             "TITLE": "Browse rooms",
@@ -7169,7 +6858,6 @@
             "ROOM_LABEL": "{{name}}'s Room",
             "ROOM_LABEL_UNOWNED": "Open Room",
             "OFFICERS_COUNT": "{{count}} / {{max}} officers",
-            "JOIN": "Join",
             "REJOIN": "Rejoin",
             "FULL": "Full"
         },
@@ -7178,7 +6866,6 @@
             "DESCRIPTION": "Select an online officer to invite them directly to this session.",
             "ONLINE_OFFICERS_LABEL": "Online officers",
             "EMPTY": "No other officers online",
-            "INVITE": "Invite",
             "INVITED": "Invited",
             "SENT_TOAST": "Invite sent",
             "FAILED_TOAST": "Failed to send invite"
@@ -7244,13 +6931,6 @@
         "UNAVAILABLE": "Dashcam unavailable",
         "UNREACHABLE": "Could not reach that dashcam"
     },
-    "EMPLOYEE_ROLES": {
-        "COLLECTED_BY": "Collected by",
-        "EXECUTED_BY": "Executed by",
-        "ISSUED_BY": "Issued by",
-        "LEAD_OFFICER": "Lead officer",
-        "REQUESTED_BY": "Requested by"
-    },
     "MDT": {
         "LOADING": "The MDT is still loading",
         "PLAYER_NOT_LOADED": "Your character isn't loaded yet",
@@ -7281,12 +6961,11 @@
         "MOVE_HINT": "[{{confirm}}] Save · [{{cancel}}] Cancel · [W] Move · [R] Rotate · [Q] World/Local"
     },
     "NOTIFICATIONS": {
-        "TITLE": "Notifications",
         "OPEN": "Open",
         "BY": "by {{name}}",
-        "FILTER_ALL": "All",
         "FILTER_UNREAD": "Unread",
         "INVITES": "Invites",
+        "OPERATIONS": "Your operations",
         "EMPTY": "You're all caught up",
         "EMPTY_HINT": "Assignments, lab results and department news show up here.",
         "EMPTY_UNREAD": "No unread notifications",
