@@ -20,6 +20,7 @@
         "MANAGEMENT": "Yönetmek",
         "CONFIG": "Yapılandırma",
         "PENALTIES": "Cezalar",
+        "PRISONERS": "Mahkumlar",
         "ASSETS": "Varlıklar",
         "OPERATIONS": "Operasyonlar",
         "RECORDS": "Kayıtlar",
@@ -528,6 +529,8 @@
                 "FINE_ASC": "İnce: Düşük → Yüksek",
                 "JAIL_DESC": "Hapis cezası süresi: Yüksek → Düşük",
                 "JAIL_ASC": "Hapis süresi: Düşük → Yüksek",
+                "REMAINING_ASC": "En kısa sürede yayınlanacak",
+                "REMAINING_DESC": "Çoğu zaman kaldı",
                 "AGE_DESC": "Yaş: Önce en yaşlı",
                 "AGE_ASC": "Yaş: Önce en genç",
                 "RECORDS_DESC": "Kayıtlar: En çok ilk",
@@ -560,7 +563,7 @@
             "EYEDROPPER": "Ekrandan bir renk seçin"
         },
         "ICON_PICKER": {
-            "PLACEHOLDER": "Bir simge seç",
+            "PLACEHOLDER": "Bir simge seçin",
             "SEARCH": "Simgeleri arayın…",
             "SUGGESTED": "Önerilen",
             "ALL": "Tüm simgeler",
@@ -678,10 +681,20 @@
             "MESSAGE_COPIED": "Mesaj kopyalandı",
             "IMAGE_LINK_COPIED": "Resim bağlantısı kopyalandı",
             "LINK_COPIED": "Bağlantı kopyalandı"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "Tıklayın ve ardından bir tuşa basın",
+            "CHANGE_KEY": "Değiştirmek için tıklayın",
+            "LISTENING": "Bir tuşa basın…",
+            "LISTENING_HINT": "İptal etmek için Esc veya dışarıya tıklayın",
+            "CUSTOM": "Gelenek",
+            "TAKEN": "{{key}} zaten {{name}} tarafından kullanılıyor. Başka bir anahtar seçin, yoksa her ikisi de çalışır."
         }
     },
     "ERRORS": {
         "REQUIRED": "Bu alan zorunludur",
+        "KEYBIND_UNSUPPORTED_KEY": "Bu anahtar tuş ataması için kullanılamaz",
+        "KEYBIND_LIMIT": "En fazla {{max}} radyo tuş bağlantısına sahip olabilirsiniz",
         "NO_PERMISSION": "Bunu yapmak için izniniz yok",
         "INVALID_DATA": "Gönderilen verilerden bazıları geçersiz",
         "INVALID_CHARGES": "Bir veya daha fazla ödeme geçersiz; tutarları ceza kanununa göre kontrol edin",
@@ -698,6 +711,7 @@
         "VEHICLE_TOO_FAR": "Araca yaklaşın",
         "NO_VEHICLE_SELECTED": "Hiçbir araç seçilmedi",
         "NO_SUSPECT_SELECTED": "Şüpheli seçilmedi",
+        "NO_SUBJECT_SELECTED": "En az bir kişi veya araç ekleyin",
         "NO_VEHICLE_NEARBY": "Yakınlarda araç yok",
         "TRUNK_SEARCH_UNAVAILABLE": "Envanter kurulumunuz için gövde araması henüz kullanılamıyor",
         "INVALID_MODEL": "Bu model mevcut değil",
@@ -743,6 +757,7 @@
             "INVALID_VALUE": "Bu değer, bu ayar için geçerli değil",
             "MIN": "En az {{min}} olmalıdır",
             "MAX": "En fazla {{max}} olmalıdır",
+            "PRINTED_MARKERS": "1 ile {{max}} arasında: numaralı işaretleyici modelleri yalnızca {{max}}'e kadar çıkar",
             "NOT_AN_OPTION": "Bu seçeneklerden biri değil",
             "EMPTY": "Boş olamaz",
             "TOO_LONG": "En fazla {{max}} karakter olmalıdır",
@@ -802,8 +817,10 @@
         "PROP_PLACER_INTERRUPTED": "Nesne yerleştirme kesintiye uğradı",
         "VEHICLE_OCCUPIED": "Önce herkesi araçtan çıkarın",
         "IMPOUND_DISABLED": "Etkileşimler menüsünden el koyma bu sunucuda kapalı",
-        "VEHICLE_EMPTY": "Sipariş verecek kimse yok",
+        "IMPOUND_NOT_IMPLEMENTED": "Bu sunucuda haciz kurulmadı",
         "NOT_SUPPORTED": "Bu, bu sunucuda mevcut değil",
+        "PRISONER_OFFLINE": "Bunun için mahkumun çevrimiçi olması gerekiyor",
+        "PRISON_ACTION_FAILED": "Hapishane senaryosu bunu yapamazdı",
         "NO_ACCESS": "İşiniz bunu kullanamaz",
         "UNKNOWN_FREQUENCY": "Bu frekansta kanal yok",
         "MARKER_LIMIT": "Kanıt işaretçisi sınırınıza ulaştınız",
@@ -823,7 +840,7 @@
         "CANNOT_MANAGE_SELF": "Bunu kendine yapamazsın",
         "GRADE_TOO_HIGH": "Yalnızca kendi seviyenizin altındaki memurları yönetebilirsiniz",
         "AMOUNT_TOO_HIGH": "Bu tutar bir işlem için limitin üzerinde",
-        "INVALID_FREQUENCY": "450.100 gibi bir frekans kullanın",
+        "INVALID_FREQUENCY": "Bu sıklık izin verilen biçimle eşleşmiyor",
         "UNIT_FULL": "Bu birimde boş koltuk yok",
         "UNIT_NEEDS_LEAD": "Önce başkasının liderlik etmesini sağlayın",
         "UNIT_OFF_DUTY": "O birimde kimse görevde değil",
@@ -884,7 +901,7 @@
         "TAG_REMOVED": "{{name}} etiketi kaldırıldı"
     },
     "CAMERAS": {
-        "HEADING": "CCTV Kameralar",
+        "HEADING": "CCTV Kameraları",
         "TABS": {
             "BODYCAMS": "Vücut kameraları",
             "DASHCAMS": "Araç kameraları"
@@ -907,7 +924,7 @@
         "CREATE_BUTTON": {
             "TRIGGER": "Yeni Kamera",
             "DIALOG_TITLE": "Kamera oluştur",
-            "DIALOG_DESCRIPTION": "Kameranın konumunu ayarlayın ve hangi bölümlerin görüntüleyebileceğini seçin."
+            "DIALOG_DESCRIPTION": "Kameranın konumunu ayarlayın ve onu hangi bölümlerin görüntüleyebileceğini seçin."
         },
         "FORM": {
             "SUBMIT_BUTTON_LABEL": "Kamera oluştur",
@@ -946,7 +963,7 @@
                 "PAN_VALUE": "{{left}} sol, {{right}} sağ",
                 "FIXED": "Sabit",
                 "EMPTY_TITLE": "Henüz yerleştirilmedi",
-                "EMPTY_DESCRIPTION": "Kamera yaratıcısı, kamerayı yerleştirmeniz, gördüklerini ayarlamanız ve denemeniz için sizi oyuna götürür.",
+                "EMPTY_DESCRIPTION": "Kamera oluşturucu, kamerayı yerleştirmeniz, gördüklerini ayarlamanız ve denemeniz için sizi oyuna götürür.",
                 "IN_CREATOR": "Yaratıcıda…",
                 "EDIT": "Yaratıcıda düzenle",
                 "OPEN": "Kamera oluşturucuyu aç",
@@ -1058,7 +1075,6 @@
             "EDIT_DESCRIPTION": "Bu kanalın adını veya frekansını güncelleyin.",
             "NAME_PLACEHOLDER": "SWAT Komutanlığı",
             "FREQUENCY_FIELD": "Frekans (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498.510",
             "SUBMIT": "Kanal oluştur",
             "TOASTS": {
                 "CREATED": "\"{{name}}\" kanalı oluşturuldu",
@@ -1071,7 +1087,7 @@
                 "CODES": "Kodlar"
             },
             "SEARCH_PLACEHOLDER": "Kanalları veya frekansları arayın…",
-            "MANAGE_TOGGLE_TITLE": "Düzenleme, silme ve yeniden düzenlemek için sürükleme denetimlerini ortaya çıkarın",
+            "MANAGE_TOGGLE_TITLE": "Denetimleri düzenlemek, silmek ve sürüklemek için yeniden düzenlemeyi ortaya çıkarın",
             "MANAGE_HINT": "Yönetim modu — kategorileri yeniden sıralamak veya kanalları bunlar arasında taşımak için tutma tutamaçlarını sürükleyin.",
             "EMPTY_TITLE": "Henüz radyo kanalı yok",
             "EMPTY_DESCRIPTION_CAN_CREATE": "Kanalları düzenlemeye başlamak için başlıktan bir kategori oluşturun.",
@@ -1098,19 +1114,24 @@
             "PTT": "PTT"
         },
         "KEYBINDS_DIALOG": {
-            "TITLE": "Radyo Tuşları",
-            "DESCRIPTION": "Belirli bir kanalda anında iletim yapmak için bir klavye tuşunu bağlayın.",
-            "EMPTY": "Henüz yapılandırılmış tuş ataması yok.",
-            "ADD_NEW": "Yeni Tuş Ataması Ekle",
-            "ADD_DESCRIPTION": "Bir ad seçin, yakalamak için bir tuşa basın ve ardından hedef kanalı seçin.",
+            "TITLE": "Radyo tuş bağlantıları",
+            "DESCRIPTION": "MDT kapalı olsa bile radyonuzu tek tuşla bir kanala ayarlayın.",
+            "OFF": "Bu sunucuda radyo tuş bağlantıları kapalı.",
+            "EMPTY": "Henüz radyo tuş ataması yok.",
+            "ADD": "Tuş bağı ekle",
+            "ADD_TITLE": "Yeni radyo tuş takımı",
+            "EDIT_TITLE": "Radyo tuş atamasını düzenle",
+            "FORM_DESCRIPTION": "Adını verin, bir kanal seçin ve radyonuzu bu kanala ayarlayan tuşa basın.",
             "NAME_PLACEHOLDER": "Ana kanal",
-            "KEY_LABEL": "Anahtar",
-            "LISTENING": "Dinleme…",
-            "CLICK_TO_CAPTURE": "Bir anahtarı yakalamak için tıklayın",
-            "CAPTURING_HINT": "Herhangi bir tuşa basın - İptal etmek için Escape.",
-            "CLICK_HINT": "Yukarıdaki alana tıklayın ve herhangi bir tuşa basın.",
             "CHANNEL_PLACEHOLDER": "Bir kanal seçin",
-            "SAVE": "Tuş atamasını kaydet"
+            "KEY_LABEL": "Anahtar",
+            "KEY_HINT": "Yalnızca tek tuşlar. Bunu daha sonra Ayarlar > Tuş Bağlantıları > FiveM'den de değiştirebilirsiniz.",
+            "CHANNEL_REMOVED": "Bu kanal artık mevcut değil",
+            "SETTINGS_HINT": "Tuşlar ayrıca Ayarlar > Tuş Bağlantıları > FiveM'den de değiştirilebilir. Kaldırılan veya değiştirilen bir anahtar hemen çalışmayı durdurur ancak yeniden bağlanana kadar orada listelenmeye devam eder.",
+            "DELETE": "Tuş atamasını sil",
+            "SAVE": "Tuş atamasını kaydet",
+            "TUNED": "Radyo {{name}} olarak ayarlandı",
+            "ROW_NAME": "Radyo: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "Yeni Radyo Kodu",
@@ -1314,7 +1335,7 @@
             "VIEW_HISTORY": "Tarih",
             "FILTER": "Filtrele ve sırala",
             "SHOW": "Göstermek",
-            "ALL_CALLS": "Tüm çağrılar",
+            "ALL_CALLS": "Tüm aramalar",
             "LEAVE_CALL": "Aramayı bırak"
         },
         "TIMELINE_NOTES": {
@@ -1541,7 +1562,7 @@
             },
             "PAGE": {
                 "TITLE": "Sayfa {{name}}",
-                "DESCRIPTION": "Birimin her görevdeki üyesine oyunda gösterilir.",
+                "DESCRIPTION": "Birimin her görevli üyesine oyunda gösterilir.",
                 "PLACEHOLDER": "örneğin Brifing için Mission Row'a dönün",
                 "SEND": "Sayfayı gönder",
                 "SENT": "Sayfa {{name}} adresine gönderildi"
@@ -1550,7 +1571,7 @@
             "AVAILABLE": "Mevcut memurlar",
             "ZONES": "Bölgeler",
             "STATUS_SUMMARY": "Duruma göre görevde",
-            "GROUP_LABEL": "Gruplama ölçütü",
+            "GROUP_LABEL": "Gruplandırma ölçütü",
             "EMPTY_TITLE": "Henüz birim yok",
             "NO_MATCH": "Aramanızla eşleşen birim yok",
             "NO_STATUS": "Durum yok",
@@ -1700,7 +1721,7 @@
             "EDIT_DIALOG_TITLE": "İncelemeyi Düzenle",
             "EDIT_DIALOG_DESCRIPTION": "{{name}} hakkındaki yorumunuzu düzenleyin.",
             "DELETE_CONFIRM_TITLE": "Bu yorum silinsin mi?",
-            "DELETE_CONFIRM_DESCRIPTION": "{{name}} tarafından yapılan inceleme tamamen kaldırılır ve puanlarına sayılması durdurulur.",
+            "DELETE_CONFIRM_DESCRIPTION": "{{name}} tarafından yapılan inceleme tamamen kaldırılır ve puana dahil edilmesi durdurulur.",
             "CATEGORIES": {
                 "COMMUNICATION": "İletişim",
                 "TEAMWORK": "Ekip çalışması",
@@ -1797,7 +1818,7 @@
             "HOURS_PER_DAY": "Günde saat",
             "HOURS_PER_WEEK": "Haftalık saat",
             "WHEN_ON_DUTY": "Görev başında olduklarında",
-            "ON_DUTY_TIME": "{{value}} görevde",
+            "ON_DUTY_TIME": "{{value}} görev başında",
             "SHIFT_LOG": "Vardiya günlüğü",
             "SHOW_SHORT": "{{value}} kısasını göster",
             "HIDE_SHORT": "{{value}} kısayı gizle",
@@ -1972,7 +1993,7 @@
             "TITLE": "Sertifikalar",
             "NEW_TITLE": "Yeni sertifika",
             "EDIT_TITLE": "Sertifikasyonu düzenle",
-            "DIALOG_DESCRIPTION": "Sertifika türleri, Çalışan sayfasından çalışan başına verilebilir veya iptal edilebilir.",
+            "DIALOG_DESCRIPTION": "Sertifika türleri Çalışan sayfasından çalışan başına verilebilir veya iptal edilebilir.",
             "HOLDERS": "Sahipler",
             "CREATE_BUTTON": "Sertifika oluştur",
             "EMPTY": "Henüz sertifika türü yok; başlamak için bir tane oluşturun.",
@@ -2120,7 +2141,7 @@
                 "CITIZENS_PHONE_RECORDS": "Bir vatandaşın telefon kayıtlarını okuyun.",
                 "SUSPECT_INTERACT": "Manşet, arama ve eskort gibi şüpheli etkileşimleri kullanın.",
                 "GALLERY_EDIT": "Galeri resimlerini ekleyin ve kaldırın.",
-                "NOTES_DELETE": "Diğer memurların kayıtlara yazdığı notları ve diğer yöneticilerin dosyaladığı İK notlarını silin. Memurlar her zaman kendilerininkileri silebilir.",
+                "NOTES_DELETE": "Diğer memurların kayıtlara yazdığı notları ve diğer yöneticilerin sunduğu İK notlarını silin. Memurlar her zaman kendilerininkileri silebilir.",
                 "VEHICLES_VIEW": "Araçları arayın ve ayrıntılarını okuyun.",
                 "VEHICLES_REGISTER": "Yeni araçları kaydedin.",
                 "VEHICLES_EDIT": "Araç ayrıntılarını ve bayrakları düzenleyin.",
@@ -2152,6 +2173,9 @@
                 "PENALCODE_VIEW": "Ceza yasasını okuyun.",
                 "PENALCODE_CREATE": "Ceza kodu girişlerini ekleyin.",
                 "PENALCODE_UPDATE": "Ceza kodu girişlerini düzenleyin.",
+                "PRISONERS_VIEW": "Kimlerin cezaevinde olduğunu ve ne kadar süre kaldıklarını görün.",
+                "PRISONERS_RELEASE": "Mahkumları cezaları bitmeden serbest bırakın.",
+                "PRISONERS_EDIT": "Bir mahkumun hâlâ hapiste kalması gereken süreyi değiştirin.",
                 "PENALCODE_DELETE": "Ceza kodu girişlerini kaldırın.",
                 "OPERATIONPLANS_VIEW": "Operasyon planlarını okuyun.",
                 "OPERATIONPLANS_CREATE": "Yeni operasyon planlarının taslağını çıkarın.",
@@ -2280,7 +2304,7 @@
         }
     },
     "DASHBOARD": {
-        "SUBHEADING": "Bir bakışta vardiyanız, uyarılarınız ve departman etkinliğiniz",
+        "SUBHEADING": "Bir bakışta vardiyanız, uyarılarınız ve departman aktiviteniz",
         "FEATURED_ANNOUNCEMENT_EMPTY": "Duyuru yok",
         "START_COLLAB_BUTTON": "İşbirliğini Başlat",
         "ALERTS": {
@@ -2358,7 +2382,7 @@
             "ISSUE_NOW_HINT": "Yalnızca bunları kaydetmek için kapatın; bir memur bunları daha sonra yayınlayabilir.",
             "OVERWRITE_DIALOG": {
                 "TITLE": "Bireysel ödemelerin üzerine yazılsın mı?",
-                "DESCRIPTION_one": "Şüphelilerin şu anda farklı suçlamaları var. \"Herkes için aynı\" seçeneğine geçiş, herkesin ücretlendirmelerini {{name}}'ın listesiyle ({{count}} ücret) değiştirir; diğerlerinin bireysel ödemeleri kaybedilir.",
+                "DESCRIPTION_one": "Şüphelilerin şu anda farklı suçlamaları var. \"Herkes için aynı\" seçeneğine geçiş, herkesin ücretlerini {{name}} adlı kişinin listesiyle ({{count}} ücret) değiştirir; diğerlerinin bireysel ücretleri kaybedilir.",
                 "DESCRIPTION_other": "Şüphelilerin şu anda farklı suçlamaları var. \"Herkes için aynı\" seçeneğine geçiş, herkesin ücretlerini {{name}} adlı kişinin listesiyle ({{count}} ücret) değiştirir; diğerlerinin bireysel ücretleri kaybedilir.",
                 "CANCEL": "Ücretleri ayrı tutun",
                 "CONFIRM": "{{name}}'ın ücretlerini herkes için kullan"
@@ -2544,7 +2568,7 @@
                     "HOSTS": "İzin verilen resim siteleri",
                     "HOSTS_HINT": "Yalnızca bu sitelerden (ve alt etki alanlarından) gelen bağlantılar kabul edilir. Herhangi bir siteye izin vermek için boş bırakın. Tam bağlantıyı yapıştırdığınızda yalnızca site eklenir.",
                     "HOSTS_PLACEHOLDER": "örneğin r2.fivemanage.com",
-                    "DESCRIPTION": "Memurların kayıtlara eklediği resim bağlantılarına ilişkin kurallar (sabıka fotoğrafları, kanıt fotoğrafları, galeriler).",
+                    "DESCRIPTION": "Memurların kayıtlara eklediği resim bağlantılarına ilişkin kurallar (sabıka fotoğrafları, delil fotoğrafları, galeriler).",
                     "TESTER": {
                         "TITLE": "Bir bağlantı deneyin",
                         "HINT": "Memurların bunu mevcut kurallara ekleyip ekleyemeyeceğini görmek için bir resim bağlantısı yapıştırın.",
@@ -2819,7 +2843,7 @@
                         "JOBS": "Bölümler",
                         "JOBS_HINT": "Kim okuyabilir ve yazabilir?",
                         "POSTPERMISSION": "Kimler yayınlayabilir?",
-                        "POSTPERMISSION_HINT": "İsteğe bağlı. Yalnızca bu izne sahip olan rütbeler yazabilir; yukarıdaki bölümlerdeki herkes yalnızca okuyabilir. Duyurular için iyi."
+                        "POSTPERMISSION_HINT": "İsteğe bağlı. Yalnızca bu izne sahip rütbeler yazabilir; yukarıdaki bölümlerdeki herkes yalnızca okuyabilir. Duyurular için iyi."
                     }
                 },
                 "NOTIFICATIONS": {
@@ -2827,6 +2851,12 @@
                     "DESCRIPTION": "Kontrol panelindeki zile ne düşüyor? Kişisel olanlar çevrimdışı olan memurları bekler; departman çapındakiler o sırada yalnızca çevrimiçi olarak memurlara ulaşıyor.",
                     "RETENTION": "Şunun için bildirimleri sakla:",
                     "RETENTION_HINT": "Bundan daha eski bildirimler, azalttığınızda hemen silinir. 0 onları sonsuza kadar korur."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Radyo animasyonu",
+                    "DESCRIPTION": "Polis memurlarının karakterleri radyoda konuşurken ne yapar? Her memur, Yapılandırma sayfasında kendi seçimini yapabilir; bu herkesin elde ettiği şeydir.",
+                    "DEFAULT": "Varsayılan animasyon",
+                    "DEFAULT_HINT": "pma-voice ile, Yok olmadığı sürece kendi radyo animasyonu kapatılır. Başka bir ses kaynağının animasyonunu kendi yapılandırmasında kapatın."
                 }
             },
             "DISPATCH": {
@@ -3002,6 +3032,33 @@
                     "AUTO_LOCK": "Plakayı kibrit üzerine kilitleyin",
                     "AUTO_LOCK_HINT": "Radar eşleşen plakayı kilitler, böylece memur onu kaybetmez.",
                     "DESCRIPTION": "Bir radar kaynağı (wk_wars2x) ile, radarın okuduğu her plaka BOLO'lara ve izinlere göre kontrol edilir ve görevli bir maç konusunda uyarılır."
+                },
+                "SCENE": {
+                    "TITLE": "Suç mahalli",
+                    "DESCRIPTION": "Memurlar olay yeri kasetini ve delil işaretleyicilerini nasıl yerleştirir: etkileşimler menüsünün Olay Yeri sayfasından, bir envanter öğesi kullanarak veya bunlardan herhangi birini kullanarak. Eşyalar kullanılmamıştır.",
+                    "METHODS": {
+                        "MENU": "Sahne sayfası",
+                        "ITEM": "Öğeyi kullanma",
+                        "BOTH": "Sahne sayfası veya öğesi"
+                    },
+                    "TAPE_METHOD": "Memurlar bandı nasıl yerleştirir?",
+                    "TAPE_METHOD_HINT": "Sahne sayfasından kaset öğesini veya herhangi birini kullanarak.",
+                    "TAPE_ITEM": "Bant öğesi",
+                    "TAPE_ITEM_HINT": "Memurların olay yeri bantlarını yerleştirmek için kullandıkları envanter öğesi.",
+                    "MARKER_METHOD": "Memurlar kanıt işaretleyicilerini nasıl yerleştirir?",
+                    "MARKER_METHOD_HINT": "Sahne sayfasından işaretçi öğesini veya herhangi birini kullanarak.",
+                    "MARKER_ITEM": "Kanıt işaretleyici öğesi",
+                    "MARKER_ITEM_HINT": "Envanter öğesi memurları kanıt işaretleyicileri yerleştirmek için kullanırlar.",
+                    "RADIUS": "Sahne boyutu",
+                    "RADIUS_HINT": "Sahnenin bu kadar yakınına yerleştirilen bantlar, işaretleyiciler ve aksesuarlar buna katılıyor. Daha uzakta yeni bir sahne başlatırlar.",
+                    "MAX_MARKERS_SCENE": "Sahne başına kanıt işaretçileri",
+                    "MAX_MARKERS_SCENE_HINT": "İşaretçiler her sahnede 1'den numaralandırılır. 0 = sınırsız, yalnızca işaretleyiciler numaralı modelleri kullanmadığında.",
+                    "MAX_MARKERS_OFFICER": "Memur başına kanıt işaretleri",
+                    "MAX_MARKERS_OFFICER_HINT": "Bir memurun her sahnede aynı anda kaç tane işaretçiyi işaretleyebileceği. 0 = sınırsız.",
+                    "TAPE_LENGTH": "En uzun bant hattı",
+                    "TAPE_LENGTH_HINT": "Bir bant hattının iki ucu birbirinden en uzak olana kadar bağlanabilir.",
+                    "MAX_TAPE_OFFICER": "Memur başına bant hatları",
+                    "MAX_TAPE_OFFICER_HINT": "Bir memurun aynı anda kaç tane bant hattı olabilir? 0 = sınırsız."
                 }
             },
             "CAMERAS": {
@@ -3043,7 +3100,7 @@
                 },
                 "MODELS": {
                     "TITLE": "Modeller",
-                    "DESCRIPTION": "CCTV kamera olarak yerleştirilebilecek her pervane ve beslemesinin yapabilecekleri. Yaptığınız her değişikliği görmek için oyundaki bir modeli ayarlayın.",
+                    "DESCRIPTION": "CCTV kamera olarak yerleştirilebilecek her pervane ve beslemesinin yapabilecekleri. Yaptığınız sırada pervanedeki her değişikliği görmek için oyundaki bir modeli ayarlayın.",
                     "LIST": "Kamera modelleri",
                     "LIST_HINT": "Model adına göre özel aksesuarlar ekleyin. Yerleştirilen kameraların hâlâ kullandığı bir model kaldırılamaz.",
                     "TUNE": "Oyuna uyum sağlayın",
@@ -3062,7 +3119,7 @@
                     },
                     "FIELDS": {
                         "LENS_OFFSET": "Mercek ofseti",
-                        "LENS_OFFSET_HINT": "Görünümü pervanenin ilerisine taşır. Beslemede montaj parçası görünüyorsa kaldırın.",
+                        "LENS_OFFSET_HINT": "Görünümü pervanenin ilerisine taşır. Beslemede montaj parçası görünüyorsa yükseltin.",
                         "MOVEABLE": "Dönebilir",
                         "MOVEABLE_HINT": "Kapalı: yayın tam olarak kameranın yerleştirildiği şekilde kalır.",
                         "PITCH_MIN": "En düşük eğim",
@@ -3089,7 +3146,7 @@
                     "GROUPS": "Silah grupları",
                     "GROUPS_HINT": "Yalnızca açık olan grupların silahları kameralara zarar verebilir.",
                     "DAMAGE": "Silah başına hasar",
-                    "DAMAGE_HINT": "Belirli silahlar için hasar. Vuruşlar 10 ila 50 arasında tutulur. Grubu açıkken bile kameralara zarar vermesini önlemek için bir silahı engelleyin. Listelenmeyen silahlar, vuruş başına varsayılan hasarı kullanır.",
+                    "DAMAGE_HINT": "Belirli silahlar için hasar. İsabetler 10 ile 50 arasında tutulur. Grubu açıkken bile kameralara zarar vermesini önlemek için bir silahı engelleyin. Listelenmeyen silahlar, vuruş başına varsayılan hasarı kullanır.",
                     "ADD": "Silah ekle",
                     "BROWSE_TITLE": "Silah ekle",
                     "BROWSE_DESCRIPTION": "Varsayılan hasarla ({{damage}}) eklemek için bir silaha tıklayın veya kaldırmak için tekrar tıklayın. Envanterinizdeki eklenti silahlar da listelenir ve istediğiniz silah adını yazabilirsiniz.",
@@ -3134,7 +3191,7 @@
                     "METHOD": "Memurlar bunu nasıl açıyor?",
                     "METHOD_HINT": "Araç kamerası öğesini kullanarak, komutu yazarak veya bunlardan herhangi birini kullanarak. Komutun hâlâ envanterinde öğeye ihtiyacı var.",
                     "STREAM_RADIUS": "Görünür alan",
-                    "STREAM_RADIUS_HINT": "Birisi araç kamerasını izlerken, arabaya bu kadar yakın olan oyuncular ve araçlar akışta görünür durumda kalıyor. Daha büyük, daha fazlasını gösterir ancak izleyiciyle daha fazla oynatıcıyı senkronize eder.",
+                    "STREAM_RADIUS_HINT": "Birisi araç kamerasını izlerken, araca bu kadar yakın olan oyuncular ve araçlar akışta görünür durumda kalıyor. Daha büyük, daha fazlasını gösterir ancak izleyiciyle daha fazla oynatıcıyı senkronize eder.",
                     "ITEM": "Araç kamerası öğesi",
                     "ITEM_HINT": "Memurların araç kamerasını açmak için kullandığı envanter öğesi."
                 },
@@ -3162,7 +3219,8 @@
                     "BOTH": "Öğe veya komut",
                     "WAYS": {
                         "ITEM": "Envanter öğesi",
-                        "COMMAND": "Sohbet komutu"
+                        "COMMAND": "Sohbet komutu",
+                        "MENU": "Sahne sayfası"
                     }
                 },
                 "REPAIR": {
@@ -3183,7 +3241,13 @@
                     "SIGNAL": "Sinyal gücü değişiklikleri",
                     "SIGNAL_HINT": "Kozmetik: Kamera ızgarasındaki sinyal çubukları zamanla biraz hareket eder. Kapalı: hareketsiz kalırlar.",
                     "AUDIO_RADIUS": "İşitme aralığı",
-                    "AUDIO_RADIUS_HINT": "Yayını izleyen memurlar, oyuncuların kameraya bu kadar yakın konuştuğunu duyuyor."
+                    "AUDIO_RADIUS_HINT": "Yayını izleyen memurlar, oyuncuların kameraya bu kadar yakın konuştuğunu duyuyor.",
+                    "ON_FEED_LOST": "Kamera kapandığında",
+                    "ON_FEED_LOST_HINT": "Kesilen oynatmaların ardından yok edilen, hacklenen veya devre dışı bırakılan bir CCTV kamerasını izleyen polis memurlarına ne olur?",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Sonraki kameraya geç",
+                        "CLOSE": "Beslemeyi kapat"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Otomatik algılama",
@@ -3212,7 +3276,7 @@
                     "ADMIN_MAX_DISTANCE": "Yönetici taşıma aralığı",
                     "ADMIN_MAX_DISTANCE_HINT": "Bir yöneticinin bir kamerayı bulunduğu yerden ne kadar uzağa taşıyabileceği.",
                     "CAPTURE_PREVIEW": "Kaydederken önizleme alın",
-                    "CAPTURE_PREVIEW_HINT": "Bir kameranın kaydedilmesi, ilk ön izlemesini lens aracılığıyla gerçekleştirir. Kamera önizlemelerine ve ekran görüntüsü yöntemine ihtiyaç var."
+                    "CAPTURE_PREVIEW_HINT": "Bir kameranın kaydedilmesi, ilk ön izlemesini mercek aracılığıyla gerçekleştirir. Kamera önizlemelerine ve ekran görüntüsü yöntemine ihtiyaç var."
                 }
             },
             "INTEGRATIONS": {
@@ -3336,7 +3400,7 @@
                 },
                 "AUTO_POPULATE": {
                     "TITLE": "MDT'de kimin görüneceği değiştirilsin mi?",
-                    "DESCRIPTION": "Bu, veritabanınızdaki her oyuncunun ve aracın listelenmesi ile yalnızca kayıtlı olan görevlilerin listelenmesi arasında geçiş yapar. Kayıtlar, kaynaktaki kişilerin ve araçların yapıldığı sırada kullanımda olduğunu gösteriyor; bu nedenle birini seçin ve saklayın."
+                    "DESCRIPTION": "Bu, veri tabanınızdaki her oyuncunun ve aracın listelenmesi ile yalnızca kayıtlı olan görevlilerin listelenmesi arasında geçiş yapar. Kayıtlar, kaynaktaki kişilerin ve araçların yapıldığı sırada kullanımda olduğunu gösteriyor; bu nedenle birini seçin ve saklayın."
                 },
                 "LOGS_RETENTION": {
                     "TITLE": "Eski etkinlik günlükleri silinsin mi?",
@@ -3348,7 +3412,7 @@
                 },
                 "NOTIFICATIONS_RETENTION": {
                     "TITLE": "Eski bildirimler silinsin mi?",
-                    "DESCRIPTION": "{{value}} tarihinden daha eski olan bildirimler hemen silinecek ve kurtarılamaz."
+                    "DESCRIPTION": "{{value}} tarihinden daha eski bildirimler hemen silinecek ve kurtarılamaz."
                 }
             },
             "RESET_SECTION": {
@@ -3418,7 +3482,7 @@
                 "DELETE_DESCRIPTION": "Herkes için hemen kaybolur.",
                 "DELETE_DESCRIPTION_DISABLE": "Herkes için hemen kaybolur. Kayıtlar zaten onu kullanıyorsa, silme işlemi reddedilir: bunun yerine anahtarıyla kapatın, böylece eski kayıtlar korunur.",
                 "ENABLED_HINT": "Açık: memurlar bunu seçebilir. Eski kayıtlara dokunmadan yeni kullanımı durdurmak için kapatın.",
-                "DISABLED_HINT": "Kapalı: memurlar bunu yeni kayıtlar olarak seçemezler, eski kayıtlar hâlâ bunu göstermektedir."
+                "DISABLED_HINT": "Kapalı: Memurlar bunu yeni kayıtlar olarak seçemezler, eski kayıtlar hâlâ bunu göstermektedir."
             },
             "LIST_FIELDS": {
                 "NAME": "Dahili ad",
@@ -3479,7 +3543,7 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "Varsayılan tuş bağlantıları",
-                    "DESCRIPTION": "Her eylemin başladığı anahtar. FiveM, bir oyuncunun anahtarlarını ilk katıldığında kaydeder, böylece burada yapılan bir değişiklik yeni oyunculara ve bu anahtara henüz sahip olmayan herkese ulaşır. Ayarlar > Tuş Bağlantıları > FiveM'de herkes kendi anahtarlarını değiştirmeye devam edebilir.",
+                    "DESCRIPTION": "Her eylemin başladığı anahtar. FiveM, bir oyuncunun anahtarlarını ilk katıldığında kaydeder, böylece buradaki değişiklik yeni oyunculara ve bu anahtara henüz sahip olmayan herkese ulaşır. Herkes yine de MDT'nin Yapılandırma sayfasında veya Ayarlar > Anahtar Bağlamaları > FiveM'de kendi anahtarlarını değiştirebilir.",
                     "OPEN_MDT": "MDT'yi açın",
                     "OPEN_MDT_HINT": "Kapatıldığında memurlar onu komutla veya eşyayla açar.",
                     "INTERACTIONS": "Etkileşimler menüsü",
@@ -3491,7 +3555,10 @@
                     "PANIC_BUTTON": "Panik butonu",
                     "PANIC_BUTTON_HINT": "Memurun konumunu bildiren bir panik alarmı gönderir.",
                     "REQUEST_BACKUP": "Yedekleme iste",
-                    "REQUEST_BACKUP_HINT": "Yakındaki birimlerden destek ister."
+                    "REQUEST_BACKUP_HINT": "Yakındaki birimlerden destek ister.",
+                    "CLASH": "Ayrıca {{names}}'ın varsayılan anahtarı. FiveM her eylemi bir anahtar üzerinde çalıştırır, dolayısıyla {{key}} her ikisini de yapar.",
+                    "MAX_RADIO": "Memur başına radyo tuş atamaları",
+                    "MAX_RADIO_HINT": "Her memurun Radyo sayfasına kaç tane radyo tuş bağlantısı ekleyebileceği. 0 onları kapatır. Zaten daha fazlasına sahip olan memurlar yalnızca ilklerini saklıyor."
                 }
             },
             "IN_GAME": {
@@ -3631,7 +3698,8 @@
                 "RADIUS": "Arama alanı",
                 "RADIUS_HINT": "Yalnızca bir raptiye yerine çağrının etrafında bir daire.",
                 "SUMMARY": "simge {{sprite}}, renk {{colour}}",
-                "SAME_AS_OTHERS": "Diğerleriyle aynı"
+                "SAME_AS_OTHERS": "Diğerleriyle aynı",
+                "COLOUR_BY_PRIORITY": "Renk çağrının önceliğini takip eder. Burada bir renk seçmek için Harita blips'inde \"Önceliğe göre renk\" seçeneğini kapatın."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Yenile",
@@ -3683,7 +3751,7 @@
                     "IMPORT_TITLE": "Kameraları içe aktar",
                     "IMPORT_DESCRIPTION": "Bu panelden (bu veya başka bir sunucuya) aktarılan kameraları yapıştırın. Herhangi bir şey kaydedilmeden önce her birine ne olacağını göreceksiniz.",
                     "INVALID": "Bu geçerli bir kamera dışa aktarımı değil. Dışa aktar ile kopyaladığınız metnin tamamını yapıştırın.",
-                    "SUMMARY": "{{new}} to add · {{duplicate}} already placed (skipped) · {{unknown}} with a model this server doesn't have (skipped)",
+                    "SUMMARY": "Eklenecek {{new}} · {{duplicate}} zaten yerleştirildi (atlandı) · Bu sunucuda bulunmayan bir modelle {{unknown}} (atlandı)",
                     "MODE": {
                         "ADD": "Eklemek",
                         "REPLACE": "Tümünü değiştir"
@@ -3734,12 +3802,12 @@
                     "ARRIVED": "Varıştaki durum",
                     "ARRIVED_HINT": "Bir üyenin çağrının varış mesafesine ne zaman geleceğini ayarlayın.",
                     "CLEARED": "Temizlendiğinde durum",
-                    "CLEARED_HINT": "",
+                    "CLEARED_HINT": "Başka bir çağrıda olmadığı sürece çağrının ne zaman kapanacağını veya ünitenin ne zaman ayrılacağını ayarlayın.",
                     "OFF": "Değiştirme",
                     "ARRIVE_RADIUS": "Varış mesafesi",
                     "ARRIVE_RADIUS_HINT": "Çağrının ne kadar yaklaştığı, geldiği sayılır. Ayrıca gönderim istatistiklerindeki yanıt süresini de sonlandırır.",
                     "STALE": "Güncelleme yapılmadığında uyar",
-                    "STALE_HINT": "Bir birim kartının durumu bu kadar uzun süre değişmediğinde uyarı verir. 0 = asla.",
+                    "STALE_HINT": "Bir ünite kartının durumu bu kadar uzun süre değişmediğinde uyarı verir. 0 = asla.",
                     "CHECK_TIMEOUT": "Durum kontrolü yanıt süresi",
                     "CHECK_TIMEOUT_HINT": "Bu kadar uzun süre cevap alınamayınca, durum kontrolü gecikmiş olarak görünüyor."
                 },
@@ -3752,7 +3820,7 @@
                 },
                 "ZONES": {
                     "TITLE": "Bölgeler",
-                    "DESCRIPTION": "Beats units can pick. İsteğe bağlı: hiçbir birimin bir arada olması gerekmez ve pano hangi bölgelerde birimin eksik olduğunu gösterir.",
+                    "DESCRIPTION": "Beats birimleri seçebilir. İsteğe bağlı: hiçbir birimin bir arada olması gerekmez ve pano hangi bölgelerde birimin eksik olduğunu gösterir.",
                     "ENABLED": "Bölgeleri kullan",
                     "ENABLED_HINT": "Kapalı: bölgeler her yerde gizlenir.",
                     "LIST": "Bölgeler",
@@ -3823,7 +3891,7 @@
                 "FLAGGED": "İşaretlendi",
                 "NORMAL_STATUS": "Temizlemek",
                 "NOT_REGISTERED": "Kayıtlı değil",
-                "NOT_REGISTERED_HINT": "Bu plakalı kayıtlı araç yok.",
+                "NOT_REGISTERED_HINT": "Bu plakalı araç kayıtlı değil.",
                 "NO_RECORD_HINT": "Bu kişiye ait MDT kaydı yok.",
                 "UNKNOWN": "Bilinmiyor",
                 "UNIDENTIFIED": "Tanımlanamayan",
@@ -3832,6 +3900,13 @@
             "RECORDING": {
                 "MAX_DURATION": "En uzun kayda ulaşıldı, klip kaydediliyor",
                 "MAX_SIZE": "Klibin kaydedilmesiyle en büyük kayıt boyutuna ulaşıldı"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "Kamera yok edildi",
+                "HACKED": "Besleme kesildi",
+                "OFFLINE": "Kamera çevrimdışı",
+                "BODYCAM": "Vücut kamerası çevrimdışı",
+                "DASHCAM": "Dashcam çevrimdışı"
             }
         },
         "GIZMO": {
@@ -3847,7 +3922,7 @@
             "COUNT": "{{placed}} / {{limit}} çıktı",
             "COUNT_UNLIMITED": "{{placed}} dışarı",
             "NO_TARGET": "Önünüzdeki yere nişan alın",
-            "PINNED": "Pinned where you left it. Backspace tekrar artı işaretini takip ediyor",
+            "PINNED": "Bıraktığın yere sabitlendi. Backspace tekrar artı işaretini takip ediyor",
             "PLACING": "Yere koyuyorum…",
             "HEADING": "Başlık",
             "STATUS": {
@@ -4025,9 +4100,6 @@
                 "ACTIVE_WARRANTS": "Aktif varantlar",
                 "STOLEN": "Çalıntı",
                 "OPEN_RECORD": "Kaydı aç",
-                "OCCUPANTS_OUT": "İçeridekilerin dışarı çıkmasını emredin",
-                "OCCUPANTS_ORDERED_one": "{{count}} yolcunun dışarı çıkması emredildi",
-                "OCCUPANTS_ORDERED_other": "{{count}} yolcunun dışarı çıkarılması emrini verdi",
                 "SEARCH_TRUNK": "Bagajı ara",
                 "IMPOUND": "haciz",
                 "IMPOUNDED": "{{plate}} kişiye el konuldu"
@@ -4176,7 +4248,7 @@
         },
         "DISPATCH_PANEL": {
             "LIVE": "Canlı gönderim akışı",
-            "MUTE": "Çağrı uyarılarını sessize al",
+            "MUTE": "Çağrı uyarılarını sessize alın",
             "UNMUTE": "Çağrı uyarılarının sesini aç",
             "ACTIVE_COUNT_one": "{{count}} aktif",
             "ACTIVE_COUNT_other": "{{count}} aktif",
@@ -4409,7 +4481,7 @@
                 "ADJUST": {
                     "ORBIT": {
                         "TITLE": "Dışarıdan bak",
-                        "BODY": "Kameranın çevresine bakmak için fareyi sağ basılı tutun ve yaklaşmak için kaydırın. Oklar onu yüzeyi boyunca kaydırır, Sayfa Yukarı / Sayfa Aşağı dışarı veya içeri doğru hareket ettirir."
+                        "BODY": "Kameranın çevresine bakmak için fareyi sağ basılı tutun ve yaklaşmak için kaydırın. Oklar onu yüzeyi boyunca kaydırır, Sayfa Yukarı / Sayfa Aşağı onu dışarı veya içeri doğru hareket ettirir."
                     },
                     "TOOLS": {
                         "TITLE": "Tek tuşla düzeltmeler",
@@ -4453,6 +4525,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Temalar ve renkler."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "Oyun içi",
+                    "DESCRIPTION": "MDT'yi ve radyoyu kullanırken karakterinizin nasıl davrandığı."
                 }
             },
             "SECTIONS": {
@@ -4461,7 +4537,9 @@
                 "UNITS_NUMBERS": "Birimler ve Sayılar",
                 "SEE_THROUGH": "İçini Görme Modu",
                 "SEE_THROUGH_DESCRIPTION": "MDT'yi kapatmadan arkasındaki oyunu izlemek için yolunuzdan çekin.",
-                "DISPLAY": "Görüntülemek"
+                "DISPLAY": "Görüntülemek",
+                "RADIO": "Radyo",
+                "KEYBINDS": "Tuş bağlantıları"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4523,13 +4601,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Bildirim sesleri",
                     "DESCRIPTION": "Gelen sevk çağrıları ve sohbetten bahsetmeler için ses çalın"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Konuşan animasyon",
+                    "DESCRIPTION": "Siz radyoda konuşurken karakteriniz ne yapıyor?",
+                    "PREVIEW": "Karakterinizin önizlemesi"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Bir tuşa basın…",
-                "LISTENING_HINT": "İptal etmek için Esc · Temizlemek için geri tuşuna basın",
                 "UNBOUND": "Bağlı değil",
                 "CUSTOM": "Gelenek"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "MDT tuş bağlantılarınız. Bir tuşa tıklayın ve değiştirmek için yeni bir tuşa basın.",
+                "NONE": "Bu sunucuda MDT tuş bağlantıları yok.",
+                "OVERLAP": "{{names}} ile aynı anahtar. FiveM her eylemi bir tuş üzerinde çalıştırır, dolayısıyla tuşa basmak hepsini çalıştırır.",
+                "OPEN_SETTINGS": "FiveM'in tuş bağlantılarındaki tuşları değiştirin",
+                "HINT": "Değiştirdiğiniz bir anahtar hemen çalışmayı durdurur ancak yeniden bağlanana kadar FiveM'in anahtar atamalarında listelenmeye devam eder. Fare düğmeleri ve denetleyiciler burada ayarlanabilir."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Işık",
@@ -4555,7 +4643,7 @@
                 "METRIC": "Metrik"
             },
             "TEMPERATURE_OPTIONS": {
-                "FAHRENHEIT": "Fahrenheit",
+                "FAHRENHEIT": "Fahrenhayt",
                 "CELSIUS": "santigrat"
             },
             "WEEKDAYS": {
@@ -4587,7 +4675,14 @@
                 "HINT": "Yukarıdaki konum ve süredeki bir bildirimi önizleyin",
                 "BUTTON": "Bildirimi önizleyin"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Önizleme — MDT'nin bu seviyede ne kadar soluk göründüğü"
+            "SEE_THROUGH_PREVIEW_HINT": "Önizleme — MDT'nin bu seviyede ne kadar soluk göründüğü",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Sunucu varsayılanı ({{style}})",
+                "NONE": "Hiçbiri",
+                "CHEST": "Omuz mikrofonu",
+                "EAR": "Kulaklık",
+                "HANDHELD": "El radyosu"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "Temalar",
@@ -4668,7 +4763,7 @@
                 "UNDO_ALL": "Değişiklikleri geri al"
             },
             "NEW_EDIT_DIALOG": {
-                "DESCRIPTION": "Bir başlangıç ​​noktası ve vurgu rengi seçin, ardından herhangi bir renge ince ayar yapın. Önizleme, siz ilerledikçe sonucu gösterir.",
+                "DESCRIPTION": "Bir başlangıç ​​noktası ve bir vurgu rengi seçin, ardından herhangi bir renge ince ayar yapın. Önizleme, siz ilerledikçe sonucu gösterir.",
                 "NEW_THEME_NAME": "Benim temam",
                 "CREATE_THEME": "Tema oluştur",
                 "EDIT_THEME_TITLE": "{{name}}'ı düzenle"
@@ -4787,6 +4882,8 @@
             "license_revoke": "Lisans İptal Edildi",
             "citizen_image_change": "Vatandaşın Fotoğrafı Değiştirildi",
             "charges_issued": "Verilen Ücretler",
+            "prisoner_released": "Mahkum Serbest Bırakıldı",
+            "prisoner_sentence_changed": "Cümle Değiştirildi",
             "note_added": "Not Eklendi",
             "note_removed": "Not Kaldırıldı",
             "employee_grade_change": "Not Değiştirildi",
@@ -4871,6 +4968,8 @@
             "LICENSE_REVOKE": "{{identifier}} adlı kullanıcının {{type}} lisansı iptal edildi",
             "CITIZEN_IMAGE_CHANGE": "{{identifier}} için profil resmi güncellendi",
             "CHARGES_ISSUED": "{{entityType}} #{{id}} tarihinde {{count}} ödeme yapıldı",
+            "PRISONER_RELEASED": "{{identifier}} adlı mahkum serbest bırakıldı (sebep: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "{{identifier}}'ın kalan cümlesini {{time}} olarak ayarlayın (sebep: {{reason}})",
             "NOTE_ADDED": "{{entityType}} #{{entityId}}'e bir not eklendi",
             "NOTE_REMOVED": "{{entityType}} #{{entityId}} adlı kişiden bir not kaldırıldı",
             "EMPLOYEE_GRADE_CHANGE": "{{identifier}}'ın notunu {{grade}} olarak ayarlayın",
@@ -5106,7 +5205,7 @@
             "DESCRIPTION": "Bir vatandaşa silah tescil ettirin."
         },
         "FORM": {
-            "MODEL_PLACEHOLDER": "Bir silah seçin",
+            "MODEL_PLACEHOLDER": "Bir silah seç",
             "SERIAL_LABEL": "Seri numarası",
             "SERIAL_PLACEHOLDER": "G12345",
             "SERIAL_HINT": "Sizin için bir seri numarası oluşturulur; bunu şimdi değiştirebilirsiniz ancak silah kaydedildikten sonra yapamazsınız.",
@@ -5352,13 +5451,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Bir kişi veya araç için gözcülük yapın. Yeni BOLO'lar taslak olarak başlar."
+            "DESCRIPTION": "Bir kişi veya araç için gözcülük yapın. Taslaklar etkinleştirilene kadar konuyu işaretlemez."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Siyah Sultan RS'li silahlı şüpheli",
             "DESCRIPTION_PLACEHOLDER": "En son nerede görüldüler, neye benziyorlar ve neden aranıyorlar?",
             "EXPIRES_LABEL": "Süresi doluyor",
             "EXPIRES_PLACEHOLDER": "Varsayılan 7 gün",
+            "SUBJECTS_TITLE": "Konular",
+            "CITIZENS_PLACEHOLDER": "Kişileri seçin",
             "TOASTS": {
                 "CREATED": "BOLO oluşturuldu"
             }
@@ -5398,6 +5499,7 @@
             "CONFIRM_DESCRIPTION": "Bu,{{subject}} yerinin tespit edildiğini doğrular ve gözetlemeyi kapatır.",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "konu",
+            "CONFIRM_DESCRIPTION_MANY": "Bu, tüm {{count}} kişinin yerinin tespit edildiğini doğrular ve gözetlemeyi kapatır.",
             "TOASTS": {
                 "MARKING": "BOLO'nun yeri işaretleniyor…",
                 "MARKED": "BOLO işaretli yer"
@@ -5416,6 +5518,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Kategorize edilmemiş",
         "INDEX": {
             "HEADING": "Yasal Mevzuat ve Ceza Kanunu",
             "SUBHEADING": "Suçların, mali yaptırımların ve adli yetkilerin resmi kodlanması",
@@ -5574,6 +5677,54 @@
             }
         }
     },
+    "PRISONERS": {
+        "SUBHEADING": "Şu anda herkes cezaevinde ve ne kadar süre kaldıkları",
+        "SUBHEADING_ONLINE_ONLY": "Şu anda çevrimiçi olan mahkumlar. Cezaevi komut dosyanız çevrimdışı mahkumları bildirmiyor",
+        "SEARCH_PLACEHOLDER": "Ada veya tanımlayıcıya göre arayın…",
+        "EMPTY": "Kimse hapiste değil",
+        "NOT_SUPPORTED": "Hapishane senaryonuz mahkumları listeleyemez",
+        "COLUMNS": {
+            "REMAINING": "Geriye kalan",
+            "RECORD": "Kayıt",
+            "SENTENCED_BY": "Mahkum edildi",
+            "SINCE": "O zamandan beri"
+        },
+        "REMAINING_OF": "{{remaining}} / {{total}}",
+        "UNKNOWN_REMAINING": "Hapishane senaryosunda bildirilmedi",
+        "JAILED_OUTSIDE_MDT": "MDT dışında hapse atıldı",
+        "RECORD_LABEL": "{{type}} #{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Penaltı",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Profili aç",
+        "REASON_LABEL": "Sebep (isteğe bağlı)",
+        "RELEASE": {
+            "TRIGGER": "Serbest bırakmak",
+            "TITLE": "Tutukluyu serbest bırak",
+            "CONFIRM": "{{name}} şimdi serbest bırakılacak ve cezaları kapatılacak.",
+            "REASON_PLACEHOLDER": "Mahkemece ceza indirimi yapıldı",
+            "BUTTON": "Serbest bırakmak",
+            "NEEDS_ONLINE": "Hapishane senaryonuz yalnızca çevrimiçi olan mahkumları serbest bırakabilir.",
+            "TOASTS": {
+                "PROCESSING": "Mahkumun serbest bırakılması…",
+                "SUCCESS": "{{name}} yayınlandı",
+                "FAILED": "Mahkûmu serbest bırakamadı"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Cümleyi değiştir",
+            "TITLE": "Cümleyi değiştir",
+            "TIME_LABEL": "Hizmete kalan süre (ay)",
+            "REASON_PLACEHOLDER": "İyi davranış",
+            "BUTTON": "{{duration}} olarak ayarla",
+            "TOASTS": {
+                "PROCESSING": "Cümleyi değiştiriyorum…",
+                "SUCCESS": "{{name}}'ın cümlesi artık {{duration}}",
+                "FAILED": "Cümle değiştirilemedi"
+            }
+        }
+    },
     "CITIZENS": {
         "REGISTER_DIALOG": {
             "TRIGGER": "Vatandaşı Kaydet",
@@ -5722,6 +5873,8 @@
         },
         "INDEX": {
             "UNNAMED": "İsimsiz vatandaş",
+            "JAILED": "hapse atıldı",
+            "JAILED_REMAINING": "Hapse atıldı · {{duration}} kaldı",
             "SUBHEADING": "Vatandaş Kimliği",
             "TOASTS": {
                 "SAVING_IMAGE": "Resim kaydediliyor…",
@@ -5818,6 +5971,24 @@
                 "SERVICE": "Hizmet"
             },
             "SUMMARY_TITLE": "Penaltı toplamları"
+        },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Hapishane Geçmişi",
+            "EMPTY": "Kayıtlarda hapis cezası yok",
+            "COLUMNS": {
+                "OUTCOME": "Sonuç",
+                "ENDED": "Sona erdi"
+            },
+            "STATUS": {
+                "ACTIVE": "Servis",
+                "SERVED": "Sunuldu",
+                "RELEASED": "Erken yayınlandı",
+                "REPLACED": "Yeni bir cümle ile değiştirildi"
+            },
+            "RELEASED_BY": "{{name}} tarafından",
+            "VIEW_ALL_one": "{{formatted}} cümlenin tamamını görüntüle",
+            "VIEW_ALL_other": "{{formatted}} cümlenin tümünü görüntüle",
+            "DIALOG_TITLE": "{{name}} adlı kişinin hapis geçmişi"
         },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Bu vatandaşla bağlantılı kayıtların, araçların ve kişilerin grafiğini açın",
@@ -6073,7 +6244,7 @@
             "113": "Eskimiş Bal Beji",
             "114": "Eskimiş Kahverengi",
             "115": "Eskimiş Koyu Kahve",
-            "116": "Eskimiş Saman Beji",
+            "116": "Eskimiş Saman Bej",
             "117": "Fırçalanmış Çelik",
             "118": "Fırçalanmış Siyah Çelik",
             "119": "Fırçalanmış Alüminyum",
@@ -6913,9 +7084,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Vücut kamerası donanımlı",
-        "LOST": "Bu vücut kamerasıyla bağlantı koptu",
         "MISSING": "Vücut kameranız yok",
-        "OFFLINE": "O memurun vücut kamerası çevrimdışı oldu",
         "REMOVED": "Vücut kamerası kaldırıldı",
         "UNREACHABLE": "Bu vücut kamerasına ulaşılamadı"
     },
@@ -6923,10 +7092,9 @@
         "ARMED": "Dashcam etkinleştirildi",
         "DISARMED": "Dashcam devre dışı bırakıldı",
         "NEEDS_PATROL_VEHICLE": "Beyaz listeye alınmış bir devriye aracında olmanız gerekir",
-        "OFFLINE": "O aracın ön kamerası çevrimdışı oldu",
         "SEAT_RESTRICTED": "Araç kamerasını yalnızca sürücü veya ön yolcu kontrol edebilir",
         "UNAVAILABLE": "Araç kamerası kullanılamıyor",
-        "UNREACHABLE": "O araç kamerasına ulaşılamadı"
+        "UNREACHABLE": "Bu araç kamerasına ulaşılamadı"
     },
     "MDT": {
         "LOADING": "MDT hala yükleniyor",

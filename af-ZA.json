@@ -20,6 +20,7 @@
         "MANAGEMENT": "Bestuur",
         "CONFIG": "Konfigurasie",
         "PENALTIES": "Strafdoele",
+        "PRISONERS": "Gevangenes",
         "ASSETS": "Bates",
         "OPERATIONS": "Bedrywighede",
         "RECORDS": "Rekords",
@@ -528,6 +529,8 @@
                 "FINE_ASC": "Fyn: Laag → Hoog",
                 "JAIL_DESC": "Tronktyd: Hoog → Laag",
                 "JAIL_ASC": "Tronktyd: Laag → Hoog",
+                "REMAINING_ASC": "Word binnekort vrygestel",
+                "REMAINING_DESC": "Meeste tyd oor",
                 "AGE_DESC": "Ouderdom: Oudste eerste",
                 "AGE_ASC": "Ouderdom: Jongste eerste",
                 "RECORDS_DESC": "Rekords: Meeste eerste",
@@ -678,10 +681,20 @@
             "MESSAGE_COPIED": "Boodskap gekopieer",
             "IMAGE_LINK_COPIED": "Prentskakel is gekopieer",
             "LINK_COPIED": "Skakel gekopieer"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "Klik en druk dan 'n sleutel",
+            "CHANGE_KEY": "Klik om te verander",
+            "LISTENING": "Druk 'n sleutel...",
+            "LISTENING_HINT": "Esc of klik buite om te kanselleer",
+            "CUSTOM": "Pasgemaak",
+            "TAKEN": "{{key}} word reeds deur {{name}} gebruik. Kies 'n ander sleutel, of albei sal loop."
         }
     },
     "ERRORS": {
         "REQUIRED": "Hierdie veld word vereis",
+        "KEYBIND_UNSUPPORTED_KEY": "Hierdie sleutel kan nie vir 'n sleutelbinding gebruik word nie",
+        "KEYBIND_LIMIT": "Jy kan tot {{max}} radiosleutelbindings hê",
         "NO_PERMISSION": "Jy het nie toestemming om dit te doen nie",
         "INVALID_DATA": "Sommige van die data wat ingedien is, is ongeldig",
         "INVALID_CHARGES": "Een of meer aanklagte is ongeldig — kontroleer die bedrae teen die strafkode",
@@ -698,6 +711,7 @@
         "VEHICLE_TOO_FAR": "Kom nader aan die voertuig",
         "NO_VEHICLE_SELECTED": "Geen voertuig gekies nie",
         "NO_SUSPECT_SELECTED": "Geen verdagte gekies nie",
+        "NO_SUBJECT_SELECTED": "Voeg ten minste een persoon of voertuig by",
         "NO_VEHICLE_NEARBY": "Geen voertuig naby nie",
         "TRUNK_SEARCH_UNAVAILABLE": "Stamsoektog is nog nie vir jou voorraadopstelling beskikbaar nie",
         "INVALID_MODEL": "Daardie model is nie beskikbaar nie",
@@ -743,6 +757,7 @@
             "INVALID_VALUE": "Daardie waarde is nie geldig vir hierdie instelling nie",
             "MIN": "Moet ten minste {{min}} wees",
             "MAX": "Moet hoogstens {{max}} wees",
+            "PRINTED_MARKERS": "Tussen 1 en {{max}}: die genommerde merkermodelle gaan slegs tot {{max}}",
             "NOT_AN_OPTION": "Dit is nie een van die opsies nie",
             "EMPTY": "Kan nie leeg wees nie",
             "TOO_LONG": "Moet hoogstens {{max}} karakters wees",
@@ -779,7 +794,7 @@
             "DEFAULT_LOCALE_REMOVED": "Dit is die bedienertaal. Kies eers 'n ander bedienertaal."
         },
         "INVALID_JOBS": "Kies ten minste een geldige departement",
-        "TOO_SHORT": "Dit is te kort",
+        "TOO_SHORT": "Hierdie is te kort",
         "TOO_LONG": "Hierdie is te lank",
         "INVALID_TYPE": "Hierdie waarde het die verkeerde tipe",
         "INVALID_VALUE": "Hierdie waarde word nie toegelaat nie",
@@ -802,8 +817,10 @@
         "PROP_PLACER_INTERRUPTED": "Stutplasing is onderbreek",
         "VEHICLE_OCCUPIED": "Kry almal eers uit die voertuig",
         "IMPOUND_DISABLED": "Skut vanaf die Interaksies-kieslys is op hierdie bediener afgeskakel",
-        "VEHICLE_EMPTY": "Niemand om uit te bestel nie",
+        "IMPOUND_NOT_IMPLEMENTED": "Skut is nie op hierdie bediener opgestel nie",
         "NOT_SUPPORTED": "Dit is nie op hierdie bediener beskikbaar nie",
+        "PRISONER_OFFLINE": "Die gevangene moet hiervoor aanlyn wees",
+        "PRISON_ACTION_FAILED": "Die tronkskrif kon dit nie doen nie",
         "NO_ACCESS": "Jou werk kan dit nie gebruik nie",
         "UNKNOWN_FREQUENCY": "Geen kanaal op hierdie frekwensie nie",
         "MARKER_LIMIT": "Jy het jou bewysmerker limiet bereik",
@@ -823,7 +840,7 @@
         "CANNOT_MANAGE_SELF": "Jy kan dit nie aan jouself doen nie",
         "GRADE_TOO_HIGH": "Jy kan slegs beamptes onder jou eie graad bestuur",
         "AMOUNT_TOO_HIGH": "Daardie bedrag is oor die limiet vir een transaksie",
-        "INVALID_FREQUENCY": "Gebruik 'n frekwensie soos 450.100",
+        "INVALID_FREQUENCY": "Hierdie frekwensie stem nie ooreen met die toegelate formaat nie",
         "UNIT_FULL": "Daardie eenheid het geen vrye sitplek nie",
         "UNIT_NEEDS_LEAD": "Laat iemand anders eers lei",
         "UNIT_OFF_DUTY": "Niemand in daardie eenheid is aan diens nie",
@@ -860,7 +877,7 @@
         "REGISTERED_WEAPON": "hierdie wapen geregistreer",
         "BOLO_LOCATED": "gemerk die BOLO geleë",
         "CREATED_WARRANT": "het hierdie lasbrief aangevra",
-        "SERVED_WARRANT": "die lasbrief beteken en aanklagte uitgereik",
+        "SERVED_WARRANT": "het die lasbrief beteken en aanklagte uitgereik",
         "SUBJECT_ATTACHED": "aangeheg {{name}} as onderwerp",
         "LINKED_INVESTIGATOR": "bygevoeg {{name}} as 'n ondersoeker",
         "UNLINKED_INVESTIGATOR": "verwyder {{name}} as 'n ondersoeker",
@@ -878,7 +895,7 @@
         "EVIDENCE_RETURNED": "het dit teruggestuur na stoor",
         "EVIDENCE_ANALYSIS_REQUESTED": "versoek {{analysis}}",
         "EVIDENCE_ANALYSIS_MATCH": "het 'n wedstryd vir {{analysis}} aangeteken",
-        "EVIDENCE_ANALYSIS_NO_MATCH": "het geen passing aangeteken vir {{analysis}}",
+        "EVIDENCE_ANALYSIS_NO_MATCH": "geen passing aangeteken vir {{analysis}}",
         "EVIDENCE_ANALYSIS_INCONCLUSIVE": "het 'n onoortuigende resultaat vir {{analysis}} aangeteken",
         "TAG_ADDED": "bygevoeg merker {{name}}",
         "TAG_REMOVED": "verwyder merker {{name}}"
@@ -893,7 +910,7 @@
             "CAMERAS_one": "{{count}} kamera regoor die stad",
             "CAMERAS_other": "{{count}} kameras regoor die stad"
         },
-        "SEARCH_PLACEHOLDER": "Soek volgens naam of ligging...",
+        "SEARCH_PLACEHOLDER": "Soek volgens naam of ligging …",
         "STATUSES": {
             "ALL": "Almal",
             "ONLINE": "Aanlyn",
@@ -1058,7 +1075,6 @@
             "EDIT_DESCRIPTION": "Dateer hierdie kanaal se naam of frekwensie op.",
             "NAME_PLACEHOLDER": "SWAT-opdrag",
             "FREQUENCY_FIELD": "Frekwensie (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498,510",
             "SUBMIT": "Skep kanaal",
             "TOASTS": {
                 "CREATED": "Kanaal \"{{name}}\" is geskep",
@@ -1098,19 +1114,24 @@
             "PTT": "PTT"
         },
         "KEYBINDS_DIALOG": {
-            "TITLE": "Radio Keybinds",
-            "DESCRIPTION": "Bind 'n sleutelbordsleutel om onmiddellik op 'n spesifieke kanaal te stuur.",
-            "EMPTY": "Geen sleutelbindings is nog opgestel nie.",
-            "ADD_NEW": "Voeg nuwe sleutelbind by",
-            "ADD_DESCRIPTION": "Kies 'n naam, druk 'n sleutel om dit vas te vang en kies dan die teikenkanaal.",
+            "TITLE": "Radio sleutelbinders",
+            "DESCRIPTION": "Stel jou radio in op 'n kanaal met een sleutel, selfs met die MDT toe.",
+            "OFF": "Radiosleutelbindings is op hierdie bediener afgeskakel.",
+            "EMPTY": "Nog geen radiosleutelbindings nie.",
+            "ADD": "Voeg sleutelbind by",
+            "ADD_TITLE": "Nuwe radio sleutelbind",
+            "EDIT_TITLE": "Wysig radiosleutelbind",
+            "FORM_DESCRIPTION": "Noem dit, kies 'n kanaal en druk die sleutel wat jou radio daarop instel.",
             "NAME_PLACEHOLDER": "Hoofkanaal",
-            "KEY_LABEL": "Sleutel",
-            "LISTENING": "Luister tans …",
-            "CLICK_TO_CAPTURE": "Klik om 'n sleutel vas te vang",
-            "CAPTURING_HINT": "Druk enige sleutel — Ontsnap om te kanselleer.",
-            "CLICK_HINT": "Klik op die veld hierbo en druk enige sleutel.",
             "CHANNEL_PLACEHOLDER": "Kies 'n kanaal",
-            "SAVE": "Stoor Keybind"
+            "KEY_LABEL": "Sleutel",
+            "KEY_HINT": "Slegs enkelsleutels. Jy kan dit ook later verander in Instellings > Sleutelbindings > FiveM.",
+            "CHANNEL_REMOVED": "Hierdie kanaal bestaan ​​nie meer nie",
+            "SETTINGS_HINT": "Sleutels kan ook verander word in Instellings > Sleutelbindings > FiveM. 'n Verwyderde of veranderde sleutel hou dadelik op werk, maar bly daar gelys totdat jy weer koppel.",
+            "DELETE": "Vee sleutelbinding uit",
+            "SAVE": "Stoor sleutelbind",
+            "TUNED": "Radio ingestel op {{name}}",
+            "ROW_NAME": "Radio: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "Nuwe radiokode",
@@ -1147,7 +1168,7 @@
             "TITLE": "Op hierdie kanaal",
             "HINT": "Sleep 'n beampte na 'n kanaal om hulle te hertoewys",
             "EMPTY": "Niemand anders is op hierdie kanaal nie.",
-            "DRAG_TITLE": "Sleep na 'n kanaal om hierdie beampte te hertoewys"
+            "DRAG_TITLE": "Sleep na 'n kanaal om hierdie beampte weer toe te wys"
         },
         "CONSOLE": {
             "TRANSMITTING": "Versend",
@@ -1261,7 +1282,7 @@
             "DISTANCE_ETA": "{{distance}} totaal · ETA {{eta}} min"
         },
         "QUICK_ALERTS": {
-            "PANIC_BUTTON": "Paniek knoppie",
+            "PANIC_BUTTON": "Paniekknoppie",
             "REQUEST_BACKUP_BUTTON": "Versoek rugsteun",
             "PANIC": {
                 "TITLE": "Beampte Benodig Hulp",
@@ -1493,7 +1514,7 @@
             "EMPTY": "Skep een om beamptes in spanne te begin groepeer.",
             "DRAG_TITLE": "Sleep na 'n ander eenheid om te hertoewys",
             "REMOVE_TITLE": "Verwyder uit eenheid",
-            "NO_MEMBERS": "",
+            "NO_MEMBERS": "Geen beamptes aangewys nie",
             "DELETE_CONFIRM_DESCRIPTION": "Dit verwyder die eenheid en onttrek elke beampte daarin. Dit kan nie ongedaan gemaak word nie.",
             "NO_UNASSIGNED": "Elke aanlyn beampte is in 'n eenheid",
             "START_UNIT": "Begin eenheid",
@@ -1528,8 +1549,8 @@
             "CHECK_OVERDUE": "Geen antwoord nie",
             "ON_CHANNEL": "Op kanaal",
             "WAYPOINT_SET": "Waypoint gestel op {{name}}",
-            "STATUS_CHECK_SENT": "Status check sent to {{name}}",
-            "STATUS_CHECK_ALL": "",
+            "STATUS_CHECK_SENT": "Statuskontrole gestuur na {{name}}",
+            "STATUS_CHECK_ALL": "Status kontroleer alles",
             "STATUS_CHECK_ALL_SENT_one": "Statuskontrole gestuur na {{count}} eenheid",
             "STATUS_CHECK_ALL_SENT_other": "Statuskontrole gestuur na {{count}} eenhede",
             "ZONE_SHORT": "Onder die minimum van {{min}} eenhede",
@@ -1543,13 +1564,13 @@
                 "TITLE": "Bladsy {{name}}",
                 "DESCRIPTION": "Getoon in speletjie aan elke aan diens lid van die eenheid.",
                 "PLACEHOLDER": "bv. Keer terug na Mission Row vir inligtingsessie",
-                "SEND": "",
+                "SEND": "Stuur bladsy",
                 "SENT": "Bladsy gestuur na {{name}}"
             },
             "ADD_OFFICER": "Voeg beampte by",
             "AVAILABLE": "Beskikbare beamptes",
             "ZONES": "Sones",
-            "STATUS_SUMMARY": "",
+            "STATUS_SUMMARY": "Aan diens volgens status",
             "GROUP_LABEL": "Groepeer deur",
             "EMPTY_TITLE": "Nog geen eenhede nie",
             "NO_MATCH": "Geen eenhede pas by jou soektog nie",
@@ -1567,7 +1588,7 @@
             "EDIT_DESCRIPTION": "Verander die eenheid se naam, tipe, radio of kleur.",
             "NAME_PLACEHOLDER": "1-ADAM-12",
             "SHIFT_DESCRIPTION": "Begin 'n eenheid vir jou skof. Jy lei dit, en dit word verwyder wanneer almal vertrek.",
-            "RADIO_FIELD": "",
+            "RADIO_FIELD": "Eenheid radio",
             "RADIO_HINT": "'n Kanaal vanaf die Radio-blad waarby lede vanaf die eenheid se spyskaart kan aansluit.",
             "PERMANENT_FIELD": "Hou aan na die skof",
             "PERMANENT_HINT": "Gered, en bly wanneer almal weggaan. Af: 'n skofeenheid, verwyder sodra dit leeg is."
@@ -2152,6 +2173,9 @@
                 "PENALCODE_VIEW": "Lees die strafkode.",
                 "PENALCODE_CREATE": "Voeg strafkode-inskrywings by.",
                 "PENALCODE_UPDATE": "Wysig strafkode-inskrywings.",
+                "PRISONERS_VIEW": "Kyk wie is in die tronk en hoe lank hulle oor is.",
+                "PRISONERS_RELEASE": "Laat gevangenes vry voordat hul vonnis eindig.",
+                "PRISONERS_EDIT": "Verander hoe lank 'n gevangene nog moet uitdien.",
                 "PENALCODE_DELETE": "Verwyder strafkode-inskrywings.",
                 "OPERATIONPLANS_VIEW": "Lees operasieplanne.",
                 "OPERATIONPLANS_CREATE": "Stel nuwe operasieplanne op.",
@@ -2471,7 +2495,7 @@
                 "ENABLED_HINT": "Wanneer ’n klag met ’n boete gestuur word, gaan die geld in die departement se genootskaprekening. Af: die geld word net van die burger geneem.",
                 "ACCOUNTS": {
                     "TITLE": "Samelewingsrekeninge",
-                    "DESCRIPTION": "Die bankrekening waarin elke werk se boetes inbetaal word. Laat dit leeg om die taaknaam te gebruik.",
+                    "DESCRIPTION": "Die bankrekening word in elke werk se boetes inbetaal. Laat dit leeg om die taaknaam te gebruik.",
                     "PLACEHOLDER": "{{job}}",
                     "EMPTY": "Witlys eers 'n werk."
                 },
@@ -2622,7 +2646,7 @@
                 "STATUSES": {
                     "TITLE": "Beamptestatusse",
                     "LIST": "Statusse",
-                    "LIST_HINT": "Voeg jou eie by of verander die kleur, ikoon en naam van enige status. Afgeskakelde of verwyderde statusse verdwyn uit die statuskieslys en beamptes wat een gebruik, word na die verstekstatus geskuif.",
+                    "LIST_HINT": "Voeg jou eie by of verander die kleur, ikoon en naam van enige status. Afgeskakelde of uitgevee statusse verdwyn uit die statuskieslys en beamptes wat een gebruik, word na die verstekstatus geskuif.",
                     "LIST_LOCKED": "Dit is die verstekstatus, dus kan dit nie afgeskakel of uitgevee word nie. Kies eers 'n ander verstekstatus.",
                     "LIST_FIELDS": {
                         "NAME_HINT": "Slegs kleinletters, syfers, _ en -. Ingevul vanaf die etiket vir jou.",
@@ -2690,7 +2714,7 @@
             "JUSTICE": {
                 "CHARGES": {
                     "TITLE": "Heffingslimiete",
-                    "DESCRIPTION": "Die meeste een strafkode aanklag kan dra. Hulle stop tikfoute soos 'n ekstra nul; die strafkoderedakteur en elke aanklag respekteer hulle.",
+                    "DESCRIPTION": "Die meeste een strafkode aanklag kan dra. Hulle stop tikfoute soos 'n ekstra nul; die strafkode-redakteur en elke aanklag respekteer hulle.",
                     "QUANTITY": "Keer wat 'n lading gestapel kan word",
                     "QUANTITY_HINT": "Vir aanklagte wat meer as een keer bygevoeg kan word (bv. 3× Aanranding), word die hoogste getal toegelaat.",
                     "FINE": "Hoogste boete",
@@ -2777,7 +2801,7 @@
                 "EVENTS": {
                     "TITLE": "Outomatiese plasings",
                     "DESCRIPTION": "Dinge wat die MDT op sy eie op 'n kletskanaal plaas, sodat niemand dit mis nie. Kies die kanaal vir elkeen, of skakel dit af.",
-                    "OFFICER_PANIC": "Paniek knoppie",
+                    "OFFICER_PANIC": "Paniekknoppie",
                     "BACKUP_REQUESTED": "Rugsteun versoek",
                     "BOLO_CREATED": "Nuwe BOLO",
                     "BOLO_LOCATED": "BOLO geleë",
@@ -2827,6 +2851,12 @@
                     "DESCRIPTION": "Wat in die klok op die paneelbord beland. Persoonlike wag vir beamptes wat vanlyn is; Departementswye bereik beamptes op daardie tydstip net aanlyn.",
                     "RETENTION": "Hou kennisgewings vir",
                     "RETENTION_HINT": "Kennisgewings ouer as dit word uitgevee, dadelik wanneer jy dit verlaag. 0 hou hulle vir ewig."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Radio animasie",
+                    "DESCRIPTION": "Wat beamptes se karakters doen terwyl hulle oor die radio praat. Elke beampte kan hul eie kies op die Konfigurasie-bladsy; dit is wat almal anders kry.",
+                    "DEFAULT": "Verstek animasie",
+                    "DEFAULT_HINT": "Met pma-voice is sy eie radio-animasie afgeskakel, tensy dit Geen is nie. Met 'n ander stemhulpbron, skakel sy animasie af in sy eie konfigurasie."
                 }
             },
             "DISPATCH": {
@@ -2971,7 +3001,7 @@
                 },
                 "ALERTS": {
                     "TITLE": "Outomatiese waarskuwings",
-                    "DESCRIPTION": "Waarsku die speletjie op sy eie wanneer 'n speler 'n misdaad pleeg. Kaartblip: die ikoon en kleur van die oproep se merker. Afkoeling: hoe lank voordat dieselfde speler daardie waarskuwing weer kan aktiveer. Aan diens vrygestel: beamptes aan diens aktiveer dit nooit nie (bv. spoed tydens 'n agtervolging). Departemente: wie ontvang die waarskuwing; alle departemente wanneer nie een gekies word nie.",
+                    "DESCRIPTION": "Waarsku die spel verhoog op sy eie wanneer 'n speler 'n misdaad pleeg. Kaartblip: die ikoon en kleur van die oproep se merker. Afkoeling: hoe lank voordat dieselfde speler daardie waarskuwing weer kan aktiveer. Aan diens vrygestel: beamptes aan diens aktiveer dit nooit nie (bv. spoed tydens 'n agtervolging). Departemente: wie ontvang die waarskuwing; alle departemente wanneer nie een gekies word nie.",
                     "ENABLED": "Aan",
                     "BLIP": "Kaartblip",
                     "COOLDOWN": "Afkoeling",
@@ -3002,6 +3032,33 @@
                     "AUTO_LOCK": "Sluit die bord op 'n vuurhoutjie",
                     "AUTO_LOCK_HINT": "Die radar sluit die plaat wat gepas het, sodat die beampte dit nie verloor nie.",
                     "DESCRIPTION": "Met 'n radarhulpbron (wk_wars2x), word elke plaat wat die radar lees teen BOLO's en lasbriewe gekontroleer, en die beampte word op 'n wedstryd gewaarsku."
+                },
+                "SCENE": {
+                    "TITLE": "Misdaadtonele",
+                    "DESCRIPTION": "Hoe beamptes misdaadtoneelband- en bewysmerkers plaas: vanaf die Toneelbladsy van die interaksie-kieslys, deur 'n inventarisitem te gebruik, of enige een. Items word nie opgebruik nie.",
+                    "METHODS": {
+                        "MENU": "Toneel bladsy",
+                        "ITEM": "Die gebruik van die item",
+                        "BOTH": "Toneelbladsy of item"
+                    },
+                    "TAPE_METHOD": "Hoe beamptes band plaas",
+                    "TAPE_METHOD_HINT": "Van die Toneelbladsy, deur die banditem te gebruik, of enige een.",
+                    "TAPE_ITEM": "Band-item",
+                    "TAPE_ITEM_HINT": "Die inventaris-item wat beamptes gebruik om misdaadtoneelband te plaas.",
+                    "MARKER_METHOD": "Hoe beamptes bewysmerkers plaas",
+                    "MARKER_METHOD_HINT": "Van die Toneelbladsy, deur die merkitem te gebruik, of enige een.",
+                    "MARKER_ITEM": "Bewysmerker item",
+                    "MARKER_ITEM_HINT": "Die inventaris-item wat beamptes gebruik om bewysmerkers te plaas.",
+                    "RADIUS": "Toneelgrootte",
+                    "RADIUS_HINT": "Band, merkers en rekwisiete wat so naby 'n toneel geplaas is, sluit daarby aan. Verder weg begin hulle ’n nuwe toneel.",
+                    "MAX_MARKERS_SCENE": "Bewysmerkers per toneel",
+                    "MAX_MARKERS_SCENE_HINT": "Merkers word vanaf 1 in elke toneel genommer. 0 = onbeperk, slegs wanneer die merkers nie die genommerde modelle gebruik nie.",
+                    "MAX_MARKERS_OFFICER": "Bewysmerkers per beampte",
+                    "MAX_MARKERS_OFFICER_HINT": "Hoeveel merkers kan een beampte op een slag hê, oor elke toneel. 0 = onbeperk.",
+                    "TAPE_LENGTH": "Langste bandlyn",
+                    "TAPE_LENGTH_HINT": "Die verste uitmekaar kan die twee punte van een bandlyn vasgemaak word.",
+                    "MAX_TAPE_OFFICER": "Bandlyne per beampte",
+                    "MAX_TAPE_OFFICER_HINT": "Hoeveel bandlyne kan een beampte op een slag hê. 0 = onbeperk."
                 }
             },
             "CAMERAS": {
@@ -3143,7 +3200,7 @@
                     "DISTANCE": "Hack afstand",
                     "DISTANCE_HINT": "Hoe naby 'n speler moet staan ​​om 'n kamera te kap en dit vanlyn te neem.",
                     "COMMAND": "Hack opdrag",
-                    "COMMAND_HINT": "Spelers kan die hack-opdrag naby 'n kamera tik om dit vanlyn te neem. Af: net jou eie skrifte kan kameras hack."
+                    "COMMAND_HINT": "Spelers kan die hack-opdrag naby 'n kamera tik om dit vanlyn te neem. Af: net jou eie skrifte kan kameras kap."
                 },
                 "RECORDING": {
                     "TITLE": "Opnames",
@@ -3162,28 +3219,35 @@
                     "BOTH": "Item of opdrag",
                     "WAYS": {
                         "ITEM": "Inventaris item",
-                        "COMMAND": "Kletsbevel"
+                        "COMMAND": "Kletsbevel",
+                        "MENU": "Toneel bladsy"
                     }
                 },
                 "REPAIR": {
                     "TITLE": "Herstelwerk",
-                    "DESCRIPTION": "Spelers maak 'n stukkende kamera reg deur langs dit te staan ​​en 'n kort vaardigheidstoets te slaag. Jou eie herstelwerk kan die RepairCamera-uitvoer gebruik selfs wanneer dit af is.",
+                    "DESCRIPTION": "Spelers maak 'n stukkende kamera reg deur langsaan te staan ​​en 'n kort vaardigheidstoets te slaag. Jou eie herstelwerk kan die RepairCamera-uitvoer gebruik selfs wanneer dit af is.",
                     "ENABLED": "Spelers kan kameras herstel",
                     "ENABLED_HINT": "Af: stukkende kameras bly stukkend totdat 'n draaiboek hulle herstel.",
                     "METHOD": "Hoe 'n herstelwerk begin",
-                    "METHOD_HINT": "Gebruik die herstelstel-item, tik die herstelopdrag, of een van die twee. Die item moet in jou voorraadhulpbron bestaan.",
+                    "METHOD_HINT": "Gebruik die herstelstel-item, tik die herstelopdrag, of enige een. Die item moet in jou voorraadhulpbron bestaan.",
                     "ITEM": "Herstelstel item",
                     "ITEM_HINT": "Die voorraaditem wat spelers gebruik om 'n kamera te herstel."
                 },
                 "FEEDS": {
                     "TITLE": "Live feeds",
-                    "DESCRIPTION": "Wat beamptes kry terwyl hulle 'n kringtelevisiekamera, liggaamskamera of dashcam kyk.",
+                    "DESCRIPTION": "Wat beamptes kry terwyl hulle 'n kringtelevisiekamera, lyfkamera of dashcam kyk.",
                     "AUDIO": "Hoor stemme naby die kamera",
                     "AUDIO_HINT": "Beamptes wat na 'n feed kyk, hoor spelers naby dit praat in plaas van hul eie omgewing. Benodig pma-stem. Deur dit af te skakel, stop dit ook vir beamptes wat nou kyk.",
                     "SIGNAL": "Seinsterkte verander",
                     "SIGNAL_HINT": "Kosmeties: die seinstawe op die kamerarooster beweeg 'n bietjie met verloop van tyd. Af: hulle bly stil.",
                     "AUDIO_RADIUS": "Gehoorreeks",
-                    "AUDIO_RADIUS_HINT": "Beamptes wat na 'n stroom kyk, hoor spelers so naby aan die kamera praat."
+                    "AUDIO_RADIUS_HINT": "Beamptes wat na 'n stroom kyk, hoor spelers so naby aan die kamera praat.",
+                    "ON_FEED_LOST": "Wanneer die kamera afgaan",
+                    "ON_FEED_LOST_HINT": "Wat gebeur vir beamptes wat na 'n CCTV-kamera kyk wat vernietig, gekap of gedeaktiveer word, nadat die uitsny afspeel.",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Skakel oor na die volgende kamera",
+                        "CLOSE": "Maak die voer toe"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Outo-bespeur",
@@ -3479,7 +3543,7 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "Verstek sleutelbindings",
-                    "DESCRIPTION": "Die sleutel waarop elke aksie begin. FiveM stoor 'n speler se sleutels die eerste keer dat hulle aansluit, so 'n verandering hier bereik nuwe spelers en enigiemand wat nog nooit hierdie sleutel gehad het nie. Almal kan steeds hul eie sleutels verander in Instellings > Sleutelbindings > FiveM.",
+                    "DESCRIPTION": "Die sleutel waarop elke aksie begin. FiveM stoor 'n speler se sleutels die eerste keer dat hulle aansluit, so 'n verandering hier bereik nuwe spelers en enigiemand wat nog nooit hierdie sleutel gehad het nie. Almal kan steeds hul eie sleutels verander op die MDT se konfigurasiebladsy of in Instellings > Sleutelbindings > FiveM.",
                     "OPEN_MDT": "Maak die MDT oop",
                     "OPEN_MDT_HINT": "Afgeskakel maak beamptes dit oop met die bevel of die item.",
                     "INTERACTIONS": "Interaksie-kieslys",
@@ -3488,10 +3552,13 @@
                     "DISPATCH_HINT": "Wys of versteek die klein versendingpaneel.",
                     "RESPOND_TO_CALL": "Reageer op oproep",
                     "RESPOND_TO_CALL_HINT": "Reageer op die nuutste oproep en stel 'n waypoint daarop.",
-                    "PANIC_BUTTON": "Paniek knoppie",
+                    "PANIC_BUTTON": "Paniekknoppie",
                     "PANIC_BUTTON_HINT": "Stuur 'n paniekwaarskuwing met die beampte se ligging.",
                     "REQUEST_BACKUP": "Versoek rugsteun",
-                    "REQUEST_BACKUP_HINT": "Vra nabygeleë eenhede vir rugsteun."
+                    "REQUEST_BACKUP_HINT": "Vra nabygeleë eenhede vir rugsteun.",
+                    "CLASH": "Ook die versteksleutel van {{names}}. FiveM voer elke aksie op 'n sleutel uit, so {{key}} sal albei doen.",
+                    "MAX_RADIO": "Radiosleutels per beampte",
+                    "MAX_RADIO_HINT": "Hoeveel radiosleutelbinders kan elke beampte op die Radio-bladsy byvoeg. 0 skakel hulle af. Beamptes wat reeds meer het, behou net hul eerstes."
                 }
             },
             "IN_GAME": {
@@ -3631,7 +3698,8 @@
                 "RADIUS": "Soek area",
                 "RADIUS_HINT": "'n Sirkel om die oproep in plaas van net 'n pen.",
                 "SUMMARY": "ikoon {{sprite}}, kleur {{colour}}",
-                "SAME_AS_OTHERS": "Dieselfde as die ander"
+                "SAME_AS_OTHERS": "Dieselfde as die ander",
+                "COLOUR_BY_PRIORITY": "Die kleur volg die oproep se prioriteit. Skakel \"Kleur volgens prioriteit\" in Kaartblaaie af om een ​​hier te kies."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Verfris",
@@ -3688,12 +3756,12 @@
                         "ADD": "Voeg by",
                         "REPLACE": "Vervang alles"
                     },
-                    "REPLACE_WARNING_one": "Die {{formatted}} kamera wat nou geplaas is, word eers uitgevee.",
+                    "REPLACE_WARNING_one": "Die {{formatted}} kamera wat nou geplaas is, word eerste uitgevee.",
                     "REPLACE_WARNING_other": "Alle {{formatted}} kameras wat nou geplaas is, word eers uitgevee.",
                     "REPLACE_CONFIRM": {
                         "TITLE": "Vervang elke kamera?",
                         "DESCRIPTION_one": "Die {{formatted}} kamera wat nou geplaas is, word uitgevee, dan word die ingevoerde kameras geplaas. Opnames bly in die galery.",
-                        "DESCRIPTION_other": "Alle {{formatted}} kameras wat nou geplaas is, word uitgevee, dan word die ingevoerde kameras geplaas. Opnames bly in die galery.",
+                        "DESCRIPTION_other": "Alle {{formatted}} kameras wat nou geplaas is, word uitgevee, en dan word die ingevoerde kameras geplaas. Opnames bly in die galery.",
                         "CONFIRM": "Vervang"
                     },
                     "STATUS": {
@@ -3767,7 +3835,7 @@
                 "STATS": {
                     "TITLE": "Versending statistieke",
                     "RETENTION": "Hou statistieke vir",
-                    "RETENTION_HINT": "Oproepe geneem, aankomste en opgelosde oproepe word in Bestuur > Versending gewys. 0 = hou vir ewig."
+                    "RETENTION_HINT": "Oproepe geneem, aankomelinge en opgelosde oproepe word in Bestuur > Versending gewys. 0 = hou vir ewig."
                 }
             }
         },
@@ -3832,6 +3900,13 @@
             "RECORDING": {
                 "MAX_DURATION": "Langste opname bereik, stoor die snit",
                 "MAX_SIZE": "Grootste opnamegrootte bereik, stoor die snit"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "Kamera vernietig",
+                "HACKED": "Voer onderskep",
+                "OFFLINE": "Kamera vanlyn",
+                "BODYCAM": "Liggaamkamera vanlyn",
+                "DASHCAM": "Dashcam vanlyn"
             }
         },
         "GIZMO": {
@@ -4014,7 +4089,7 @@
                 "LOCKED": "Gesluit",
                 "RUN_PLATE": "Hardloop plaat",
                 "NOT_REGISTERED": "Plaat nie op rekord nie",
-                "MISMATCH": "Plaat geregistreer vir 'n ander model",
+                "MISMATCH": "Plaat geregistreer op 'n ander model",
                 "OWNER": "Eienaar",
                 "REGISTERED_MODEL": "Geregistreerde model",
                 "STATUS": "Status",
@@ -4025,9 +4100,6 @@
                 "ACTIVE_WARRANTS": "Aktiewe lasbriewe",
                 "STOLEN": "Gesteel",
                 "OPEN_RECORD": "Oop rekord",
-                "OCCUPANTS_OUT": "Bestel insittendes uit",
-                "OCCUPANTS_ORDERED_one": "{{count}} insittende bestel",
-                "OCCUPANTS_ORDERED_other": "{{count}} insittendes bestel",
                 "SEARCH_TRUNK": "Soek stam",
                 "IMPOUND": "Skut",
                 "IMPOUNDED": "{{plate}} geskut"
@@ -4399,7 +4471,7 @@
                     },
                     "CHECKS": {
                         "TITLE": "Regstreekse tjeks",
-                        "BODY": "Alles wat verkeerd kan loop, word nagegaan terwyl jy beweeg: mure, die lens, die uitsig, die afstand. Groen is fyn, amber is die moeite werd om te kyk, rooi moet reggemaak word voordat dit gestoor word."
+                        "BODY": "Alles wat verkeerd kan loop, word nagegaan terwyl jy beweeg: mure, die lens, die uitsig, die afstand. Groen is goed, amber is die moeite werd om te kyk, rooi moet reggemaak word voordat dit gestoor word."
                     },
                     "KEYS": {
                         "TITLE": "Sleutels vir hierdie stap",
@@ -4408,7 +4480,7 @@
                 },
                 "ADJUST": {
                     "ORBIT": {
-                        "TITLE": "Kyk daarna van buite af",
+                        "TITLE": "Kyk dit van buite af",
                         "BODY": "Hou regtermuis vas om rondom die kamera te kyk en blaai om nader te kom. Die pyle skuif dit langs sy oppervlak, Page Up / Page Down skuif dit uit of in."
                     },
                     "TOOLS": {
@@ -4453,6 +4525,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Temas en kleure."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "In die speletjie",
+                    "DESCRIPTION": "Hoe jou karakter optree terwyl jy die MDT en die radio gebruik."
                 }
             },
             "SECTIONS": {
@@ -4461,7 +4537,9 @@
                 "UNITS_NUMBERS": "Eenhede & Getalle",
                 "SEE_THROUGH": "Sien-deur-modus",
                 "SEE_THROUGH_DESCRIPTION": "Vervaag die MDT uit die pad om die wedstryd daaragter te kyk, sonder om dit toe te maak.",
-                "DISPLAY": "Vertoon"
+                "DISPLAY": "Vertoon",
+                "RADIO": "Radio",
+                "KEYBINDS": "Sleutelbinders"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4509,7 +4587,7 @@
                     "DESCRIPTION": "Slaan bladsy-oorgange en UI-animasies oor"
                 },
                 "TRANSPARENCY_KEY": {
-                    "LABEL": "Deurkyk-modus",
+                    "LABEL": "Deurkykmodus",
                     "DESCRIPTION": "Vervaag die MDT terwyl dit oop is sodat jy die speletjie kan kyk"
                 },
                 "TRANSPARENCY_LEVEL": {
@@ -4523,13 +4601,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Kennisgewing klink",
                     "DESCRIPTION": "Speel 'n klank vir inkomende versendingoproepe en kletsnoemings"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Pratende animasie",
+                    "DESCRIPTION": "Wat jou karakter doen terwyl jy oor die radio praat",
+                    "PREVIEW": "Voorskou op jou karakter"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Druk 'n sleutel...",
-                "LISTENING_HINT": "Esc om te kanselleer · Backspace om skoon te maak",
                 "UNBOUND": "Nie gebonde nie",
                 "CUSTOM": "Pasgemaak"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "Jou MDT-sleutelbind. Klik 'n sleutel en druk 'n nuwe een om dit te verander.",
+                "NONE": "Hierdie bediener het geen MDT-sleutelbindings nie.",
+                "OVERLAP": "Dieselfde sleutel as {{names}}. FiveM voer elke aksie op 'n sleutel uit, so as u dit druk, word almal uitgevoer.",
+                "OPEN_SETTINGS": "Verander sleutels in FiveM se sleutelbindings",
+                "HINT": "'n Sleutel wat jy vervang, hou dadelik op om te werk, maar bly in FiveM se sleutelbindings gelys totdat jy weer koppel. Muisknoppies en beheerders kan daar gestel word."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Lig",
@@ -4569,7 +4657,7 @@
             },
             "NOTIFICATION_POSITIONS": {
                 "TOP_LEFT": "Links bo",
-                "TOP_CENTER": "Bo middelpunt",
+                "TOP_CENTER": "Boonste middelpunt",
                 "TOP_RIGHT": "Regs bo",
                 "BOTTOM_LEFT": "Links onder",
                 "BOTTOM_CENTER": "Onderste middel",
@@ -4587,7 +4675,14 @@
                 "HINT": "Voorbeskou 'n kennisgewing by die posisie en duur hierbo",
                 "BUTTON": "Voorskou kennisgewing"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Voorskou — hoe vervaag die MDT op hierdie vlak lyk"
+            "SEE_THROUGH_PREVIEW_HINT": "Voorskou — hoe vervaag die MDT op hierdie vlak lyk",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Bediener verstek ({{style}})",
+                "NONE": "Geen",
+                "CHEST": "Skouer mikrofoon",
+                "EAR": "Oorstuk",
+                "HANDHELD": "Handradio"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "Temas",
@@ -4787,6 +4882,8 @@
             "license_revoke": "Lisensie herroep",
             "citizen_image_change": "Burgerfoto verander",
             "charges_issued": "Kostes uitgereik",
+            "prisoner_released": "Gevangene vrygelaat",
+            "prisoner_sentence_changed": "Sin Verander",
             "note_added": "Nota bygevoeg",
             "note_removed": "Nota verwyder",
             "employee_grade_change": "Graad verander",
@@ -4861,7 +4958,7 @@
             "WARRANT_STATUS": "Stel lasbrief #{{id}}-status op {{status}}",
             "WARRANT_SERVED": "Bedien lasbrief #{{id}}",
             "BOLO_CREATED": "Geskep BOLO #{{id}}",
-            "BOLO_STATUS": "Stel BOLO #{{id}}-status na {{status}}",
+            "BOLO_STATUS": "Stel BOLO #{{id}}-status op {{status}}",
             "BOLO_LOCATED": "Gemerk BOLO #{{id}} geleë",
             "VEHICLE_STATUS": "Stel voertuig se {{plate}}-status op {{status}}",
             "EVIDENCE_STATUS": "Stel bewys #{{id}}-status op {{status}}",
@@ -4871,6 +4968,8 @@
             "LICENSE_REVOKE": "Het {{type}}-lisensie van {{identifier}} herroep",
             "CITIZEN_IMAGE_CHANGE": "Opgedateerde profielfoto vir {{identifier}}",
             "CHARGES_ISSUED": "Het {{count}} heffing(s) uitgereik op {{entityType}} #{{id}}",
+            "PRISONER_RELEASED": "Vrygestelde gevangene {{identifier}} (rede: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "Stel die oorblywende sin van {{identifier}} op {{time}} (rede: {{reason}})",
             "NOTE_ADDED": "Het 'n nota by {{entityType}} #{{entityId}} gevoeg",
             "NOTE_REMOVED": "Het 'n nota van {{entityType}} #{{entityId}} verwyder",
             "EMPLOYEE_GRADE_CHANGE": "Stel {{identifier}} se graad op {{grade}}",
@@ -5215,7 +5314,7 @@
                 },
                 "WEAPONS": {
                     "LABEL": "Wapens",
-                    "DESCRIPTION": "Modelnaam en reeksnommers van wapens betrokke by die voorval, kommageskei"
+                    "DESCRIPTION": "Modelnaam en reeksnommers van wapens wat by die voorval betrokke was, kommageskei"
                 }
             },
             "ANNOUNCEMENT": {
@@ -5352,13 +5451,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Reik 'n uitkykpunt uit vir 'n persoon of voertuig. Nuwe BOLO's begin as konsepte."
+            "DESCRIPTION": "Reik 'n uitkykpunt uit vir 'n persoon of voertuig. Konsepte vlag nie die onderwerp totdat dit geaktiveer is nie."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Gewapende verdagte in 'n swart Sultan RS",
             "DESCRIPTION_PLACEHOLDER": "Waar hulle laas gesien is, hoe hulle lyk en hoekom hulle gesoek word",
             "EXPIRES_LABEL": "Verval om",
             "EXPIRES_PLACEHOLDER": "Verstek tot 7 dae",
+            "SUBJECTS_TITLE": "Vakke",
+            "CITIZENS_PLACEHOLDER": "Kies mense",
             "TOASTS": {
                 "CREATED": "BOLO geskep"
             }
@@ -5398,6 +5499,7 @@
             "CONFIRM_DESCRIPTION": "Dit bevestig dat{{subject}} opgespoor is en sluit die uitkykpunt.",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "die onderwerp",
+            "CONFIRM_DESCRIPTION_MANY": "Dit bevestig dat alle {{count}} vakke opgespoor is en sluit die uitkykpunt.",
             "TOASTS": {
                 "MARKING": "Merk tans BOLO geleë …",
                 "MARKED": "BOLO gemerk geleë"
@@ -5416,8 +5518,9 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Ongekategoriseer",
         "INDEX": {
-            "HEADING": "Regswette en Strafkode",
+            "HEADING": "Regsstatute en Strafkode",
             "SUBHEADING": "Amptelike kodifikasie van misdrywe, finansiële sanksies en geregtelike mandate",
             "CATEGORY_DIALOG_TITLE": "Nuwe kategorie",
             "CATEGORY_DIALOG_DESCRIPTION": "Voeg 'n nuwe wetlike kategorie by om jou strafkode artikels en oortredings te organiseer.",
@@ -5471,7 +5574,7 @@
                 "CATEGORY_REQUIRED": "Kies 'n kategorie vir hierdie artikel",
                 "MIN_FINE_ABOVE_DEFAULT": "Min boete kan nie hoër as die verstek boete wees nie",
                 "MAX_FINE_BELOW_DEFAULT": "Maksimum boete kan nie laer as die verstek boete wees nie",
-                "MIN_JAIL_ABOVE_DEFAULT": "Min tronk tyd kan nie hoër as die verstek tronk tyd wees nie",
+                "MIN_JAIL_ABOVE_DEFAULT": "Min tronk tyd kan nie hoër wees as die verstek tronk tyd nie",
                 "MAX_JAIL_BELOW_DEFAULT": "Maksimum tronk tyd kan nie laer wees as die verstek tronk tyd nie",
                 "MIN_HOURS_ABOVE_DEFAULT": "Min gemeenskapsdiens kan nie hoër as die verstektake wees nie",
                 "MAX_HOURS_BELOW_DEFAULT": "Maksimum gemeenskapsdiens kan nie laer wees as die verstektake nie",
@@ -5571,6 +5674,54 @@
                 "PROCESSING": "Verwerk tans boete …",
                 "SUCCESS": "Straf verwerk vir {{name}}",
                 "FAILED": "Kon nie die boete verwerk nie"
+            }
+        }
+    },
+    "PRISONERS": {
+        "SUBHEADING": "Almal in die tronk op die oomblik en hoe lank hulle oor is",
+        "SUBHEADING_ONLINE_ONLY": "Gevangenes wat op die oomblik aanlyn is. Jou tronkskrif rapporteer nie vanlyn gevangenes nie",
+        "SEARCH_PLACEHOLDER": "Soek volgens naam of identifiseerder …",
+        "EMPTY": "Niemand is in die tronk nie",
+        "NOT_SUPPORTED": "Jou tronkskrif kan nie gevangenes lys nie",
+        "COLUMNS": {
+            "REMAINING": "Oorblywende",
+            "RECORD": "Rekord",
+            "SENTENCED_BY": "Gevonnis deur",
+            "SINCE": "Sedert"
+        },
+        "REMAINING_OF": "{{remaining}} van {{total}}",
+        "UNKNOWN_REMAINING": "Nie gerapporteer deur die tronkskrif nie",
+        "JAILED_OUTSIDE_MDT": "Buite die MDT tronk toe",
+        "RECORD_LABEL": "{{type}} #{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Straf",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Maak profiel oop",
+        "REASON_LABEL": "Rede (opsioneel)",
+        "RELEASE": {
+            "TRIGGER": "Loslaat",
+            "TITLE": "Laat gevangene vry",
+            "CONFIRM": "{{name}} sal nou vrygestel word en hul vonnis gesluit.",
+            "REASON_PLACEHOLDER": "Vonnis verminder deur die hof",
+            "BUTTON": "Loslaat",
+            "NEEDS_ONLINE": "Jou tronkskrif kan net gevangenes vrylaat wat aanlyn is.",
+            "TOASTS": {
+                "PROCESSING": "Laat gevangene vry …",
+                "SUCCESS": "Vrygestel {{name}}",
+                "FAILED": "Kon nie die gevangene vrylaat nie"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Verander sin",
+            "TITLE": "Verander sin",
+            "TIME_LABEL": "Tyd oor om te bedien (maande)",
+            "REASON_PLACEHOLDER": "Goeie gedrag",
+            "BUTTON": "Stel op {{duration}}",
+            "TOASTS": {
+                "PROCESSING": "Verander tans sin …",
+                "SUCCESS": "{{name}} se sin is nou {{duration}}",
+                "FAILED": "Kon nie die sin verander nie"
             }
         }
     },
@@ -5722,6 +5873,8 @@
         },
         "INDEX": {
             "UNNAMED": "Naamlose burger",
+            "JAILED": "Tronk toe",
+            "JAILED_REMAINING": "Tronk toe · {{duration}} oor",
             "SUBHEADING": "Burger ID",
             "TOASTS": {
                 "SAVING_IMAGE": "Stoor tans prent …",
@@ -5819,6 +5972,24 @@
             },
             "SUMMARY_TITLE": "Straftotale"
         },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Tronkgeskiedenis",
+            "EMPTY": "Geen tronkstraf op rekord nie",
+            "COLUMNS": {
+                "OUTCOME": "Uitkoms",
+                "ENDED": "Geëindig"
+            },
+            "STATUS": {
+                "ACTIVE": "Dien",
+                "SERVED": "Bedien",
+                "RELEASED": "Vroeg vrygestel",
+                "REPLACED": "Vervang deur 'n nuwe sin"
+            },
+            "RELEASED_BY": "deur {{name}}",
+            "VIEW_ALL_one": "Bekyk al {{formatted}} sin",
+            "VIEW_ALL_other": "Bekyk al {{formatted}} sinne",
+            "DIALOG_TITLE": "Tronkgeskiedenis van {{name}}"
+        },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Maak 'n grafiek oop van die rekords, voertuie en mense wat aan hierdie burger gekoppel is",
             "PHONE_RECORDS_HINT": "Bekyk telefoonrekords",
@@ -5883,7 +6054,7 @@
             "CATEGORY_HINTS": {
                 "engine": "Turbo, ECU tune, uitlaat, nitrous",
                 "bodywork": "Venster tint, verf, widebody kits, plate",
-                "suspension": "Verlaag, ligstelle, wiele en bande",
+                "suspension": "Verlaag, optelstelle, wiele en bande",
                 "electronics": "GPS-jammers, versteekte bedrading, beligting",
                 "weapons": "Gemonteerde of versteekte wapens, onwettige aanhegsels",
                 "other": "Enigiets wat nie by die ander kategorieë pas nie"
@@ -5891,7 +6062,7 @@
             "DIALOG": {
                 "TITLE": "Teken 'n wysiging aan",
                 "DESCRIPTION": "Teken iets aan wat jy op hierdie voertuig waargeneem of bevestig het. Dit word by die rekord en by die aktiwiteitlog gevoeg.",
-                "CATEGORY_HINT": "Kies die naaste pas. Gemerkte kategorieë word vir ander beamptes uitgelig.",
+                "CATEGORY_HINT": "Kies die naaste pas. Gevlagde kategorieë word vir ander beamptes uitgelig.",
                 "NAME_LABEL": "Wat is gewysig?",
                 "NAME_PLACEHOLDER": "Fase 3 turbo",
                 "NAME_HINT": "Wees spesifiek: die deel, en enigiets noemenswaardig daaroor."
@@ -6256,7 +6427,7 @@
             "EMPTY": "Geen bewyse gevind nie"
         },
         "charges": {
-            "PLACEHOLDER": "Soek heffings volgens ID of naam …",
+            "PLACEHOLDER": "Soek heffings volgens ID of naam...",
             "EMPTY": "Geen heffings gevind nie"
         },
         "officers": {
@@ -6264,7 +6435,7 @@
             "EMPTY": "Geen beamptes gevind nie"
         },
         "penal_category": {
-            "PLACEHOLDER": "Soek hoofstukke volgens ID of naam …",
+            "PLACEHOLDER": "Soek hoofstukke volgens ID of naam...",
             "EMPTY": "Geen hoofstukke gevind nie"
         },
         "COMMON": {
@@ -6879,7 +7050,7 @@
             "NAME": "Saak nader"
         },
         "CENTURION": {
-            "DESCRIPTION": "100+ ure aan diens aangeteken",
+            "DESCRIPTION": "Het 100+ ure aan diens aangeteken",
             "NAME": "Centurion"
         },
         "EVIDENCE_CUSTODIAN": {
@@ -6913,9 +7084,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Liggaamskamera toegerus",
-        "LOST": "Het verbinding met daardie lyfkamera verloor",
         "MISSING": "Jy het nie 'n lyfkamera nie",
-        "OFFLINE": "Daardie beampte se lyfkamera het vanlyn gegaan",
         "REMOVED": "Liggaamkamera verwyder",
         "UNREACHABLE": "Kon nie daardie lyfkamera bereik nie"
     },
@@ -6923,7 +7092,6 @@
         "ARMED": "Dashcam gewapen",
         "DISARMED": "Dashcam gedeaktiveer",
         "NEEDS_PATROL_VEHICLE": "Jy moet in 'n witlyspatrollievoertuig wees",
-        "OFFLINE": "Daardie voertuig se dashcam het vanlyn gegaan",
         "SEAT_RESTRICTED": "Slegs die bestuurder of voorste passasier kan die dashcam beheer",
         "UNAVAILABLE": "Dashcam nie beskikbaar nie",
         "UNREACHABLE": "Kon nie daardie dashcam bereik nie"

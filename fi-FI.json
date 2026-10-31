@@ -20,6 +20,7 @@
         "MANAGEMENT": "Hallinto",
         "CONFIG": "Kokoonpano",
         "PENALTIES": "Rangaistukset",
+        "PRISONERS": "vangit",
         "ASSETS": "Omaisuus",
         "OPERATIONS": "Toiminnot",
         "RECORDS": "Records",
@@ -102,7 +103,7 @@
         "DEPARTMENT_SELECT": {
             "ALL": "Kaikki osastot",
             "PLACEHOLDER": "Valitse osastot…",
-            "NO_OPTIONS": "Ei osastoja käytettävissä."
+            "NO_OPTIONS": "Osastoa ei ole saatavilla."
         },
         "DATE_RANGE": {
             "DAYS_SHORT": "{{value}}d",
@@ -198,9 +199,9 @@
             "SCOPE": {
                 "FINE": "hyvin",
                 "JAIL": "synnytys",
-                "JAIL_HINT": "\"Sulkeminen\" skaalaa vankeusajan ja yhdyskuntapalveluksen yhdessä – riippumatta siitä, kumpaa artikkeli todella sisältää."
+                "JAIL_HINT": "\"Sulkeminen\" skaalaa vankeusajan ja yhdyskuntapalvelun yhdessä - sen mukaan, kumpaa artikkeli todella sisältää."
             },
-            "EMPTY_STATE": "Valitse artikkeleita vasemmalla olevasta rikoslaista ja veloita ne täältä.",
+            "EMPTY_STATE": "Valitse artikkelit vasemmalla olevasta rikoslain kohdasta ja veloita ne täältä.",
             "PRESETS": {
                 "LENIENT": "lempeä",
                 "STRICT": "Tiukka"
@@ -220,7 +221,7 @@
         "CHARGE_ROW": {
             "STACKABLE_TITLE": "Pinottava – laajenna muuttaaksesi määrää",
             "COMMUNITY_SERVICE": "Comm. Palvelu",
-            "COMMUNITY_SERVICE_SUPERSEDED_HINT": "Ei toimiteta – tästä syytteestä seuraa jo vankeusaika, ja pelaaja voi palvella vain yhtä tai toista.",
+            "COMMUNITY_SERVICE_SUPERSEDED_HINT": "Ei toimiteta – tästä syytteestä seuraa jo vankeusrangaistus, ja pelaaja voi palvella vain yhtä tai toista.",
             "LICENCE": "Lisenssi",
             "SUSPEND_LICENCE": "Keskeytä {{license}}-lisenssi"
         },
@@ -528,6 +529,8 @@
                 "FINE_ASC": "Hieno: Matala → Korkea",
                 "JAIL_DESC": "Vankilaaika: Korkea → Matala",
                 "JAIL_ASC": "Vankila-aika: Matala → Korkea",
+                "REMAINING_ASC": "Vapautuu pian",
+                "REMAINING_DESC": "Eniten aikaa jäljellä",
                 "AGE_DESC": "Ikä: Vanhin ensin",
                 "AGE_ASC": "Ikä: Nuorin ensin",
                 "RECORDS_DESC": "Records: Useimmat ensin",
@@ -678,14 +681,24 @@
             "MESSAGE_COPIED": "Viesti kopioitu",
             "IMAGE_LINK_COPIED": "Kuvalinkki kopioitu",
             "LINK_COPIED": "Linkki kopioitu"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "Napsauta ja paina sitten näppäintä",
+            "CHANGE_KEY": "Muuta napsauttamalla",
+            "LISTENING": "Paina näppäintä…",
+            "LISTENING_HINT": "Esc tai klikkaa ulkopuolella peruuttaaksesi",
+            "CUSTOM": "Mukautettu",
+            "TAKEN": "{{name}} käyttää jo {{key}}. Valitse toinen avain, tai molemmat toimivat."
         }
     },
     "ERRORS": {
         "REQUIRED": "Tämä kenttä on pakollinen",
+        "KEYBIND_UNSUPPORTED_KEY": "Tätä avainta ei voi käyttää näppäinsidoksena",
+        "KEYBIND_LIMIT": "Sinulla voi olla enintään {{max}} radionäppäinsidosta",
         "NO_PERMISSION": "Sinulla ei ole lupaa tehdä sitä",
         "INVALID_DATA": "Osa lähetetyistä tiedoista on virheellinen",
         "INVALID_CHARGES": "Yksi tai useampi maksu on virheellinen – tarkista summat rikoslain mukaan",
-        "INTERNAL_ERROR": "Jotain meni pieleen palvelimella – yritä uudelleen",
+        "INTERNAL_ERROR": "Palvelimessa meni vikaan – yritä uudelleen",
         "TAG_LIMIT_REACHED": "Tässä tietueessa on jo enimmäismäärä tunnisteita",
         "DATE_IN_PAST": "Päivämäärän on oltava tulevaisuudessa",
         "WARRANT_SINGLE_TARGET": "Etsintälupa vaatii täsmälleen yhden kohteen – kansalaisen, ajoneuvon tai kiinteistön",
@@ -698,6 +711,7 @@
         "VEHICLE_TOO_FAR": "Mene lähemmäs ajoneuvoa",
         "NO_VEHICLE_SELECTED": "Ei valittua ajoneuvoa",
         "NO_SUSPECT_SELECTED": "Epäiltyä ei valittu",
+        "NO_SUBJECT_SELECTED": "Lisää vähintään yksi henkilö tai ajoneuvo",
         "NO_VEHICLE_NEARBY": "Ei ajoneuvoa lähellä",
         "TRUNK_SEARCH_UNAVAILABLE": "Tavaratilan haku ei ole vielä käytettävissä varastoasetuksissasi",
         "INVALID_MODEL": "Sitä mallia ei ole saatavilla",
@@ -734,7 +748,7 @@
         "CALLSIGN_FORMAT": "Tämän luokan kutsumerkit näyttävät tältä {{format}} (# = numero)",
         "NO_FREE_CALLSIGN": "Jokainen tämän luokan kutsumerkki otetaan vastaan",
         "NO_SOCIETY_ACCOUNT": "Osastollasi ei ole yhteisötiliä",
-        "INSUFFICIENT_FUNDS": "Osastolla ei ole tarpeeksi varoja",
+        "INSUFFICIENT_FUNDS": "Osastolla ei ole riittävästi varoja",
         "NOT_ENOUGH_MONEY": "Sinulla ei ole tarpeeksi rahaa",
         "SETTINGS": {
             "UNKNOWN": "Tätä asetusta ei ole olemassa",
@@ -743,6 +757,7 @@
             "INVALID_VALUE": "Tämä arvo ei kelpaa tälle asetukselle",
             "MIN": "On oltava vähintään {{min}}",
             "MAX": "Saa olla enintään {{max}}",
+            "PRINTED_MARKERS": "Between 1 and {{max}}: the numbered marker models only go up to {{max}}",
             "NOT_AN_OPTION": "Se ei ole yksi vaihtoehdoista",
             "EMPTY": "Ei voi olla tyhjä",
             "TOO_LONG": "Saa olla enintään {{max}} merkkiä",
@@ -770,7 +785,7 @@
             "CALLSIGN_FORMAT_NUMBER": "Käytä numerossa yhtä #-ryhmää (enintään 4), esim. \"1-ADAM-##\"",
             "CALLSIGN_FORMAT_CHARS": "Muoto käyttää merkkejä, joita kutsumerkeissä ei voi olla",
             "NOT_MODEL": "\"{{value}}\" ei ole kelvollinen mallin nimi. Käytä vain kirjaimia, numeroita, _ ja -.",
-            "RANGE_ORDER": "{{name}}: alueen pienin arvo ei voi olla suurempi kuin suurin.",
+            "RANGE_ORDER": "{{name}}: alueen alin arvo ei voi olla suurempi kuin suurin.",
             "NO_MODELS": "Ainakin yksi kameramalli on säilytettävä.",
             "MODEL_IN_USE": "\"{{name}}\" on sijoitettujen kameroiden käytössä, joten sitä ei voi poistaa. Poista ne kamerat ensin.",
             "NOT_KEY": "\"{{value}}\" ei ole avain, jonka FiveM voi sitoa",
@@ -802,8 +817,10 @@
         "PROP_PLACER_INTERRUPTED": "Tuen sijoitus keskeytettiin",
         "VEHICLE_OCCUPIED": "Pois kaikki ensin autosta",
         "IMPOUND_DISABLED": "Vuorovaikutusvalikon takavarikointi on poistettu käytöstä tällä palvelimella",
-        "VEHICLE_EMPTY": "Ei ketään tilattavaa",
+        "IMPOUND_NOT_IMPLEMENTED": "Takavarikointia ei ole määritetty tälle palvelimelle",
         "NOT_SUPPORTED": "Tämä ei ole saatavilla tällä palvelimella",
+        "PRISONER_OFFLINE": "Vangin on oltava verkossa tätä varten",
+        "PRISON_ACTION_FAILED": "Vankilan käsikirjoitus ei voinut tehdä sitä",
         "NO_ACCESS": "Työsi ei voi käyttää tätä",
         "UNKNOWN_FREQUENCY": "Tällä taajuudella ei ole kanavaa",
         "MARKER_LIMIT": "Olet saavuttanut todisteiden rajan",
@@ -823,7 +840,7 @@
         "CANNOT_MANAGE_SELF": "Et voi tehdä tätä itsellesi",
         "GRADE_TOO_HIGH": "Voit johtaa vain oman palkkaluokkasi alapuolella olevia upseereita",
         "AMOUNT_TOO_HIGH": "Tämä summa ylittää yhden tapahtuman rajan",
-        "INVALID_FREQUENCY": "Käytä taajuutta kuten 450.100",
+        "INVALID_FREQUENCY": "Tämä taajuus ei vastaa sallittua muotoa",
         "UNIT_FULL": "Tässä yksikössä ei ole vapaata istuinta",
         "UNIT_NEEDS_LEAD": "Anna jonkun muun johtaa ensin",
         "UNIT_OFF_DUTY": "Kukaan siinä yksikössä ei ole päivystyksessä",
@@ -866,7 +883,7 @@
         "UNLINKED_INVESTIGATOR": "poistettu {{name}} tutkijasta",
         "CHARGES_SAVED": "päivitti maksut",
         "CHARGE_REMOVED": "poisti maksun",
-        "CHARGES_ISSUED": "syytteet {{name}}",
+        "CHARGES_ISSUED": "laskutti {{name}}",
         "LINKED_RECORD": "linkitetty {{kind}} {{name}}",
         "UNLINKED_RECORD": "linkitetty {{kind}} {{name}}",
         "EVIDENCE_STORED": "varasi tämän varastoon osoitteessa {{location}}",
@@ -1058,7 +1075,6 @@
             "EDIT_DESCRIPTION": "Päivitä tämän kanavan nimi tai taajuus.",
             "NAME_PLACEHOLDER": "SWAT-komento",
             "FREQUENCY_FIELD": "Taajuus (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498.510",
             "SUBMIT": "Luo kanava",
             "TOASTS": {
                 "CREATED": "Kanava \"{{name}}\" luotu",
@@ -1099,18 +1115,23 @@
         },
         "KEYBINDS_DIALOG": {
             "TITLE": "Radionäppäimet",
-            "DESCRIPTION": "Sido näppäimistön näppäin lähettääksesi välittömästi tietyllä kanavalla.",
-            "EMPTY": "Näppäimiä ei ole vielä määritetty.",
-            "ADD_NEW": "Lisää uusi näppäinyhdistelmä",
-            "ADD_DESCRIPTION": "Valitse nimi, kaappaa se painamalla näppäintä ja valitse sitten kohdekanava.",
+            "DESCRIPTION": "Viritä radiosi kanavalle yhdellä näppäimellä, vaikka MDT olisi kiinni.",
+            "OFF": "Radionäppäinsidokset on poistettu käytöstä tällä palvelimella.",
+            "EMPTY": "Ei vielä radionäppäimiä.",
+            "ADD": "Lisää näppäinyhdistelmä",
+            "ADD_TITLE": "Uusi radionäppäimet",
+            "EDIT_TITLE": "Muokkaa radionäppäimiä",
+            "FORM_DESCRIPTION": "Nimeä se, valitse kanava ja paina näppäintä, joka virittää radiosi sille.",
             "NAME_PLACEHOLDER": "Pääkanava",
-            "KEY_LABEL": "Avain",
-            "LISTENING": "Kuuntelee…",
-            "CLICK_TO_CAPTURE": "Napsauta siepataksesi avaimen",
-            "CAPTURING_HINT": "Paina mitä tahansa näppäintä — Esc peruuttaaksesi.",
-            "CLICK_HINT": "Napsauta yllä olevaa kenttää ja paina mitä tahansa näppäintä.",
             "CHANNEL_PLACEHOLDER": "Valitse kanava",
-            "SAVE": "Tallenna Keybind"
+            "KEY_LABEL": "Avain",
+            "KEY_HINT": "Vain yksittäiset näppäimet. Voit myös muuttaa sitä myöhemmin kohdassa Asetukset > Näppäinsidokset > FiveM.",
+            "CHANNEL_REMOVED": "Tätä kanavaa ei ole enää olemassa",
+            "SETTINGS_HINT": "Näppäimiä voi muuttaa myös kohdassa Asetukset > Näppäinsidokset > FiveM. Poistettu tai vaihdettu avain lakkaa toimimasta heti, mutta pysyy luettelossa, kunnes muodostat yhteyden uudelleen.",
+            "DELETE": "Poista näppäinyhdistelmä",
+            "SAVE": "Tallenna näppäinyhdistelmä",
+            "TUNED": "Radio viritetty kanavalle {{name}}",
+            "ROW_NAME": "Radio: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "Uusi radiokoodi",
@@ -1152,7 +1173,7 @@
         "CONSOLE": {
             "TRANSMITTING": "Lähetetään",
             "HOLD_TO_TALK": "Odota puhuaksesi",
-            "IDLE_DESCRIPTION": "Yhdistä alla olevaan kanavaan lähettääksesi ja katsoaksesi, ketkä ovat sillä.",
+            "IDLE_DESCRIPTION": "Yhdistä alla olevaan kanavaan lähettääksesi ja katsoaksesi, kuka on sillä.",
             "TITLE": "Lähetin",
             "FREQUENCY": "Taajuus"
         },
@@ -1910,7 +1931,7 @@
         "RECRUIT_DIALOG": {
             "TRIGGER": "Rekrytoida",
             "TITLE": "Rekrytoi kansalainen",
-            "DESCRIPTION": "Valitse työtön kansalainen, online- tai offline-tilassa, lisättäväksesi {{department}}-palveluun. He liittyvät nimellä {{rank}} automaattisesti määritetyllä kutsumerkillä.",
+            "DESCRIPTION": "Valitse työtön kansalainen, online- tai offline-tilassa, lisättäväksesi palveluun {{department}}. He liittyvät nimellä {{rank}} automaattisesti määritetyllä kutsumerkillä.",
             "RECRUIT_NAMED": "Rekrytoi {{name}}",
             "DEFAULT_RANK_FALLBACK": "Rekrytoida",
             "TOASTS": {
@@ -1949,7 +1970,7 @@
             "METRICS": {
                 "SHIFTS": "Työvuorot suoritettu",
                 "TENURE_DAYS": "Hallituspäivät",
-                "REVIEW_SCORE": "Vertaisarvioinnin keskimääräinen pistemäärä",
+                "REVIEW_SCORE": "Keskimääräinen vertaisarviointipiste",
                 "REVIEW_COUNT": "Vertaisarvioinnit saatu",
                 "RECORDS_INCIDENTS": "Tapauksia syntynyt",
                 "RECORDS_WARRANTS": "Todistukset pyydetty tai toimitettu",
@@ -2112,13 +2133,13 @@
                 "DISPATCH_CHANNEL_CONNECT": "Yhdistä virkailijat lähetyskanaviin.",
                 "DISPATCH_CHANNEL_DELETE": "Poista lähetyskanavat.",
                 "CITIZENS_VIEW": "Hae kansalaisia ​​ja lue heidän profiilinsa.",
-                "CITIZENS_REGISTER": "Rekisteröi järjestelmään uudet kansalaiset.",
+                "CITIZENS_REGISTER": "Rekisteröi uudet kansalaiset järjestelmään.",
                 "CITIZENS_EDIT": "Muokkaa kansalaisprofiileja.",
                 "CITIZENS_LICENSE_GRANT": "Myönnä lisenssit kansalaisille.",
                 "CITIZENS_LICENSE_REVOKE": "Peruuttaa lisenssit kansalaisilta.",
                 "CITIZENS_LICENSE_POINTS": "Lisää tai poista lisenssipisteitä.",
                 "CITIZENS_PHONE_RECORDS": "Lue kansalaisen puhelintiedot.",
-                "SUSPECT_INTERACT": "Käytä epäilyttäviä vuorovaikutuksia, kuten mansetti, etsintä ja saattaja.",
+                "SUSPECT_INTERACT": "Käytä epäilyttäviä vuorovaikutuksia, kuten mansetti, haku ja saattaja.",
                 "GALLERY_EDIT": "Lisää ja poista galleriakuvia.",
                 "NOTES_DELETE": "Poista muistiinpanot, jotka muut virkailijat kirjoittivat asiakirjoihin, ja HR-muistiinpanot, jotka muut johtajat ovat jättäneet. Virkailijat voivat aina poistaa omansa.",
                 "VEHICLES_VIEW": "Hae ajoneuvoja ja lue niiden tiedot.",
@@ -2152,6 +2173,9 @@
                 "PENALCODE_VIEW": "Lue rikoslaki.",
                 "PENALCODE_CREATE": "Lisää rikoslain merkinnät.",
                 "PENALCODE_UPDATE": "Muokkaa rikoslain merkintöjä.",
+                "PRISONERS_VIEW": "Katso kuka on vankilassa ja kuinka kauan heillä on jäljellä.",
+                "PRISONERS_RELEASE": "Vapauta vangit ennen kuin heidän tuomionsa päättyy.",
+                "PRISONERS_EDIT": "Muuta kuinka kauan vangin on vielä palveltava.",
                 "PENALCODE_DELETE": "Poista rikoslain merkinnät.",
                 "OPERATIONPLANS_VIEW": "Lue toimintasuunnitelmat.",
                 "OPERATIONPLANS_CREATE": "Uudet toimintasuunnitelmat.",
@@ -2349,7 +2373,7 @@
         },
         "CHARGES_FIELD": {
             "FIRST_SUSPECT_FALLBACK": "ensimmäinen epäilty",
-            "EMPTY_STATE": "Lisää ensin epäilty syytteiden mainitsemiseksi.",
+            "EMPTY_STATE": "Lisää ensin epäilty ilmoittaaksesi syytteet.",
             "EVERYONE": "Kaikki",
             "COPY_FROM_SUSPECT": "Kopioi toisen epäillyn syytteet",
             "COPY_FROM_LABEL": "Kopioi kohteesta",
@@ -2410,7 +2434,7 @@
                     "TITLE": "Sallitut työpaikat",
                     "DESCRIPTION": "Vain nämä työt voivat avata MDT:n. Työpaikan lisääminen antaa sen jäsenille pääsyn; yhden poistaminen vie sen heti pois.",
                     "ADD": "Lisää työ",
-                    "EMPTY": "Yksikään työpaikka ei ole sallittujen luettelossa – kukaan ei voi avata MDT:tä.",
+                    "EMPTY": "Yksikään työ ei ole sallittujen luettelossa – kukaan ei voi avata MDT:tä.",
                     "ADD_TITLE": "Lisää työpaikka",
                     "ADD_DESCRIPTION": "Valitse viitekehyksestäsi työ, jotta voit antaa MDT:n käyttöoikeuden.",
                     "JOB_LABEL": "Job",
@@ -2424,7 +2448,7 @@
                 "DUTY": {
                     "TITLE": "Velvollisuus",
                     "REQUIRE_DUTY": "Virkailijoiden tulee olla päivystystehtävissä",
-                    "REQUIRE_DUTY_HINT": "Päällä: upseerien on oltava paikalla ennen kuin he voivat avata MDT:n ja käyttää rajoitettuja toimia. Off: Sallittujen työpaikkojen saaminen riittää."
+                    "REQUIRE_DUTY_HINT": "Päällä: upseerien on oltava paikalla (mennä päivystykseen), ennen kuin he voivat avata MDT:n ja käyttää rajoitettuja toimia. Off: Sallittujen työpaikkojen saaminen riittää."
                 },
                 "OPENING": {
                     "TITLE": "MDT:n avaaminen",
@@ -2432,7 +2456,7 @@
                     "ITEM_HINT": "Varaston tablettituotteen käyttäminen avaa MDT:n. Tuotteen on oltava jo varastoresurssissasi, MDT ei luo sitä.",
                     "COMMAND": "Avaa chat-komennolla",
                     "COMMAND_HINT": "Komennon kirjoittaminen chatissa (oletuksena /mdt, asetettu config.lua:ssa) avaa MDT:n.",
-                    "DESCRIPTION": "Tapa, jolla virkamiehet voivat avata tabletin. Pidä vähintään yksi päällä. Muutokset tulevat voimaan heti.",
+                    "DESCRIPTION": "Tapa, jolla virkailijat voivat avata tabletin. Pidä vähintään yksi päällä. Muutokset tulevat voimaan heti.",
                     "ITEM_NAME": "MDT tuote",
                     "ITEM_NAME_HINT": "Varastonimike, joka avaa MDT:n."
                 },
@@ -2451,7 +2475,7 @@
                     },
                     "DEFAULT_VISIBILITY": "Uusien ennätysten näkyvyys",
                     "DEFAULT_VISIBILITY_HINT": "Millä äskettäin luotu tietue alkaa. Sen omistava osasto voi muuttaa sen tietueessa jälkikäteen.",
-                    "BYPASS": "Töitä, jotka näkevät jokaisen ennätyksen",
+                    "BYPASS": "Työpaikkoja, jotka näkevät jokaisen ennätyksen",
                     "BYPASS_HINT": "Nämä työt näkevät ja hallitsevat kaikkia tietueita niiden näkyvyydestä riippumatta. Sopii päällikköihin, sisäisiin asioihin tai tuomioistuimeen.",
                     "BYPASS_PLACEHOLDER": "Lisää työpaikka",
                     "DESCRIPTION": "Useiden osastojen (poliisi, sheriffi, metsänvartijat...) avulla voit päättää, kuka näkee mitkä tiedot. Pois päältä, jokainen osasto näkee kaiken.",
@@ -2491,10 +2515,10 @@
                         "CASH": "käteistä",
                         "BANK": "Pankki"
                     },
-                    "DESCRIPTION": "Anna syytteen lähettäneelle virkamiehelle palkkiona osa sakosta. Loput menee osastolle. Vain suoraan pankista otetut sakot; laskutusskriptit maksavat oman palkkionsa.",
+                    "DESCRIPTION": "Anna syytteen lähettäneelle virkamiehelle osa sen sakosta palkkiona. Loput menee osastolle. Vain suoraan pankista otetut sakot; laskutusskriptit maksavat oman palkkionsa.",
                     "EXAMPLE": {
                         "TITLE": "Kokeile sakkoa",
-                        "HINT": "Kirjoita sakko nähdäksesi, kuinka se jaetaan nykyisillä asetuksilla.",
+                        "HINT": "Kirjoita sakko nähdäksesi kuinka se jaetaan nykyisillä asetuksilla.",
                         "FINE": "Hyvä",
                         "OFFICER": "Upseeri saa ({{percent}} %)",
                         "SOCIETY": "Osasto saa",
@@ -2502,11 +2526,11 @@
                     }
                 },
                 "FUNDS_PAYMENT_TYPE": "Talletukset ja nostot käyttö",
-                "FUNDS_PAYMENT_TYPE_HINT": "Mistä virkailijan omat rahat tulevat tai menevät, kun hän tallettaa osaston varoja tai nostaa niistä Hallinta-sivulla.",
+                "FUNDS_PAYMENT_TYPE_HINT": "Mistä virkailijan omat rahat tulevat tai mihin he tekevät talletuksia osaston varoihin tai nostavat niistä Hallinta-sivulla.",
                 "BILLING": {
                     "TITLE": "Laskutus",
                     "ALLOW_DEBT": "Salli negatiivinen saldo",
-                    "ALLOW_DEBT_HINT": "Kun kansalaisella ei ole varaa suoraan pankista otettuun sakkoon. Päällä: heidän saldonsa laskee nollan alapuolelle. Off: sakko jätetään väliin, eikä kenellekään makseta.",
+                    "ALLOW_DEBT_HINT": "Kun kansalaisella ei ole varaa suoraan pankista otettuun sakkoon. Päällä: heidän saldonsa laskee alle nollan. Off: sakko jätetään väliin, eikä kukaan saa palkkaa.",
                     "DUE": "Päiviä laskun maksamiseen",
                     "DUE_HINT": "Laskutusskripteille, joissa on eräpäivät (vms_cityhall). Muut jättävät sen huomioimatta.",
                     "DESCRIPTION": "Kuinka sakot kerätään. Ilman laskutuskirjoitusta sakko otetaan heti kansalaisen pankista."
@@ -2520,7 +2544,7 @@
                     "BANK": "Näytä kansalaisten pankkitiedot",
                     "BANK_HINT": "Näyttää jokaisen kansalaisen pankkitilin numeron ja saldon. Toimii vain, jos kehyssovitin tukee sitä.",
                     "PHONE_RECORDS": "Näytä kansalaisten puhelintiedot",
-                    "PHONE_RECORDS_HINT": "Näyttää puheluiden tallennuspainikkeen (puhelut ja viestit) kansalaisen puhelinnumeron vieressä. Sammuta, jos palvelimesi ei halua virkailijoiden lukevan puhelintietoja.",
+                    "PHONE_RECORDS_HINT": "Näyttää puhelimen tallennuspainikkeen (puhelut ja viestit) kansalaisen puhelinnumeron vieressä. Sammuta, jos palvelimesi ei halua virkailijoiden lukevan puhelintietoja.",
                     "RESIDENTS": "Näytä kuka asuu kiinteistössä",
                     "RESIDENTS_HINT": "Näyttää vuokralaiset ja osaomistajat kiinteistörekistereissä, kun asuntoresurssi tarjoaa ne.",
                     "HIDDEN_JOBS": "Piilotyöt",
@@ -2571,7 +2595,7 @@
                 },
                 "MODIFICATIONS": {
                     "TITLE": "Ajoneuvon muutosluokat",
-                    "DESCRIPTION": "Virkailijat valitsevat luokat, kun he kirjaavat tiedossa olevan muutoksen ajoneuvoon (viritetty moottori, piilotettu lokero...). Merkitse laittomat tavarat salakuljetukseksi, jotta ne erottuvat joukosta.",
+                    "DESCRIPTION": "Virkailijat valitsevat kategoriat, kun he kirjaavat ajoneuvoon tunnetun muutoksen (viritetty moottori, piilotettu lokero...). Merkitse laittomat salakuljetukseksi, jotta ne erottuvat joukosta.",
                     "LIST": "Luokat",
                     "LIST_HINT": "Jo käytettyä luokkaa ei voi poistaa, vaan poista se käytöstä.",
                     "LIST_FIELDS": {
@@ -2640,7 +2664,7 @@
                     },
                     "DEFAULT": "Oletustila",
                     "DEFAULT_HINT": "Status, jonka upseeri saa, kun hän lähtee töihin, ja se, johon upseerit palaavat, kun heidän omansa sammutetaan.",
-                    "DESCRIPTION": "Tilat, jotka upseerit voivat asettaa itselleen (käytettävissä, varattu, paikalla...), jotka näytetään kaikille luettelossa ja kartalla."
+                    "DESCRIPTION": "Tilat, jotka upseerit voivat asettaa itselleen (käytettävissä, varattu, paikalla...), näytetään kaikille luettelossa ja kartalla."
                 },
                 "CALLSIGNS": {
                     "TITLE": "Kutsumerkit",
@@ -2662,10 +2686,10 @@
                         "DEPARTMENT": "Jokainen osasto",
                         "ONLINE": "Vain verkkovirkailijat"
                     },
-                    "SELF_EDIT": "Virkamiehet voivat muuttaa omia",
+                    "SELF_EDIT": "Virkamiehet voivat vaihtaa omia",
                     "SELF_EDIT_HINT": "Pois: vain esimiehet (employees.manage) voivat muuttaa kutsumerkkejä Työntekijät-sivulta.",
                     "ASSIGN_HIRE": "Määrää, kun palkataan",
-                    "ASSIGN_HIRE_HINT": "Uudet työntekijät saavat seuraavan ilmaisen arvonsa.",
+                    "ASSIGN_HIRE_HINT": "Uudet työntekijät saavat arvonsa seuraavan ilmaisen kutsumerkin.",
                     "ASSIGN_RANK": "Määrää uudelleen ylennyksen tai alennuksen yhteydessä",
                     "ASSIGN_RANK_HINT": "Upseeri, jonka kutsumerkki ei sovi hänen uuden arvonsa muotoon, saa siitä seuraavan ilmaisen.",
                     "ASSIGN_DUTY": "Tehdä tehtävien aikana",
@@ -2674,7 +2698,7 @@
                     "MAX_LENGTH_HINT": "Pisin kutsumerkki, joka upseerilla voi olla (esim. \"2-ADAM-12\" on 9 merkkiä).",
                     "EXAMPLE": {
                         "TITLE": "Kutsumerkit per arvo",
-                        "HINT": "Kukin arvo seuraa muotoa ja ensimmäinen kutsumerkki, jonka se jakaa.",
+                        "HINT": "Kukin sijoitus noudattaa muotoa ja ensimmäinen kutsumerkki.",
                         "FREE": "Mikä tahansa kutsumerkki (määritetty: {{callsign}})"
                     }
                 },
@@ -2690,12 +2714,12 @@
             "JUSTICE": {
                 "CHARGES": {
                     "TITLE": "Maksurajoitukset",
-                    "DESCRIPTION": "Enimmäismäärä yksi rikoslakimaksu voi kestää. Ne pysäyttävät kirjoitusvirheet kuin ylimääräinen nolla; rikoslakieditori ja jokainen syyte kunnioittavat niitä.",
+                    "DESCRIPTION": "Enintään yhden rikoslainsyytteen kantama. Ne pysäyttävät kirjoitusvirheet kuin ylimääräinen nolla; rikoslakieditori ja jokainen syyte kunnioittavat niitä.",
                     "QUANTITY": "Kertaa latausta voidaan pinota",
                     "QUANTITY_HINT": "Suurin sallittu määrä maksuille, jotka voidaan lisätä useammin kuin kerran (esim. 3× Assault).",
                     "FINE": "Korkein sakko",
                     "FINE_HINT": "Enintään yksi lataus voi olla sakko, per määrä.",
-                    "JAIL": "Pisin vankila",
+                    "JAIL": "Pisin vankeusaika",
                     "JAIL_HINT": "Suurin vankeusaika, jonka yksi syyte voi antaa per luku.",
                     "COMMUNITY_SERVICE": "Pisin yhdyskuntapalvelu",
                     "COMMUNITY_SERVICE_HINT": "Eniten yhdyskuntapalvelua, jonka yksi maksu voi antaa per lasku.",
@@ -2761,11 +2785,11 @@
                 "CHAT": {
                     "TITLE": "Chat",
                     "SLOWDOWN": "Viestien välinen aika",
-                    "SLOWDOWN_HINT": "Virkailija joutuu odottamaan näin kauan kahden viestin välillä. Estää kanavien tulvimisen. 0 sammuttaa sen.",
+                    "SLOWDOWN_HINT": "Virkailijan on odotettava näin kauan kahden viestin välillä. Estää kanavien tulvimisen. 0 sammuttaa sen.",
                     "RETENTION": "Säilytä viestejä varten",
                     "RETENTION_HINT": "Tätä vanhemmat viestit poistetaan heti, kun lasket sen. 0 säilyttää ne ikuisesti.",
                     "LIVE_LOCATION": "Live-sijainnin aikakatkaisu",
-                    "LIVE_LOCATION_HINT": "Jaettu live-sijainti pysähtyy, jos sen jakava virkailija ei lähetä päivitystä näin pitkään (kaatumiset, yhteyden katkeaminen). Se päivittyy noin 8 sekunnin välein, joten pidä tätä korkeammalla."
+                    "LIVE_LOCATION_HINT": "Jaettu live-sijainti pysähtyy, jos sen jakava virkailija ei lähetä päivitystä näin pitkään (kaatumiset, yhteyden katkeaminen). Se päivittyy noin 8 sekunnin välein, joten pidä tätä korkeampana."
                 },
                 "DMS": {
                     "TITLE": "Suorat viestit",
@@ -2801,7 +2825,7 @@
                     "TESTER": {
                         "TITLE": "Kokeile koodia",
                         "HINT": "Kirjoita koodi nähdäksesi, hyväksytäänkö se.",
-                        "ANY": "Hyväksytty – muotoja ei ole asetettu, joten mikä tahansa koodi on sallittu.",
+                        "ANY": "Hyväksytty — muotoja ei ole asetettu, joten mikä tahansa koodi on sallittu.",
                         "MATCH": "Hyväksytty – se vastaa {{format}}.",
                         "NO_MATCH": "Hylätty – se ei vastaa mitään yllä olevista muodoista."
                     }
@@ -2827,6 +2851,12 @@
                     "DESCRIPTION": "Mikä osuu kojelaudan kelloon. Henkilökohtaiset odottavat virkamiehiä, jotka ovat offline-tilassa; osaston laajuiset tavoittavat virkailijat vain verkossa.",
                     "RETENTION": "Säilytä ilmoitukset",
                     "RETENTION_HINT": "Tätä vanhemmat ilmoitukset poistetaan heti, kun lasket sen. 0 säilyttää ne ikuisesti."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Radio animaatio",
+                    "DESCRIPTION": "Mitä upseerien hahmot tekevät puhuessaan radiossa. Jokainen virkailija voi valita oman valintansa Asetukset-sivulta; tätä kaikki muut saavat.",
+                    "DEFAULT": "Oletusanimaatio",
+                    "DEFAULT_HINT": "Pma-voicella sen oma radioanimaatio on kytketty pois päältä, ellei tämä ole Ei mitään. Jos käytät toista ääniresurssia, poista sen animaatio käytöstä sen omassa konfiguraatiossa."
                 }
             },
             "DISPATCH": {
@@ -2892,7 +2922,7 @@
                     "PULSE": "Pulssirengas",
                     "PULSE_HINT": "Rengas niiden puhelutyyppien merkin alla, joissa se on päällä, joten tärkeät puhelut erottuvat joukosta.",
                     "PULSE_UNTIL_ASSIGNED": "Vain kunnes yksikkö on kiinnitetty",
-                    "PULSE_UNTIL_ASSIGNED_HINT": "Soitto sammuu, kun joku vastaa puheluun.",
+                    "PULSE_UNTIL_ASSIGNED_HINT": "Soitto sammuu, kun joku ottaa puhelun vastaan.",
                     "FLASH": "Flash uudet puhelut",
                     "FLASH_HINT": "Kuinka kauan uuden puhelun merkki vilkkuu. 0 tarkoittaa, että se ei vilku.",
                     "FADE_EXPIRY": "Himmeä ennen sulkemista",
@@ -2908,7 +2938,7 @@
                     "OTHER_DEPARTMENTS": "Näytä muut osastot",
                     "OTHER_DEPARTMENTS_HINT": "Pois päältä: upseerit näkevät vain oman osastonsa upseerit.",
                     "SHORT_RANGE": "Näytä vain lähellä olevat virkailijat",
-                    "SHORT_RANGE_HINT": "Blips näkyy vain minikartalla lähellä ollessaan.",
+                    "SHORT_RANGE_HINT": "Liput näkyvät minikartassa vain lähellä ollessaan.",
                     "SPRITE_FOOT": "Ikoni jalan",
                     "SPRITE_FOOT_HINT": "Näyttää mihin suuntaan upseeri kasvot.",
                     "SPRITE_VEHICLE": "Ikoni ajoneuvossa",
@@ -2926,7 +2956,7 @@
                 },
                 "CHANCE": {
                     "TITLE": "Ilmoita mahdollisuudesta",
-                    "ENABLED": "Rikoksia ei aina ilmoiteta",
+                    "ENABLED": "Rikoksista ei aina ilmoiteta",
                     "ENABLED_HINT": "Pois päältä: jokainen automaattinen hälytys saapuu lähetykseen.",
                     "BASE_CHANCE": "Mahdollisuus ilman todistajia",
                     "BASE_CHANCE_HINT": "Mahdollisuus rikoksesta ilmoitetaan, kun ketään ei ole lähellä.",
@@ -2946,7 +2976,7 @@
                     "CAMERA_BONUS_HINT": "Lisätään, kun toimiva CCTV-kamera näkee rikoksen.",
                     "CAMERA_MIN_CHANCE": "Pienin mahdollisuus kamerassa",
                     "CAMERA_MIN_CHANCE_HINT": "Rikos, jonka kamera näkee, raportoidaan ainakin näin usein. 100% tarkoittaa aina.",
-                    "DESCRIPTION": "Tosielämässä jokaisesta rikoksesta ei tehdä ilmoitusta. Kun tämä on käytössä, automaattiset hälytykset (ampuminen, autovarkaudet...) saapuvat vain todennäköisyydellä, joka riippuu todistajista, kellonajasta ja kameroista. Käytä alla olevaa simulaattoria nähdäksesi tulos.",
+                    "DESCRIPTION": "Tosielämässä jokaisesta rikoksesta ei tehdä ilmoitusta. Kun tämä on käytössä, automaattiset hälytykset (ampuminen, autovarkaudet...) saapuvat paikalle vain todistajista, vuorokaudenajasta ja kameroista riippuen. Käytä alla olevaa simulaattoria nähdäksesi tulos.",
                     "PRESETS": {
                         "VERY_REALISTIC": "Erittäin realistinen",
                         "VERY_REALISTIC_HINT": "Harvat rikokset saapuvat lähetykseen ilman todistajia tai kameroita",
@@ -3002,6 +3032,33 @@
                     "AUTO_LOCK": "Lukitse lautanen tulitikulle",
                     "AUTO_LOCK_HINT": "Tutka lukitsee osuneen levyn, jotta upseeri ei menetä sitä.",
                     "DESCRIPTION": "Tutkaresurssin (wk_wars2x) avulla jokainen tutkan lukema kilpi tarkistetaan BOLO:iden ja warranttien suhteen, ja upseeria varoitetaan ottelusta."
+                },
+                "SCENE": {
+                    "TITLE": "Rikoskohtaukset",
+                    "DESCRIPTION": "Kuinka poliisit sijoittavat rikospaikkanauhan ja todisteet: vuorovaikutusvalikon Paikka-sivulta käyttämällä inventaariota tai jompaakumpaa. Tavarat eivät ole käytössä.",
+                    "METHODS": {
+                        "MENU": "Kohtaussivu",
+                        "ITEM": "Kohteen käyttäminen",
+                        "BOTH": "Kohtaussivu tai kohde"
+                    },
+                    "TAPE_METHOD": "Kuinka virkamiehet asettavat nauhaa",
+                    "TAPE_METHOD_HINT": "Kohtaus-sivulta käyttämällä nauhakohdetta tai jompaakumpaa.",
+                    "TAPE_ITEM": "Nauha esine",
+                    "TAPE_ITEM_HINT": "Varastotarvikevirkailijat käyttävät rikospaikkanauhan sijoittamiseen.",
+                    "MARKER_METHOD": "Kuinka virkamiehet asettavat todisteita",
+                    "MARKER_METHOD_HINT": "Kohtaus-sivulta käyttämällä merkkikohdetta tai jompaakumpaa.",
+                    "MARKER_ITEM": "Todistusmerkkikohde",
+                    "MARKER_ITEM_HINT": "Varastotuotevirkailijat käyttävät todisteiden merkintöjä.",
+                    "RADIUS": "Kohtauksen koko",
+                    "RADIUS_HINT": "Nauha, merkit ja rekvisiitta asettivat tämän lähelle kohtausta, joka liittyy siihen. Kauempana he aloittavat uuden kohtauksen.",
+                    "MAX_MARKERS_SCENE": "Todistusmerkit kohtausta kohti",
+                    "MAX_MARKERS_SCENE_HINT": "Merkit on numeroitu 1:stä jokaisessa kohtauksessa. 0 = rajoittamaton, vain kun merkit eivät käytä numeroituja malleja.",
+                    "MAX_MARKERS_OFFICER": "Todistusmerkit per upseeri",
+                    "MAX_MARKERS_OFFICER_HINT": "Kuinka monta merkkiä yhdellä upseerilla voi olla kerralla, jokaisessa kohtauksessa. 0 = rajoittamaton.",
+                    "TAPE_LENGTH": "Pisin nauhalinja",
+                    "TAPE_LENGTH_HINT": "Kauimpana toisistaan ​​yhden teippiviivan kaksi päätä voidaan sitoa.",
+                    "MAX_TAPE_OFFICER": "Nauhalinjat upseeria kohti",
+                    "MAX_TAPE_OFFICER_HINT": "Kuinka monta nauhalinjaa yhdellä upseerilla voi olla kerralla. 0 = rajoittamaton."
                 }
             },
             "CAMERAS": {
@@ -3115,11 +3172,11 @@
                     "PREVIEW": "Kameran esikatselut",
                     "PREVIEW_HINT": "Kamerat-sivulla näkyy viimeisin still-kuva kustakin kamerasta.",
                     "PREVIEW_REFRESH": "Ota esikatselut uudelleen tämän jälkeen",
-                    "PREVIEW_REFRESH_HINT": "Kuinka vanha esikatselu voi olla, ennen kuin seuraava kameraa katsova poliisi ottaa uuden.",
+                    "PREVIEW_REFRESH_HINT": "Kuinka vanha esikatselu voi olla, ennen kuin seuraava kameraa katsova virkailija ottaa uuden.",
                     "RADIUS": "Kameran hakusäde",
                     "RADIUS_HINT": "Hälytys on linkitetty toimivaan kameraan näin lähellä rikoksentekijää.",
                     "LINE_OF_SIGHT": "Kameran täytyy nähdä rikollinen",
-                    "LINE_OF_SIGHT_HINT": "Yhdistä vain kamera, joka on suunnattu rikoksentekijään ilman mitään siltä väliltä. Katkaise virta, jos mukautetut kameran rekvisiitta ovat väärin päin.",
+                    "LINE_OF_SIGHT_HINT": "Yhdistä vain kamera, joka on suunnattu rikoksentekijään ilman mitään välissä. Katkaise virta, jos mukautetut kameran rekvisiitta ovat väärin päin.",
                     "FOV": "Kameran katselukulma",
                     "FOV_HINT": "Kuinka leveälle kamera näkee. Rikoksentekijän on oltava tämän kulman sisällä.",
                     "VIEW_RANGE": "Kameran katseluetäisyys",
@@ -3130,11 +3187,11 @@
                     "MODELS": "Kojekameralla varustetut ajoneuvot",
                     "MODELS_HINT": "Ajoneuvot, joissa kojelautakamera voidaan käynnistää. Lisää ne luettelosta, ajoneuvosta, jossa istut, tai osoittamalla yhtä pelissä.",
                     "FRONT_SEATS": "Vain etuistuimet",
-                    "FRONT_SEATS_HINT": "Vain kuljettaja tai etumatkustaja voi kytkeä kojelautakameran päälle tai pois päältä.",
+                    "FRONT_SEATS_HINT": "Vain kuljettaja tai etumatkustaja voi kytkeä kojetaulun päälle tai pois päältä.",
                     "METHOD": "Kuinka virkamiehet kytkevät sen päälle",
                     "METHOD_HINT": "Käytä dashcam-kohdetta, kirjoita komento tai jompikumpi. Komento tarvitsee edelleen tuotteen varastossaan.",
                     "STREAM_RADIUS": "Näkyvä alue",
-                    "STREAM_RADIUS_HINT": "Kun joku katsoo kojelautakameraa, pelaajat ja ajoneuvot, jotka ovat lähellä autoa, pysyvät näkyvissä syötteessä. Isompi näyttää enemmän, mutta synkronoi enemmän pelaajia katsojaan.",
+                    "STREAM_RADIUS_HINT": "Kun joku katsoo kojelautakameraa, pelaajat ja ajoneuvot, jotka ovat lähellä autoa, pysyvät näkyvissä syötteessä. Isompi näyttää enemmän, mutta synkronoi enemmän pelaajia katsojalle.",
                     "ITEM": "Dashcam-tuote",
                     "ITEM_HINT": "Varastotuotevirkailijat käyttävät kojelautakameran päälle."
                 },
@@ -3162,7 +3219,8 @@
                     "BOTH": "Kohde tai komento",
                     "WAYS": {
                         "ITEM": "Varastotuote",
-                        "COMMAND": "Chat-komento"
+                        "COMMAND": "Chat-komento",
+                        "MENU": "Kohtaussivu"
                     }
                 },
                 "REPAIR": {
@@ -3179,11 +3237,17 @@
                     "TITLE": "Live-syötteet",
                     "DESCRIPTION": "Mitä poliisit saavat, kun he katsovat CCTV-kameraa, bodycam- tai kojelautakameraa.",
                     "AUDIO": "Kuuntele ääniä kameran läheltä",
-                    "AUDIO_HINT": "Syötettä katsovat virkailijat kuulevat pelaajien puhuvan sen lähellä oman ympäristönsä sijaan. Tarvitsee pma-äänen. Sen sammuttaminen pysäyttää sen myös tällä hetkellä katsovilta virkailijoilta.",
+                    "AUDIO_HINT": "Syötettä katsovat virkailijat kuulevat pelaajien puhuvan sen lähellä oman ympäristönsä sijaan. Tarvitsee pma-äänen. Sen sammuttaminen pysäyttää sen myös tällä hetkellä katsovilta virkamiehiltä.",
                     "SIGNAL": "Signaalin voimakkuus muuttuu",
                     "SIGNAL_HINT": "Kosmetiikka: kameraruudukon signaalipalkit liikkuvat hieman ajan myötä. Pois: ne pysyvät paikallaan.",
                     "AUDIO_RADIUS": "Kuuloalue",
-                    "AUDIO_RADIUS_HINT": "Syötettä katsovat virkailijat kuulevat pelaajien puhuvan näin lähellä kameraa."
+                    "AUDIO_RADIUS_HINT": "Syötettä katsovat virkailijat kuulevat pelaajien puhuvan näin lähellä kameraa.",
+                    "ON_FEED_LOST": "Kun kamera kaatuu",
+                    "ON_FEED_LOST_HINT": "Mitä tapahtuu virkamiehille, jotka katsovat CCTV-kameraa, joka tuhoutuu, hakkeroituu tai poistuu käytöstä sen katkaisujen jälkeen?",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Vaihda seuraavaan kameraan",
+                        "CLOSE": "Sulje syöte"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Automaattinen tunnistus",
@@ -3200,7 +3264,7 @@
                     "METHOD": "Kuinka virkamiehet kytkevät sen päälle",
                     "METHOD_HINT": "Bodycam-kohteen käyttäminen, komennon kirjoittaminen tai jompikumpi. Komento tarvitsee edelleen tuotteen varastossaan.",
                     "STREAM_RADIUS": "Näkyvä alue",
-                    "STREAM_RADIUS_HINT": "Kun joku katselee bodycamia, pelaajat ja ajoneuvot, jotka ovat näin lähellä käyttäjää, pysyvät näkyvissä syötteessä. Isompi näyttää enemmän, mutta synkronoi enemmän pelaajia katsojaan.",
+                    "STREAM_RADIUS_HINT": "Kun joku katselee bodycamia, pelaajat ja ajoneuvot, jotka ovat näin lähellä käyttäjää, pysyvät näkyvissä syötteessä. Isompi näyttää enemmän, mutta synkronoi enemmän pelaajia katsojalle.",
                     "ITEM": "Bodycam-tuote",
                     "ITEM_HINT": "Varastotuotevirkailijat käyttävät vartalokameransa päälle."
                 },
@@ -3250,7 +3314,7 @@
                     "MUGSHOT": "Mugshots",
                     "TARGET": "Silmän kohde",
                     "K9": "K9",
-                    "SCREENSHOT": "Kuvakaappauksia",
+                    "SCREENSHOT": "Kuvakaappaukset",
                     "SOCIETY": "Yhteiskunnan pankkitoiminta",
                     "UPLOAD": "Lataukset",
                     "POLICE": "Poliisin vuorovaikutus"
@@ -3479,7 +3543,7 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "Oletusnäppäimet",
-                    "DESCRIPTION": "Näppäin jokainen toiminto alkaa. FiveM tallentaa pelaajan avaimet, kun hän liittyy ensimmäisen kerran, joten muutos tavoittaa uudet pelaajat ja kaikki, joilla ei ole vielä ollut tätä avainta. Jokainen voi edelleen muuttaa omia avaimiaan kohdassa Asetukset > Näppäinsidokset > FiveM.",
+                    "DESCRIPTION": "Näppäin jokainen toiminto alkaa. FiveM tallentaa pelaajan avaimet, kun hän liittyy ensimmäisen kerran, joten muutos tavoittaa uudet pelaajat ja kaikki, joilla ei ole vielä ollut tätä avainta. Jokainen voi edelleen vaihtaa omia avaimiaan MDT:n konfigurointisivulla tai kohdassa Asetukset > Näppäinsidokset > FiveM.",
                     "OPEN_MDT": "Avaa MDT",
                     "OPEN_MDT_HINT": "Pois päältä, virkamiehet avaavat sen komennolla tai esineellä.",
                     "INTERACTIONS": "Vuorovaikutusvalikko",
@@ -3491,7 +3555,10 @@
                     "PANIC_BUTTON": "Paniikkipainike",
                     "PANIC_BUTTON_HINT": "Lähettää paniikkihälytyksen poliisin sijainnin kanssa.",
                     "REQUEST_BACKUP": "Pyydä varmuuskopiota",
-                    "REQUEST_BACKUP_HINT": "Pyydä varmuuskopiota lähellä olevilta yksiköiltä."
+                    "REQUEST_BACKUP_HINT": "Pyydä varmuuskopiota lähellä olevilta yksiköiltä.",
+                    "CLASH": "Myös {{names}}-oletusavain. FiveM suorittaa jokaisen toiminnon avaimella, joten {{key}} tekisi molemmat.",
+                    "MAX_RADIO": "Radionäppäimet upseeria kohti",
+                    "MAX_RADIO_HINT": "Kuinka monta radionäppäinsidosta kukin upseeri voi lisätä Radio-sivulle. 0 sammuttaa ne. Virkamiehet, joilla on jo enemmän, pitävät vain ensimmäiset."
                 }
             },
             "IN_GAME": {
@@ -3505,7 +3572,7 @@
                 },
                 "DISTANCE": {
                     "BUTTON": "Näytä pelissä",
-                    "BUTTON_HINT": "Lennä ympäriinsä ja näe tämä etäisyys maailmassa ennen sen tallentamista.",
+                    "BUTTON_HINT": "Lennä ympäriinsä ja katso tämä etäisyys maailmassa ennen sen tallentamista.",
                     "TITLE": "Pelin sisäinen esikatselu",
                     "FROM": {
                         "CAMERA": "Mitattu kamerasta #{{id}}",
@@ -3631,7 +3698,8 @@
                 "RADIUS": "Hakualue",
                 "RADIUS_HINT": "Ympyrä puhelun ympärillä pelkän nastan sijaan.",
                 "SUMMARY": "kuvake {{sprite}}, väri {{colour}}",
-                "SAME_AS_OTHERS": "Sama kuin muutkin"
+                "SAME_AS_OTHERS": "Sama kuin muutkin",
+                "COLOUR_BY_PRIORITY": "Väri seuraa puhelun prioriteettia. Valitse yksi tästä poistamalla \"Väri prioriteetin mukaan\" käytöstä Map Blipsissa."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Päivitä",
@@ -3667,7 +3735,7 @@
                     "SAVING": "Tallennetaan kameraa…",
                     "SAVED": "Kamera tallennettu",
                     "DELETED": "Kamera poistettu",
-                    "TELEPORT_FAILED": "Kameraa ei löytynyt",
+                    "TELEPORT_FAILED": "Sitä kameraa ei löytynyt",
                     "STATUS": {
                         "ONLINE": "Kamera verkossa",
                         "OFFLINE": "Kamera sammutettu",
@@ -3726,9 +3794,9 @@
                 },
                 "AUTO": {
                     "TITLE": "Yksiköt puheluissa",
-                    "DESCRIPTION": "Miten yksiköt vastaavat puheluihin ja mitkä tilat MDT asettaa niille.",
+                    "DESCRIPTION": "Miten yksiköt vastaavat puheluihin ja mitkä tilat MDT niille asettaa.",
                     "WHOLE_UNIT": "Vastaa yhtenä kokonaisuutena",
-                    "WHOLE_UNIT_HINT": "Päällä: puheluun vastaaminen (tai kutsuun saaminen) asettaa jokaisen yksikön päivystävän jäsenen siihen.",
+                    "WHOLE_UNIT_HINT": "Päällä: puheluun vastaaminen (tai kutsuun saaminen) asettaa yksikön jokaisen päivystävän jäsenen siihen.",
                     "RESPONDING": "Tila vastattaessa",
                     "RESPONDING_HINT": "Aseta, kun yksikköön soitetaan puhelu.",
                     "ARRIVED": "Tila saapuessa",
@@ -3737,7 +3805,7 @@
                     "CLEARED_HINT": "Aseta, milloin puhelu sulkeutuu tai laite poistuu siitä, ellei kyseessä ole toinen puhelu.",
                     "OFF": "Älä vaihda",
                     "ARRIVE_RADIUS": "Saapumisetäisyys",
-                    "ARRIVE_RADIUS_HINT": "Kuinka lähellä puhelua lasketaan saapuneeksi. Päättää myös vastausajan lähetystilastoihin.",
+                    "ARRIVE_RADIUS_HINT": "Se, kuinka lähellä puhelua lasketaan saapuneeksi. Päättää myös vastausajan lähetystilastoihin.",
                     "STALE": "Varoita, kun ei päivitystä",
                     "STALE_HINT": "Yksikkökortti näyttää varoituksen, kun sen tila ei ole muuttunut pitkään aikaan. 0 = ei koskaan.",
                     "CHECK_TIMEOUT": "Tilatarkistuksen vastausaika",
@@ -3756,7 +3824,7 @@
                     "ENABLED": "Käytä vyöhykkeitä",
                     "ENABLED_HINT": "Pois päältä: vyöhykkeet ovat piilossa kaikkialla.",
                     "LIST": "Alueet",
-                    "LIST_HINT": "Nimi, väri ja vähiten yksiköitä, jotka vyöhykkeellä pitäisi olla.",
+                    "LIST_HINT": "Nimi, väri ja vähiten yksiköitä vyöhykkeellä.",
                     "LIST_FIELDS": {
                         "NAME_HINT": "Vain pienet kirjaimet, numerot, _ ja -.",
                         "LABEL_HINT": "Mitä virkailijat näkevät.",
@@ -3796,7 +3864,7 @@
                 "RECORDING": "Tallennus",
                 "AUTO_DETECT": "Automaattinen tunnistus",
                 "CAPTURE": "Kaapata",
-                "FLASH": "Salama"
+                "FLASH": "Flash"
             },
             "INSTRUCTIONS": {
                 "LOOK": "Katso",
@@ -3832,6 +3900,13 @@
             "RECORDING": {
                 "MAX_DURATION": "Pisin tallenne saavutettu, leikkeen tallentaminen",
                 "MAX_SIZE": "Suurin tallennuskoko saavutettu, leike tallennetaan"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "Kamera tuhoutunut",
+                "HACKED": "Syöte siepattu",
+                "OFFLINE": "Kamera offline-tilassa",
+                "BODYCAM": "Bodycam offline-tilassa",
+                "DASHCAM": "Dashcam offline-tilassa"
             }
         },
         "GIZMO": {
@@ -3912,14 +3987,14 @@
             "TITLE": "Rikospaikkanauha",
             "COUNT": "{{placed}}/{{limit}} riviä",
             "COUNT_UNLIMITED": "{{placed}} riviä",
-            "NO_TARGET": "Tähtää seinään, pylvääseen tai potkuriin",
+            "NO_TARGET": "Tähtää seinään, tankoon tai tukiin",
             "TYING": "Sitomalla se…",
             "LINE_NEW": "Seuraava piste aloittaa uuden rivin",
             "LINE_GOING": "Sitoudu viimeisestä kohdastasi",
             "CHECKS_TITLE": "Tarkastukset",
             "STATUS": {
                 "OK": "Valmiina sitomaan",
-                "WARNING": "Voi sitoa, tarkistaa meripihkaiset esineet",
+                "WARNING": "Voi sitoa, tarkistaa meripihkan väriset esineet",
                 "ERROR": "Ei voi sitoa sitä tänne"
             },
             "HINTS": {
@@ -4025,9 +4100,6 @@
                 "ACTIVE_WARRANTS": "Aktiiviset warrantit",
                 "STOLEN": "Varastettu",
                 "OPEN_RECORD": "Avaa levy",
-                "OCCUPANTS_OUT": "Tilaa asukkaat ulos",
-                "OCCUPANTS_ORDERED_one": "Tilattu {{count}} asukkaalle",
-                "OCCUPANTS_ORDERED_other": "Tilattu {{count}} asukasta",
                 "SEARCH_TRUNK": "Hakurunko",
                 "IMPOUND": "Takavarikoida",
                 "IMPOUNDED": "{{plate}} takavarikoitu"
@@ -4218,7 +4290,7 @@
             "DESCRIPTIONS": {
                 "PLACE": "Lennä paikalle ja tähtää seinään, kattoon tai lattiaan. Kamera tarttuu siihen, tasaisesti ja pystyssä.",
                 "ADJUST": "Katso sitä ulkopuolelta ja hienosäädä sen sijainti.",
-                "GIZMO": "Vapaa liikkuvuus gizmolla. Se napsahtaa takaisin lähimpään pintaan, kun jätät sen.",
+                "GIZMO": "Vapaa liikkua gizmolla. Se napsahtaa takaisin lähimpään pintaan, kun jätät sen.",
                 "AIM": "Näet linssin läpi aivan kuten syötteen. Aseta, missä se lepää ja kuinka pitkälle käyttäjät voivat kääntää ja zoomata sitä.",
                 "REVIEW": "Kokeile syötettä kuten operaattori tekee. Tallennus vie ensimmäisen esikatselun linssin läpi."
             },
@@ -4453,6 +4525,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Teemoja ja värejä."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "Pelin sisällä",
+                    "DESCRIPTION": "Kuinka hahmosi käyttäytyy, kun käytät MDT:tä ja radiota."
                 }
             },
             "SECTIONS": {
@@ -4461,7 +4537,9 @@
                 "UNITS_NUMBERS": "Yksiköt ja numerot",
                 "SEE_THROUGH": "Läpinäkymätila",
                 "SEE_THROUGH_DESCRIPTION": "Häivytä MDT pois tieltä katsoaksesi peliä sen takana sulkematta sitä.",
-                "DISPLAY": "Näyttö"
+                "DISPLAY": "Näyttö",
+                "RADIO": "Radio",
+                "KEYBINDS": "Näppäimet"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4523,13 +4601,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Ilmoitusäänet",
                     "DESCRIPTION": "Toista ääni saapuville lähetyspuheluille ja chat-maininnoille"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Puhuva animaatio",
+                    "DESCRIPTION": "Mitä hahmosi tekee, kun puhut radiossa",
+                    "PREVIEW": "Esikatselu hahmostasi"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Paina näppäintä…",
-                "LISTENING_HINT": "Esc peruuttaaksesi · Askelpalautin tyhjentääksesi",
                 "UNBOUND": "Ei sidottu",
                 "CUSTOM": "Mukautettu"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "MDT-näppäimet. Napsauta näppäintä ja muuta sitä painamalla uutta.",
+                "NONE": "Tällä palvelimella ei ole MDT-näppäinsidoksia.",
+                "OVERLAP": "Sama avain kuin {{names}}. FiveM suorittaa jokaisen näppäimen toiminnon, joten sen painaminen suorittaa ne kaikki.",
+                "OPEN_SETTINGS": "Muuta näppäimiä FiveM:n näppäinsidoksissa",
+                "HINT": "Vaihdamasi avain lakkaa toimimasta heti, mutta pysyy listalla FiveM:n avainsidoksissa, kunnes muodostat yhteyden uudelleen. Hiiren painikkeet ja ohjaimet voidaan asettaa sinne."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Kevyt",
@@ -4587,7 +4675,14 @@
                 "HINT": "Katso ilmoitus yllä olevasta sijainnista ja kestosta",
                 "BUTTON": "Esikatsele ilmoitus"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Esikatselu – kuinka haaliselta MDT näyttää tällä tasolla"
+            "SEE_THROUGH_PREVIEW_HINT": "Esikatselu – kuinka haaliselta MDT näyttää tällä tasolla",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Palvelimen oletusarvo ({{style}})",
+                "NONE": "Ei mitään",
+                "CHEST": "Olkapäämikrofoni",
+                "EAR": "Kuuloke",
+                "HANDHELD": "Kädessä pidettävä radio"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "Teemat",
@@ -4737,7 +4832,7 @@
     "SUSPECT": {
         "INVALID_TARGET": "Epäilty ei ole enää tavoitettavissa",
         "TARGET_TOO_FAR": "Mene lähemmäksi epäiltyä",
-        "MUST_BE_CUFFED": "Epäilty on ensin asetettava mansettiin",
+        "MUST_BE_CUFFED": "Epäilty on ensin pantava raudoihin",
         "SEARCH_UNAVAILABLE": "Haku ei ole vielä käytettävissä mainosjakaumaasetuksissasi",
         "ALREADY_IN_VEHICLE": "Epäilty on jo autossa",
         "NEEDS_CUFFS_ITEM": "Sinulla ei ole käsiraudoita"
@@ -4787,6 +4882,8 @@
             "license_revoke": "Lisenssi peruutettu",
             "citizen_image_change": "Kansalaisen kuva vaihdettu",
             "charges_issued": "Maksut suoritettu",
+            "prisoner_released": "Vanki vapautettu",
+            "prisoner_sentence_changed": "Lause muutettu",
             "note_added": "Huomautus lisätty",
             "note_removed": "Huomautus poistettu",
             "employee_grade_change": "Arvosana muutettu",
@@ -4794,7 +4891,7 @@
             "employee_fired": "Työntekijä erotettu",
             "employee_recruited": "Työntekijä rekrytoitu",
             "certification_type_created": "Varmennetyyppi luotu",
-            "certification_type_updated": "Varmennetyyppi päivitetty",
+            "certification_type_updated": "Sertifikaatin tyyppi päivitetty",
             "certification_type_deleted": "Varmennetyyppi poistettu",
             "certification_granted": "Sertifiointi myönnetty",
             "certification_revoked": "Sertifiointi peruutettu",
@@ -4871,6 +4968,8 @@
             "LICENSE_REVOKE": "Peruutettu lisenssi {{type}} käyttäjältä {{identifier}}",
             "CITIZEN_IMAGE_CHANGE": "Päivitetty profiilikuva käyttäjälle {{identifier}}",
             "CHARGES_ISSUED": "Tehty {{count}} veloitusta {{entityType}} #{{id}}",
+            "PRISONER_RELEASED": "Vapautettu vanki {{identifier}} (syy: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "Aseta {{identifier}} jäljellä olevaksi lauseeksi {{time}} (syy: {{reason}})",
             "NOTE_ADDED": "Lisätty muistiinpano kohteeseen {{entityType}} #{{entityId}}",
             "NOTE_REMOVED": "Poisti muistiinpanon kohteesta {{entityType}} #{{entityId}}",
             "EMPLOYEE_GRADE_CHANGE": "Aseta henkilön {{identifier}} arvosanaksi {{grade}}",
@@ -4925,7 +5024,7 @@
     },
     "OPERATIONS": {
         "HEADING": "Toimintasuunnitelmat",
-        "SUBHEADING": "Koordinoi taktisia operaatioita ja hallitse aktiivisia käyttöönottoja",
+        "SUBHEADING": "Koordinoi taktisia operaatioita ja hallitse aktiivisia sijoituksia",
         "LIST_TITLE": "Toimintasuunnitelmat",
         "STARTED_AGO": "Aloitettu {{time}} sitten",
         "STARTS_IN": "Alkaa {{time}}",
@@ -5070,7 +5169,7 @@
             "DONE": "Tunnustit tiedotuksen",
             "SUCCESS": "Tiedotus tunnustettu",
             "PENDING": "Ei vielä",
-            "EMPTY": "Kukaan ei ole vielä myöntänyt tiedotusta.",
+            "EMPTY": "Kukaan ei ole vielä tunnustanut tiedotusta.",
             "COUNT_one": "{{value}} upseeri",
             "COUNT_other": "{{value}} upseeria",
             "OF_ASSIGNED": "{{done}}/{{total}} määritetty"
@@ -5166,7 +5265,7 @@
             "AUTOSAVE_SAVED": "Luonnos tallennettu paikallisesti",
             "UPDATED_AT": "Päivitetty {{time}}",
             "DEFAULT_ON": "Esitäytetty, kun joku aloittaa uuden {{category}}.",
-            "DEFAULT_OFF": "Ei oletuksena. Jokaisella osastolla voi olla yksi oletus luokkaa kohden.",
+            "DEFAULT_OFF": "Ei oletuksena. Jokaisella osastolla voi olla yksi oletusarvo luokkaa kohden.",
             "MAKE_DEFAULT": "Tee oletukseksi",
             "UNSAVED": "Tallentamattomat muutokset",
             "DRAFT_RESTORED": "Palautettiin tallentamaton luonnoksesi kohteesta {{time}}.",
@@ -5199,7 +5298,7 @@
                 },
                 "VICTIMS": {
                     "LABEL": "Uhrit",
-                    "DESCRIPTION": "Kaikkien tapaus vahingoittaneiden tai vaikuttaneiden nimet pilkuilla erotettuina"
+                    "DESCRIPTION": "Kaikkien tapahtuman vahingoittamien tai vaikuttaneiden nimet pilkuilla erotettuina"
                 },
                 "COPS": {
                     "LABEL": "Upseerit",
@@ -5272,7 +5371,7 @@
             "HINT": "Valitse malli luettelosta muokataksesi sitä tai luo uusi. Mallit esitäytä uudet tietueet, jotta kukaan ei aloita tyhjältä sivulta; katkelmat lisäävät uudelleenkäytettäviä kappaleita mihin tahansa tekstiin."
         },
         "DELETE": {
-            "DESCRIPTION": "Malli poistetaan lopullisesti. Tämä ei vaikuta siitä jo kirjoitettuihin tietueisiin."
+            "DESCRIPTION": "Malli poistetaan lopullisesti. Ei vaikuta siitä jo kirjoitettuihin tietueisiin."
         },
         "KINDS": {
             "TEMPLATE": "Malli",
@@ -5352,13 +5451,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Etsi henkilö tai ajoneuvo. Uudet BOLOt alkavat luonnoksista."
+            "DESCRIPTION": "Etsi henkilö tai ajoneuvo. Luonnokset eivät merkitse aihetta ennen kuin ne on aktivoitu."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Aseistettu epäilty mustassa Sultan RS:ssä",
             "DESCRIPTION_PLACEHOLDER": "Missä heidät on viimeksi nähty, miltä ne näyttävät ja miksi niitä etsitään",
             "EXPIRES_LABEL": "Päättyy klo",
             "EXPIRES_PLACEHOLDER": "Oletusarvo on 7 päivää",
+            "SUBJECTS_TITLE": "Aiheet",
+            "CITIZENS_PLACEHOLDER": "Valitse ihmiset",
             "TOASTS": {
                 "CREATED": "BOLO luotu"
             }
@@ -5398,6 +5499,7 @@
             "CONFIRM_DESCRIPTION": "Tämä vahvistaa, että {{subject}} on paikannettu, ja sulkee näkökentän.",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "aihe",
+            "CONFIRM_DESCRIPTION_MANY": "Tämä vahvistaa, että kaikki {{count}} kohdetta on paikannettu, ja sulkee näkökentän.",
             "TOASTS": {
                 "MARKING": "Merkitään BOLO sijainti…",
                 "MARKED": "BOLO merkitty sijainti"
@@ -5416,6 +5518,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Luokittelematon",
         "INDEX": {
             "HEADING": "Lakisäännöt ja rikoslaki",
             "SUBHEADING": "Rikoksia, taloudellisia seuraamuksia ja oikeudellisia valtuuksia koskeva virallinen kodifiointi",
@@ -5520,11 +5623,11 @@
             "SEARCH_CITIZEN_PLACEHOLDER": "Etsi kansalaista…",
             "ADD_OFFENSE_LABEL": "Lisää loukkaus",
             "SEARCH_OFFENSE_PLACEHOLDER": "Etsi rikoslaki…",
-            "NOTICE_BODY": "Varmista, että kaikki syytteet on tarkistettu asianmukaisesti ja että kansalaiselle on ilmoitettu hänen taloudellisista velvoitteistaan. Tämä toiminto kirjataan järjestelmään.",
+            "NOTICE_BODY": "Varmista, että kaikki syytteet on tarkistettu asianmukaisesti ja että kansalaiselle on ilmoitettu heidän taloudellisista velvoitteistaan. Tämä toiminto kirjataan järjestelmään.",
             "FINE_AMOUNT_LABEL": "Hieno määrä",
             "SUM_OF_CHARGES": "maksujen summa",
             "CHARGES_SUMMARY_LABEL": "Maksujen yhteenveto",
-            "CHARGES_EMPTY": "Hae ylhäältä lisätäksesi rikkomuksia ja säädä jokainen sakko sen sallitun alueen sisällä.",
+            "CHARGES_EMPTY": "Hae ylhäältä lisätäksesi rikkomuksia ja säädä sitten jokainen sakko sen sallitulle alueelle.",
             "PROCESS_FINE": "Käsittely kunnossa · {{amount}}",
             "TOASTS": {
                 "PROCESSING": "Käsittely hyvin…",
@@ -5549,7 +5652,7 @@
         "JAIL_DIALOG": {
             "TRIGGER": "Vankila",
             "DIALOG_TITLE": "Vankilaan kansalainen",
-            "DIALOG_DESCRIPTION": "Tuomitse kuka tahansa rekisteröitynyt kansalainen online- tai offline-tilassa ilman rikoskoodimaksua. Se kirjataan rangaistuksena.",
+            "DIALOG_DESCRIPTION": "Tuomita kuka tahansa rekisteröitynyt kansalainen online- tai offline-tilassa ilman rikoskoodimaksua. Se kirjataan rangaistuksena.",
             "JAIL_TIME_LABEL": "Vankilaaika (kuukautta)",
             "REASON_LABEL": "Syy (valinnainen)",
             "REASON_PLACEHOLDER": "Vastustaa pidätystä",
@@ -5571,6 +5674,54 @@
                 "PROCESSING": "Käsitellään rangaistusta…",
                 "SUCCESS": "Rangaistus käsitelty: {{name}}",
                 "FAILED": "Rangaistuksen käsittely epäonnistui"
+            }
+        }
+    },
+    "PRISONERS": {
+        "SUBHEADING": "Kaikki vankilassa tällä hetkellä ja kuinka kauan heillä on jäljellä",
+        "SUBHEADING_ONLINE_ONLY": "Vangit, jotka ovat verkossa juuri nyt. Vankilakäsikirjoituksesi ei raportoi offline-vangeista",
+        "SEARCH_PLACEHOLDER": "Hae nimellä tai tunnisteella…",
+        "EMPTY": "Kukaan ei ole vankilassa",
+        "NOT_SUPPORTED": "Vankilakäsikirjoituksessasi ei voi luetella vankeja",
+        "COLUMNS": {
+            "REMAINING": "Jäljellä",
+            "RECORD": "Tallentaa",
+            "SENTENCED_BY": "Tuomittu",
+            "SINCE": "Koska"
+        },
+        "REMAINING_OF": "{{remaining}}/{{total}}",
+        "UNKNOWN_REMAINING": "Vankilan käsikirjoitus ei raportoi",
+        "JAILED_OUTSIDE_MDT": "Vankilassa MDT:n ulkopuolella",
+        "RECORD_LABEL": "{{type}} #{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Rangaistus",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Avaa profiili",
+        "REASON_LABEL": "Syy (valinnainen)",
+        "RELEASE": {
+            "TRIGGER": "Vapauta",
+            "TITLE": "Vapauta vanki",
+            "CONFIRM": "{{name}} vapautetaan nyt ja hänen tuomionsa päättyy.",
+            "REASON_PLACEHOLDER": "Käräjäoikeus lievensi rangaistusta",
+            "BUTTON": "Vapauta",
+            "NEEDS_ONLINE": "Vankilakäsikirjoituksesi voi vapauttaa vain verkossa olevat vangit.",
+            "TOASTS": {
+                "PROCESSING": "Vapautetaan vankia…",
+                "SUCCESS": "Julkaistu {{name}}",
+                "FAILED": "Vangin vapauttaminen epäonnistui"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Muuta lausetta",
+            "TITLE": "Muuta lausetta",
+            "TIME_LABEL": "Palveluaikaa jäljellä (kuukautta)",
+            "REASON_PLACEHOLDER": "Hyvä käytös",
+            "BUTTON": "Aseta arvoon {{duration}}",
+            "TOASTS": {
+                "PROCESSING": "Vaihdetaan lausetta…",
+                "SUCCESS": "Käyttäjän {{name}} lause on nyt {{duration}}",
+                "FAILED": "Lauseen muuttaminen epäonnistui"
             }
         }
     },
@@ -5722,6 +5873,8 @@
         },
         "INDEX": {
             "UNNAMED": "Nimetön kansalainen",
+            "JAILED": "Vankilaan",
+            "JAILED_REMAINING": "Vangittu · {{duration}} jäljellä",
             "SUBHEADING": "Kansalaisen tunnus",
             "TOASTS": {
                 "SAVING_IMAGE": "Tallennetaan kuvaa…",
@@ -5819,6 +5972,24 @@
             },
             "SUMMARY_TITLE": "Rangaistussummat"
         },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Vankilan historia",
+            "EMPTY": "Ei tiedossa vankeusrangaistuksia",
+            "COLUMNS": {
+                "OUTCOME": "Tulokset",
+                "ENDED": "Päättyi"
+            },
+            "STATUS": {
+                "ACTIVE": "Tarjoilu",
+                "SERVED": "Palveltu",
+                "RELEASED": "Julkaistu aikaisin",
+                "REPLACED": "Korvataan uudella lauseella"
+            },
+            "RELEASED_BY": "tekijä: {{name}}",
+            "VIEW_ALL_one": "Näytä kaikki {{formatted}} lausetta",
+            "VIEW_ALL_other": "Näytä kaikki {{formatted}} lausetta",
+            "DIALOG_TITLE": "Vankilahistoria: {{name}}"
+        },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Avaa kaavio tähän kansalaiseen liittyvistä tietueista, ajoneuvoista ja ihmisistä",
             "PHONE_RECORDS_HINT": "Katso puhelintiedot",
@@ -5878,7 +6049,7 @@
                 "suspension": "Jousitus",
                 "electronics": "Elektroniikka",
                 "weapons": "Aseet",
-                "other": "muu"
+                "other": "Muut"
             },
             "CATEGORY_HINTS": {
                 "engine": "Turbo, ECU-viritys, pakoputki, nitros",
@@ -6260,7 +6431,7 @@
             "EMPTY": "Maksuja ei löytynyt"
         },
         "officers": {
-            "PLACEHOLDER": "Etsi upseeria nimellä tai kutsumerkillä…",
+            "PLACEHOLDER": "Etsi virkailijoita nimellä tai kutsumerkillä…",
             "EMPTY": "Poliiseja ei löytynyt"
         },
         "penal_category": {
@@ -6454,7 +6625,7 @@
             "COUNT_other": "{{formatted}} analyysiä",
             "REQUEST": "Pyydä analyysia",
             "NO_REQUEST_DETAILS": "Yksityiskohtia ei ole annettu",
-            "REQUESTED_BY": "{{name}} pyytänyt {{date}}",
+            "REQUESTED_BY": "{{name}} pyysi {{date}}",
             "EXAMINED_BY": "{{name}} tarkasteli {{date}}",
             "LINK_AS_SUSPECT": "Linkitä epäiltynä",
             "RECORD_RESULT": "Ennätystulos",
@@ -6558,7 +6729,7 @@
             "clothing": "Vaatteet",
             "tool": "Työkalut/aseet (ei ampuma-ase)",
             "vehicle": "Ajoneuvon todisteet",
-            "other": "muu"
+            "other": "Muut"
         },
         "analysis": {
             "fingerprint": "Sormenjälkianalyysi",
@@ -6580,7 +6751,7 @@
             "lab": "Laboratorioanalyysi",
             "court": "Tuomioistuin",
             "investigation": "Tutkinta",
-            "other": "muu"
+            "other": "Muut"
         }
     },
     "bolos": {
@@ -6708,7 +6879,7 @@
             "NO_SNIPPET": "—"
         },
         "NOTIFICATIONS": {
-            "ALWAYS_ALERT_HINT": "Maininnat ja paniikkihälytykset antavat aina ilmoituksen, jopa mykistetyllä kanavalla.",
+            "ALWAYS_ALERT_HINT": "Maininnat ja paniikkihälytykset antavat aina ilmoituksen, myös mykistetyllä kanavalla.",
             "VIEW": "Näytä"
         },
         "DM": {
@@ -6768,7 +6939,7 @@
             "NO_ROOM_TITLE": "Ei aktiivista huonetta",
             "NO_ROOM_DESCRIPTION": "Et ole yhteydessä istuntoon. Luo huone tai liity julkiseen tehdäksesi yhteistyötä.",
             "CONNECTING_TITLE": "Istunnon perustaminen",
-            "CONNECTING_DESCRIPTION": "Liity huoneeseen…"
+            "CONNECTING_DESCRIPTION": "Liitytään huoneeseen…"
         },
         "FOOTER": {
             "ESTABLISHING": "Perustetaan…",
@@ -6913,9 +7084,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Bodycam varustettu",
-        "LOST": "Yhteys bodycamiin katkesi",
         "MISSING": "Sinulla ei ole bodycamia",
-        "OFFLINE": "Tuon upseerin vartalokamera meni offline-tilaan",
         "REMOVED": "Bodycam poistettu",
         "UNREACHABLE": "Bodycam-kameraa ei voitu tavoittaa"
     },
@@ -6923,7 +7092,6 @@
         "ARMED": "Dashcam aseistettu",
         "DISARMED": "Kojekamera pois päältä",
         "NEEDS_PATROL_VEHICLE": "Sinun on oltava sallittujen luettelossa olevassa partioajoneuvossa",
-        "OFFLINE": "Ajoneuvon kojelautakamera meni offline-tilaan",
         "SEAT_RESTRICTED": "Vain kuljettaja tai etumatkustaja voi hallita kojelautaa",
         "UNAVAILABLE": "Dashcam ei ole käytettävissä",
         "UNREACHABLE": "Kojekameraan ei saatu yhteyttä"

@@ -20,6 +20,7 @@
         "MANAGEMENT": "Förvaltning",
         "CONFIG": "Konfiguration",
         "PENALTIES": "Påföljder",
+        "PRISONERS": "Fångar",
         "ASSETS": "Tillgångar",
         "OPERATIONS": "Operationer",
         "RECORDS": "Uppgifter",
@@ -132,7 +133,7 @@
         "CHARGES": {
             "ADD_CHARGE": "Lägg till avgift",
             "NO_CHARGES_FILED": "Inga åtal har väckts",
-            "SUMMARY_TITLE": "",
+            "SUMMARY_TITLE": "Avgifter sammanfattning",
             "SUMMARY_CHARGED": "Misstänkta åtalade",
             "SUMMARY_OF": "{{value}} av {{total}}",
             "SUMMARY_NOT_ISSUED": "Inte utfärdat ännu",
@@ -142,7 +143,7 @@
             "ISSUED_BY": "Utgiven av {{officer}} den {{date}}",
             "ISSUE_CHARGES": "Utfärda avgifter",
             "TOASTS": {
-                "ISSUING": "",
+                "ISSUING": "Utfärdar avgifter...",
                 "REMOVING": "Tar bort laddningen...",
                 "REMOVED": "Laddningen har tagits bort"
             }
@@ -151,11 +152,11 @@
             "OWNER": "Ägare"
         },
         "IMAGE_GALLERY": "Bildgalleri",
-        "SUBMITTING": "",
+        "SUBMITTING": "Skickar...",
         "YOU_SUFFIX": "(Du)",
         "NO_RESULTS_FOUND": "Inga resultat hittades",
         "ACTIVITY_LOG": {
-            "EMPTY": "",
+            "EMPTY": "Ingen aktivitet registrerad ännu",
             "COUNT_one": "{{formatted}} post",
             "COUNT_other": "{{formatted}} poster",
             "COLLAPSE": "Kollapsa",
@@ -164,7 +165,7 @@
             "VIEW_ALL_one": "Visa alla {{formatted}} poster",
             "VIEW_ALL_other": "Visa alla {{formatted}} poster",
             "ENTRIES_one": "{{formatted}} post, senaste först",
-            "ENTRIES_other": "{{formatted}} poster, senaste först"
+            "ENTRIES_other": "{{formatted}} entries, newest first"
         },
         "ATTACHABLE_SECTION": {
             "DETACH_RECORD": "Ta bort posten",
@@ -186,19 +187,19 @@
             "SET_PROFILE": "Använd som profilbild"
         },
         "ATTACH_RECORD_DIALOG": {
-            "DESCRIPTION": "Sök och välj en post att länka."
+            "DESCRIPTION": ""
         },
         "CHARGE_BROWSER": {
             "FILTER_PLACEHOLDER": "Filtrera artiklar...",
             "NO_RESULTS": "Inga resultat",
             "SEVERITY_LABEL": "Stränghet:",
             "SCALE_ALL_TITLE": "Skala alla avgifter",
-            "SCALE_ALL_DESCRIPTION": "Justerar varje laddnings svårighetsgrad tillsammans.",
+            "SCALE_ALL_DESCRIPTION": "",
             "APPLY_TO_LABEL": "Ansök till",
             "SCOPE": {
                 "FINE": "bra",
                 "JAIL": "förlossning",
-                "JAIL_HINT": "\"Confinement\" skalar fängelsetid och samhällstjänst tillsammans - vilken en artikel faktiskt bär."
+                "JAIL_HINT": "\"Inspärrning\" skalar fängelsetid och samhällstjänst tillsammans - vilken som än en artikel faktiskt innehåller."
             },
             "EMPTY_STATE": "Välj artiklar från strafflagen till vänster för att ladda dem här.",
             "PRESETS": {
@@ -214,19 +215,19 @@
             "CUSTOM_CHARGE": {
                 "TITLE": "Anpassad avgift",
                 "DESCRIPTION": "Lägg till en engångsböter, fängelse eller samhällstjänst utan någon strafflagsartikel bakom sig.",
-                "LABEL_PLACEHOLDER": "till exempel Domstolen beslutade om återbetalning"
+                "LABEL_PLACEHOLDER": "till exempel Court-ordered restitution"
             }
         },
         "CHARGE_ROW": {
-            "STACKABLE_TITLE": "Stapelbar — expandera för att ändra kvantiteten",
+            "STACKABLE_TITLE": "",
             "COMMUNITY_SERVICE": "Comm. Service",
-            "COMMUNITY_SERVICE_SUPERSEDED_HINT": "Kommer inte att avtjänas – denna anklagelse innebär redan fängelse, och en spelare kan bara avtjäna det ena eller det andra.",
+            "COMMUNITY_SERVICE_SUPERSEDED_HINT": "Kommer inte att avtjänas — denna anklagelse innebär redan fängelse, och en spelare kan bara avtjäna det ena eller det andra.",
             "LICENCE": "Licens",
             "SUSPEND_LICENCE": "Stäng av {{license}}-licensen"
         },
         "CHARGE_DIALOG": {
             "TITLE": "Emissionsavgift – {{name}}",
-            "DESCRIPTION": "Citera strafflagsartiklar mot {{name}}. Avgifterna förblir vilande tills de utfärdas.",
+            "DESCRIPTION": "Cite penal code articles against {{name}}. Charges stay pending until issued.",
             "SAVING": "Sparar avgifter...",
             "SAVED": "Avgifter sparade",
             "SAVE_CHARGES": "Spara avgifter"
@@ -235,14 +236,14 @@
             "SELECT": "Lägg till avgifter",
             "EDIT": "Redigera avgifter",
             "EMPTY_STATE": "Inga avgifter",
-            "EMPTY_HINT": "Öppna strafflagen för att citera artiklar.",
+            "EMPTY_HINT": "",
             "SUSPENDS": "Stänger av {{license}}",
             "COUNT_one": "{{count}} avgift",
             "COUNT_other": "{{count}} avgifter",
             "DIALOG_DESCRIPTION": "Bläddra i artiklar och justera böter, fängelse och andra påföljder."
         },
         "IMAGE_DIALOG": {
-            "DEFAULT_DESCRIPTION": "Klistra in en URL eller ta ett foto i spelet.",
+            "DEFAULT_DESCRIPTION": "",
             "TAB_URL": "URL",
             "TAB_TAKE_PICTURE": "Ta bild",
             "URL_PLACEHOLDER": "https://i.imgur.com/",
@@ -252,7 +253,7 @@
             "TAKE_A_PHOTO": "Ta ett foto",
             "NO_PHOTOS": "Inga foton tillgängliga",
             "CAPTION_PLACEHOLDER": "Beskrivning (valfritt)",
-            "DRAG_TO_ADJUST": "Dra för att justera beskärningsområdet",
+            "DRAG_TO_ADJUST": "",
             "TAKING_PHOTO": "Tar foto...",
             "PHOTO_CAPTURED": "Foto tagna",
             "PHOTO_CAPTURE_CANCELED": "Bildtagningen avbröts",
@@ -269,8 +270,8 @@
             "CHANGE_PICTURE": "Byt bild",
             "REMOVE_PICTURE": "Ta bort bilden",
             "REMOVE_CONFIRM_TITLE": "Ta bort bilden?",
-            "REMOVE_CONFIRM_DESCRIPTION": "Detta tar bort profilbilden från posten. Den kan ställas in igen när som helst.",
-            "DIALOG_DESCRIPTION": "Lägg till en länk eller ta en bild direkt i spelet."
+            "REMOVE_CONFIRM_DESCRIPTION": "Detta tar bort profilbilden från posten. It can be set again at any time.",
+            "DIALOG_DESCRIPTION": ""
         },
         "RECORD_GRAPH": {
             "TITLE": "Relationsgraf",
@@ -528,6 +529,8 @@
                 "FINE_ASC": "Fin: Låg → Hög",
                 "JAIL_DESC": "Fängelsetid: Hög → Låg",
                 "JAIL_ASC": "Fängelsetid: Låg → Hög",
+                "REMAINING_ASC": "Släpps snarast",
+                "REMAINING_DESC": "Mest tid kvar",
                 "AGE_DESC": "Ålder: Äldst först",
                 "AGE_ASC": "Ålder: Yngst först",
                 "RECORDS_DESC": "Rekord: De flesta först",
@@ -650,40 +653,50 @@
             "BAIL": "Borgen",
             "POINTS": "Poäng",
             "QTY": "Antal",
-            "OWNS": "Äger",
+            "OWNS": "",
             "NOTES": "Anteckningar",
             "SEARCH_PLACEHOLDER": "Söka…",
-            "N_SELECTED": "{{count}} har valts",
+            "N_SELECTED": "{{count}} selected",
             "EXPIRES_ON": "Går ut {{date}}",
-            "EXPIRED_ON": "Upphörde {{date}}"
+            "EXPIRED_ON": "Expired {{date}}"
         },
         "CATEGORY": {
             "CREATE": "Skapa kategori",
-            "PLACEHOLDER": "Välj en kategori",
-            "EDIT": "Redigera kategori"
+            "PLACEHOLDER": "",
+            "EDIT": ""
         },
         "LOCATION_ACTIONS": {
-            "SET_WAYPOINT": "Ställ in waypoint",
-            "COPY_COORDS": "Kopiera koordinater",
+            "SET_WAYPOINT": "",
+            "COPY_COORDS": "",
             "COORDS_COPIED": "Koordinaterna har kopierats",
-            "SETTING_WAYPOINT": "Ställer in waypoint..."
+            "SETTING_WAYPOINT": ""
         },
         "TOASTS": {
             "SAVING_DESCRIPTION": "Sparar beskrivning...",
             "DESCRIPTION_UPDATED": "Beskrivning uppdaterad",
-            "REMOVING_TAG": "Tar bort taggen...",
-            "TAG_REMOVED": "Taggen har tagits bort",
+            "REMOVING_TAG": "",
+            "TAG_REMOVED": "",
             "ATTACHING_SUBJECT": "Bifogar ämne...",
-            "SUBJECT_ATTACHED": "Ämne bifogat",
-            "MESSAGE_COPIED": "Meddelandet har kopierats",
-            "IMAGE_LINK_COPIED": "Bildlänk kopierad",
+            "SUBJECT_ATTACHED": "",
+            "MESSAGE_COPIED": "",
+            "IMAGE_LINK_COPIED": "",
             "LINK_COPIED": "Länken har kopierats"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "",
+            "CHANGE_KEY": "",
+            "LISTENING": "Tryck på en tangent...",
+            "LISTENING_HINT": "Esc eller klicka utanför för att avbryta",
+            "CUSTOM": "Beställnings",
+            "TAKEN": "{{key}} används redan av {{name}}. Välj en annan nyckel, annars fungerar båda."
         }
     },
     "ERRORS": {
-        "REQUIRED": "Detta fält är obligatoriskt",
+        "REQUIRED": "",
+        "KEYBIND_UNSUPPORTED_KEY": "Den här nyckeln kan inte användas för en nyckelbindning",
+        "KEYBIND_LIMIT": "Du kan ha upp till {{max}} radionyckelbindningar",
         "NO_PERMISSION": "Du har inte tillstånd att göra det",
-        "INVALID_DATA": "En del av de inlämnade uppgifterna är ogiltiga",
+        "INVALID_DATA": "Vissa av de inlämnade uppgifterna är ogiltiga",
         "INVALID_CHARGES": "En eller flera avgifter är ogiltiga — kontrollera beloppen mot brottsbalken",
         "INTERNAL_ERROR": "Något gick fel på servern – försök igen",
         "TAG_LIMIT_REACHED": "Denna post har redan det maximala antalet taggar",
@@ -698,6 +711,7 @@
         "VEHICLE_TOO_FAR": "Kom närmare fordonet",
         "NO_VEHICLE_SELECTED": "Inget fordon valt",
         "NO_SUSPECT_SELECTED": "Ingen misstänkt vald",
+        "NO_SUBJECT_SELECTED": "Lägg till minst en person eller ett fordon",
         "NO_VEHICLE_NEARBY": "Inget fordon i närheten",
         "TRUNK_SEARCH_UNAVAILABLE": "Trunk-sökning är inte tillgängligt för din lagerinställning ännu",
         "INVALID_MODEL": "Den modellen är inte tillgänglig",
@@ -712,7 +726,7 @@
         "EVIDENCE_ITEMS_CHANGED": "Vissa artiklar finns inte längre i ditt lager. Kontrollera objekten och försök igen.",
         "EVIDENCE_ITEMS_UNSUPPORTED": "Bevislagring stöds inte av den här serverns inventering",
         "EVIDENCE_TOO_MANY_ITEMS": "För många olika föremål för ett bevisförråd",
-        "EVIDENCE_STASH_FAILED": "Det gick inte att skapa bevisförrådet. Dina föremål har lämnats tillbaka.",
+        "EVIDENCE_STASH_FAILED": "Det gick inte att skapa bevis. Dina föremål har lämnats tillbaka.",
         "EVIDENCE_CREATE_IN_PROGRESS": "Dessa bevis loggas redan",
         "WEAPON_NOT_REGISTERED": "Det här vapnet har inte registrerats i MDT än",
         "EVIDENCE_NOT_FOUND": "Denna bevisuppteckning finns inte längre",
@@ -743,6 +757,7 @@
             "INVALID_VALUE": "Det värdet är inte giltigt för den här inställningen",
             "MIN": "Måste vara minst {{min}}",
             "MAX": "Får vara högst {{max}}",
+            "PRINTED_MARKERS": "Mellan 1 och {{max}}: de numrerade markörmodellerna går bara upp till {{max}}",
             "NOT_AN_OPTION": "Det är inte ett av alternativen",
             "EMPTY": "Kan inte vara tom",
             "TOO_LONG": "Får vara högst {{max}} tecken",
@@ -802,8 +817,10 @@
         "PROP_PLACER_INTERRUPTED": "Propplaceringen avbröts",
         "VEHICLE_OCCUPIED": "Få ut alla ur fordonet först",
         "IMPOUND_DISABLED": "Beslag från menyn Interaktioner är avstängt på den här servern",
-        "VEHICLE_EMPTY": "Ingen att beställa ut",
+        "IMPOUND_NOT_IMPLEMENTED": "Beslag är inte inställt på den här servern",
         "NOT_SUPPORTED": "Detta är inte tillgängligt på den här servern",
+        "PRISONER_OFFLINE": "Fången måste vara online för detta",
+        "PRISON_ACTION_FAILED": "Fängelsemanuset kunde inte göra det",
         "NO_ACCESS": "Ditt jobb kan inte använda detta",
         "UNKNOWN_FREQUENCY": "Ingen kanal på denna frekvens",
         "MARKER_LIMIT": "Du har nått din bevismarkeringsgräns",
@@ -814,7 +831,7 @@
         "TAPE_TOO_LONG": "För långt från din senaste jämnhet",
         "TAPE_TOO_SHORT": "För nära din sista utjämning",
         "TAPE_LIMIT": "Du har nått din bandgräns",
-        "NO_NEARBY_TAPE": "Inget band inom räckhåll",
+        "NO_NEARBY_TAPE": "Ingen tejp inom räckhåll",
         "NO_TAPE_ITEM": "Du behöver polisband",
         "NO_MARKER_ITEM": "Du behöver bevismarkörer",
         "INVALID_STATUS": "Den statusen är inte tillgänglig",
@@ -823,7 +840,7 @@
         "CANNOT_MANAGE_SELF": "Du kan inte göra det här mot dig själv",
         "GRADE_TOO_HIGH": "Du kan bara hantera tjänstemän under din egen lönegrad",
         "AMOUNT_TOO_HIGH": "Det beloppet är över gränsen för en transaktion",
-        "INVALID_FREQUENCY": "Använd en frekvens som 450.100",
+        "INVALID_FREQUENCY": "Den här frekvensen matchar inte det tillåtna formatet",
         "UNIT_FULL": "Den enheten har ingen ledig plats",
         "UNIT_NEEDS_LEAD": "Låt någon annan leda först",
         "UNIT_OFF_DUTY": "Ingen i den enheten är i tjänst",
@@ -860,7 +877,7 @@
         "REGISTERED_WEAPON": "registrerade detta vapen",
         "BOLO_LOCATED": "märkt BOLO placerad",
         "CREATED_WARRANT": "begärt detta beslut",
-        "SERVED_WARRANT": "delgivna ordern och utfärdade åtal",
+        "SERVED_WARRANT": "delgivna beslutet och utfärdade åtal",
         "SUBJECT_ATTACHED": "bifogade {{name}} som ämne",
         "LINKED_INVESTIGATOR": "lade till {{name}} som utredare",
         "UNLINKED_INVESTIGATOR": "tog bort {{name}} som utredare",
@@ -970,7 +987,7 @@
             "DISABLE_CONFIRM_DESCRIPTION_WITH_VIEWERS_one": "{{count}}-tjänsteman tittar för närvarande på det här flödet och kommer att tappa anslutningen.",
             "DISABLE_CONFIRM_DESCRIPTION_WITH_VIEWERS_other": "{{count}} tjänstemän tittar för närvarande på det här flödet och kommer att tappa anslutningen.",
             "UNKNOWN_LOCATION": "Okänd plats",
-            "DESTROYED_LABEL": "Kamera förstörd",
+            "DESTROYED_LABEL": "Kameran förstörd",
             "VIEW_IN_GAME": "Se In-Game",
             "VIEWERS_LABEL": "Tittare",
             "NO_ONE_WATCHING": "Ingen tittar",
@@ -1058,7 +1075,6 @@
             "EDIT_DESCRIPTION": "Uppdatera den här kanalens namn eller frekvens.",
             "NAME_PLACEHOLDER": "SWAT-kommando",
             "FREQUENCY_FIELD": "Frekvens (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498,510",
             "SUBMIT": "Skapa kanal",
             "TOASTS": {
                 "CREATED": "Kanalen \"{{name}}\" har skapats",
@@ -1080,7 +1096,7 @@
         "CHANNEL_ROW": {
             "DRAG_TITLE": "Dra för att flytta till en annan kategori",
             "LEAVE_TITLE": "Lämna kanalen",
-            "AUDIO_UNMUTE_TITLE": "Slå på ljudet — återställ radiovolymen",
+            "AUDIO_UNMUTE_TITLE": "Slå på ljudet – återställ radiovolymen",
             "AUDIO_MUTE_TITLE": "Tyst – tystar ditt radioljud",
             "LIVE": "Bo",
             "DELETE_CONFIRM_DESCRIPTION": "Detta tar permanent bort kanalen ({{freq}}). Detta kan inte ångras."
@@ -1098,19 +1114,24 @@
             "PTT": "PTT"
         },
         "KEYBINDS_DIALOG": {
-            "TITLE": "Radio Keybinds",
-            "DESCRIPTION": "Bind en tangent för att omedelbart sända på en specifik kanal.",
-            "EMPTY": "Inga nyckelbindningar har konfigurerats ännu.",
-            "ADD_NEW": "Lägg till ny nyckelbindning",
-            "ADD_DESCRIPTION": "Välj ett namn, tryck på en tangent för att fånga det och välj sedan målkanalen.",
+            "TITLE": "Radionycklar",
+            "DESCRIPTION": "Ställ in din radio på en kanal med en knapp, även med MDT stängd.",
+            "OFF": "Radionyckelbindningar är avstängda på den här servern.",
+            "EMPTY": "Inga radionyckelbindningar än.",
+            "ADD": "Lägg till tangentbindning",
+            "ADD_TITLE": "Ny radionyckelbindning",
+            "EDIT_TITLE": "Redigera radionyckelbindning",
+            "FORM_DESCRIPTION": "Namnge det, välj en kanal och tryck på knappen som ställer in din radio på den.",
             "NAME_PLACEHOLDER": "Huvudkanal",
-            "KEY_LABEL": "Nyckel",
-            "LISTENING": "Lyssnande…",
-            "CLICK_TO_CAPTURE": "Klicka för att fånga en nyckel",
-            "CAPTURING_HINT": "Tryck på valfri tangent — Escape för att avbryta.",
-            "CLICK_HINT": "Klicka på fältet ovan och tryck på valfri tangent.",
             "CHANNEL_PLACEHOLDER": "Välj en kanal",
-            "SAVE": "Spara nyckelbindning"
+            "KEY_LABEL": "Nyckel",
+            "KEY_HINT": "Endast enstaka nycklar. Du kan också ändra det senare i Inställningar > Nyckelbindningar > FiveM.",
+            "CHANNEL_REMOVED": "Denna kanal finns inte längre",
+            "SETTINGS_HINT": "Nycklar kan också ändras i Inställningar > Nyckelbindningar > FiveM. En borttagen eller ändrad nyckel slutar fungera direkt men förblir listad där tills du återansluter.",
+            "DELETE": "Ta bort tangentbindning",
+            "SAVE": "Spara tangentbindning",
+            "TUNED": "Radio inställd på {{name}}",
+            "ROW_NAME": "Radio: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "Ny radiokod",
@@ -1307,7 +1328,7 @@
             "ACKNOWLEDGE": "Erkänna",
             "STOP_ROUTING": "Sluta dirigera",
             "GET_DIRECTIONS": "Få vägbeskrivningar",
-            "SET_WAYPOINT": "Ställ in waypoint",
+            "SET_WAYPOINT": "",
             "WAYPOINT_SET": "Waypoint inställd på din GPS",
             "TIMELINE_AND_NOTES": "Tidslinje och anteckningar",
             "VIEW_LIVE": "Bo",
@@ -1413,7 +1434,7 @@
                     "string": "Blir ett enda värde."
                 },
                 "RESOLVES_TO": "Beslutar till:",
-                "NO_VALUE_FALLBACK": "Inget värde – med reserv:",
+                "NO_VALUE_FALLBACK": "Inget värde — med reserv:",
                 "EMPTY_NOTE": "För närvarande tom — kommer att vara tom i den skickade rapporten.",
                 "INSERTED_AS": "Infogat som:",
                 "FALLBACK_IF_EMPTY": "Reserv om tom:",
@@ -1654,7 +1675,7 @@
             "PEOPLE_CHARGED_other": "Till {{formatted}} personer",
             "RECORDS_PER_DAY": "Rekord per dag",
             "RECORDS_PER_WEEK": "Rekord per vecka",
-            "EMPTY": "Inga poster under denna period.",
+            "EMPTY": "Inga rekord under denna period.",
             "NO_MATCHES": "Inga poster matchar detta filter.",
             "ROLES": {
                 "LEAD": "Ledare",
@@ -1778,7 +1799,7 @@
             "TOASTS": {
                 "ADDING": "Lägger till varning...",
                 "ADDED": "Strejk tillagd",
-                "REMOVING": "Tar bort varning...",
+                "REMOVING": "Tar bort varningen...",
                 "REMOVED": "Strejken har tagits bort"
             }
         },
@@ -2117,7 +2138,7 @@
                 "CITIZENS_LICENSE_GRANT": "Bevilja licenser till medborgare.",
                 "CITIZENS_LICENSE_REVOKE": "Återkalla licenser från medborgare.",
                 "CITIZENS_LICENSE_POINTS": "Lägg till eller ta bort licenspunkter.",
-                "CITIZENS_PHONE_RECORDS": "Läs en medborgares telefonregister.",
+                "CITIZENS_PHONE_RECORDS": "Läs en medborgartelefonregister.",
                 "SUSPECT_INTERACT": "Använd misstänkta interaktioner som manschett, sökning och eskort.",
                 "GALLERY_EDIT": "Lägg till och ta bort galleribilder.",
                 "NOTES_DELETE": "Ta bort anteckningar som andra tjänstemän skrev på register och HR-anteckningar som andra chefer lämnade in. Tjänstemän kan alltid ta bort sina egna.",
@@ -2142,7 +2163,7 @@
                 "MANAGEMENT_RECRUIT": "Rekrytera nya medarbetare.",
                 "MANAGEMENT_PERMISSIONS": "Redigera rankningsbehörigheter (den här sidan).",
                 "MANAGEMENT_PERMISSIONS_ALL": "Redigera rankningsbehörigheter för valfri avdelning.",
-                "MANAGEMENT_ANALYTICS_ALL": "Se analys och ekonomi för alla avdelningar.",
+                "MANAGEMENT_ANALYTICS_ALL": "Se analyser och ekonomi för alla avdelningar.",
                 "MANAGEMENT_ACHIEVEMENTS": "Skapa och redigera prestationer.",
                 "MANAGEMENT_CERTIFICATIONS": "Skapa och redigera certifieringar.",
                 "MANAGEMENT_TAGS": "Moderera och redigera taggar.",
@@ -2152,6 +2173,9 @@
                 "PENALCODE_VIEW": "Läs strafflagen.",
                 "PENALCODE_CREATE": "Lägg till straffkodsposter.",
                 "PENALCODE_UPDATE": "Redigera straffkodsposter.",
+                "PRISONERS_VIEW": "Se vem som sitter i fängelse och hur länge de har kvar.",
+                "PRISONERS_RELEASE": "Frisläpp fångar innan deras straff tar slut.",
+                "PRISONERS_EDIT": "Ändra hur länge en fånge fortfarande måste avtjäna.",
                 "PENALCODE_DELETE": "Ta bort straffkodsposter.",
                 "OPERATIONPLANS_VIEW": "Läs verksamhetsplaner.",
                 "OPERATIONPLANS_CREATE": "Utarbeta nya verksamhetsplaner.",
@@ -2187,7 +2211,7 @@
         "ON_DUTY": {
             "TITLE": "I tjänst",
             "EMPTY_TITLE": "Ingen i tjänst",
-            "EMPTY_DESCRIPTION": "Handläggare kommer att dyka upp här så fort de har kommit in."
+            "EMPTY_DESCRIPTION": "Poliser kommer att dyka upp här så fort de kommer in."
         },
         "PLAYER_CARD": {
             "GROUPS": {
@@ -2289,7 +2313,7 @@
         },
         "ON_DUTY": {
             "EMPTY_TITLE": "Ingen i tjänst",
-            "EMPTY_DESCRIPTION": "Handläggare kommer att dyka upp här så fort de har kommit in."
+            "EMPTY_DESCRIPTION": "Poliser kommer att dyka upp här så fort de kommer in."
         },
         "PLAYER_CARD": {
             "GROUPS": {
@@ -2522,7 +2546,7 @@
                     "PHONE_RECORDS": "Visa medborgarnas telefonregister",
                     "PHONE_RECORDS_HINT": "Visar knappen för telefonbok (samtal och meddelanden) bredvid medborgarens telefonnummer. Stäng av om din server inte vill att tjänstemän läser telefondata.",
                     "RESIDENTS": "Visa vem som bor på en fastighet",
-                    "RESIDENTS_HINT": "Visar hyresgäster och delägare i fastighetsregister när din bostadsresurs tillhandahåller dem.",
+                    "RESIDENTS_HINT": "Visar hyresgäster och delägare på fastighetsregister när din bostadsresurs tillhandahåller dem.",
                     "HIDDEN_JOBS": "Dolda jobb",
                     "HIDDEN_JOBS_HINT": "Jobbtjänstemän ser aldrig på medborgare, som gäng. Medlemmar visar jobbet nedan istället, och filtret Citizens kan inte hitta dem med det.",
                     "HIDDEN_JOBS_PLACEHOLDER": "Välj ett jobb",
@@ -2639,7 +2663,7 @@
                         "DISABLED_HINT": "Officerarna kan inte välja det. Tjänstemän som använder den flyttas till standardstatus."
                     },
                     "DEFAULT": "Standardstatus",
-                    "DEFAULT_HINT": "Den status en officer får när de går i tjänst, och en officer faller tillbaka till när deras stängs av.",
+                    "DEFAULT_HINT": "Statusen en officer får när de går i tjänst, och en officer faller tillbaka till när deras stängs av.",
                     "DESCRIPTION": "De statuser som tjänstemän kan ställa in på sig själva (tillgänglig, upptagen, på plats...), visas för alla på listan och kartan."
                 },
                 "CALLSIGNS": {
@@ -2701,7 +2725,7 @@
                     "COMMUNITY_SERVICE_HINT": "Den mest samhällstjänst en avgift kan ge per räkning.",
                     "BAIL": "Högsta borgen",
                     "BAIL_HINT": "Den högsta borgen som en avgift kan fastställa per punkt.",
-                    "POINTS": "De flesta licenspoäng",
+                    "POINTS": "Flest licenspoäng",
                     "POINTS_HINT": "De flesta körkortspoäng en laddning kan lägga till, per räkning."
                 },
                 "POINTS": {
@@ -2827,6 +2851,12 @@
                     "DESCRIPTION": "Det som hamnar i klockan på instrumentbrädan. Personliga väntar på officerare som är offline; Avdelningsövergripande sådana når bara tjänstemän online vid tillfället.",
                     "RETENTION": "Behåll aviseringar för",
                     "RETENTION_HINT": "Aviseringar som är äldre än detta raderas, direkt när du sänker den. 0 behåller dem för alltid."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Radioanimation",
+                    "DESCRIPTION": "Vad officerars karaktärer gör när de pratar i radio. Varje officer kan välja sin egen på konfigurationssidan; detta är vad alla andra får.",
+                    "DEFAULT": "Standardanimering",
+                    "DEFAULT_HINT": "Med pma-voice är dess egen radioanimation avstängd om inte detta är None. Med en annan röstresurs, stäng av dess animering i sin egen konfiguration."
                 }
             },
             "DISPATCH": {
@@ -2849,7 +2879,7 @@
                     "TITLE": "Upptrappning",
                     "ENABLED": "Eskalera obesvarade samtal",
                     "ENABLED_HINT": "Av: ett samtal behåller den prioritet som det skapades med.",
-                    "LOW": "Låg blir medium efteråt",
+                    "LOW": "Låg blir medium efter",
                     "LOW_HINT": "Hur länge väntar ett lågprioriterat samtal innan det blir medium.",
                     "MEDIUM": "Medium blir hög efter",
                     "MEDIUM_HINT": "Hur länge väntar den sedan som medium innan den blir hög.",
@@ -2902,9 +2932,9 @@
                 },
                 "UNITS": {
                     "TITLE": "Officer blippar",
-                    "DESCRIPTION": "Jourhavande officerare ser de andra tjänstemännen på spelkartan och minikartan, med en ikon för hur de rör sig och en färg per avdelning. Närliggande officerare följer dem smidigt; långt borta flyttar sig med varje positionsuppdatering.",
+                    "DESCRIPTION": "Jourhavande befäl ser de andra tjänstgörande befälen på spelkartan och minikartan, med en ikon för hur de rör sig och en färg per avdelning. Närliggande officerare följer dem smidigt; långt borta flyttar sig med varje positionsuppdatering.",
                     "ENABLED": "Visa officerare på kartan",
-                    "ENABLED_HINT": "Om du stänger av den tar du bort blåsorna direkt.",
+                    "ENABLED_HINT": "Om du stänger av den tar du bort blipparna direkt.",
                     "OTHER_DEPARTMENTS": "Visa andra avdelningar",
                     "OTHER_DEPARTMENTS_HINT": "Av: officerare ser bara officerare på sin egen avdelning.",
                     "SHORT_RANGE": "Visa bara närliggande tjänstemän",
@@ -3002,6 +3032,33 @@
                     "AUTO_LOCK": "Lås plåten på en tändsticka",
                     "AUTO_LOCK_HINT": "Radarn låser plattan som matchade, så att officeren inte tappar den.",
                     "DESCRIPTION": "Med en radarresurs (wk_wars2x) kontrolleras varje platta som radarn läser mot BOLOs och order, och officeren varnas vid en match."
+                },
+                "SCENE": {
+                    "TITLE": "Brottsplatser",
+                    "DESCRIPTION": "Hur poliser placerar brottsplatsband och bevismarkörer: från sidan Scen i interaktionsmenyn, genom att använda ett inventeringsobjekt, eller endera. Artiklar är inte förbrukade.",
+                    "METHODS": {
+                        "MENU": "Scensida",
+                        "ITEM": "Använda objektet",
+                        "BOTH": "Scensida eller objekt"
+                    },
+                    "TAPE_METHOD": "Hur poliser placerar tejp",
+                    "TAPE_METHOD_HINT": "Från scensidan, genom att använda bandobjektet, eller någon av dem.",
+                    "TAPE_ITEM": "Tejp föremål",
+                    "TAPE_ITEM_HINT": "Inventeringsobjektet tjänstemän använder för att placera brottsplatsband.",
+                    "MARKER_METHOD": "Hur poliser placerar bevismarkörer",
+                    "MARKER_METHOD_HINT": "Från scensidan, genom att använda markörobjektet, eller endera.",
+                    "MARKER_ITEM": "Bevismarkörsobjekt",
+                    "MARKER_ITEM_HINT": "Inventeringsobjektet tjänstemän använder för att placera bevismarkörer.",
+                    "RADIUS": "Scenstorlek",
+                    "RADIUS_HINT": "Tejp, markörer och rekvisita placerade så nära en scen går med. Längre bort startar de en ny scen.",
+                    "MAX_MARKERS_SCENE": "Bevismarkörer per scen",
+                    "MAX_MARKERS_SCENE_HINT": "Markörer numreras från 1 i varje scen. 0 = obegränsat, endast när markörerna inte använder de numrerade modellerna.",
+                    "MAX_MARKERS_OFFICER": "Bevismarkörer per officer",
+                    "MAX_MARKERS_OFFICER_HINT": "Hur många markörer en officer kan ha ute på en gång, över varje scen. 0 = obegränsat.",
+                    "TAPE_LENGTH": "Längsta bandlinjen",
+                    "TAPE_LENGTH_HINT": "Längst bort kan de två ändarna av en tejplinje knytas.",
+                    "MAX_TAPE_OFFICER": "Tejpa linjer per officer",
+                    "MAX_TAPE_OFFICER_HINT": "Hur många bandrader en officer kan ha upp på en gång. 0 = obegränsat."
                 }
             },
             "CAMERAS": {
@@ -3014,7 +3071,7 @@
                     "LINE_OF_SIGHT": "Shooter måste se kameran",
                     "LINE_OF_SIGHT_HINT": "Träffar räknas bara när ingenting är mellan skjutaren och kameran. Stoppar skador genom väggar.",
                     "HEALTH": "Kamerahälsa",
-                    "HEALTH_HINT": "Hur mycket skada en kamera tar innan den går sönder. Genom att byta den håller varje kamera på samma del av sin hälsa.",
+                    "HEALTH_HINT": "Hur mycket skada en kamera tar innan den går sönder. Genom att byta den behåller varje kamera samma del av sin hälsa.",
                     "WEAPON_DAMAGE": "Skada per träff",
                     "WEAPON_DAMAGE_HINT": "För vapen som inte finns i vapenlistan.",
                     "REPORT_DISTANCE": "Max skjutavstånd",
@@ -3162,7 +3219,8 @@
                     "BOTH": "Objekt eller kommando",
                     "WAYS": {
                         "ITEM": "Inventeringsobjekt",
-                        "COMMAND": "Chatt kommando"
+                        "COMMAND": "Chatt kommando",
+                        "MENU": "Scensida"
                     }
                 },
                 "REPAIR": {
@@ -3183,7 +3241,13 @@
                     "SIGNAL": "Signalstyrkan ändras",
                     "SIGNAL_HINT": "Kosmetisk: signalstaplarna på kamerans rutnät rör sig lite med tiden. Av: de står stilla.",
                     "AUDIO_RADIUS": "Hörselomfång",
-                    "AUDIO_RADIUS_HINT": "Officerare som tittar på en feed hör spelare prata så nära kameran."
+                    "AUDIO_RADIUS_HINT": "Officerare som tittar på en feed hör spelare prata så nära kameran.",
+                    "ON_FEED_LOST": "När kameran går ner",
+                    "ON_FEED_LOST_HINT": "Vad händer för poliser som tittar på en CCTV-kamera som förstörs, hackas eller inaktiveras, efter att dess avstängning spelas upp.",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Byt till nästa kamera",
+                        "CLOSE": "Stäng matningen"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Automatisk upptäckt",
@@ -3284,12 +3348,12 @@
                 "ACCESS": "Vem kan öppna MDT, hur de öppnar den och vilken avdelning ser vilka poster.",
                 "PERMISSIONS": "Vad varje rang av varje jobb får göra inom MDT.",
                 "GENERAL": "Språk, datum- och nummerformat, officersstatus och nationalitetslistan.",
-                "RECORDS": "Vad tjänstemän ser på medborgar- och fordonsregister, fordonsändringskategorier, hur mycket laster på en gång och hur länge loggar förvaras.",
+                "RECORDS": "Vad tjänstemännen ser på medborgar- och fordonsregister, fordonsändringskategorier, hur mycket laster på en gång och hur länge loggar förvaras.",
                 "JUSTICE": "De högsta straffen som en avgift kan ge, och körkortspoängsystemet.",
                 "EVIDENCE": "Bevistyperna och labbanalyserna som tjänstemännen väljer från och var loggade föremål lagras.",
                 "SOCIETY": "Vart fina pengar går, tjänstemannens andel av dem och hur räkningar hanteras.",
                 "COMMS": "MDT-chatten och dess kanaler, privata meddelanden, automatiska chattinlägg och radiokoder.",
-                "DISPATCH": "Hur brott blir till avsändningssamtal, hur samtal beter sig och vad poliser ser på kartan.",
+                "DISPATCH": "Hur brott förvandlas till avsändningssamtal, hur samtal beter sig och vad poliser ser på kartan.",
                 "FIELD": "Plåtläsaren (radar) och polishundar.",
                 "CAMERAS": "CCTV-kameror, bodycams och dashcams: skador, reparationer, hacking, ljud, inspelningar och hur spelare sätter på dem.",
                 "INTEGRATIONS": "Vilka av din servers resurser MDT arbetar med. Skrivskyddad: de plockas i config.lua.",
@@ -3436,7 +3500,7 @@
                     "DESCRIPTION": "Utseendet varje officer får tills de väljer ett annat tema i sina MDT-inställningar. Ändringar dyker upp direkt för alla som använder den.",
                     "EDIT": "Redigera färger",
                     "EDIT_TITLE": "Redigera standardtemat",
-                    "EDIT_DESCRIPTION": "Välj en utgångspunkt och en accentfärg och finjustera sedan valfri färg i förhandsgranskningen. Tjänstemän kan fortfarande välja eller göra sina egna teman.",
+                    "EDIT_DESCRIPTION": "Välj en utgångspunkt och en accentfärg och finjustera sedan valfri färg i förhandsgranskningen. Tjänstemännen kan fortfarande välja eller göra sina egna teman.",
                     "COPY_PLACEHOLDER": "Kopiera ett av mina teman...",
                     "COPY_TITLE": "Vill du använda färgerna för \"{{name}}\"?",
                     "COPY_DESCRIPTION": "Standardtemat tar detta temas färger och rundhet. Dess namn förblir detsamma.",
@@ -3479,9 +3543,9 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "Standard nyckelbindningar",
-                    "DESCRIPTION": "Nyckeln som varje åtgärd startar på. FiveM sparar en spelares nycklar första gången de går med, så en förändring här når nya spelare och alla som aldrig haft denna nyckel ännu. Alla kan fortfarande ändra sina egna nycklar i Inställningar > Nyckelbindningar > FiveM.",
+                    "DESCRIPTION": "Nyckeln som varje åtgärd startar på. FiveM sparar en spelares nycklar första gången de går med, så en förändring här når nya spelare och alla som aldrig haft denna nyckel ännu. Alla kan fortfarande ändra sina egna nycklar på MDT:s konfigurationssida eller i Inställningar > Nyckelbindningar > FiveM.",
                     "OPEN_MDT": "Öppna MDT",
-                    "OPEN_MDT_HINT": "Avstängd öppnar poliser den med kommandot eller föremålet.",
+                    "OPEN_MDT_HINT": "Avstängd öppnar officerare den med kommandot eller föremålet.",
                     "INTERACTIONS": "Interaktionsmeny",
                     "INTERACTIONS_HINT": "Öppnar menyn för tjänstemäns interaktioner.",
                     "DISPATCH": "Miniutskick",
@@ -3491,7 +3555,10 @@
                     "PANIC_BUTTON": "Panikknapp",
                     "PANIC_BUTTON_HINT": "Skickar en panikvarning med polisens plats.",
                     "REQUEST_BACKUP": "Begär säkerhetskopiering",
-                    "REQUEST_BACKUP_HINT": "Ber närliggande enheter om backup."
+                    "REQUEST_BACKUP_HINT": "Ber närliggande enheter om backup.",
+                    "CLASH": "Även standardnyckeln för {{names}}. FiveM kör varje åtgärd på en nyckel, så {{key}} skulle göra båda.",
+                    "MAX_RADIO": "Radionyckelbindningar per officer",
+                    "MAX_RADIO_HINT": "Hur många radionyckelbindningar varje officer kan lägga till på Radiosidan. 0 stänger av dem. Befäl som redan har fler behåller bara sina första."
                 }
             },
             "IN_GAME": {
@@ -3505,7 +3572,7 @@
                 },
                 "DISTANCE": {
                     "BUTTON": "Visa i spelet",
-                    "BUTTON_HINT": "Flyg runt och se detta avstånd i världen innan du sparar det.",
+                    "BUTTON_HINT": "Flyg runt och se det här avståndet i världen innan du sparar det.",
                     "TITLE": "Förhandsvisning i spelet",
                     "FROM": {
                         "CAMERA": "Mätt från kamera #{{id}}",
@@ -3602,7 +3669,7 @@
                 "SEARCH": "Sök på namn eller modell",
                 "ALL_CLASSES": "Alla klasser",
                 "NOT_IN_VEHICLE": "Du är inte i ett fordon",
-                "UNKNOWN": "Inte ett fordon på den här servern. Kontrollera stavningen eller se till att dess resurs har startat."
+                "UNKNOWN": "Inte ett fordon på denna server. Kontrollera stavningen eller se till att dess resurs har startat."
             },
             "CATALOG": {
                 "ADD_TYPED": "Lägg till \"{{name}}\" ändå",
@@ -3617,7 +3684,7 @@
                 "BROWSE_DESCRIPTION": "Varje artikel som ditt lager känner till. Klicka på en för att lägga till eller ta bort den.",
                 "BROWSE_DESCRIPTION_SINGLE": "Varje artikel som ditt lager känner till. Klicka på den du vill använda.",
                 "SEARCH": "Sök efter namn eller etikett",
-                "UNKNOWN": "Ditt lager har ingen vara med det här namnet, så det här fungerar inte förrän du lägger till det där."
+                "UNKNOWN": "Ditt lager har ingen vara med det här namnet, så detta fungerar inte förrän du lägger till det där."
             },
             "BLIPS": {
                 "SEARCH": "Sök på nummer eller namn",
@@ -3627,11 +3694,12 @@
                 "PULSE": "Pulsring",
                 "PULSE_HINT": "En ring under markören (när pulsringen är på).",
                 "ENTITY": "Följ officeren",
-                "ENTITY_HINT": "För samtal höjer en officer: markören flyttar med dem.",
+                "ENTITY_HINT": "För samtal höjer en officer: markören rör sig med dem.",
                 "RADIUS": "Sökområde",
                 "RADIUS_HINT": "En cirkel runt samtalet istället för bara en nål.",
                 "SUMMARY": "ikon {{sprite}}, färg {{colour}}",
-                "SAME_AS_OTHERS": "Samma som de andra"
+                "SAME_AS_OTHERS": "Samma som de andra",
+                "COLOUR_BY_PRIORITY": "Färgen följer samtalets prioritet. Stäng av \"Färg efter prioritet\" i kartblips för att välja en här."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Uppdatera",
@@ -3683,7 +3751,7 @@
                     "IMPORT_TITLE": "Importera kameror",
                     "IMPORT_DESCRIPTION": "Klistra in kameror som exporterats från den här panelen (på den här eller en annan server). Du kommer att se vad som händer med var och en innan något sparas.",
                     "INVALID": "Det är inte en giltig kameraexport. Klistra in hela texten du kopierade med Exportera.",
-                    "SUMMARY": "{{new}} att lägga till · {{duplicate}} redan placerad (hoppad över) · {{unknown}} med en modell som denna server inte har (hoppad över)",
+                    "SUMMARY": "{{new}} att lägga till · {{duplicate}} redan placerad (hoppad) · {{unknown}} med en modell som denna server inte har (hoppad över)",
                     "MODE": {
                         "ADD": "Tillägga",
                         "REPLACE": "Byt ut alla"
@@ -3693,7 +3761,7 @@
                     "REPLACE_CONFIRM": {
                         "TITLE": "Byta ut varje kamera?",
                         "DESCRIPTION_one": "Kameran {{formatted}} som placerats nu tas bort och de importerade placeras sedan. Inspelningarna finns kvar i galleriet.",
-                        "DESCRIPTION_other": "Alla {{formatted}} kameror som placerats nu raderas och de importerade placeras sedan. Inspelningarna finns kvar i galleriet.",
+                        "DESCRIPTION_other": "Alla {{formatted}} kameror som placerats nu tas bort och de importerade placeras sedan. Inspelningarna finns kvar i galleriet.",
                         "CONFIRM": "Ersätta"
                     },
                     "STATUS": {
@@ -3711,12 +3779,12 @@
             "OFFICER_UNITS": {
                 "TYPES": {
                     "TITLE": "Enhetstyper",
-                    "DESCRIPTION": "Typerna av enhetsofficerare kan bildas, var och en med sin ikon och antal platser.",
+                    "DESCRIPTION": "De typer av enhetsofficerare kan bildas, var och en med sin ikon och antal platser.",
                     "LIST": "Typer",
                     "LIST_HINT": "Lägg till ditt eget eller ändra någon typ. En typ av sparade enheter som fortfarande används kan inte tas bort.",
                     "LIST_FIELDS": {
                         "NAME_HINT": "Endast små bokstäver, siffror, _ och -.",
-                        "LABEL_HINT": "Vad officerare ser. Lämna den tom på en inbyggd typ för att behålla dess översatta namn.",
+                        "LABEL_HINT": "Vad officerare ser. Lämna det tomt på en inbyggd typ för att behålla det översatta namnet.",
                         "ICON_HINT": "Alla Lucide-ikonnamn från lucide.dev/icons, t.ex. bil, hund eller flyg.",
                         "SEATS": "Säten",
                         "SEATS_HINT": "De flesta medlemmarna på en gång. 0 = ingen gräns."
@@ -3741,7 +3809,7 @@
                     "STALE": "Varna efter ingen uppdatering för",
                     "STALE_HINT": "Ett enhetskort visar en varning när dess status inte har ändrats så länge. 0 = aldrig.",
                     "CHECK_TIMEOUT": "Statuskontroll svarstid",
-                    "CHECK_TIMEOUT_HINT": "Efter så här lång tid utan svar visas en statuskontroll som försenad."
+                    "CHECK_TIMEOUT_HINT": "Efter denna långa tid utan svar visas en statuskontroll som försenad."
                 },
                 "VEHICLES": {
                     "TITLE": "Fordon",
@@ -3752,7 +3820,7 @@
                 },
                 "ZONES": {
                     "TITLE": "Zoner",
-                    "DESCRIPTION": "Beats-enheter kan välja. Valfritt: ingen enhet måste vara i en och tavlan visar vilka zoner som saknar enheter.",
+                    "DESCRIPTION": "Beats-enheter kan välja. Valfritt: ingen enhet måste vara i en, och tavlan visar vilka zoner som saknar enheter.",
                     "ENABLED": "Använd zoner",
                     "ENABLED_HINT": "Av: zoner är dolda överallt.",
                     "LIST": "Zoner",
@@ -3832,6 +3900,13 @@
             "RECORDING": {
                 "MAX_DURATION": "Längsta inspelning nådd, sparar klippet",
                 "MAX_SIZE": "Största inspelningsstorlek nådd, sparar klippet"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "Kameran förstörd",
+                "HACKED": "Foder avlyssnat",
+                "OFFLINE": "Kamera offline",
+                "BODYCAM": "Bodycam offline",
+                "DASHCAM": "Dashcam offline"
             }
         },
         "GIZMO": {
@@ -4025,9 +4100,6 @@
                 "ACTIVE_WARRANTS": "Aktiva teckningsoptioner",
                 "STOLEN": "Stulen",
                 "OPEN_RECORD": "Öppna posten",
-                "OCCUPANTS_OUT": "Beställ ut passagerare",
-                "OCCUPANTS_ORDERED_one": "Beställde ut {{count}} passagerare",
-                "OCCUPANTS_ORDERED_other": "Beställde ut {{count}} passagerare",
                 "SEARCH_TRUNK": "Sök stammen",
                 "IMPOUND": "Beslagta",
                 "IMPOUNDED": "{{plate}} beslagtagna"
@@ -4167,7 +4239,7 @@
                     "DOG_DEAD": "Hunden är nere",
                     "NO_TARGET": "Inget mål i närheten",
                     "TOO_FAR": "För långt",
-                    "MISSING_ITEM": "Saknas föremål",
+                    "MISSING_ITEM": "Saknas objekt",
                     "COOLDOWN": "För tidigt",
                     "BUSY": "Upptagen",
                     "INVALID_ACTION": "Ej tillgängligt"
@@ -4219,7 +4291,7 @@
                 "PLACE": "Flyg till platsen och sikta på en vägg, tak eller golv. Kameran håller fast vid den, jämn och upprätt.",
                 "ADJUST": "Titta på den utifrån och finjustera var den sitter.",
                 "GIZMO": "Fritt drag med prylen. Den snäpper tillbaka på den närmaste ytan när du lämnar den.",
-                "AIM": "Du ser genom linsen precis som matningen. Ställ in var den vilar och hur långt föraren kan vända och zooma den.",
+                "AIM": "Du ser genom linsen precis som matningen. Ställ in var den vilar och hur långt operatörerna kan vända och zooma den.",
                 "REVIEW": "Prova flödet som en operatör kommer att göra. Spara tar den första förhandsgranskningen genom linsen."
             },
             "TIPS": {
@@ -4368,7 +4440,7 @@
                 "DEPTH": "Ut / In",
                 "TRANSLATE": "Flytta",
                 "ROTATE_GIZMO": "Rotera",
-                "SPACE": "Lokalt / världen",
+                "SPACE": "Lokalt / Världen",
                 "EXIT_GIZMO": "Lämna gizmo",
                 "OUTSIDE_VIEW": "Utifrån utsikt",
                 "LENS_VIEW": "Linsvy",
@@ -4409,11 +4481,11 @@
                 "ADJUST": {
                     "ORBIT": {
                         "TITLE": "Titta på det utifrån",
-                        "BODY": "Håll höger musknapp för att titta runt kameran och bläddra för att komma närmare. Pilarna skjuter den längs dess yta, Page Up / Page Down flyttar den ut eller in."
+                        "BODY": "Håll höger musknapp för att se dig omkring i kameran och bläddra för att komma närmare. Pilarna skjuter den längs dess yta, Page Up / Page Down flyttar den ut eller in."
                     },
                     "TOOLS": {
                         "TITLE": "Enknappsfixar",
-                        "BODY": "F sätter den jämnt på den närmaste ytan och backar ut den från väggarna. R gör den upprätt och rak. Q/E vrid den på ett tak eller golv. G öppnar gizmo för något annat."
+                        "BODY": "F sätter den jämnt på den närmaste ytan och backar ut den från väggarna. R gör den upprätt och rak. Q/E vänd den på ett tak eller golv. G öppnar gizmo för något annat."
                     }
                 },
                 "AIM": {
@@ -4453,15 +4525,21 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Teman och färger."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "I spelet",
+                    "DESCRIPTION": "Hur din karaktär beter sig när du använder MDT och radio."
                 }
             },
             "SECTIONS": {
                 "LANGUAGE_CURRENCY": "Språk & Valuta",
-                "DATE_TIME": "Datum & tid",
-                "UNITS_NUMBERS": "Enheter & siffror",
+                "DATE_TIME": "Datum och tid",
+                "UNITS_NUMBERS": "Enheter och siffror",
                 "SEE_THROUGH": "Genomskinligt läge",
                 "SEE_THROUGH_DESCRIPTION": "Tona MDT ur vägen för att se spelet bakom det, utan att stänga det.",
-                "DISPLAY": "Visa"
+                "DISPLAY": "Visa",
+                "RADIO": "Radio",
+                "KEYBINDS": "Keybinds"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4523,13 +4601,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Aviseringsljud",
                     "DESCRIPTION": "Spela ett ljud för inkommande samtal och chattomnämnanden"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Talande animation",
+                    "DESCRIPTION": "Vad din karaktär gör när du pratar i radio",
+                    "PREVIEW": "Förhandsgranska din karaktär"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Tryck på en tangent...",
-                "LISTENING_HINT": "Esc för att avbryta · Backsteg för att rensa",
                 "UNBOUND": "Ej bunden",
                 "CUSTOM": "Beställnings"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "Din MDT-nyckelbindning. Klicka på en tangent och tryck på en ny för att ändra den.",
+                "NONE": "Den här servern har inga MDT-nyckelbindningar.",
+                "OVERLAP": "Samma nyckel som {{names}}. FiveM kör varje åtgärd på en tangent, så att trycka på den kör dem alla.",
+                "OPEN_SETTINGS": "Byt nycklar i FiveMs nyckelbindningar",
+                "HINT": "En nyckel du byter ut slutar fungera direkt, men förblir listad i FiveM:s nyckelbindningar tills du återansluter. Musknappar och kontroller kan ställas in där."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Ljus",
@@ -4587,7 +4675,14 @@
                 "HINT": "Förhandsgranska en avisering vid positionen och varaktigheten ovan",
                 "BUTTON": "Förhandsgranska avisering"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Förhandsvisning — hur blekad MDT ser ut på denna nivå"
+            "SEE_THROUGH_PREVIEW_HINT": "Förhandsvisning — hur blekad MDT ser ut på denna nivå",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Serverstandard ({{style}})",
+                "NONE": "Ingen",
+                "CHEST": "Axelmikrofon",
+                "EAR": "Hörlur",
+                "HANDHELD": "Handhållen radio"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "teman",
@@ -4718,7 +4813,7 @@
                 "FOCUSED": "Status: Öppen",
                 "ROW_1": "Väpnat rån på Fleeca Bank",
                 "ROW_1_META": "John Doe 2 timmar sedan",
-                "ROW_2": "Jakten på Great Ocean Hwy",
+                "ROW_2": "Jakt på Great Ocean Hwy",
                 "ROW_2_META": "Maria Ruiz 5 timmar sedan",
                 "ROW_3": "Trafikstopp på väg 68",
                 "ROW_3_META": "Alex Kim igår",
@@ -4787,6 +4882,8 @@
             "license_revoke": "Licens återkallad",
             "citizen_image_change": "Medborgarfoto ändrat",
             "charges_issued": "Avgifter utfärdade",
+            "prisoner_released": "Fånge frigiven",
+            "prisoner_sentence_changed": "Mening ändrad",
             "note_added": "Anmärkning tillagd",
             "note_removed": "Obs togs bort",
             "employee_grade_change": "Betyg ändrat",
@@ -4871,6 +4968,8 @@
             "LICENSE_REVOKE": "Återkallat {{type}}-licens från {{identifier}}",
             "CITIZEN_IMAGE_CHANGE": "Uppdaterad profilbild för {{identifier}}",
             "CHARGES_ISSUED": "Utfärdade {{count}} debitering(ar) den {{entityType}} #{{id}}",
+            "PRISONER_RELEASED": "Frigiven fånge {{identifier}} (orsak: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "Ställ in den återstående meningen i {{identifier}} till {{time}} ​​(orsak: {{reason}})",
             "NOTE_ADDED": "Lade till en anteckning till {{entityType}} #{{entityId}}",
             "NOTE_REMOVED": "Tog bort en anteckning från {{entityType}} #{{entityId}}",
             "EMPLOYEE_GRADE_CHANGE": "Ställ in betyget för {{identifier}} till {{grade}}",
@@ -4939,7 +5038,7 @@
         "FORM": {
             "NAME_LABEL": "Namn",
             "NAME_PLACEHOLDER": "Operation Nightfall",
-            "DATE_LABEL": "Datum & tid",
+            "DATE_LABEL": "Datum och tid",
             "DATE_PLACEHOLDER": "Välj datum och tid",
             "NOTES_LABEL": "Briefing anteckningar",
             "NOTES_PLACEHOLDER": "Vi träffas på Fleeca Bank i Paleto Bay.",
@@ -4984,7 +5083,7 @@
         },
         "HINTS": {
             "DRAFT": "En plan förblir ett utkast tills du ritar minst ett område för den på kartan.",
-            "EDITING": "Välj en områdestyp och rita med verktygsfältet uppe till vänster på kartan. Ctrl+Z ångrar ett steg. Dina ändringar sparas när du är klar med redigeringen.",
+            "EDITING": "Välj en områdestyp och rita med verktygsfältet längst upp till vänster på kartan. Ctrl+Z ångrar ett steg. Dina ändringar sparas när du är klar med redigeringen.",
             "SELECTED": "Dess områden visas på kartan."
         },
         "AREA_KINDS": {
@@ -5255,7 +5354,7 @@
                 },
                 "DATE": {
                     "LABEL": "Datum",
-                    "DESCRIPTION": "Datumet då posten lämnas in"
+                    "DESCRIPTION": "Datumet då posten lämnades in"
                 },
                 "TIME": {
                     "LABEL": "Tid",
@@ -5352,13 +5451,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Utfärda en utkik efter en person eller ett fordon. Nya BOLO börjar som utkast."
+            "DESCRIPTION": "Utfärda en utkik efter en person eller ett fordon. Utkast flaggar inte ämnet förrän de är aktiverade."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Beväpnad misstänkt i en svart Sultan RS",
             "DESCRIPTION_PLACEHOLDER": "Var de sågs senast, hur de ser ut och varför de är efterlysta",
             "EXPIRES_LABEL": "Går ut kl",
             "EXPIRES_PLACEHOLDER": "Som standard är 7 dagar",
+            "SUBJECTS_TITLE": "Ämnen",
+            "CITIZENS_PLACEHOLDER": "Välj personer",
             "TOASTS": {
                 "CREATED": "BOLO skapad"
             }
@@ -5384,7 +5485,7 @@
         },
         "DETAILS_CARD": {
             "TITLE": "BOLO Detaljer",
-            "VIEW_LINKS_HINT": "Öppna en graf över poster, personer och fordon som är kopplade till denna BOLO",
+            "VIEW_LINKS_HINT": "Öppna en graf över poster, personer och fordon som är länkade till denna BOLO",
             "FIELDS": {
                 "LOCATED": "Belägen"
             },
@@ -5398,6 +5499,7 @@
             "CONFIRM_DESCRIPTION": "Detta bekräftar att{{subject}} har hittats och stänger utkik.",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "ämnet",
+            "CONFIRM_DESCRIPTION_MANY": "Detta bekräftar att alla {{count}} ämnen har hittats och stänger utkik.",
             "TOASTS": {
                 "MARKING": "Markerar BOLO lokaliserad...",
                 "MARKED": "BOLO märkt belägen"
@@ -5416,6 +5518,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Okategoriserad",
         "INDEX": {
             "HEADING": "Lagstadgar & strafflagen",
             "SUBHEADING": "Officiell kodifiering av brott, ekonomiska sanktioner och rättsliga mandat",
@@ -5529,7 +5632,7 @@
             "TOASTS": {
                 "PROCESSING": "Bearbetar bra...",
                 "SUCCESS": "Böter {{name}} {{amount}}",
-                "FAILED": "Det gick inte att behandla böterna"
+                "FAILED": "Misslyckades med att behandla böterna"
             }
         }
     },
@@ -5571,6 +5674,54 @@
                 "PROCESSING": "Bearbetar straff …",
                 "SUCCESS": "Påföljd behandlad för {{name}}",
                 "FAILED": "Det gick inte att behandla påföljden"
+            }
+        }
+    },
+    "PRISONERS": {
+        "SUBHEADING": "Alla i fängelse just nu och hur länge de har kvar",
+        "SUBHEADING_ONLINE_ONLY": "Fångar som är online just nu. Ditt fängelsemanus rapporterar inte offlinefångar",
+        "SEARCH_PLACEHOLDER": "Sök på namn eller identifierare...",
+        "EMPTY": "Ingen sitter i fängelse",
+        "NOT_SUPPORTED": "Ditt fängelsemanus kan inte lista fångar",
+        "COLUMNS": {
+            "REMAINING": "Återstående",
+            "RECORD": "Spela in",
+            "SENTENCED_BY": "Dömd av",
+            "SINCE": "Sedan"
+        },
+        "REMAINING_OF": "{{remaining}} av {{total}}",
+        "UNKNOWN_REMAINING": "Inte rapporterat av fängelsemanuset",
+        "JAILED_OUTSIDE_MDT": "Fängslad utanför MDT",
+        "RECORD_LABEL": "{{type}} #{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Straff",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Öppna profilen",
+        "REASON_LABEL": "Orsak (valfritt)",
+        "RELEASE": {
+            "TRIGGER": "Släppa",
+            "TITLE": "Släpp fången",
+            "CONFIRM": "{{name}} kommer att släppas nu och deras straff stängs.",
+            "REASON_PLACEHOLDER": "Straffet reducerades av rätten",
+            "BUTTON": "Släppa",
+            "NEEDS_ONLINE": "Ditt fängelsemanus kan bara frige fångar som är online.",
+            "TOASTS": {
+                "PROCESSING": "Frisläpper fången...",
+                "SUCCESS": "Släppt {{name}}",
+                "FAILED": "Det gick inte att frige fången"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Ändra mening",
+            "TITLE": "Ändra mening",
+            "TIME_LABEL": "Tid kvar att servera (månader)",
+            "REASON_PLACEHOLDER": "Bra beteende",
+            "BUTTON": "Ställ in på {{duration}}",
+            "TOASTS": {
+                "PROCESSING": "Ändrar mening...",
+                "SUCCESS": "{{name}}s mening är nu {{duration}}",
+                "FAILED": "Det gick inte att ändra meningen"
             }
         }
     },
@@ -5722,6 +5873,8 @@
         },
         "INDEX": {
             "UNNAMED": "Namnlös medborgare",
+            "JAILED": "Fängslad",
+            "JAILED_REMAINING": "Fängslad · {{duration}} kvar",
             "SUBHEADING": "Medborgar-ID",
             "TOASTS": {
                 "SAVING_IMAGE": "Sparar bild...",
@@ -5819,6 +5972,24 @@
             },
             "SUMMARY_TITLE": "Totalt straff"
         },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Fängelse Historia",
+            "EMPTY": "Inga fängelsestraff registrerade",
+            "COLUMNS": {
+                "OUTCOME": "Resultat",
+                "ENDED": "Slutade"
+            },
+            "STATUS": {
+                "ACTIVE": "Servering",
+                "SERVED": "Serveras",
+                "RELEASED": "Släpps tidigt",
+                "REPLACED": "Ersätts av en ny mening"
+            },
+            "RELEASED_BY": "av {{name}}",
+            "VIEW_ALL_one": "Visa alla {{formatted}} meningar",
+            "VIEW_ALL_other": "Visa alla {{formatted}} meningar",
+            "DIALOG_TITLE": "Fängelsehistorik för {{name}}"
+        },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Öppna en graf över register, fordon och personer kopplade till denna medborgare",
             "PHONE_RECORDS_HINT": "Visa telefonregister",
@@ -5842,8 +6013,8 @@
             "OPEN_WARRANT": "Öppen order",
             "NO_ACCOUNT_NUMBER": "Inget kontonummer",
             "TOASTS": {
-                "REMOVING_TAG": "Tar bort taggen...",
-                "TAG_REMOVED": "Taggen har tagits bort"
+                "REMOVING_TAG": "",
+                "TAG_REMOVED": ""
             }
         },
         "EDIT_PROFILE_DIALOG": {
@@ -5881,10 +6052,10 @@
                 "other": "Andra"
             },
             "CATEGORY_HINTS": {
-                "engine": "",
+                "engine": "Turbo, ECU tune, avgassystem, nitrösa",
                 "bodywork": "Fönstertoning, färg, widebody-kit, tallrikar",
                 "suspension": "Sänkning, lyftsatser, hjul och däck",
-                "electronics": "",
+                "electronics": "GPS störsändare, dolda ledningar, belysning",
                 "weapons": "Monterade eller dolda vapen, illegala fästen",
                 "other": "Allt som inte passar de andra kategorierna"
             },
@@ -5919,7 +6090,7 @@
             "DESCRIPTION": "Uppdatera modellen, färgen och ägaren för {{plate}}.",
             "TOASTS": {
                 "SAVING": "Sparar fordon...",
-                "SAVED": "",
+                "SAVED": "Fordonet uppdaterat",
                 "FAILED": "Det gick inte att uppdatera fordonet"
             }
         }
@@ -6256,7 +6427,7 @@
             "EMPTY": "Inga bevis hittades"
         },
         "charges": {
-            "PLACEHOLDER": "Sök efter avgifter med ID eller namn...",
+            "PLACEHOLDER": "Sök efter avgifter efter ID eller namn...",
             "EMPTY": "Inga avgifter hittades"
         },
         "officers": {
@@ -6479,7 +6650,7 @@
                 "REQUESTED": "Labbanalys begärd",
                 "RESULT_RECORDED": "Labbresultat registrerat",
                 "LINKING_SUSPECT": "Länkar misstänkt...",
-                "SUSPECT_LINKED": "Misstänkt kopplad"
+                "SUSPECT_LINKED": "Misstänkt länkad"
             }
         },
         "DELETE_BUTTON": {
@@ -6732,7 +6903,7 @@
             "VOTE_COUNT_other": "{{count}} röster"
         },
         "LOCATION": {
-            "COPY_COORDS": "Kopiera koordinater",
+            "COPY_COORDS": "",
             "COPIED_TOAST": "Koordinaterna har kopierats"
         },
         "IMAGE_ATTACHMENT": "Bildbilaga",
@@ -6750,7 +6921,7 @@
         "SYSTEM": {
             "PANIC": "🚨 {{callsign}} trycker på sin panikknapp",
             "BACKUP_REQUESTED": "{{callsign}} begärde säkerhetskopiering på {{location}}",
-            "UNIT_10_97": "{{callsign}} är 10-97 (på scenen)",
+            "UNIT_10_97": "{{callsign}} är 10-97 (på scen)",
             "BOLO_CREATED": "{{callsign}} utfärdade en BOLO – {{title}}",
             "BOLO_LOCATED": "{{callsign}} hittade ett BOLO-ämne — {{title}}",
             "WARRANT_CREATED": "{{callsign}} har utfärdat ett beslut – {{title}}",
@@ -6887,7 +7058,7 @@
             "NAME": "Bevisförmyndare"
         },
         "FIRST_SHIFT": {
-            "DESCRIPTION": "Genomförde din första tjänstgöring",
+            "DESCRIPTION": "Genomfört din första tjänstgöring",
             "NAME": "Första skiftet"
         },
         "IRON_MAN": {
@@ -6913,9 +7084,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Bodycam utrustad",
-        "LOST": "Förlorade anslutningen till den kameran",
         "MISSING": "Du har ingen bodycam",
-        "OFFLINE": "Den officerens kroppskamera gick offline",
         "REMOVED": "Bodycam borttagen",
         "UNREACHABLE": "Kunde inte nå den bodycam"
     },
@@ -6923,10 +7092,9 @@
         "ARMED": "Dashcam beväpnad",
         "DISARMED": "Dashcam avaktiverad",
         "NEEDS_PATROL_VEHICLE": "Du måste vara i ett vitlistat patrullfordon",
-        "OFFLINE": "Det fordonets instrumentkamera gick offline",
         "SEAT_RESTRICTED": "Endast föraren eller passageraren fram kan styra instrumentkameran",
         "UNAVAILABLE": "Dashcam ej tillgänglig",
-        "UNREACHABLE": "Kunde inte nå den dashcam"
+        "UNREACHABLE": "Kunde inte nå den instrumentkameran"
     },
     "MDT": {
         "LOADING": "MDT laddas fortfarande",

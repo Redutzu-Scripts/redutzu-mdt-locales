@@ -20,6 +20,7 @@
         "MANAGEMENT": "Pengelolaan",
         "CONFIG": "Konfigurasi",
         "PENALTIES": "Penalti",
+        "PRISONERS": "Tahanan",
         "ASSETS": "Aktiva",
         "OPERATIONS": "Operasi",
         "RECORDS": "Catatan",
@@ -221,7 +222,7 @@
         },
         "CHARGE_DIALOG": {
             "TITLE": "Biaya penerbitan — {{name}}",
-            "DESCRIPTION": "Mengutip pasal hukum pidana yang menentang {{name}}. Tagihan tetap tertunda sampai dikeluarkan.",
+            "DESCRIPTION": "Mengutip pasal hukum pidana yang menentang {{name}}. Tagihan tetap tertunda sampai diterbitkan.",
             "SAVING": "Menghemat biaya…",
             "SAVED": "Biaya dihemat",
             "SAVE_CHARGES": "Menghemat biaya"
@@ -282,7 +283,7 @@
             "SNAPSHOT_DESCRIPTION": "Gambar telah diunggah. Salin tautan untuk membagikannya.",
             "SNAPSHOT_LINK": "Tautan gambar",
             "LINK_COPY_FAILED": "Tidak dapat menyalin tautan.",
-            "TIMELINE": "Garis waktu",
+            "TIMELINE": "Garis Waktu",
             "TIMELINE_HINT": "Hanya menampilkan rekaman yang dibuat dalam periode ini. Catatan tanpa tanggal, seperti warga negara dan kendaraan, tetap ada sementara catatan bertanggal yang terhubung dengannya tetap ada.",
             "LAYOUT": "Tata Letak",
             "FOCUS": "Fokus pada catatan",
@@ -483,7 +484,7 @@
             "RANGE": "{{label}} · {{from}}–{{to}} dari {{total}}",
             "FIRST_PAGE": "Halaman pertama",
             "PREVIOUS_PAGE": "Halaman sebelumnya",
-            "NEXT_PAGE": "Halaman berikutnya",
+            "NEXT_PAGE": "Halaman selanjutnya",
             "LAST_PAGE": "Halaman terakhir",
             "FILTERS": "Filter",
             "SORT_BY": "Urutkan berdasarkan",
@@ -516,6 +517,8 @@
                 "FINE_ASC": "Baik: Rendah → Tinggi",
                 "JAIL_DESC": "Waktu penjara: Tinggi → Rendah",
                 "JAIL_ASC": "Waktu penjara: Rendah → Tinggi",
+                "REMAINING_ASC": "Dirilis paling cepat",
+                "REMAINING_DESC": "Sebagian besar waktu tersisa",
                 "AGE_DESC": "Usia: Yang tertua terlebih dahulu",
                 "AGE_ASC": "Usia: Bungsu terlebih dahulu",
                 "RECORDS_DESC": "Catatan: Paling pertama",
@@ -665,10 +668,20 @@
             "MESSAGE_COPIED": "Pesan disalin",
             "IMAGE_LINK_COPIED": "Tautan gambar disalin",
             "LINK_COPIED": "Tautan disalin"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "Klik, lalu tekan salah satu tombol",
+            "CHANGE_KEY": "Klik untuk mengubah",
+            "LISTENING": "Tekan sebuah tombol…",
+            "LISTENING_HINT": "Esc atau klik di luar untuk membatalkan",
+            "CUSTOM": "Kebiasaan",
+            "TAKEN": "{{key}} sudah digunakan oleh {{name}}. Pilih kunci lain, atau keduanya akan berjalan."
         }
     },
     "ERRORS": {
         "REQUIRED": "Bidang ini wajib diisi",
+        "KEYBIND_UNSUPPORTED_KEY": "Kunci ini tidak dapat digunakan untuk pengikat kunci",
+        "KEYBIND_LIMIT": "Anda dapat memiliki hingga {{max}} ikatan tombol radio",
         "NO_PERMISSION": "Anda tidak memiliki izin untuk melakukan itu",
         "INVALID_DATA": "Beberapa data yang dikirimkan tidak valid",
         "INVALID_CHARGES": "Satu atau lebih dakwaan tidak sah — periksa jumlahnya dengan KUHP",
@@ -685,6 +698,7 @@
         "VEHICLE_TOO_FAR": "Mendekatlah ke kendaraan",
         "NO_VEHICLE_SELECTED": "Tidak ada kendaraan yang dipilih",
         "NO_SUSPECT_SELECTED": "Tidak ada tersangka yang dipilih",
+        "NO_SUBJECT_SELECTED": "Tambahkan setidaknya satu orang atau kendaraan",
         "NO_VEHICLE_NEARBY": "Tidak ada kendaraan di dekatnya",
         "TRUNK_SEARCH_UNAVAILABLE": "Pencarian batang belum tersedia untuk penyiapan inventaris Anda",
         "INVALID_MODEL": "Model itu tidak tersedia",
@@ -717,7 +731,7 @@
         "INVALID_RADIO_CODE_FORMAT": "Kode tidak cocok dengan format yang diizinkan",
         "INVALID_CALLSIGN": "Callsign terlalu panjang atau menggunakan karakter yang tidak diperbolehkan",
         "RATE_LIMITED": "Terlalu banyak permintaan, pelan-pelan",
-        "CALLSIGN_TAKEN": "Petugas lain sudah menggunakan tanda panggilan ini",
+        "CALLSIGN_TAKEN": "Petugas lain sudah menggunakan tanda panggil ini",
         "CALLSIGN_FORMAT": "Tanda panggilan untuk peringkat ini terlihat seperti {{format}} (# = satu digit)",
         "NO_FREE_CALLSIGN": "Setiap tanda panggilan dari format peringkat ini diambil",
         "NO_SOCIETY_ACCOUNT": "Departemen Anda belum menyiapkan akun masyarakat",
@@ -730,6 +744,7 @@
             "INVALID_VALUE": "Nilai tersebut tidak valid untuk setelan ini",
             "MIN": "Minimal harus {{min}}",
             "MAX": "Maksimal harus {{max}}",
+            "PRINTED_MARKERS": "Antara 1 dan {{max}}: model penanda bernomor hanya mencapai {{max}}",
             "NOT_AN_OPTION": "Itu bukanlah salah satu pilihannya",
             "EMPTY": "Tidak boleh kosong",
             "TOO_LONG": "Harus berisi maksimal {{max}} karakter",
@@ -755,7 +770,7 @@
             "NOT_ITEM": "\"{{value}}\" bukan nama item yang valid. Gunakan huruf, angka, _, - dan . hanya.",
             "NOT_WEAPON": "\"{{value}}\" bukan nama senjata yang valid. Gunakan huruf, angka, dan _ saja, mis. WEAPON_PISTOL.",
             "CALLSIGN_FORMAT_NUMBER": "Gunakan satu grup # (hingga 4) untuk nomor tersebut, mis. \"1-ADAM-##\"",
-            "CALLSIGN_FORMAT_CHARS": "Formatnya menggunakan karakter yang tidak boleh dimiliki oleh tanda panggil",
+            "CALLSIGN_FORMAT_CHARS": "Formatnya menggunakan karakter yang tidak boleh dimiliki oleh tanda panggilan",
             "NOT_MODEL": "\"{{value}}\" bukan nama model yang valid. Gunakan huruf, angka, _ dan - saja.",
             "RANGE_ORDER": "{{name}}: nilai terendah suatu rentang tidak boleh lebih tinggi dari nilai tertinggi.",
             "NO_MODELS": "Setidaknya satu model kamera harus tetap ada.",
@@ -789,8 +804,10 @@
         "PROP_PLACER_INTERRUPTED": "Penempatan prop terganggu",
         "VEHICLE_OCCUPIED": "Suruh semua orang keluar dari kendaraan terlebih dahulu",
         "IMPOUND_DISABLED": "Penyitaan dari menu Interaksi dimatikan di server ini",
-        "VEHICLE_EMPTY": "Tidak ada yang memesan",
+        "IMPOUND_NOT_IMPLEMENTED": "Penyitaan tidak diatur di server ini",
         "NOT_SUPPORTED": "Ini tidak tersedia di server ini",
+        "PRISONER_OFFLINE": "Tahanan harus online untuk ini",
+        "PRISON_ACTION_FAILED": "Naskah penjara tidak bisa melakukan itu",
         "NO_ACCESS": "Pekerjaan Anda tidak dapat menggunakan ini",
         "UNKNOWN_FREQUENCY": "Tidak ada saluran pada frekuensi ini",
         "MARKER_LIMIT": "Anda telah mencapai batas penanda bukti",
@@ -810,7 +827,7 @@
         "CANNOT_MANAGE_SELF": "Anda tidak dapat melakukan ini pada diri Anda sendiri",
         "GRADE_TOO_HIGH": "Anda hanya dapat mengelola petugas di bawah nilai Anda sendiri",
         "AMOUNT_TOO_HIGH": "Jumlah tersebut melebihi batas untuk satu kali transaksi",
-        "INVALID_FREQUENCY": "Gunakan frekuensi seperti 450.100",
+        "INVALID_FREQUENCY": "Frekuensi ini tidak sesuai dengan format yang diizinkan",
         "UNIT_FULL": "Unit itu tidak memiliki kursi kosong",
         "UNIT_NEEDS_LEAD": "Suruh orang lain memimpin terlebih dahulu",
         "UNIT_OFF_DUTY": "Tak seorang pun di unit itu yang bertugas",
@@ -1042,7 +1059,6 @@
             "EDIT_DESCRIPTION": "Perbarui nama atau frekuensi saluran ini.",
             "NAME_PLACEHOLDER": "Komando SWAT",
             "FREQUENCY_FIELD": "Frekuensi (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498.510",
             "SUBMIT": "Buat saluran",
             "TOASTS": {
                 "CREATED": "Saluran \"{{name}}\" dibuat",
@@ -1082,19 +1098,24 @@
             "PTT": "PTT"
         },
         "KEYBINDS_DIALOG": {
-            "TITLE": "Pengikat Tombol Radio",
-            "DESCRIPTION": "Ikat tombol keyboard untuk langsung mengirimkan pada saluran tertentu.",
-            "EMPTY": "Belum ada pengikat kunci yang dikonfigurasi.",
-            "ADD_NEW": "Tambahkan Pengikat Kunci Baru",
-            "ADD_DESCRIPTION": "Pilih nama, tekan salah satu tombol untuk mengambilnya, lalu pilih saluran target.",
+            "TITLE": "Pengikat tombol radio",
+            "DESCRIPTION": "Setel radio Anda ke saluran dengan satu tombol, bahkan dengan MDT tertutup.",
+            "OFF": "Pengikat tombol radio dimatikan di server ini.",
+            "EMPTY": "Belum ada pengikat tombol radio.",
+            "ADD": "Tambahkan pengikat tombol",
+            "ADD_TITLE": "Pengikat tombol radio baru",
+            "EDIT_TITLE": "Edit ikatan tombol radio",
+            "FORM_DESCRIPTION": "Beri nama, pilih saluran dan tekan tombol yang menyetel radio Anda ke saluran tersebut.",
             "NAME_PLACEHOLDER": "Saluran utama",
-            "KEY_LABEL": "Kunci",
-            "LISTENING": "Mendengarkan…",
-            "CLICK_TO_CAPTURE": "Klik untuk mengambil kunci",
-            "CAPTURING_HINT": "Tekan tombol apa saja — Escape untuk membatalkan.",
-            "CLICK_HINT": "Klik bidang di atas dan tekan tombol apa saja.",
             "CHANNEL_PLACEHOLDER": "Pilih saluran",
-            "SAVE": "Simpan Pengikat Kunci"
+            "KEY_LABEL": "Kunci",
+            "KEY_HINT": "Kunci tunggal saja. Anda juga dapat mengubahnya nanti di Pengaturan > Pengikatan Kunci > FiveM.",
+            "CHANNEL_REMOVED": "Saluran ini sudah tidak ada lagi",
+            "SETTINGS_HINT": "Kunci juga dapat diubah di Pengaturan > Pengikatan Kunci > FiveM. Kunci yang dilepas atau diubah akan langsung berhenti berfungsi, namun tetap terdaftar di sana hingga Anda tersambung kembali.",
+            "DELETE": "Hapus ikatan kunci",
+            "SAVE": "Simpan ikatan kunci",
+            "TUNED": "Radio disetel ke {{name}}",
+            "ROW_NAME": "Radio: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "Kode Radio Baru",
@@ -1300,7 +1321,7 @@
             "LEAVE_CALL": "Tinggalkan panggilan"
         },
         "TIMELINE_NOTES": {
-            "TITLE": "Garis waktu",
+            "TITLE": "Garis Waktu",
             "EMPTY": "Belum ada acara.",
             "NOTE_PLACEHOLDER": "Tambahkan catatan…",
             "EVENTS": {
@@ -1613,7 +1634,7 @@
             "EARNED": "Diperoleh",
             "VIEW_PROGRESS": "Selanjutnya",
             "VIEW_ALL": "Semua",
-            "NO_ACHIEVEMENTS": "Tidak ada pencapaian yang disiapkan untuk departemen ini",
+            "NO_ACHIEVEMENTS": "Tidak ada pencapaian yang ditetapkan untuk departemen ini",
             "RANK_HISTORY": "Riwayat Peringkat",
             "RECORDS_FILED": "Catatan diajukan",
             "CERTIFICATIONS": "Sertifikasi",
@@ -1748,7 +1769,7 @@
             "REASON_PLACEHOLDER": "Apa yang telah terjadi…",
             "TOASTS": {
                 "ADDING": "Menambahkan teguran…",
-                "ADDED": "Serangan ditambahkan",
+                "ADDED": "Serangan menambahkan",
                 "REMOVING": "Menghapus teguran…",
                 "REMOVED": "Pemogokan dihapus"
             }
@@ -1823,7 +1844,7 @@
                 "BADGE_TAKEN": "Lencana #{{badge}} sudah diberikan kepada orang lain di departemen ini",
                 "BADGE_UPDATE_FAILED": "Tidak dapat memperbarui lencana #",
                 "BADGE_UPDATE_FAILED_REASON": "Tidak dapat memperbarui lencana # ({{reason}})",
-                "GRANTING_CERTIFICATION": "Memberikan sertifikasi…",
+                "GRANTING_CERTIFICATION": "Pemberian sertifikasi…",
                 "CERTIFICATION_GRANTED": "{{name}} diberikan {{certification}}",
                 "REVOKING_CERTIFICATION": "Mencabut sertifikasi…",
                 "CERTIFICATION_REVOKED": "{{certification}} dicabut dari {{name}}",
@@ -1987,7 +2008,7 @@
             "SERVED_HINT": "{{value}} ditayangkan",
             "LOCATED_HINT": "{{value}} terletak",
             "CUSTODY_HINT": "{{value}} dalam tahanan",
-            "CITIZENS_CHARGED_other": "{{value}} warga dikenai biaya",
+            "CITIZENS_CHARGED_other": "{{value}} warga negara dikenakan biaya",
             "OFFICERS_ON_DUTY_other": "{{value}} petugas yang bertugas",
             "RECORDS_COUNT_other": "{{value}} catatan",
             "ACTIVITY_TITLE": "Aktivitas",
@@ -2116,6 +2137,9 @@
                 "PENALCODE_VIEW": "Baca hukum pidana.",
                 "PENALCODE_CREATE": "Tambahkan entri hukum pidana.",
                 "PENALCODE_UPDATE": "Edit entri hukum pidana.",
+                "PRISONERS_VIEW": "Lihat siapa yang dipenjara dan berapa lama lagi mereka tersisa.",
+                "PRISONERS_RELEASE": "Bebaskan tahanan sebelum masa hukumannya berakhir.",
+                "PRISONERS_EDIT": "Mengubah berapa lama seorang narapidana masih harus menjalani hukuman.",
                 "PENALCODE_DELETE": "Hapus entri hukum pidana.",
                 "OPERATIONPLANS_VIEW": "Baca rencana operasi.",
                 "OPERATIONPLANS_CREATE": "Draf rencana operasi baru.",
@@ -2514,7 +2538,7 @@
                     "ENABLED": "Izinkan pengeditan catatan bersama-sama",
                     "ENABLED_HINT": "Petugas dapat saling mengundang ke dalam catatan dan melihat perubahan satu sama lain saat mereka mengetik.",
                     "EXPIRY": "Undangan kedaluwarsa setelahnya",
-                    "EXPIRY_HINT": "Undangan yang tidak dijawab oleh siapa pun akan dibatalkan setelah sekian lama. 0 berarti tidak pernah kadaluarsa."
+                    "EXPIRY_HINT": "Undangan yang tidak dijawab oleh siapa pun akan dibatalkan setelah sekian lama. 0 berarti tidak pernah kadaluwarsa."
                 },
                 "OPERATIONS": {
                     "TITLE": "Rencana operasi",
@@ -2561,7 +2585,7 @@
                     "MEASUREMENT": "Satuan",
                     "MEASUREMENT_HINT": "Imperial (kaki, mil, pon) atau metrik (meter, kilometer, kilogram) untuk jarak, tinggi dan berat.",
                     "TEMPERATURE": "Suhu",
-                    "TEMPERATURE_HINT": "Fahrenheit atau Celcius.",
+                    "TEMPERATURE_HINT": "Fahrenheit atau Celsius.",
                     "PHONE_PREVIEW": "5551234567 terlihat seperti:",
                     "EXAMPLE": {
                         "TITLE": "Bagaimana tampilannya",
@@ -2638,7 +2662,7 @@
                     "LIST": "Kebangsaan",
                     "DESCRIPTION": "Digunakan di dua tempat: filter Kebangsaan pada halaman Warga Negara, dan bidang Kebangsaan ketika petugas mendaftarkan warga negara secara manual (hanya ketika \"Daftar semua orang dari database\" tidak aktif). Dengan demikian, kewarganegaraan seorang warga negara berasal dari karakternya dalam kerangka Anda. Karakter ESX tidak memilikinya, jadi bidang dan filternya disembunyikan di sana.",
                     "PLACEHOLDER": "Tambahkan kewarganegaraan",
-                    "LIST_HINT": "Menghapus satu tidak akan mengubah warga yang sudah memilikinya, hanya saja mereka tidak dapat disaring lagi.",
+                    "LIST_HINT": "Menghapus satu tidak akan mengubah warga yang sudah memilikinya, hanya saja mereka tidak bisa lagi tersaring olehnya.",
                     "CHOICES_HINT": "Pilih satu dari daftar, atau ketikkan nama apa pun dan tambahkan apa adanya."
                 }
             },
@@ -2782,6 +2806,12 @@
                     "DESCRIPTION": "Apa yang mendarat di bel di dashboard. Yang pribadi menunggu petugas yang offline; yang berskala departemen hanya menjangkau petugas secara online pada saat itu.",
                     "RETENTION": "Simpan notifikasi untuk",
                     "RETENTION_HINT": "Notifikasi yang lebih lama dari ini akan langsung dihapus saat Anda menurunkannya. 0 menyimpannya selamanya."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Animasi radio",
+                    "DESCRIPTION": "Apa yang dilakukan karakter petugas saat mereka berbicara di radio. Setiap petugas dapat memilih sendiri di halaman Konfigurasi; inilah yang didapat orang lain.",
+                    "DEFAULT": "Animasi bawaan",
+                    "DEFAULT_HINT": "Dengan pma-voice, animasi radionya sendiri dimatikan kecuali jika ini adalah None. Dengan sumber suara lain, matikan animasinya di konfigurasinya sendiri."
                 }
             },
             "DISPATCH": {
@@ -2956,6 +2986,33 @@
                     "AUTO_LOCK": "Kunci piring pada korek api",
                     "AUTO_LOCK_HINT": "Radar mengunci pelat yang cocok, sehingga petugas tidak kehilangannya.",
                     "DESCRIPTION": "Dengan sumber daya radar (wk_wars2x), setiap pelat yang dibaca radar diperiksa berdasarkan BOLO dan surat perintah, dan petugas diperingatkan jika ada kecocokan."
+                },
+                "SCENE": {
+                    "TITLE": "TKP",
+                    "DESCRIPTION": "Cara petugas menempatkan rekaman TKP dan penanda bukti: dari halaman Adegan di menu interaksi, dengan menggunakan item inventaris, atau salah satunya. Barang tidak habis.",
+                    "METHODS": {
+                        "MENU": "Halaman adegan",
+                        "ITEM": "Menggunakan barang tersebut",
+                        "BOTH": "Halaman atau item adegan"
+                    },
+                    "TAPE_METHOD": "Bagaimana petugas memasang selotip",
+                    "TAPE_METHOD_HINT": "Dari halaman Adegan, dengan menggunakan item rekaman, atau salah satunya.",
+                    "TAPE_ITEM": "Barang pita",
+                    "TAPE_ITEM_HINT": "Petugas item inventaris digunakan untuk memasang rekaman TKP.",
+                    "MARKER_METHOD": "Bagaimana petugas menempatkan penanda bukti",
+                    "MARKER_METHOD_HINT": "Dari halaman Pemandangan, dengan menggunakan item penanda, atau salah satunya.",
+                    "MARKER_ITEM": "Barang penanda bukti",
+                    "MARKER_ITEM_HINT": "Alat inventarisasi tersebut digunakan petugas untuk meletakkan penanda barang bukti.",
+                    "RADIUS": "Ukuran pemandangan",
+                    "RADIUS_HINT": "Tape, spidol dan alat peraga ditempatkan sedekat ini dengan sebuah adegan yang bergabung dengannya. Lebih jauh lagi, mereka memulai adegan baru.",
+                    "MAX_MARKERS_SCENE": "Penanda bukti per adegan",
+                    "MAX_MARKERS_SCENE_HINT": "Penanda diberi nomor dari 1 di setiap adegan. 0 = tidak terbatas, hanya jika penanda tidak menggunakan model bernomor.",
+                    "MAX_MARKERS_OFFICER": "Penanda bukti per petugas",
+                    "MAX_MARKERS_OFFICER_HINT": "Berapa banyak penanda yang dapat dikeluarkan oleh seorang petugas sekaligus, di setiap adegan. 0 = tidak terbatas.",
+                    "TAPE_LENGTH": "Jalur pita terpanjang",
+                    "TAPE_LENGTH_HINT": "Yang paling jauh jaraknya kedua ujung satu tali pita bisa diikat.",
+                    "MAX_TAPE_OFFICER": "Garis pita per petugas",
+                    "MAX_TAPE_OFFICER_HINT": "Berapa banyak pita perekat yang dapat dipasang oleh seorang petugas sekaligus. 0 = tidak terbatas."
                 }
             },
             "CAMERAS": {
@@ -3113,7 +3170,8 @@
                     "BOTH": "Barang atau perintah",
                     "WAYS": {
                         "ITEM": "Barang inventaris",
-                        "COMMAND": "Perintah obrolan"
+                        "COMMAND": "Perintah obrolan",
+                        "MENU": "Halaman adegan"
                     }
                 },
                 "REPAIR": {
@@ -3134,7 +3192,13 @@
                     "SIGNAL": "Kekuatan sinyal berubah",
                     "SIGNAL_HINT": "Kosmetik: bilah sinyal pada kisi kamera bergerak sedikit seiring waktu. Mati: mereka diam.",
                     "AUDIO_RADIUS": "Jangkauan pendengaran",
-                    "AUDIO_RADIUS_HINT": "Petugas yang menonton siaran mendengar pemain berbicara sedekat ini ke kamera."
+                    "AUDIO_RADIUS_HINT": "Petugas yang menonton siaran mendengar pemain berbicara sedekat ini ke kamera.",
+                    "ON_FEED_LOST": "Saat kamera mati",
+                    "ON_FEED_LOST_HINT": "Apa yang terjadi pada petugas yang menonton kamera CCTV yang dihancurkan, diretas atau dinonaktifkan, setelah pemutarannya dihentikan.",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Beralih ke kamera berikutnya",
+                        "CLOSE": "Tutup umpan"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Deteksi otomatis",
@@ -3423,7 +3487,7 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "Ikatan kunci default",
-                    "DESCRIPTION": "Kunci untuk memulai setiap tindakan. FiveM menyimpan kunci pemain saat pertama kali mereka bergabung, jadi perubahan di sini menjangkau pemain baru dan siapa saja yang belum pernah memiliki kunci ini. Setiap orang masih dapat mengubah kuncinya sendiri di Pengaturan > Pengikatan Kunci > FiveM.",
+                    "DESCRIPTION": "Kunci untuk memulai setiap tindakan. FiveM menyimpan kunci pemain saat pertama kali mereka bergabung, jadi perubahan di sini menjangkau pemain baru dan siapa saja yang belum pernah memiliki kunci ini. Setiap orang masih dapat mengubah kuncinya sendiri di halaman Konfigurasi MDT atau di Pengaturan > Pengikatan Kunci > FiveM.",
                     "OPEN_MDT": "Buka MDTnya",
                     "OPEN_MDT_HINT": "Dimatikan, petugas membukanya dengan perintah atau barang.",
                     "INTERACTIONS": "Menu interaksi",
@@ -3435,7 +3499,10 @@
                     "PANIC_BUTTON": "Tombol panik",
                     "PANIC_BUTTON_HINT": "Mengirimkan peringatan panik dengan lokasi petugas.",
                     "REQUEST_BACKUP": "Minta cadangan",
-                    "REQUEST_BACKUP_HINT": "Meminta cadangan unit terdekat."
+                    "REQUEST_BACKUP_HINT": "Meminta cadangan unit terdekat.",
+                    "CLASH": "Juga merupakan kunci default {{names}}. FiveM menjalankan setiap tindakan pada sebuah kunci, jadi {{key}} akan melakukan keduanya.",
+                    "MAX_RADIO": "Pengikat tombol radio per petugas",
+                    "MAX_RADIO_HINT": "Berapa banyak pengikat tombol radio yang dapat ditambahkan setiap petugas di halaman Radio. 0 mematikannya. Petugas yang sudah memiliki lebih banyak hanya menyimpan yang pertama."
                 }
             },
             "IN_GAME": {
@@ -3573,7 +3640,8 @@
                 "RADIUS": "Daerah pencarian",
                 "RADIUS_HINT": "Lingkaran di sekitar panggilan, bukan hanya pin.",
                 "SUMMARY": "ikon {{sprite}}, warna {{colour}}",
-                "SAME_AS_OTHERS": "Sama seperti yang lain"
+                "SAME_AS_OTHERS": "Sama seperti yang lain",
+                "COLOUR_BY_PRIORITY": "Warnanya mengikuti prioritas panggilan. Matikan \"Warna berdasarkan prioritas\" di Peta blip untuk memilih satu di sini."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Menyegarkan",
@@ -3658,7 +3726,7 @@
                         "SEATS_HINT": "Anggota terbanyak sekaligus. 0 = tidak ada batasan."
                     },
                     "SHIFT_UNITS": "Petugas dapat memulai unit",
-                    "SHIFT_UNITS_HINT": "Petugas dengan unit.join dapat memulai unit untuk shift mereka. Itu dihapus ketika anggota terakhirnya keluar."
+                    "SHIFT_UNITS_HINT": "Petugas dengan unit.join dapat memulai unit untuk shiftnya. Itu dihapus ketika anggota terakhirnya keluar."
                 },
                 "AUTO": {
                     "TITLE": "Unit sedang menelepon",
@@ -3768,6 +3836,13 @@
             "RECORDING": {
                 "MAX_DURATION": "Rekaman terlama tercapai, menyimpan klipnya",
                 "MAX_SIZE": "Mencapai ukuran rekaman terbesar, menyimpan klip"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "Kamera hancur",
+                "HACKED": "Umpan dicegat",
+                "OFFLINE": "Kamera offline",
+                "BODYCAM": "Kamera tubuh offline",
+                "DASHCAM": "Kamera dasbor offline"
             }
         },
         "GIZMO": {
@@ -3850,7 +3925,7 @@
             "COUNT_UNLIMITED": "{{placed}} baris",
             "NO_TARGET": "Bidik ke dinding, tiang, atau penyangga",
             "TYING": "Mengikatnya…",
-            "LINE_NEW": "Poin selanjutnya memulai baris baru",
+            "LINE_NEW": "Poin berikutnya memulai baris baru",
             "LINE_GOING": "Mengikat dari poin terakhir Anda",
             "CHECKS_TITLE": "Cek",
             "STATUS": {
@@ -3960,8 +4035,6 @@
                 "ACTIVE_WARRANTS": "Waran aktif",
                 "STOLEN": "Dicuri",
                 "OPEN_RECORD": "Buka catatan",
-                "OCCUPANTS_OUT": "Perintahkan penghuninya keluar",
-                "OCCUPANTS_ORDERED_other": "Memerintahkan {{count}} penghuni keluar",
                 "SEARCH_TRUNK": "Batang pencarian",
                 "IMPOUND": "Menyita",
                 "IMPOUNDED": "{{plate}} disita"
@@ -4381,6 +4454,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Tema dan warna."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "Dalam game",
+                    "DESCRIPTION": "Bagaimana karakter Anda berperilaku saat Anda menggunakan MDT dan radio."
                 }
             },
             "SECTIONS": {
@@ -4389,7 +4466,9 @@
                 "UNITS_NUMBERS": "Satuan & Angka",
                 "SEE_THROUGH": "Mode Tembus Pandang",
                 "SEE_THROUGH_DESCRIPTION": "Hilangkan MDT untuk menonton pertandingan di belakangnya, tanpa menutupnya.",
-                "DISPLAY": "Menampilkan"
+                "DISPLAY": "Menampilkan",
+                "RADIO": "Radio",
+                "KEYBINDS": "Pengikat kunci"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4451,13 +4530,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Notifikasi berbunyi",
                     "DESCRIPTION": "Memutar suara untuk panggilan pengiriman masuk dan sebutan obrolan"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Animasi berbicara",
+                    "DESCRIPTION": "Apa yang dilakukan karakter Anda saat Anda berbicara di radio",
+                    "PREVIEW": "Pratinjau karakter Anda"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Tekan sebuah tombol…",
-                "LISTENING_HINT": "Esc untuk membatalkan · Backspace untuk menghapus",
                 "UNBOUND": "Tidak terikat",
                 "CUSTOM": "Kebiasaan"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "Ikatan kunci MDT Anda. Klik salah satu tombol dan tekan tombol baru untuk mengubahnya.",
+                "NONE": "Server ini tidak memiliki ikatan kunci MDT.",
+                "OVERLAP": "Kunci yang sama dengan {{names}}. FiveM menjalankan setiap tindakan pada sebuah tombol, jadi menekannya akan menjalankan semuanya.",
+                "OPEN_SETTINGS": "Ubah kunci dalam pengikatan kunci FiveM",
+                "HINT": "Kunci yang Anda ganti langsung berhenti berfungsi, namun tetap tercantum dalam pengikatan kunci FiveM hingga Anda tersambung kembali. Tombol mouse dan pengontrol dapat diatur di sana."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Lampu",
@@ -4514,7 +4603,14 @@
                 "HINT": "Pratinjau notifikasi pada posisi dan durasi di atas",
                 "BUTTON": "Pratinjau pemberitahuan"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Pratinjau — betapa memudarnya tampilan MDT pada level ini"
+            "SEE_THROUGH_PREVIEW_HINT": "Pratinjau — betapa memudarnya tampilan MDT pada level ini",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Bawaan server ({{style}})",
+                "NONE": "Tidak ada",
+                "CHEST": "Mikrofon bahu",
+                "EAR": "Lubang suara",
+                "HANDHELD": "Radio genggam"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "Tema",
@@ -4714,6 +4810,8 @@
             "license_revoke": "Lisensi Dicabut",
             "citizen_image_change": "Foto Warga Berubah",
             "charges_issued": "Biaya yang Dikeluarkan",
+            "prisoner_released": "Tahanan Dibebaskan",
+            "prisoner_sentence_changed": "Kalimat Berubah",
             "note_added": "Catatan Ditambahkan",
             "note_removed": "Catatan Dihapus",
             "employee_grade_change": "Kelas Berubah",
@@ -4798,6 +4896,8 @@
             "LICENSE_REVOKE": "Mencabut lisensi {{type}} dari {{identifier}}",
             "CITIZEN_IMAGE_CHANGE": "Gambar profil yang diperbarui untuk {{identifier}}",
             "CHARGES_ISSUED": "Menerbitkan {{count}} tagihan pada {{entityType}} #{{id}}",
+            "PRISONER_RELEASED": "Membebaskan tahanan {{identifier}} (alasan: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "Tetapkan sisa kalimat {{identifier}} menjadi {{time}} (alasan: {{reason}})",
             "NOTE_ADDED": "Menambahkan catatan ke {{entityType}} #{{entityId}}",
             "NOTE_REMOVED": "Menghapus catatan dari {{entityType}} #{{entityId}}",
             "EMPLOYEE_GRADE_CHANGE": "Tetapkan nilai {{identifier}} menjadi {{grade}}",
@@ -5067,7 +5167,7 @@
             "CREATE_DIALOG_TITLE": "Buat templat baru",
             "CREATE_DIALOG_DESCRIPTION": "Mulai templat dokumen baru yang dapat digunakan kembali.",
             "NEW_TEMPLATE": "Templat baru",
-            "NO_TEMPLATES": "Belum ada templat",
+            "NO_TEMPLATES": "Belum ada template",
             "SECTION_STARRED": "Berbintang",
             "SECTION_ALL": "Semua templat"
         },
@@ -5078,7 +5178,7 @@
         "LIST_ITEM": {
             "STAR_TOOLTIP": "Bintang",
             "UNSTAR_TOOLTIP": "Hapus bintang",
-            "SET_AS_DEFAULT": "Tetapkan sebagai bawaan"
+            "SET_AS_DEFAULT": "Tetapkan sebagai default"
         },
         "EDITOR": {
             "UNSAVE_FAVORITE": "Batalkan penyimpanan dari favorit",
@@ -5225,7 +5325,7 @@
             "SUSPECTS_PLACEHOLDER": "Pilih tersangka",
             "VICTIMS_LABEL": "Korban terlibat",
             "VICTIMS_PLACEHOLDER": "Pilih korban",
-            "OFFICERS_LABEL": "Petugas terlibat",
+            "OFFICERS_LABEL": "Petugas yang terlibat",
             "OFFICERS_PLACEHOLDER": "Pilih petugas",
             "VEHICLES_LABEL": "Kendaraan yang terlibat",
             "VEHICLES_PLACEHOLDER": "Pilih kendaraan",
@@ -5277,13 +5377,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Mengeluarkan pengawasan terhadap seseorang atau kendaraan. BOLO baru dimulai sebagai draf."
+            "DESCRIPTION": "Mengeluarkan pengawasan terhadap seseorang atau kendaraan. Draf tidak menandai subjek sampai diaktifkan."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Tersangka bersenjata di dalam mobil Sultan RS berwarna hitam",
             "DESCRIPTION_PLACEHOLDER": "Di mana terakhir kali mereka terlihat, seperti apa rupanya, dan mengapa mereka dicari",
             "EXPIRES_LABEL": "Berakhir pada",
             "EXPIRES_PLACEHOLDER": "Defaultnya adalah 7 hari",
+            "SUBJECTS_TITLE": "Subyek",
+            "CITIZENS_PLACEHOLDER": "Pilih orang",
             "TOASTS": {
                 "CREATED": "BOLO dibuat"
             }
@@ -5323,6 +5425,7 @@
             "CONFIRM_DESCRIPTION": "Ini mengonfirmasi{{subject}} telah ditemukan dan menutup pengintaian.",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "subjek",
+            "CONFIRM_DESCRIPTION_MANY": "Ini mengonfirmasi semua {{count}} subjek telah ditemukan dan menutup pengintaian.",
             "TOASTS": {
                 "MARKING": "Menandai BOLO terletak…",
                 "MARKED": "BOLO ditandai terletak"
@@ -5341,6 +5444,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Tidak dikategorikan",
         "INDEX": {
             "HEADING": "Statuta Hukum & KUHP",
             "SUBHEADING": "Kodifikasi resmi atas pelanggaran, sanksi keuangan, dan mandat peradilan",
@@ -5498,6 +5602,54 @@
             }
         }
     },
+    "PRISONERS": {
+        "SUBHEADING": "Semua orang di penjara saat ini dan berapa lama lagi yang tersisa",
+        "SUBHEADING_ONLINE_ONLY": "Narapidana yang sedang online saat ini. Skrip penjara Anda tidak melaporkan tahanan offline",
+        "SEARCH_PLACEHOLDER": "Cari berdasarkan nama atau pengenal…",
+        "EMPTY": "Tidak ada seorang pun yang dipenjara",
+        "NOT_SUPPORTED": "Naskah penjara Anda tidak dapat mencantumkan tahanan",
+        "COLUMNS": {
+            "REMAINING": "Tersisa",
+            "RECORD": "Catatan",
+            "SENTENCED_BY": "Dihukum oleh",
+            "SINCE": "Sejak"
+        },
+        "REMAINING_OF": "{{remaining}} dari {{total}}",
+        "UNKNOWN_REMAINING": "Tidak dilaporkan oleh naskah penjara",
+        "JAILED_OUTSIDE_MDT": "Dipenjara di luar MDT",
+        "RECORD_LABEL": "{{type}} #{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Penalti",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Buka profil",
+        "REASON_LABEL": "Alasan (opsional)",
+        "RELEASE": {
+            "TRIGGER": "Melepaskan",
+            "TITLE": "Bebaskan tahanan",
+            "CONFIRM": "{{name}} akan dibebaskan sekarang dan hukumannya ditutup.",
+            "REASON_PLACEHOLDER": "Hukuman dikurangi oleh pengadilan",
+            "BUTTON": "Melepaskan",
+            "NEEDS_ONLINE": "Skrip penjara Anda hanya dapat membebaskan tahanan yang sedang online.",
+            "TOASTS": {
+                "PROCESSING": "Membebaskan tahanan…",
+                "SUCCESS": "Dirilis {{name}}",
+                "FAILED": "Gagal melepaskan tahanan"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Ubah kalimat",
+            "TITLE": "Ubah kalimat",
+            "TIME_LABEL": "Waktu tersisa untuk melayani (bulan)",
+            "REASON_PLACEHOLDER": "Perilaku yang baik",
+            "BUTTON": "Setel ke {{duration}}",
+            "TOASTS": {
+                "PROCESSING": "Mengubah kalimat…",
+                "SUCCESS": "Kalimat {{name}} sekarang menjadi {{duration}}",
+                "FAILED": "Gagal mengubah kalimat"
+            }
+        }
+    },
     "CITIZENS": {
         "REGISTER_DIALOG": {
             "TRIGGER": "Daftarkan Warga Negara",
@@ -5644,6 +5796,8 @@
         },
         "INDEX": {
             "UNNAMED": "Warga negara yang tidak disebutkan namanya",
+            "JAILED": "Dipenjara",
+            "JAILED_REMAINING": "Dipenjara · {{duration}} kiri",
             "SUBHEADING": "tanda pengenal warga negara",
             "TOASTS": {
                 "SAVING_IMAGE": "Menyimpan gambar…",
@@ -5736,6 +5890,23 @@
                 "SERVICE": "Melayani"
             },
             "SUMMARY_TITLE": "Total penalti"
+        },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Sejarah Penjara",
+            "EMPTY": "Tidak ada catatan hukuman penjara",
+            "COLUMNS": {
+                "OUTCOME": "Hasil",
+                "ENDED": "Berakhir"
+            },
+            "STATUS": {
+                "ACTIVE": "Porsi",
+                "SERVED": "Disajikan",
+                "RELEASED": "Dirilis lebih awal",
+                "REPLACED": "Diganti dengan kalimat baru"
+            },
+            "RELEASED_BY": "oleh {{name}}",
+            "VIEW_ALL_other": "Lihat semua {{formatted}} kalimat",
+            "DIALOG_TITLE": "Sejarah penjara {{name}}"
         },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Buka grafik catatan, kendaraan, dan orang yang ditautkan ke warga ini",
@@ -6717,7 +6888,7 @@
             "REMOVE_FAILED": "Gagal menghapus petugas",
             "OWNERSHIP_TRANSFERRED": "Kepemilikan dialihkan",
             "TRANSFER_FAILED": "Gagal mentransfer kepemilikan",
-            "ROOM_CLOSED": "Ruangan ditutup",
+            "ROOM_CLOSED": "Ruangan tertutup",
             "ROOM_LEFT": "Kamar kiri",
             "REMOVED_FROM_ROOM": "Anda dikeluarkan dari ruangan",
             "INVITE_RECEIVED": "{{from}} mengundang Anda ke kamarnya",
@@ -6825,9 +6996,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Dilengkapi kamera tubuh",
-        "LOST": "Kehilangan koneksi ke bodycam itu",
         "MISSING": "Anda tidak memiliki kamera tubuh",
-        "OFFLINE": "Bodycam petugas itu offline",
         "REMOVED": "Kamera tubuh dihapus",
         "UNREACHABLE": "Tidak dapat menjangkau kamera tubuh itu"
     },
@@ -6835,7 +7004,6 @@
         "ARMED": "Dashcam bersenjata",
         "DISARMED": "Kamera dasbor dilucuti",
         "NEEDS_PATROL_VEHICLE": "Anda harus berada dalam kendaraan patroli yang masuk daftar putih",
-        "OFFLINE": "Kamera dasbor kendaraan itu offline",
         "SEAT_RESTRICTED": "Hanya pengemudi atau penumpang depan yang dapat mengontrol kamera dasbor",
         "UNAVAILABLE": "Kamera dasbor tidak tersedia",
         "UNREACHABLE": "Tidak dapat menjangkau kamera dasbor itu"

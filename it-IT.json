@@ -20,6 +20,7 @@
         "MANAGEMENT": "Gestione",
         "CONFIG": "Configurazione",
         "PENALTIES": "Sanzioni",
+        "PRISONERS": "Prigionieri",
         "ASSETS": "Attività",
         "OPERATIONS": "Operazioni",
         "RECORDS": "Record",
@@ -203,7 +204,7 @@
             "SCOPE": {
                 "FINE": "Bene",
                 "JAIL": "confinamento",
-                "JAIL_HINT": "\"Confinamento\" mette insieme il tempo in prigione e il servizio alla comunità, qualunque sia il termine effettivamente riportato in un articolo."
+                "JAIL_HINT": "\"Confinamento\" mette insieme il tempo in prigione e il servizio alla comunità, qualunque sia il termine effettivamente riportato nell'articolo."
             },
             "EMPTY_STATE": "Scegli gli articoli dal codice penale a sinistra per addebitarli qui.",
             "PRESETS": {
@@ -367,7 +368,7 @@
             "ADD_TAG": "Aggiungi etichetta",
             "LIMIT_REACHED": "Limite di tag raggiunto ({{max}})",
             "DIALOG_DESCRIPTION": "Cerca un tag da aggiungere o creane uno nuovo.",
-            "SEARCH_PLACEHOLDER": "Cerca tag…",
+            "SEARCH_PLACEHOLDER": "Cerca tag...",
             "NO_MATCH": "Nessun tag corrispondente",
             "CREATE_NAMED": "Crea \"{{name}}\"",
             "NEW_TAG": "Nuova etichetta",
@@ -463,7 +464,7 @@
         "OFFLINE": "Non in linea",
         "ON_DUTY": "In servizio",
         "OFF_DUTY": "Fuori servizio",
-        "LOADING_MORE": "Caricamento altro...",
+        "LOADING_MORE": "Caricamento altro…",
         "GRADE_FALLBACK": "Grado {{grade}}",
         "CALLSIGN_INPUT": {
             "NEXT_FREE": "Prossimo nominativo libero",
@@ -495,7 +496,7 @@
             "PRIORITY": "Priorità",
             "UNDETERMINED": "Indeterminato",
             "TYPE_PLACEHOLDER": "Seleziona un tipo",
-            "SUBJECT_TYPE": "Tipo di oggetto",
+            "SUBJECT_TYPE": "Tipo di soggetto",
             "INVESTIGATORS": "Investigatori",
             "OWNERS": "Proprietari",
             "ISSUED_BY": "Emesso da",
@@ -540,6 +541,8 @@
                 "FINE_ASC": "Multa: Basso → Alto",
                 "JAIL_DESC": "Tempo di prigione: alto → basso",
                 "JAIL_ASC": "Tempo di prigione: Basso → Alto",
+                "REMAINING_ASC": "Rilascio al più presto",
+                "REMAINING_DESC": "La maggior parte del tempo rimasto",
                 "AGE_DESC": "Età: prima il più vecchio",
                 "AGE_ASC": "Età: prima il più giovane",
                 "RECORDS_DESC": "Record: la maggior parte per primi",
@@ -691,10 +694,20 @@
             "MESSAGE_COPIED": "Messaggio copiato",
             "IMAGE_LINK_COPIED": "Link immagine copiato",
             "LINK_COPIED": "Collegamento copiato"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "Fare clic, quindi premere un tasto",
+            "CHANGE_KEY": "Fare clic per modificare",
+            "LISTENING": "Premi un tasto...",
+            "LISTENING_HINT": "Esci o fai clic all'esterno per annullare",
+            "CUSTOM": "Costume",
+            "TAKEN": "{{key}} è già utilizzato da {{name}}. Scegli un'altra chiave, altrimenti funzionerebbero entrambe."
         }
     },
     "ERRORS": {
         "REQUIRED": "Questo campo è obbligatorio",
+        "KEYBIND_UNSUPPORTED_KEY": "Questa chiave non può essere utilizzata per un'associazione di tasti",
+        "KEYBIND_LIMIT": "Puoi avere fino a {{max}} combinazioni di tasti radio",
         "NO_PERMISSION": "Non hai il permesso per farlo",
         "INVALID_DATA": "Alcuni dei dati inviati non sono validi",
         "INVALID_CHARGES": "Una o più accuse non sono valide: confronta gli importi con il codice penale",
@@ -711,6 +724,7 @@
         "VEHICLE_TOO_FAR": "Avvicinarsi al veicolo",
         "NO_VEHICLE_SELECTED": "Nessun veicolo selezionato",
         "NO_SUSPECT_SELECTED": "Nessun sospetto selezionato",
+        "NO_SUBJECT_SELECTED": "Aggiungi almeno una persona o un veicolo",
         "NO_VEHICLE_NEARBY": "Nessun veicolo nelle vicinanze",
         "TRUNK_SEARCH_UNAVAILABLE": "La ricerca del trunk non è ancora disponibile per la configurazione dell'inventario",
         "INVALID_MODEL": "Quel modello non è disponibile",
@@ -756,6 +770,7 @@
             "INVALID_VALUE": "Tale valore non è valido per questa impostazione",
             "MIN": "Deve essere almeno {{min}}",
             "MAX": "Deve essere al massimo {{max}}",
+            "PRINTED_MARKERS": "Tra 1 e {{max}}: i modelli con segnalini numerati arrivano solo fino a {{max}}",
             "NOT_AN_OPTION": "Questa non è una delle opzioni",
             "EMPTY": "Non può essere vuoto",
             "TOO_LONG": "Deve contenere al massimo {{max}} caratteri",
@@ -815,8 +830,10 @@
         "PROP_PLACER_INTERRUPTED": "Il posizionamento dell'elica è stato interrotto",
         "VEHICLE_OCCUPIED": "Prima fate scendere tutti dal veicolo",
         "IMPOUND_DISABLED": "Il sequestro dal menu Interazioni è disattivato su questo server",
-        "VEHICLE_EMPTY": "Nessuno da ordinare",
+        "IMPOUND_NOT_IMPLEMENTED": "Il sequestro non è configurato su questo server",
         "NOT_SUPPORTED": "Questo non è disponibile su questo server",
+        "PRISONER_OFFLINE": "Per questo il prigioniero deve essere online",
+        "PRISON_ACTION_FAILED": "La sceneggiatura della prigione non poteva farlo",
         "NO_ACCESS": "Il tuo lavoro non può usarlo",
         "UNKNOWN_FREQUENCY": "Nessun canale su questa frequenza",
         "MARKER_LIMIT": "Hai raggiunto il limite dei segnalini prove",
@@ -836,7 +853,7 @@
         "CANNOT_MANAGE_SELF": "Non puoi farti questo",
         "GRADE_TOO_HIGH": "Puoi gestire solo gli ufficiali di livello inferiore al tuo",
         "AMOUNT_TOO_HIGH": "Tale importo supera il limite per una transazione",
-        "INVALID_FREQUENCY": "Utilizza una frequenza come 450.100",
+        "INVALID_FREQUENCY": "Questa frequenza non corrisponde al formato consentito",
         "UNIT_FULL": "Quella unità non ha un posto libero",
         "UNIT_NEEDS_LEAD": "Fai in modo che qualcun altro guidi prima",
         "UNIT_OFF_DUTY": "Nessuno in quell'unità è in servizio",
@@ -1001,7 +1018,7 @@
                 "ENABLING": "Abilitazione della fotocamera…",
                 "DISABLING": "Disattivazione della fotocamera…",
                 "ENABLED": "Fotocamera abilitata",
-                "DISABLED": "Fotocamera disabilitata",
+                "DISABLED": "Fotocamera disattivata",
                 "TOGGLE_FAILED_ENABLE": "Impossibile abilitare questa fotocamera",
                 "TOGGLE_FAILED_DISABLE": "Impossibile disattivare questa fotocamera",
                 "TOGGLE_ERROR": "Impossibile attivare/disattivare questa fotocamera",
@@ -1074,7 +1091,6 @@
             "EDIT_DESCRIPTION": "Aggiorna il nome o la frequenza di questo canale.",
             "NAME_PLACEHOLDER": "Comando SWAT",
             "FREQUENCY_FIELD": "Frequenza (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498.510",
             "SUBMIT": "Crea canale",
             "TOASTS": {
                 "CREATED": "Canale \"{{name}}\" creato",
@@ -1115,18 +1131,23 @@
         },
         "KEYBINDS_DIALOG": {
             "TITLE": "Combinazioni di tasti radio",
-            "DESCRIPTION": "Associa un tasto della tastiera per trasmettere istantaneamente su un canale specifico.",
-            "EMPTY": "Nessuna combinazione di tasti ancora configurata.",
-            "ADD_NEW": "Aggiungi nuova combinazione di tasti",
-            "ADD_DESCRIPTION": "Scegli un nome, premi un tasto per catturarlo, quindi scegli il canale di destinazione.",
+            "DESCRIPTION": "Sintonizza la tua radio su un canale con un solo tasto, anche con MDT chiuso.",
+            "OFF": "Le combinazioni di tasti radio sono disattivate su questo server.",
+            "EMPTY": "Ancora nessuna combinazione di tasti radio.",
+            "ADD": "Aggiungi combinazione di tasti",
+            "ADD_TITLE": "Nuova combinazione di tasti radio",
+            "EDIT_TITLE": "Modifica la combinazione di tasti della radio",
+            "FORM_DESCRIPTION": "Assegnagli un nome, scegli un canale e premi il tasto che sintonizza la radio su di esso.",
             "NAME_PLACEHOLDER": "Canale principale",
-            "KEY_LABEL": "Chiave",
-            "LISTENING": "Ascolto…",
-            "CLICK_TO_CAPTURE": "Fare clic per catturare una chiave",
-            "CAPTURING_HINT": "Premere un tasto qualsiasi: Esci per annullare.",
-            "CLICK_HINT": "Fare clic sul campo sopra e premere un tasto qualsiasi.",
             "CHANNEL_PLACEHOLDER": "Seleziona un canale",
-            "SAVE": "Salva combinazione di tasti"
+            "KEY_LABEL": "Chiave",
+            "KEY_HINT": "Solo chiavi singole. Puoi anche modificarlo in seguito in Impostazioni > Associazioni tasti > FiveM.",
+            "CHANNEL_REMOVED": "Questo canale non esiste più",
+            "SETTINGS_HINT": "I tasti possono anche essere modificati in Impostazioni > Associazioni tasti > FiveM. Una chiave rimossa o modificata smette di funzionare immediatamente ma rimane nell'elenco finché non ti riconnetti.",
+            "DELETE": "Elimina combinazione di tasti",
+            "SAVE": "Salva combinazione di tasti",
+            "TUNED": "Radio sintonizzata su {{name}}",
+            "ROW_NAME": "Radio: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "Nuovo codice radio",
@@ -1498,7 +1519,7 @@
     },
     "OFFICERS": {
         "SUBHEADING": "Personale attivo",
-        "SEARCH_PLACEHOLDER": "Cerca nome o ID cittadino...",
+        "SEARCH_PLACEHOLDER": "Cerca nome o ID cittadino…",
         "ONLINE_COUNT_one": "{{count}} in linea",
         "ONLINE_COUNT_many": "{{count}} in linea",
         "ONLINE_COUNT_other": "{{count}} in linea",
@@ -1887,7 +1908,7 @@
                 "CERTIFICATION_GRANTED": "{{name}} concesso {{certification}}",
                 "REVOKING_CERTIFICATION": "Revoca della certificazione…",
                 "CERTIFICATION_REVOKED": "{{certification}} revocato da {{name}}",
-                "FIRING": "Licenziamento di {{name}}...",
+                "FIRING": "Licenziamento di {{name}}…",
                 "FIRED": "{{name}} è stato rimosso dal dipartimento"
             }
         },
@@ -2031,7 +2052,7 @@
                 "COPIED": "{{name}} copiato in {{type}}",
                 "COPY_EXISTS": "{{type}} ha già {{name}}"
             },
-            "SEARCH": "Cerca tag…",
+            "SEARCH": "Cerca tag...",
             "DIALOG_DESCRIPTION": "I tag etichettano i record in modo che gli agenti possano individuarli a colpo d'occhio.",
             "RECORD_TYPE": "Tipo di registrazione",
             "HINT": "Fare clic su un tag per modificarlo. Trascinalo su un altro tipo di record per copiarlo lì."
@@ -2188,6 +2209,9 @@
                 "PENALCODE_VIEW": "Leggi il codice penale.",
                 "PENALCODE_CREATE": "Aggiungi voci di codice penale.",
                 "PENALCODE_UPDATE": "Modifica le voci del codice penale.",
+                "PRISONERS_VIEW": "Guarda chi è in prigione e quanto tempo gli resta.",
+                "PRISONERS_RELEASE": "Rilasciare i prigionieri prima della fine della pena.",
+                "PRISONERS_EDIT": "Modificare la durata della pena che un prigioniero deve ancora scontare.",
                 "PENALCODE_DELETE": "Rimuovere le voci del codice penale.",
                 "OPERATIONPLANS_VIEW": "Leggi i piani operativi.",
                 "OPERATIONPLANS_CREATE": "Redigere nuovi piani operativi.",
@@ -2872,6 +2896,12 @@
                     "DESCRIPTION": "Ciò che finisce nel campanello sul cruscotto. Quelli personali aspettano gli agenti offline; quelli a livello di dipartimento raggiungono solo gli ufficiali online in quel momento.",
                     "RETENTION": "Conserva le notifiche per",
                     "RETENTION_HINT": "Le notifiche più vecchie di questa vengono cancellate immediatamente quando lo riduci. 0 li conserva per sempre."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Animazione radiofonica",
+                    "DESCRIPTION": "Cosa fanno i personaggi degli ufficiali mentre parlano alla radio. Ogni ufficiale può scegliere il proprio nella pagina Configurazione; questo è ciò che ottengono tutti gli altri.",
+                    "DEFAULT": "Animazione predefinita",
+                    "DEFAULT_HINT": "Con pma-voice, la sua animazione radio è disattivata a meno che non sia impostato su None. Con un'altra risorsa vocale, disattiva la sua animazione nella sua stessa configurazione."
                 }
             },
             "DISPATCH": {
@@ -2967,7 +2997,7 @@
                     "COLOUR": "Colore",
                     "COLOUR_HINT": "Di seguito il colore di ogni dipartimento che non ha il proprio.",
                     "JOB_COLOURS": "Colore per reparto",
-                    "JOB_COLOURS_HINT": "Assegna a un dipartimento il proprio colore, in modo che gli ufficiali possano distinguere le unità."
+                    "JOB_COLOURS_HINT": "Assegna a un dipartimento il proprio colore, in modo che gli agenti possano distinguere le unità."
                 },
                 "CHANCE": {
                     "TITLE": "Segnala la possibilità",
@@ -3048,6 +3078,33 @@
                     "AUTO_LOCK": "Blocca il piatto su un fiammifero",
                     "AUTO_LOCK_HINT": "Il radar blocca la targa corrispondente, in modo che l'ufficiale non la perda.",
                     "DESCRIPTION": "Con una risorsa radar (wk_wars2x), ogni targa letta dal radar viene confrontata con BOLO e mandati e l'ufficiale viene avvisato in caso di corrispondenza."
+                },
+                "SCENE": {
+                    "TITLE": "Scene del crimine",
+                    "DESCRIPTION": "Come gli agenti posizionano il nastro sulla scena del crimine e gli indicatori di prova: dalla pagina Scena del menu Interazioni, utilizzando un oggetto dell'inventario o uno qualsiasi dei due. Gli articoli non sono esauriti.",
+                    "METHODS": {
+                        "MENU": "Pagina della scena",
+                        "ITEM": "Utilizzo dell'oggetto",
+                        "BOTH": "Pagina o elemento della scena"
+                    },
+                    "TAPE_METHOD": "Come gli agenti posizionano il nastro",
+                    "TAPE_METHOD_HINT": "Dalla pagina Scena, utilizzando l'elemento nastro o uno qualsiasi dei due.",
+                    "TAPE_ITEM": "Elemento nastro",
+                    "TAPE_ITEM_HINT": "L'oggetto dell'inventario che gli agenti usano per posizionare il nastro della scena del crimine.",
+                    "MARKER_METHOD": "Come gli agenti posizionano i contrassegni di prova",
+                    "MARKER_METHOD_HINT": "Dalla pagina Scena, utilizzando l'elemento marcatore o uno qualsiasi dei due.",
+                    "MARKER_ITEM": "Elemento indicatore di prova",
+                    "MARKER_ITEM_HINT": "L'oggetto dell'inventario utilizzato dagli ufficiali per posizionare i contrassegni di prova.",
+                    "RADIUS": "Dimensioni della scena",
+                    "RADIUS_HINT": "Nastro, pennarelli e oggetti di scena posizionati così vicino a una scena si uniscono ad essa. Più lontano, iniziano una nuova scena.",
+                    "MAX_MARKERS_SCENE": "Marcatori di prove per scena",
+                    "MAX_MARKERS_SCENE_HINT": "I marcatori sono numerati da 1 in ciascuna scena. 0 = illimitato, solo quando i segnalini non utilizzano i modelli numerati.",
+                    "MAX_MARKERS_OFFICER": "Segnalini di prova per ufficiale",
+                    "MAX_MARKERS_OFFICER_HINT": "Quanti indicatori può avere un agente contemporaneamente, in ogni scena. 0 = illimitato.",
+                    "TAPE_LENGTH": "Linea di nastro più lunga",
+                    "TAPE_LENGTH_HINT": "Quanto più distanti tra loro è possibile legare le due estremità di una linea di nastro.",
+                    "MAX_TAPE_OFFICER": "Linee di nastro per ufficiale",
+                    "MAX_TAPE_OFFICER_HINT": "Quante linee di nastro può avere un agente contemporaneamente. 0 = illimitato."
                 }
             },
             "CAMERAS": {
@@ -3211,7 +3268,8 @@
                     "BOTH": "Elemento o comando",
                     "WAYS": {
                         "ITEM": "Articolo di inventario",
-                        "COMMAND": "Comando chat"
+                        "COMMAND": "Comando chat",
+                        "MENU": "Pagina della scena"
                     }
                 },
                 "REPAIR": {
@@ -3228,11 +3286,17 @@
                     "TITLE": "Feed dal vivo",
                     "DESCRIPTION": "Cosa ottengono gli agenti mentre guardano una telecamera a circuito chiuso, una bodycam o una dashcam.",
                     "AUDIO": "Ascolta le voci vicino alla telecamera",
-                    "AUDIO_HINT": "Gli agenti che guardano un feed sentono i giocatori parlare vicino ad esso invece che nell'ambiente circostante. Ha bisogno della voce pma. Disattivandolo si interrompe anche la sorveglianza da parte degli agenti in questo momento.",
+                    "AUDIO_HINT": "Gli agenti che guardano un feed sentono i giocatori parlare vicino ad esso invece che nell'ambiente circostante. Ha bisogno della voce pma. Disattivandolo si interrompe anche la sorveglianza degli agenti in questo momento.",
                     "SIGNAL": "La potenza del segnale cambia",
                     "SIGNAL_HINT": "Estetica: le barre del segnale sulla griglia della telecamera si muovono leggermente nel tempo. Spenti: restano fermi.",
                     "AUDIO_RADIUS": "Gamma uditiva",
-                    "AUDIO_RADIUS_HINT": "Gli agenti che guardano un feed sentono i giocatori parlare così vicino alla telecamera."
+                    "AUDIO_RADIUS_HINT": "Gli agenti che guardano un feed sentono i giocatori parlare così vicino alla telecamera.",
+                    "ON_FEED_LOST": "Quando la telecamera si abbassa",
+                    "ON_FEED_LOST_HINT": "Cosa succede agli agenti che guardano una telecamera a circuito chiuso che viene distrutta, violata o disattivata, dopo la riproduzione.",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Passa alla telecamera successiva",
+                        "CLOSE": "Chiudi l'alimentazione"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Rilevamento automatico",
@@ -3455,7 +3519,7 @@
             },
             "PERMISSION_PICKER": {
                 "SEARCH": "Cerca i permessi o digita il tuo...",
-                "EMPTY": "Nessuna autorizzazione corrisponde. Digita un nome come myplugin.view per utilizzare il tuo.",
+                "EMPTY": "Nessuna autorizzazione corrisponde. Digita un nome come myplugin.view per usare il tuo.",
                 "USE_CUSTOM": "Usa il tuo:"
             },
             "ROWS": {
@@ -3535,7 +3599,7 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "Combinazioni di tasti predefinite",
-                    "DESCRIPTION": "Il tasto da cui inizia ogni azione. FiveM salva le chiavi di un giocatore la prima volta che si iscrive, quindi una modifica qui raggiunge i nuovi giocatori e chiunque non abbia ancora avuto questa chiave. Tutti possono comunque modificare le proprie chiavi in ​​Impostazioni > Associazioni tasti > FiveM.",
+                    "DESCRIPTION": "Il tasto da cui inizia ogni azione. FiveM salva le chiavi di un giocatore la prima volta che si iscrive, quindi una modifica qui raggiunge i nuovi giocatori e chiunque non abbia ancora avuto questa chiave. Tutti possono comunque modificare le proprie chiavi nella pagina di configurazione di MDT o in Impostazioni > Associazioni tasti > FiveM.",
                     "OPEN_MDT": "Apri l'MDT",
                     "OPEN_MDT_HINT": "Spento, gli agenti lo aprono con il comando o l'oggetto.",
                     "INTERACTIONS": "Menù interazioni",
@@ -3547,7 +3611,10 @@
                     "PANIC_BUTTON": "Pulsante antipanico",
                     "PANIC_BUTTON_HINT": "Invia un allarme di panico con la posizione dell'ufficiale.",
                     "REQUEST_BACKUP": "Richiedi backup",
-                    "REQUEST_BACKUP_HINT": "Chiede rinforzi alle unità vicine."
+                    "REQUEST_BACKUP_HINT": "Chiede rinforzi alle unità vicine.",
+                    "CLASH": "Anche la chiave predefinita di {{names}}. FiveM esegue ogni azione su una chiave, quindi {{key}} farebbe entrambe le cose.",
+                    "MAX_RADIO": "Combinazioni di tasti radio per ufficiale",
+                    "MAX_RADIO_HINT": "Quante combinazioni di tasti radio ogni ufficiale può aggiungere alla pagina Radio. 0 li spegne. Gli ufficiali che ne hanno già di più mantengono solo i primi."
                 }
             },
             "IN_GAME": {
@@ -3689,7 +3756,8 @@
                 "RADIUS": "Zona di ricerca",
                 "RADIUS_HINT": "Un cerchio attorno alla chiamata invece che solo uno spillo.",
                 "SUMMARY": "icona {{sprite}}, colore {{colour}}",
-                "SAME_AS_OTHERS": "Uguale agli altri"
+                "SAME_AS_OTHERS": "Uguale agli altri",
+                "COLOUR_BY_PRIORITY": "Il colore segue la priorità della chiamata. Disattiva \"Colore per priorità\" nei simboli della mappa per sceglierne uno qui."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Aggiorna",
@@ -3896,6 +3964,13 @@
             "RECORDING": {
                 "MAX_DURATION": "È stata raggiunta la registrazione più lunga, salvando la clip",
                 "MAX_SIZE": "È stata raggiunta la dimensione di registrazione più grande, salvando la clip"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "Fotocamera distrutta",
+                "HACKED": "Mangime intercettato",
+                "OFFLINE": "Fotocamera offline",
+                "BODYCAM": "Bodycam offline",
+                "DASHCAM": "Dashcam offline"
             }
         },
         "GIZMO": {
@@ -4090,10 +4165,6 @@
                 "ACTIVE_WARRANTS": "Warrant attivi",
                 "STOLEN": "Rubato",
                 "OPEN_RECORD": "Apri registro",
-                "OCCUPANTS_OUT": "Ordina agli occupanti di uscire",
-                "OCCUPANTS_ORDERED_one": "Ho ordinato a {{count}} di uscire dall'occupante",
-                "OCCUPANTS_ORDERED_many": "Ho ordinato a {{count}} occupanti di uscire",
-                "OCCUPANTS_ORDERED_other": "Ho ordinato a {{count}} occupanti di uscire",
                 "SEARCH_TRUNK": "Cerca tronco",
                 "IMPOUND": "Sequestrare",
                 "IMPOUNDED": "{{plate}} sequestrati"
@@ -4525,6 +4596,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Temi e colori."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "Nel gioco",
+                    "DESCRIPTION": "Come si comporta il tuo personaggio mentre usi l'MDT e la radio."
                 }
             },
             "SECTIONS": {
@@ -4533,7 +4608,9 @@
                 "UNITS_NUMBERS": "Unità e numeri",
                 "SEE_THROUGH": "Modalità trasparente",
                 "SEE_THROUGH_DESCRIPTION": "Togli l'MDT per guardare la partita dietro di esso, senza chiuderlo.",
-                "DISPLAY": "Display"
+                "DISPLAY": "Display",
+                "RADIO": "Radio",
+                "KEYBINDS": "Combinazioni di tasti"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4595,13 +4672,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Suoni di notifica",
                     "DESCRIPTION": "Riproduci un suono per le chiamate di invio in arrivo e le menzioni della chat"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Animazione parlante",
+                    "DESCRIPTION": "Cosa fa il tuo personaggio mentre parli alla radio",
+                    "PREVIEW": "Anteprima del tuo personaggio"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Premi un tasto...",
-                "LISTENING_HINT": "Esc per annullare · Backspace per cancellare",
                 "UNBOUND": "Non vincolato",
                 "CUSTOM": "Costume"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "Le tue combinazioni di tasti MDT. Fare clic su un tasto e premerne uno nuovo per modificarlo.",
+                "NONE": "Questo server non ha combinazioni di tasti MDT.",
+                "OVERLAP": "Stessa chiave di {{names}}. FiveM esegue tutte le azioni su un tasto, quindi premendolo le eseguono tutte.",
+                "OPEN_SETTINGS": "Cambia le chiavi nelle associazioni dei tasti di FiveM",
+                "HINT": "Una chiave sostituita smette di funzionare immediatamente, ma rimane elencata nelle associazioni dei tasti di FiveM fino alla riconnessione. Qui è possibile impostare i pulsanti e i controller del mouse."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Leggero",
@@ -4660,7 +4747,14 @@
                 "HINT": "Visualizza l'anteprima di una notifica nella posizione e nella durata indicate sopra",
                 "BUTTON": "Notifica in anteprima"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Anteprima: quanto sbiadito appare l'MDT a questo livello"
+            "SEE_THROUGH_PREVIEW_HINT": "Anteprima: quanto appare sbiadito l'MDT a questo livello",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Server predefinito ({{style}})",
+                "NONE": "Nessuno",
+                "CHEST": "Microfono da spalla",
+                "EAR": "Auricolare",
+                "HANDHELD": "Radio portatile"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "Temi",
@@ -4860,6 +4954,8 @@
             "license_revoke": "Licenza revocata",
             "citizen_image_change": "Foto del cittadino modificata",
             "charges_issued": "Addebiti emessi",
+            "prisoner_released": "Prigioniero rilasciato",
+            "prisoner_sentence_changed": "Frase modificata",
             "note_added": "Nota aggiunta",
             "note_removed": "Nota rimossa",
             "employee_grade_change": "Grado cambiato",
@@ -4944,6 +5040,8 @@
             "LICENSE_REVOKE": "Licenza {{type}} revocata da {{identifier}}",
             "CITIZEN_IMAGE_CHANGE": "Immagine del profilo aggiornata per {{identifier}}",
             "CHARGES_ISSUED": "{{count}} addebito/i emesso/i il giorno {{entityType}} #{{id}}",
+            "PRISONER_RELEASED": "Prigioniero rilasciato {{identifier}} (motivo: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "Imposta la frase rimanente da {{identifier}} a {{time}} (motivo: {{reason}})",
             "NOTE_ADDED": "Aggiunta una nota a {{entityType}} #{{entityId}}",
             "NOTE_REMOVED": "Rimossa una nota da {{entityType}} #{{entityId}}",
             "EMPLOYEE_GRADE_CHANGE": "Imposta il voto di {{identifier}} su {{grade}}",
@@ -5274,11 +5372,11 @@
                 },
                 "VICTIMS": {
                     "LABEL": "Vittime",
-                    "DESCRIPTION": "Nomi di tutte le persone ferite o colpite dall'incidente, separati da virgole"
+                    "DESCRIPTION": "Nomi di tutte le persone danneggiate o colpite dall'incidente, separati da virgole"
                 },
                 "COPS": {
                     "LABEL": "Ufficiali",
-                    "DESCRIPTION": "Nomi degli agenti che hanno risposto o sono stati assegnati all'incidente, separati da virgole"
+                    "DESCRIPTION": "Nomi degli agenti che hanno risposto o che sono stati assegnati all'incidente, separati da virgole"
                 },
                 "VEHICLES": {
                     "LABEL": "Veicoli",
@@ -5389,7 +5487,7 @@
         },
         "INDEX": {
             "SUBHEADING": "Sfoglia e gestisci tutti i rapporti sugli incidenti",
-            "SEARCH_PLACEHOLDER": "Cerca per titolo o #...",
+            "SEARCH_PLACEHOLDER": "Cerca per titolo o #…",
             "EMPTY": "Nessun incidente trovato",
             "COLUMNS": {
                 "REPORTED_BY": "Segnalato da",
@@ -5427,13 +5525,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Allertare una persona o un veicolo. I nuovi BOLO iniziano come bozze."
+            "DESCRIPTION": "Allertare una persona o un veicolo. Le bozze non contrassegnano l'oggetto finché non vengono attivate."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Sospetto armato a bordo di una Sultan RS nera",
             "DESCRIPTION_PLACEHOLDER": "Dove sono stati visti l'ultima volta, che aspetto hanno e perché sono ricercati",
             "EXPIRES_LABEL": "Scade alle",
             "EXPIRES_PLACEHOLDER": "Il valore predefinito è 7 giorni",
+            "SUBJECTS_TITLE": "Soggetti",
+            "CITIZENS_PLACEHOLDER": "Seleziona le persone",
             "TOASTS": {
                 "CREATED": "BOLO creato"
             }
@@ -5473,6 +5573,7 @@
             "CONFIRM_DESCRIPTION": "Ciò conferma che{{subject}} è stato localizzato e chiude la vedetta.",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "l'argomento",
+            "CONFIRM_DESCRIPTION_MANY": "Ciò conferma che tutti i {{count}} soggetti sono stati localizzati e chiude la vedetta.",
             "TOASTS": {
                 "MARKING": "Contrassegno BOLO situato…",
                 "MARKED": "BOLO contrassegnato come individuato"
@@ -5491,6 +5592,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Senza categoria",
         "INDEX": {
             "HEADING": "Statuto giuridico e codice penale",
             "SUBHEADING": "Codificazione ufficiale dei reati, delle sanzioni finanziarie e dei mandati giudiziari",
@@ -5593,7 +5695,7 @@
             "TITLE": "Processo Bene",
             "DESCRIPTION": "Citare un cittadino per uno o più reati. Modifica ogni addebito entro l'intervallo consentito: il totale verrà fatturato a loro.",
             "CHANGE": "Modifica",
-            "SEARCH_CITIZEN_PLACEHOLDER": "Cerca un cittadino...",
+            "SEARCH_CITIZEN_PLACEHOLDER": "Cerca un cittadino…",
             "ADD_OFFENSE_LABEL": "Aggiungi offesa",
             "SEARCH_OFFENSE_PLACEHOLDER": "Cerca nel codice penale...",
             "NOTICE_BODY": "Confermare che tutte le spese siano state adeguatamente riviste e che il cittadino sia stato informato dei propri obblighi finanziari. Questa azione verrà registrata nel sistema.",
@@ -5647,6 +5749,54 @@
                 "PROCESSING": "Penalità di elaborazione...",
                 "SUCCESS": "Penalità elaborata per {{name}}",
                 "FAILED": "Impossibile elaborare la sanzione"
+            }
+        }
+    },
+    "PRISONERS": {
+        "SUBHEADING": "Tutti in prigione in questo momento e quanto tempo resta loro",
+        "SUBHEADING_ONLINE_ONLY": "Prigionieri che sono online in questo momento. La sceneggiatura della tua prigione non riporta i prigionieri offline",
+        "SEARCH_PLACEHOLDER": "Cerca per nome o identificatore...",
+        "EMPTY": "Nessuno è in prigione",
+        "NOT_SUPPORTED": "Il copione della tua prigione non può elencare i prigionieri",
+        "COLUMNS": {
+            "REMAINING": "Rimanente",
+            "RECORD": "Documentazione",
+            "SENTENCED_BY": "Condannato da",
+            "SINCE": "Da"
+        },
+        "REMAINING_OF": "{{remaining}} di {{total}}",
+        "UNKNOWN_REMAINING": "Non riportato dal copione della prigione",
+        "JAILED_OUTSIDE_MDT": "Incarcerato fuori dall'MDT",
+        "RECORD_LABEL": "{{type}}#{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Pena",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Apri profilo",
+        "REASON_LABEL": "Motivo (facoltativo)",
+        "RELEASE": {
+            "TRIGGER": "Pubblicazione",
+            "TITLE": "Liberare il prigioniero",
+            "CONFIRM": "{{name}} verrà rilasciato adesso e la sua pena sarà chiusa.",
+            "REASON_PLACEHOLDER": "Sentenza ridotta dal tribunale",
+            "BUTTON": "Pubblicazione",
+            "NEEDS_ONLINE": "Il tuo copione carcerario può rilasciare solo i prigionieri che sono online.",
+            "TOASTS": {
+                "PROCESSING": "Rilascio del prigioniero...",
+                "SUCCESS": "Rilasciato {{name}}",
+                "FAILED": "Impossibile liberare il prigioniero"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Cambia frase",
+            "TITLE": "Cambia frase",
+            "TIME_LABEL": "Tempo rimasto per servire (mesi)",
+            "REASON_PLACEHOLDER": "Buon comportamento",
+            "BUTTON": "Imposta su {{duration}}",
+            "TOASTS": {
+                "PROCESSING": "Modifica frase...",
+                "SUCCESS": "La frase di {{name}} ora è {{duration}}",
+                "FAILED": "Impossibile modificare la frase"
             }
         }
     },
@@ -5800,6 +5950,8 @@
         },
         "INDEX": {
             "UNNAMED": "Cittadino senza nome",
+            "JAILED": "Incarcerato",
+            "JAILED_REMAINING": "Incarcerato · {{duration}} rimasti",
             "SUBHEADING": "Identificazione del cittadino",
             "TOASTS": {
                 "SAVING_IMAGE": "Salvataggio immagine…",
@@ -5900,6 +6052,25 @@
                 "SERVICE": "Servizio"
             },
             "SUMMARY_TITLE": "Totali penalità"
+        },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Storia della prigione",
+            "EMPTY": "Nessuna condanna al carcere registrata",
+            "COLUMNS": {
+                "OUTCOME": "Risultato",
+                "ENDED": "Finito"
+            },
+            "STATUS": {
+                "ACTIVE": "Servire",
+                "SERVED": "Servito",
+                "RELEASED": "Rilasciato presto",
+                "REPLACED": "Sostituito da una nuova frase"
+            },
+            "RELEASED_BY": "di {{name}}",
+            "VIEW_ALL_one": "Visualizza tutta la frase {{formatted}}",
+            "VIEW_ALL_many": "Visualizza tutte le {{formatted}} frasi",
+            "VIEW_ALL_other": "Visualizza tutte le {{formatted}} frasi",
+            "DIALOG_TITLE": "Cronologia della prigione di {{name}}"
         },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Apri un grafico dei dati, dei veicoli e delle persone collegati a questo cittadino",
@@ -6238,7 +6409,7 @@
             "ACKNOWLEDGE": "Riconoscere",
             "UNACKNOWLEDGE": "Non riconoscere",
             "TOASTS": {
-                "LOADING": "Riconoscendo…",
+                "LOADING": "Riconoscendo...",
                 "SUCCESS": "Annuncio riconosciuto",
                 "REMOVED": "Riconoscimento rimosso"
             }
@@ -6303,7 +6474,7 @@
             "EMPTY": "Nessun cittadino trovato"
         },
         "characters": {
-            "PLACEHOLDER": "Cerca caratteri per nome o ID...",
+            "PLACEHOLDER": "Cerca caratteri per nome o ID…",
             "EMPTY": "Nessun personaggio non registrato trovato"
         },
         "recruits": {
@@ -6315,11 +6486,11 @@
             "EMPTY": "Nessun veicolo trovato"
         },
         "weapons": {
-            "PLACEHOLDER": "Cerca per nome o numero di serie…",
+            "PLACEHOLDER": "Cerca per nome o numero di serie...",
             "EMPTY": "Nessuna arma trovata"
         },
         "warrants": {
-            "PLACEHOLDER": "Mandati di ricerca per ID o titolo…",
+            "PLACEHOLDER": "Mandati di ricerca per ID o titolo...",
             "EMPTY": "Nessun mandato trovato"
         },
         "bolos": {
@@ -6331,15 +6502,15 @@
             "EMPTY": "Nessun immobile trovato"
         },
         "incidents": {
-            "PLACEHOLDER": "Cerca gli incidenti per ID o nome...",
+            "PLACEHOLDER": "Cerca gli incidenti per ID o nome…",
             "EMPTY": "Nessun incidente trovato"
         },
         "evidences": {
-            "PLACEHOLDER": "Cerca prove per ID o nome...",
+            "PLACEHOLDER": "Cerca prove per ID o nome…",
             "EMPTY": "Nessuna prova trovata"
         },
         "charges": {
-            "PLACEHOLDER": "Cerca addebiti per ID o nome...",
+            "PLACEHOLDER": "Cerca addebiti per ID o nome…",
             "EMPTY": "Nessun addebito trovato"
         },
         "officers": {
@@ -6355,7 +6526,7 @@
             "OWNED_BY": "Di proprietà di {{name}}",
             "REGISTERED_TO": "Registrato a {{name}}",
             "CREATED_AGO": "Creato {{time}}",
-            "START_TYPING": "Inizia a digitare per cercare…",
+            "START_TYPING": "Inizia a digitare per cercare...",
             "CLEAR_ALL": "Cancella tutto",
             "SELECTED_OF": "{{count}} di {{max}} selezionato",
             "REMOVE_ARIA": "Rimuovi {{value}}",
@@ -6471,7 +6642,7 @@
             "VIEW_LINKS_HINT": "Apri un grafico dei documenti, delle persone e dei veicoli collegati a queste prove"
         },
         "INDEX": {
-            "SUBHEADING": "Registro delle prove",
+            "SUBHEADING": "Registrazione delle prove",
             "ID": "ID",
             "NAME": "Nome",
             "LOGGED": "Registrato",
@@ -6804,7 +6975,7 @@
             "EMPTY": "Nessuna unità disponibile per inviare messaggi in questo momento"
         },
         "RECEIPT": {
-            "SENDING": "invio…",
+            "SENDING": "invio...",
             "NOT_DELIVERED": "non consegnato"
         },
         "POLL": {
@@ -7001,9 +7172,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Dotato di bodycam",
-        "LOST": "Connessione persa con quella bodycam",
         "MISSING": "Non hai una bodycam",
-        "OFFLINE": "La bodycam di quell'agente è andata offline",
         "REMOVED": "Bodycam rimossa",
         "UNREACHABLE": "Impossibile raggiungere la bodycam"
     },
@@ -7011,7 +7180,6 @@
         "ARMED": "Dashcam armata",
         "DISARMED": "Dashcam disarmata",
         "NEEDS_PATROL_VEHICLE": "Devi essere a bordo di un veicolo di pattuglia autorizzato",
-        "OFFLINE": "La dashcam di quel veicolo è andata offline",
         "SEAT_RESTRICTED": "Solo il conducente o il passeggero anteriore possono controllare la dashcam",
         "UNAVAILABLE": "Dashcam non disponibile",
         "UNREACHABLE": "Impossibile raggiungere la dashcam"

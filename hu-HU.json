@@ -20,6 +20,7 @@
         "MANAGEMENT": "Menedzsment",
         "CONFIG": "Konfiguráció",
         "PENALTIES": "Büntetések",
+        "PRISONERS": "Foglyok",
         "ASSETS": "Eszközök",
         "OPERATIONS": "Műveletek",
         "RECORDS": "Records",
@@ -67,7 +68,7 @@
         },
         "court": {
             "LABEL": "Bíróságon",
-            "DESCRIPTION": "A tiszt a bírósági eljárásban vesz részt, és nem elérhető."
+            "DESCRIPTION": "A tiszt a bírósági eljárásban vesz részt, és nem szállítható."
         },
         "hospital": {
             "LABEL": "Kórházban",
@@ -214,7 +215,7 @@
             "CUSTOM_CHARGE": {
                 "TITLE": "Egyedi díj",
                 "DESCRIPTION": "Adjon hozzá egyszeri pénzbírságot, börtönbüntetést vagy közérdekű munkát, amely mögött nincs büntető törvénykönyv.",
-                "LABEL_PLACEHOLDER": "például Bíróság által elrendelt visszaszolgáltatás"
+                "LABEL_PLACEHOLDER": "például Bíróság által elrendelt kárpótlás"
             }
         },
         "CHARGE_ROW": {
@@ -226,7 +227,7 @@
         },
         "CHARGE_DIALOG": {
             "TITLE": "Kibocsátási terhelés – {{name}}",
-            "DESCRIPTION": "Idézzen fel {{name}} elleni büntető törvénykönyv cikkeit. A díjak kiadásáig függőben maradnak.",
+            "DESCRIPTION": "Idézze meg a(z) {{name}} elleni büntető törvénykönyv cikkeit. A díjak kiadásáig függőben maradnak.",
             "SAVING": "Díjak megtakarítása…",
             "SAVED": "A költségek mentve",
             "SAVE_CHARGES": "Mentse el a költségeket"
@@ -270,7 +271,7 @@
             "REMOVE_PICTURE": "Kép eltávolítása",
             "REMOVE_CONFIRM_TITLE": "Eltávolítja a képet?",
             "REMOVE_CONFIRM_DESCRIPTION": "Ezzel eltávolítja a profilképet a rekordból. Bármikor újra beállítható.",
-            "DIALOG_DESCRIPTION": "Adj hozzá egy linket, vagy készíts képet közvetlenül a játékban."
+            "DIALOG_DESCRIPTION": "Adj hozzá linket, vagy készíts képet közvetlenül a játékban."
         },
         "RECORD_GRAPH": {
             "TITLE": "Kapcsolati grafikon",
@@ -297,7 +298,7 @@
             "TRACE_FROM": "Nyomkövetés innen",
             "TRACING_FROM": "Nyomkövetés innen: {{label}} – válasszon másik rekordot",
             "STOP_TRACING": "Stop",
-            "NO_PATH": "Az aktuális szűrőkkel nincs elérési út a rekordok között.",
+            "NO_PATH": "Az aktuális szűrőkkel nincs elérési út e rekordok között.",
             "LAYOUTS": {
                 "CLUSTERS": "Klaszterek",
                 "RADIAL": "Sugárirányú",
@@ -381,7 +382,7 @@
         },
         "PERMISSION_GATE": {
             "ACCESS_DENIED_TITLE": "Hozzáférés megtagadva",
-            "ACCESS_DENIED_DESCRIPTION": "Nem rendelkezik a tartalom eléréséhez szükséges engedélyekkel. Ha váratlanul ide irányították át, kérjük, forduljon a személyzethez segítségért.",
+            "ACCESS_DENIED_DESCRIPTION": "Nem rendelkezik a tartalom eléréséhez szükséges engedélyekkel. Ha váratlanul átirányították ide, kérje a személyzet segítségét.",
             "MISSING_PERMISSION_one": "Hiányzó engedély",
             "MISSING_PERMISSION_other": "Hiányzó engedélyek"
         },
@@ -411,7 +412,7 @@
         "REGISTERED_OWNER": "Bejegyzett tulajdonos",
         "NO_OWNER_RECORD": "Nincs nyilvántartva tulajdonos",
         "ACTIONS": {
-            "CANCEL": "Mégsem",
+            "CANCEL": "Mégse",
             "SAVE": "Megtakarítás",
             "SAVE_CHANGES": "Módosítások mentése",
             "LOAD_MORE": "További betöltése ({{remaining}} maradt)",
@@ -459,7 +460,7 @@
         "CALLSIGN_INPUT": {
             "NEXT_FREE": "Következő ingyenes hívójel",
             "NEXT_FREE_VALUE": "Használja a következő ingyeneset: {{callsign}}",
-            "FORMAT_HINT": "Formátum ehhez a ranghoz: {{format}} (# = számjegy)",
+            "FORMAT_HINT": "Formátum ehhez a ranghoz: {{format}} (# = szám)",
             "PLACEHOLDER": "például 1-ADAM-12",
             "UPDATING": "Hívójel frissítése…"
         },
@@ -528,13 +529,15 @@
                 "FINE_ASC": "Finom: Alacsony → Magas",
                 "JAIL_DESC": "Börtönidő: Magas → Alacsony",
                 "JAIL_ASC": "Börtönidő: Alacsony → Magas",
+                "REMAINING_ASC": "Megjelenés leghamarabb",
+                "REMAINING_DESC": "A legtöbb idő hátra van",
                 "AGE_DESC": "Kor: Először a legidősebb",
                 "AGE_ASC": "Kor: A legfiatalabb először",
                 "RECORDS_DESC": "Feljegyzések: A legtöbb első",
                 "RECORDS_ASC": "Feljegyzések: Legkorábban"
             },
             "FILTERS_FIELDS": {
-                "CREATED_BY": "Készítette",
+                "CREATED_BY": "Létrehozta",
                 "COLLECTED_BY": "által gyűjtött",
                 "AGE": "Kor",
                 "OWNS_VEHICLE": "Egy jármű",
@@ -678,10 +681,20 @@
             "MESSAGE_COPIED": "Üzenet másolva",
             "IMAGE_LINK_COPIED": "A kép linkje másolva",
             "LINK_COPIED": "Link másolva"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "Kattintson, majd nyomjon meg egy billentyűt",
+            "CHANGE_KEY": "Kattintson a módosításhoz",
+            "LISTENING": "Nyomj meg egy gombot…",
+            "LISTENING_HINT": "Esc vagy kattintson kívülre a visszavonáshoz",
+            "CUSTOM": "Szokás",
+            "TAKEN": "A(z) {{key}} domaint már használja {{name}}. Válasszon másik kulcsot, különben mindkettő fut."
         }
     },
     "ERRORS": {
         "REQUIRED": "Ezt a mezőt kötelező kitölteni",
+        "KEYBIND_UNSUPPORTED_KEY": "Ez a kulcs nem használható billentyűkombinációhoz",
+        "KEYBIND_LIMIT": "Legfeljebb {{max}} rádióbillentyűzet lehet",
         "NO_PERMISSION": "Nincs erre engedélye",
         "INVALID_DATA": "A beküldött adatok egy része érvénytelen",
         "INVALID_CHARGES": "Egy vagy több díj érvénytelen – ellenőrizze az összegeket a büntető törvénykönyvvel",
@@ -698,6 +711,7 @@
         "VEHICLE_TOO_FAR": "Menjen közelebb a járműhöz",
         "NO_VEHICLE_SELECTED": "Nincs kiválasztott jármű",
         "NO_SUSPECT_SELECTED": "Nincs gyanúsított kiválasztva",
+        "NO_SUBJECT_SELECTED": "Adjon hozzá legalább egy személyt vagy járművet",
         "NO_VEHICLE_NEARBY": "Nincs jármű a közelben",
         "TRUNK_SEARCH_UNAVAILABLE": "A törzskeresés még nem érhető el a készletbeállításhoz",
         "INVALID_MODEL": "Ez a modell nem elérhető",
@@ -712,7 +726,7 @@
         "EVIDENCE_ITEMS_CHANGED": "Egyes tételek már nincsenek a készletében. Ellenőrizze az elemeket, és próbálja újra.",
         "EVIDENCE_ITEMS_UNSUPPORTED": "Ennek a szervernek a készlete nem támogatja a bizonyítékok elrejtését",
         "EVIDENCE_TOO_MANY_ITEMS": "Túl sok különböző tárgy egyetlen bizonyítéktárhoz",
-        "EVIDENCE_STASH_FAILED": "Nem sikerült előállítani a bizonyítékot. A tételeit visszakaptuk.",
+        "EVIDENCE_STASH_FAILED": "Nem sikerült előállítani a bizonyítékot. A tárgyakat visszakaptuk.",
         "EVIDENCE_CREATE_IN_PROGRESS": "Ezt a bizonyítékot már naplózzák",
         "WEAPON_NOT_REGISTERED": "Ezt a fegyvert még nem regisztrálták az MDT-ben",
         "EVIDENCE_NOT_FOUND": "Ez a bizonyíték már nem létezik",
@@ -743,6 +757,7 @@
             "INVALID_VALUE": "Ez az érték nem érvényes ehhez a beállításhoz",
             "MIN": "Legalább {{min}} értéknek kell lennie",
             "MAX": "Legfeljebb {{max}} lehet",
+            "PRINTED_MARKERS": "1 és {{max}} között: a számozott jelölőmodellek csak {{max}}-ig terjednek",
             "NOT_AN_OPTION": "Ez nem tartozik a lehetőségek közé",
             "EMPTY": "Nem lehet üres",
             "TOO_LONG": "Legfeljebb {{max}} karakterből állhat",
@@ -762,14 +777,14 @@
             "DUPLICATE_NAME": "A(z) „{{name}}” elemet már használja egy másik bejegyzés",
             "NONE_ENABLED": "Legalább egy bejegyzésnek rajta kell maradnia",
             "NAME_IN_USE": "A(z) „{{name}}” elemet a mentett rekordok használják, ezért nem lehet törölni vagy átnevezni. Inkább kapcsolja ki.",
-            "CHANNEL_IN_USE": "Az automatikus csevegési bejegyzések továbbra is a(z) #{{channel}} címre érkeznek. Először válasszon másik csatornát számukra.",
+            "CHANNEL_IN_USE": "Az automatikus csevegési bejegyzések továbbra is a(z) #{{channel}} címre érkeznek. Először válasszon nekik másik csatornát.",
             "NOT_COLOR": "A(z) {{color}} szín nem érvényes",
             "NOT_COLOR_HEX": "Nem érvényes szín, pl. #3b82f6",
             "NOT_ITEM": "\"{{value}}\" nem érvényes elemnév. Használjon betűket, számokat, _, - és . csak.",
             "NOT_WEAPON": "\"{{value}}\" nem érvényes fegyvernév. Csak betűket, számokat és _-t használjon, pl. WEAPON_PISTOL.",
             "CALLSIGN_FORMAT_NUMBER": "Használjon egy # csoportot (legfeljebb 4) a számhoz, pl. \"1-ADAM-##\"",
             "CALLSIGN_FORMAT_CHARS": "A formátum olyan karaktereket használ, amelyeket a hívójelek nem tartalmazhatnak",
-            "NOT_MODEL": "A \"{{value}}\" nem érvényes modellnév. Csak betűket, számokat, _ és - jeleket használjon.",
+            "NOT_MODEL": "A „{{value}}” nem érvényes modellnév. Csak betűket, számokat, _ és - jeleket használjon.",
             "RANGE_ORDER": "{{name}}: egy tartomány legalacsonyabb értéke nem lehet magasabb, mint a legmagasabb.",
             "NO_MODELS": "Legalább egy kameramodellnek meg kell maradnia.",
             "MODEL_IN_USE": "A(z) „{{name}}” elemet az elhelyezett kamerák használják, ezért nem távolítható el. Először törölje a kamerákat.",
@@ -802,8 +817,10 @@
         "PROP_PLACER_INTERRUPTED": "A támaszték elhelyezése megszakadt",
         "VEHICLE_OCCUPIED": "Először mindenkit szálljon ki a járműből",
         "IMPOUND_DISABLED": "Az Interactions menüből történő lefoglalás ki van kapcsolva ezen a szerveren",
-        "VEHICLE_EMPTY": "Nincs, aki kirendelje",
+        "IMPOUND_NOT_IMPLEMENTED": "A lefoglalás nincs beállítva ezen a szerveren",
         "NOT_SUPPORTED": "Ez nem érhető el ezen a szerveren",
+        "PRISONER_OFFLINE": "A fogolynak ehhez online kell lennie",
+        "PRISON_ACTION_FAILED": "A börtön forgatókönyve erre nem volt képes",
         "NO_ACCESS": "Ezt a munkád nem használhatja",
         "UNKNOWN_FREQUENCY": "Ezen a frekvencián nincs csatorna",
         "MARKER_LIMIT": "Elérted a bizonyítékok határát",
@@ -823,15 +840,15 @@
         "CANNOT_MANAGE_SELF": "Ezt nem teheted meg magaddal",
         "GRADE_TOO_HIGH": "Csak a saját besorolása alatti tiszteket kezelheti",
         "AMOUNT_TOO_HIGH": "Ez az összeg meghaladja az egy tranzakcióra vonatkozó korlátot",
-        "INVALID_FREQUENCY": "Használjon 450.100-as frekvenciát",
+        "INVALID_FREQUENCY": "Ez a gyakoriság nem egyezik a megengedett formátummal",
         "UNIT_FULL": "Ennek az egységnek nincs szabad ülése",
-        "UNIT_NEEDS_LEAD": "Előbb tegyen valaki mást a vezetésre",
+        "UNIT_NEEDS_LEAD": "Tegyen először valaki mást a vezető helyre",
         "UNIT_OFF_DUTY": "Az egységben senki nem teljesít szolgálatot",
         "NOT_IN_VEHICLE": "Ugyanabban a járműben kell ülnie",
         "BADGE_TAKEN": "Ez a jelvényszám már foglalt",
         "CANNOT_REVIEW_SELF": "Nem tudod felülvizsgálni magad",
         "DUPLICATE_FREQUENCY": "Egy csatorna már használja ezt a frekvenciát",
-        "HOOK_CANCELLED": "Ezt a műveletet a szerver letiltotta",
+        "HOOK_CANCELLED": "Ezt a műveletet a szerver blokkolta",
         "INVALID_CAMERA_MODE": "Ezt a kamerát nem lehet így használni",
         "INVALID_CATEGORY": "Válasszon egy érvényes kategóriát",
         "INVALID_DATETIME": "Válasszon egy érvényes dátumot és időt",
@@ -840,7 +857,7 @@
         "NOT_RECRUITABLE": "Csak munkanélküli állampolgárokat lehet toborozni",
         "NOT_VIEWING_CAMERA": "Nem kamerát nézel",
         "POLL_CLOSED": "Ez a szavazás lezárult",
-        "TARGET_NOT_ELIGIBLE": "Ezt az embert nem lehet erre kiválasztani",
+        "TARGET_NOT_ELIGIBLE": "Ezt az embert erre nem lehet kiválasztani",
         "CITIZEN_ALREADY_REGISTERED": "Ez az állampolgár már regisztrálva van",
         "VEHICLE_ALREADY_REGISTERED": "Ezzel a rendszámmal rendelkező jármű már regisztrálva van"
     },
@@ -1058,7 +1075,6 @@
             "EDIT_DESCRIPTION": "Frissítse a csatorna nevét vagy gyakoriságát.",
             "NAME_PLACEHOLDER": "SWAT parancs",
             "FREQUENCY_FIELD": "Frekvencia (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498.510",
             "SUBMIT": "Csatorna létrehozása",
             "TOASTS": {
                 "CREATED": "\"{{name}}\" csatorna létrehozva",
@@ -1071,7 +1087,7 @@
                 "CODES": "Kódok"
             },
             "SEARCH_PLACEHOLDER": "Csatornák vagy frekvenciák keresése…",
-            "MANAGE_TOGGLE_TITLE": "Felfedheti a szerkesztési, törlési és átszervezési vezérlőket húzással",
+            "MANAGE_TOGGLE_TITLE": "Szerkesztési, törlési és húzással átrendezheti a vezérlőket",
             "MANAGE_HINT": "Kezelő mód – a fogantyúk húzásával átrendezheti a kategóriákat, vagy mozgathatja a csatornákat közöttük.",
             "EMPTY_TITLE": "Még nincsenek rádiócsatornák",
             "EMPTY_DESCRIPTION_CAN_CREATE": "A csatornák rendezésének megkezdéséhez hozzon létre egy kategóriát a fejlécből.",
@@ -1086,10 +1102,10 @@
             "DELETE_CONFIRM_DESCRIPTION": "Ezzel véglegesen eltávolítja a csatornát ({{freq}}). Ezt nem lehet visszavonni."
         },
         "CATEGORY_SECTION": {
-            "DRAG_TITLE": "Húzza a kategóriák átrendezéséhez",
+            "DRAG_TITLE": "Húzza a kategóriákat a kategóriák átrendezéséhez",
             "ADD_CHANNEL_TITLE": "Csatorna hozzáadása ehhez a kategóriába",
             "DELETE": "Kategória törlése",
-            "DROP_HERE": "Dobj le, hogy ide költözz",
+            "DROP_HERE": "Dobd le, hogy ide költözz",
             "NO_CHANNELS": "Még nincsenek csatornák",
             "DELETE_CONFIRM_DESCRIPTION": "Ezzel eltávolítja a kategóriát és az összes csatornáját. Ezt nem lehet visszavonni."
         },
@@ -1098,19 +1114,24 @@
             "PTT": "PTT"
         },
         "KEYBINDS_DIALOG": {
-            "TITLE": "Rádióbillentyűzetek",
-            "DESCRIPTION": "Kösse össze a billentyűzet billentyűjét, hogy azonnal továbbítsa egy adott csatornán.",
-            "EMPTY": "Még nincs beállítva billentyűkombináció.",
-            "ADD_NEW": "Új billentyűkombináció hozzáadása",
-            "ADD_DESCRIPTION": "Válasszon egy nevet, nyomja meg a gombot a rögzítéshez, majd válassza ki a célcsatornát.",
+            "TITLE": "Rádióbillentyűk",
+            "DESCRIPTION": "Hangolja rádióját egy csatornára egyetlen gombbal, még zárt MDT mellett is.",
+            "OFF": "A rádióbillentyűzetek ki vannak kapcsolva ezen a szerveren.",
+            "EMPTY": "Még nincs rádióbillentyűzet.",
+            "ADD": "Billentyűzet hozzáadása",
+            "ADD_TITLE": "Új rádióbillentyűzet",
+            "EDIT_TITLE": "Rádióbillentyűzet szerkesztése",
+            "FORM_DESCRIPTION": "Nevezze el, válasszon egy csatornát, és nyomja meg azt a gombot, amely rá hangolja a rádiót.",
             "NAME_PLACEHOLDER": "Fő csatorna",
-            "KEY_LABEL": "Kulcsfontosságú",
-            "LISTENING": "Hallgatás…",
-            "CLICK_TO_CAPTURE": "Kattintson a kulcs rögzítéséhez",
-            "CAPTURING_HINT": "Nyomja meg bármelyik billentyűt — Escape a törléshez.",
-            "CLICK_HINT": "Kattintson a fenti mezőre, és nyomja meg bármelyik billentyűt.",
             "CHANNEL_PLACEHOLDER": "Válasszon egy csatornát",
-            "SAVE": "Keybind mentése"
+            "KEY_LABEL": "Kulcsfontosságú",
+            "KEY_HINT": "Csak egy gombbal. Később is módosíthatja a Beállítások > Kulcskötések > FiveM menüpontban.",
+            "CHANNEL_REMOVED": "Ez a csatorna már nem létezik",
+            "SETTINGS_HINT": "A billentyűk a Beállítások > Kulcskötések > FiveM menüpontban is módosíthatók. Az eltávolított vagy megváltoztatott kulcs azonnal leáll, de ott marad, amíg újra nem csatlakozik.",
+            "DELETE": "Billentyűzet törlése",
+            "SAVE": "Billentyűzet mentése",
+            "TUNED": "Rádió hangolva a következőre: {{name}}",
+            "ROW_NAME": "Rádió: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "Új rádiókód",
@@ -1279,7 +1300,7 @@
             "ERRORS": {
                 "NOT_ON_DUTY": "Szolgálatban kell lenned",
                 "RATE_LIMITED": "Lassítson – próbálja újra egy pillanat múlva",
-                "NOT_FOUND": "Ezt a hívást már megoldották",
+                "NOT_FOUND": "Ez a hívás már megoldódott",
                 "UNIT_OFF_DUTY": "Az egységben senki nem teljesít szolgálatot"
             }
         },
@@ -1297,7 +1318,7 @@
                 "NO_CALLS_TITLE": "Nincsenek legutóbbi hívások",
                 "NOT_ON_ANY_TITLE": "Nem veszel részt hívásban",
                 "NO_UNASSIGNED_TITLE": "Nincsenek hozzá nem rendelt hívások",
-                "NO_CALLS_DESCRIPTION": "A bejövő diszpécserhívások itt jelennek meg, ahogy beérkeznek.",
+                "NO_CALLS_DESCRIPTION": "Itt jelennek meg a bejövő hívások, ahogy beérkeznek.",
                 "NOT_ON_ANY_DESCRIPTION": "Válaszoljon egy hívásra, hogy itt megtekinthesse.",
                 "NO_UNASSIGNED_DESCRIPTION": "Minden jelenleg látható egységhez tartozik egy egység."
             },
@@ -1723,14 +1744,14 @@
             "EMPTY": "Még nincsenek HR-feljegyzések.",
             "NOTHING_ACTIVE": "Semmihez sincs szükség cselekvésre. Minden megjegyzés megoldva.",
             "NO_MATCHES": "Egyetlen jegyzet sem felel meg ennek a szűrőnek.",
-            "FILTER_ACTIVE": "Cselekvés szükséges",
+            "FILTER_ACTIVE": "Cselekvésre van szükség",
             "FILTER_ALL": "Minden",
             "BY_TYPE": "Típus szerint",
             "FOLLOW_UP_COUNT_one": "{{formatted}} nyomon követés",
             "FOLLOW_UP_COUNT_other": "{{formatted}} nyomon követés",
             "SEVERITY_LABEL": "Súlyosság",
             "BODY_LABEL": "Jegyzet",
-            "BODY_PLACEHOLDER": "Mi történt, és milyen összefüggéseket kell tudnia a leendő menedzsernek…",
+            "BODY_PLACEHOLDER": "Mi történt, és milyen összefüggéseket kell tudnia egy leendő menedzsernek…",
             "SUBMIT_NOTE": "Megjegyzés hozzáadása",
             "DELETE_CONFIRM_TITLE": "Törli ezt a HR-jegyzetet?",
             "DELETE_CONFIRM_DESCRIPTION": "A feljegyzés és a nyomon követései eltávolítva {{name}} fájljából. Ezt nem lehet visszavonni.",
@@ -2091,7 +2112,7 @@
                 "DASHBOARD_VIEW": "Tekintse meg az irányítópult áttekintését és a statisztikákat.",
                 "INCIDENTS_VIEW": "Nyissa meg az eseménylistát, és olvassa el az eseményjelentéseket.",
                 "INCIDENTS_CREATE": "Új eseményjelentések benyújtása.",
-                "INCIDENTS_UPDATE": "Szerkessze a meglévő eseményjelentéseket, díjakat és érintett feleket.",
+                "INCIDENTS_UPDATE": "Szerkessze a meglévő eseményjelentéseket, díjakat és az érintett feleket.",
                 "INCIDENTS_DELETE": "Az eseményjelentések végleges törlése.",
                 "EVIDENCES_VIEW": "Böngésszen a bizonyítékok között és azok felügyeleti láncában.",
                 "EVIDENCES_CREATE": "Regisztráljon új bizonyítékokat.",
@@ -2152,6 +2173,9 @@
                 "PENALCODE_VIEW": "Olvasd el a büntető törvénykönyvet.",
                 "PENALCODE_CREATE": "Büntetőtörvény-bejegyzések hozzáadása.",
                 "PENALCODE_UPDATE": "Büntető törvénykönyv bejegyzéseinek szerkesztése.",
+                "PRISONERS_VIEW": "Nézze meg, ki van börtönben, és meddig van még hátra.",
+                "PRISONERS_RELEASE": "Engedd szabadon a foglyokat, mielőtt büntetésük lejár.",
+                "PRISONERS_EDIT": "Módosítsa azt, mennyi ideig kell még szolgálatot teljesítenie egy fogolynak.",
                 "PENALCODE_DELETE": "Törölje a büntető törvénykönyv bejegyzéseit.",
                 "OPERATIONPLANS_VIEW": "Olvassa el a műveleti terveket.",
                 "OPERATIONPLANS_CREATE": "Új működési tervek készítése.",
@@ -2202,7 +2226,7 @@
             "DUTY_TIME_HM": "{{hours}}ó {{minutes}}p",
             "DUTY_TIME_M": "{{minutes}} m",
             "CALLSIGN_DIALOG_TITLE": "Hívójel módosítása",
-            "CALLSIGN_DIALOG_DESCRIPTION": "Frissítse rádió hívójelét.",
+            "CALLSIGN_DIALOG_DESCRIPTION": "Frissítse a rádió hívójelét.",
             "CALLSIGN_PLACEHOLDER": "például 1-ADAM-12",
             "TOASTS": {
                 "DUTY_SUCCESS": "A kötelesség átkapcsolva",
@@ -2301,7 +2325,7 @@
             "DUTY_TIME_HM": "{{hours}}ó {{minutes}}p",
             "DUTY_TIME_M": "{{minutes}} m",
             "CALLSIGN_DIALOG_TITLE": "Hívójel módosítása",
-            "CALLSIGN_DIALOG_DESCRIPTION": "Frissítse rádió hívójelét.",
+            "CALLSIGN_DIALOG_DESCRIPTION": "Frissítse a rádió hívójelét.",
             "TOASTS": {
                 "DUTY_SUCCESS": "A kötelesség átkapcsolva",
                 "DUTY_LOADING": "Váltó kötelesség…",
@@ -2424,12 +2448,12 @@
                 "DUTY": {
                     "TITLE": "Vám",
                     "REQUIRE_DUTY": "A tiszteknek szolgálatban kell lenniük",
-                    "REQUIRE_DUTY_HINT": "Be: a tiszteknek be kell jelentkezniük (szolgálatba kell menniük), mielőtt kinyithatnák az MDT-t és korlátozott műveleteket hajthatnak végre. Ki: elég, ha van egy engedélyezőlistán szereplő állás."
+                    "REQUIRE_DUTY_HINT": "Be: a tiszteknek be kell jelentkezniük (szolgálatba kell menniük), mielőtt kinyithatnák az MDT-t és korlátozott műveleteket hajthatnak végre. Ki: elég egy engedélyezőlistán szereplő állás."
                 },
                 "OPENING": {
                     "TITLE": "Az MDT megnyitása",
                     "ITEM": "Nyissa meg az MDT elemmel",
-                    "ITEM_HINT": "A készletből származó táblagépelem használatával megnyílik az MDT. A cikknek már léteznie kell a készleterőforrásban, az MDT nem hozza létre.",
+                    "ITEM_HINT": "A készletből származó táblagép-elem használatával megnyílik az MDT. A cikknek már léteznie kell a készleterőforrásban, az MDT nem hozza létre.",
                     "COMMAND": "Nyissa meg egy chat paranccsal",
                     "COMMAND_HINT": "Ha beírja a parancsot a chat-be (alapértelmezés szerint /mdt, a config.lua-ban van beállítva), megnyílik az MDT.",
                     "DESCRIPTION": "Hogyan nyithatják ki a tisztek a táblagépet. Tartsa legalább az egyiket bekapcsolva. A változások azonnal érvénybe lépnek.",
@@ -2454,7 +2478,7 @@
                     "BYPASS": "Munkák, amelyek minden rekordot látnak",
                     "BYPASS_HINT": "Ezek a munkák minden rekordot látnak és kezelnek, függetlenül annak láthatóságától. Jó a főnököknek, a belügyeknek vagy a bíróságnak.",
                     "BYPASS_PLACEHOLDER": "Munka hozzáadása",
-                    "DESCRIPTION": "Több osztállyal (rendőrség, seriff, ranger...) eldöntheti, hogy ki melyik rekordot lássa. Kikapcsolva minden részleg mindent lát.",
+                    "DESCRIPTION": "Több osztállyal (rendőrség, seriff, őrök...) eldöntheti, hogy ki melyik rekordot lássa. Kikapcsolva minden részleg mindent lát.",
                     "EXAMPLE": {
                         "TITLE": "Aki rekordot lát",
                         "HINT": "A három láthatóság, és hogy ki nyithat mindegyikhez egy rekordot. A kiemelt az, amit az új rekordok kapnak.",
@@ -2494,7 +2518,7 @@
                     "DESCRIPTION": "Jutalomként adja meg a díjat küldött tisztnek a bírság egy részét. A többi az osztályra kerül. Csak közvetlenül a banktól felvett bírságokra; a számlázási szkriptek saját jutalékot fizetnek.",
                     "EXAMPLE": {
                         "TITLE": "Próbáljon ki egy bírságot",
-                        "HINT": "Írjon be egy bírságot, hogy megtudja, hogyan oszlik meg az aktuális beállításokkal.",
+                        "HINT": "Írjon be egy bírságot, hogy megnézze, hogyan oszlik meg az aktuális beállításokkal.",
                         "FINE": "Finom",
                         "OFFICER": "A tiszt megkapja ({{percent}}%)",
                         "SOCIETY": "Osztály kap",
@@ -2502,7 +2526,7 @@
                     }
                 },
                 "FUNDS_PAYMENT_TYPE": "Befizetések és kifizetések használata",
-                "FUNDS_PAYMENT_TYPE_HINT": "Honnan származik vagy hová megy a tiszt saját pénze, amikor befizet az osztály alapjaiba, vagy kiveszi onnan a Menedzsment oldalon.",
+                "FUNDS_PAYMENT_TYPE_HINT": "Honnan származik vagy hová megy a tiszt saját pénze, amikor befizet az osztály alapjaiba vagy kiveszi onnan a Kezelés oldalon.",
                 "BILLING": {
                     "TITLE": "Számlázás",
                     "ALLOW_DEBT": "Negatív egyenleg engedélyezése",
@@ -2527,7 +2551,7 @@
                     "HIDDEN_JOBS_HINT": "A munkaügyi tisztek soha nem látják a polgárokat, például a bandákat. A tagok inkább az alábbi munkát jelenítik meg, és az Állampolgárok szűrő nem találja meg őket ez alapján.",
                     "HIDDEN_JOBS_PLACEHOLDER": "Válasszon állást",
                     "HIDDEN_JOBS_SHOWN_AS": "Rejtett munkák megjelenítése mint",
-                    "HIDDEN_JOBS_SHOWN_AS_HINT": "Úgy tűnik, hogy egy rejtett munkakörben dolgozóknak általában a kereted munkanélküli állása van."
+                    "HIDDEN_JOBS_SHOWN_AS_HINT": "Úgy tűnik, hogy egy rejtett munkakörben dolgozó tagjai általában a kereted munkanélküli állása."
                 },
                 "LIMITS": {
                     "TITLE": "Korlátok",
@@ -2708,7 +2732,7 @@
                     "TITLE": "Licencpontok",
                     "ENABLED": "Használjon licencpontokat",
                     "ENABLED_HINT": "Ki: a pontokat figyelmen kívül hagyja és mindenhol elrejti az MDT-ben.",
-                    "WINDOW": "Számoljon pontokat az utolsótól",
+                    "WINDOW": "Számolja pontokat az utolsótól",
                     "WINDOW_HINT": "Ebben az időszakban csak a díjakból származó pontok számítanak. A régebbi pontok maguktól lejárnak.",
                     "THRESHOLD": "Felfüggesztés időpontban",
                     "THRESHOLD_HINT": "A licencet felfüggesztik, ha a pontjai elérik ezt az összeget.",
@@ -2721,7 +2745,7 @@
                         "LENIENT": "Elnéző",
                         "LENIENT_HINT": "18 pont 6 hónapon belül",
                         "OFF": "Nincs pont",
-                        "OFF_HINT": "Az engedélyeket soha nem függesztik fel pontok"
+                        "OFF_HINT": "A licenceket soha nem függesztik fel pontok"
                     },
                     "EXAMPLE": {
                         "TITLE": "Példa illesztőprogram",
@@ -2827,6 +2851,12 @@
                     "DESCRIPTION": "Ami a műszerfalon lévő csengőben landol. A személyesek az offline tisztekre várnak; az osztályszintűek akkoriban csak online érik el a tiszteket.",
                     "RETENTION": "Tartsa meg az értesítéseket",
                     "RETENTION_HINT": "Az ennél régebbi értesítések azonnal törlődnek, amikor leengedi. 0 örökre megtartja őket."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Rádióanimáció",
+                    "DESCRIPTION": "Mit csinálnak a tisztek karakterei, miközben a rádióban beszélnek. Minden tiszt kiválaszthatja a sajátját a Konfiguráció oldalon; ezt mindenki más kapja.",
+                    "DEFAULT": "Alapértelmezett animáció",
+                    "DEFAULT_HINT": "A pma-voice esetén a saját rádióanimációja ki van kapcsolva, hacsak nem a Nincs. Egy másik hangerőforrás esetén kapcsolja ki az animációt a saját konfigurációjában."
                 }
             },
             "DISPATCH": {
@@ -2971,7 +3001,7 @@
                 },
                 "ALERTS": {
                     "TITLE": "Automatikus riasztások",
-                    "DESCRIPTION": "Figyelmezteti a játék emelését, ha egy játékos bűncselekményt követ el. Térképjelző: a hívásjelző ikonja és színe. Lehűlés: mennyi idő múlva tudja újra kiváltani ugyanaz a játékos a riasztást. Mentesült az ügyeletes: a szolgálatot teljesítő tisztek soha nem váltják ki (pl. gyorshajtás üldözés közben). Osztályok: ki kapja a riasztást; minden részleget, ha egyiket sem választották ki.",
+                    "DESCRIPTION": "Figyelmezteti a játék emelését, ha egy játékos bűncselekményt követ el. Térképjelző: a hívásjelző ikonja és színe. Lehűlés: mennyi idő után tudja ugyanaz a játékos újra kiváltani a riasztást. Mentesült az ügyeletes: a szolgálatot teljesítő tisztek soha nem váltják ki (pl. gyorshajtás üldözés közben). Osztályok: ki kapja a riasztást; minden részleget, amikor egyiket sem választották ki.",
                     "ENABLED": "On",
                     "BLIP": "Térkép blip",
                     "COOLDOWN": "Lehűlés",
@@ -3001,14 +3031,41 @@
                     },
                     "AUTO_LOCK": "Rögzítse a tányért egy gyufára",
                     "AUTO_LOCK_HINT": "A radar lezárja az egyező táblát, így a tiszt nem veszíti el.",
-                    "DESCRIPTION": "A radarerőforrással (wk_wars2x) minden, a radar által leolvasott táblát ellenőriznek a BOLO-k és a warrantok alapján, és a tiszt figyelmeztetést kap egy meccsre."
+                    "DESCRIPTION": "Egy radarerőforrással (wk_wars2x) minden, a radar által leolvasott tábla ellenőrzi a BOLO-kat és a warrantokat, és a tiszt figyelmeztetést kap egy meccsre."
+                },
+                "SCENE": {
+                    "TITLE": "Krimi jelenetek",
+                    "DESCRIPTION": "Hogyan helyezik el a tisztek a helyszíni szalagot és a bizonyítékjelzőket: az interakciók menü Helyszín oldalán, egy leltári elem vagy bármelyik segítségével. A tárgyak nincsenek elhasználva.",
+                    "METHODS": {
+                        "MENU": "Jelenet oldal",
+                        "ITEM": "Az elem használata",
+                        "BOTH": "Jelenet oldal vagy elem"
+                    },
+                    "TAPE_METHOD": "Hogyan helyezik el a tisztek a szalagot",
+                    "TAPE_METHOD_HINT": "A Jelenet oldalról a szalagelem használatával vagy bármelyikkel.",
+                    "TAPE_ITEM": "Szalagos elem",
+                    "TAPE_ITEM_HINT": "A leltári tételeket a tisztek használják a tetthelyről készült szalag elhelyezésére.",
+                    "MARKER_METHOD": "Hogyan helyezik el a tisztek a bizonyítékjelzőket",
+                    "MARKER_METHOD_HINT": "A Jelenet oldalról a jelölőelem vagy bármelyik használatával.",
+                    "MARKER_ITEM": "Bizonyítékjelző elem",
+                    "MARKER_ITEM_HINT": "A leltári cikkek tisztjei bizonyítékjelzőket helyeznek el.",
+                    "RADIUS": "Jelenet mérete",
+                    "RADIUS_HINT": "Szalagok, jelzők és kellékek közel helyezték el a jelenethez, amelyhez csatlakozik. Távolabb, új jelenetet kezdenek.",
+                    "MAX_MARKERS_SCENE": "Bizonyítékjelzők jelenetenként",
+                    "MAX_MARKERS_SCENE_HINT": "A jelölők minden jelenetben 1-től vannak számozva. 0 = korlátlan, csak akkor, ha a jelölők nem a számozott modelleket használják.",
+                    "MAX_MARKERS_OFFICER": "Bizonyítékjelzők tisztenként",
+                    "MAX_MARKERS_OFFICER_HINT": "Egy tisztnek hány jelzője lehet egyszerre, minden jeleneten. 0 = korlátlan.",
+                    "TAPE_LENGTH": "A leghosszabb szalagsor",
+                    "TAPE_LENGTH_HINT": "A legtávolabb egy szalagvonal két vége köthető meg.",
+                    "MAX_TAPE_OFFICER": "Szalagsorok tisztenként",
+                    "MAX_TAPE_OFFICER_HINT": "Egy tisztnek hány szalagsora lehet egyszerre. 0 = korlátlan."
                 }
             },
             "CAMERAS": {
                 "DAMAGE": {
                     "TITLE": "Kár",
                     "DESTROYABLE": "A kamerák megsemmisülhetnek",
-                    "DESTROYABLE_HINT": "Ki: a fényképezőgéppel forgatva semmi sem történik.",
+                    "DESTROYABLE_HINT": "Ki: a fényképezés nem vezet semmit.",
                     "EFFECTS": "Szikra és füst",
                     "EFFECTS_HINT": "A törött kamerák szikráznak és füstölnek.",
                     "LINE_OF_SIGHT": "A lövésznek látnia kell a kamerát",
@@ -3043,11 +3100,11 @@
                 },
                 "MODELS": {
                     "TITLE": "Modellek",
-                    "DESCRIPTION": "Minden CCTV kameraként elhelyezhető kellék, és a feedje mire képes. Hangoljon be egy modellt a játékban, hogy minden változást lásson a kelléken, ahogy azt elkészíti.",
+                    "DESCRIPTION": "Minden kellék, amely CCTV kameraként elhelyezhető, és mire képes a feedje. Hangoljon be egy modellt a játékban, hogy minden változást lásson a kelléken, ahogy azt elkészíti.",
                     "LIST": "Fényképezőgép modellek",
-                    "LIST_HINT": "Adjon hozzá egyéni kellékeket modellnevük alapján. Nem távolítható el egy olyan modell, amelyet a kamerák még mindig használnak.",
+                    "LIST_HINT": "Adjon hozzá egyéni kellékeket modellnevük alapján. Nem távolítható el olyan modell, amelyet a kamerák még mindig használnak.",
                     "TUNE": "Hangolódj bele a játékba",
-                    "TUNE_HINT": "Ön elé helyezi ezt a kelléket, és minden változtatásnál megjeleníti a hírfolyamát, mielőtt mentésre kerül.",
+                    "TUNE_HINT": "Ön elé helyezi ezt a kelléket, és minden változtatásnál megjeleníti a hírfolyamát, mielőtt elmentené.",
                     "EDIT_DESCRIPTION": "Mire képes egy feed ebből a kellékből. Az elhelyezett kamerák a változásokat észlelik, amikor legközelebb valaki megnyitja a hírcsatornáját.",
                     "ADD_PLACEHOLDER": "Modellnév, pl. prop_cctv_cam_01a",
                     "COUNT_one": "{{value}} modell",
@@ -3162,7 +3219,8 @@
                     "BOTH": "Tétel vagy parancs",
                     "WAYS": {
                         "ITEM": "Leltári tétel",
-                        "COMMAND": "Chat parancs"
+                        "COMMAND": "Chat parancs",
+                        "MENU": "Jelenet oldal"
                     }
                 },
                 "REPAIR": {
@@ -3183,7 +3241,13 @@
                     "SIGNAL": "A jelerősség megváltozik",
                     "SIGNAL_HINT": "Kozmetikai: a kamerarácson lévő jelsávok idővel kissé elmozdulnak. Ki: mozdulatlanul maradnak.",
                     "AUDIO_RADIUS": "Hallástartomány",
-                    "AUDIO_RADIUS_HINT": "A hírfolyamot figyelő tisztek hallják, hogy a játékosok ilyen közelről beszélnek a kamerához."
+                    "AUDIO_RADIUS_HINT": "A hírfolyamot figyelő tisztek hallják, hogy a játékosok ilyen közelről beszélnek a kamerához.",
+                    "ON_FEED_LOST": "Amikor lemegy a kamera",
+                    "ON_FEED_LOST_HINT": "Mi történik azokkal a tisztekkel, akik egy CCTV-kamerát néznek, amely megsemmisül, feltörik vagy letiltásra kerül a kivágások után?",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Váltson a következő kamerára",
+                        "CLOSE": "Zárja be a hírcsatornát"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Automatikus felismerés",
@@ -3284,7 +3348,7 @@
                 "ACCESS": "Ki nyithatja meg az MDT-t, hogyan nyitja meg, és melyik osztály mely rekordokat látja.",
                 "PERMISSIONS": "Az MDT-n belül az egyes munkák egyes rangjainak elvégzése.",
                 "GENERAL": "Nyelv, dátum és számformátumok, tiszti státuszok és nemzetiségi lista.",
-                "RECORDS": "Mit látnak a tisztek az állampolgári és járműnyilvántartásokon, a jármű módosítási kategóriáit, mennyi rakományt egyszerre, és mennyi ideig vezetik a naplókat.",
+                "RECORDS": "Mit látnak a rendőrök az állampolgári és járműnyilvántartásokon, a jármű módosítási kategóriáit, mennyi rakományt egyszerre, és mennyi ideig vezetik a naplókat.",
                 "JUSTICE": "A legmagasabb büntetés, amit egy díj kiszabhat, és a jogosítvány-pontrendszer.",
                 "EVIDENCE": "A tisztek a bizonyítéktípusokat és a laboratóriumi elemzéseket választják, és ahol a naplózott elemeket tárolják.",
                 "SOCIETY": "Hová kerül a finompénz, a tiszti részesedés abból, és a számlák kezelésének módja.",
@@ -3324,7 +3388,7 @@
             "CONFIRM": {
                 "REQUIRE_DUTY_OFF": {
                     "TITLE": "Hagyják, hogy a tisztek szolgálaton kívül használják az MDT-t?",
-                    "DESCRIPTION": "Bárki, aki az engedélyezési listán szerepel, meg tudja nyitni az MDT-t, és korlátozott műveleteket végezhet anélkül, hogy be kellene lépnie. A legtöbb kiszolgáló ezt bekapcsolva tartja."
+                    "DESCRIPTION": "Bárki, akinek engedélyezőlistán van munkája, meg tudja nyitni az MDT-t, és korlátozott műveleteket végezhet belépés nélkül. A legtöbb kiszolgáló ezt bekapcsolva tartja."
                 },
                 "NO_WAY_TO_OPEN": {
                     "TITLE": "Kikapcsolja az MDT utolsó megnyitásának módját?",
@@ -3336,7 +3400,7 @@
                 },
                 "AUTO_POPULATE": {
                     "TITLE": "Megváltoztatja, hogy ki jelenik meg az MDT-ben?",
-                    "DESCRIPTION": "Ezzel válthat aközött, hogy minden játékost és járművet listázzon az adatbázisában, illetve csak azokat, amelyeket a tisztek regisztráltak. A feljegyzések a készítésükkor használt forrásból származó emberekre és járművekre mutatnak, ezért válasszon egyet, és őrizze meg."
+                    "DESCRIPTION": "Ezzel válthat aközött, hogy minden játékost és járművet listázzon az adatbázisában, illetve csak azokat, amelyeket a tisztek regisztráltak. A feljegyzések azokra az emberekre és járművekre mutatnak, amelyek a készítésükkor használatban voltak, ezért válasszon egyet, és őrizze meg."
                 },
                 "LOGS_RETENTION": {
                     "TITLE": "Törli a régebbi tevékenységnaplókat?",
@@ -3472,14 +3536,14 @@
                         "SUBTITLE": "Oldal alcíme",
                         "SUBTITLE_HINT": "Kis szöveg a címsor alatt.",
                         "PERMISSION": "Ki láthatja",
-                        "PERMISSION_HINT": "Válasszon ki egy engedélyt, vagy írja be a sajátját (pl. wiki.view), és adja meg az engedélyek között. Üres: mindenki, aki meg tudja nyitni az MDT-t."
+                        "PERMISSION_HINT": "Válasszon egy engedélyt, vagy írja be a sajátját (pl. wiki.view), és adja meg az engedélyek között. Üres: mindenki, aki meg tudja nyitni az MDT-t."
                     },
                     "PREVIEW_TITLE": "Az oldalsávban",
                     "PREVIEW_HINT": "Hogyan jelennek meg az oldalak azon tisztek számára, akik láthatják őket."
                 },
                 "KEYBINDS": {
                     "TITLE": "Alapértelmezett billentyűkombinációk",
-                    "DESCRIPTION": "A kulcs minden művelet kezdődik. A FiveM elmenti a játékos kulcsait az első csatlakozáskor, így a változás eléri az új játékosokat és mindenkit, aki még nem rendelkezik ezzel a kulcstal. Továbbra is mindenki módosíthatja saját kulcsait a Beállítások > Kulcskötések > FiveM menüpontban.",
+                    "DESCRIPTION": "A kulcs minden művelet kezdődik. A FiveM elmenti a játékos kulcsait az első csatlakozáskor, így a változás eléri az új játékosokat és mindenkit, aki még nem rendelkezik ezzel a kulcstal. Továbbra is mindenki módosíthatja saját kulcsait az MDT konfigurációs oldalán vagy a Beállítások > Kulcskötések > FiveM menüpontban.",
                     "OPEN_MDT": "Nyissa meg az MDT-t",
                     "OPEN_MDT_HINT": "Kikapcsolt állapotban a tisztek a paranccsal vagy a tétellel kinyitják.",
                     "INTERACTIONS": "Interakciók menü",
@@ -3491,7 +3555,10 @@
                     "PANIC_BUTTON": "Pánik gomb",
                     "PANIC_BUTTON_HINT": "Pánikjelzést küld a tiszt tartózkodási helyével.",
                     "REQUEST_BACKUP": "Biztonsági mentés kérése",
-                    "REQUEST_BACKUP_HINT": "Biztonsági mentést kér a közeli egységektől."
+                    "REQUEST_BACKUP_HINT": "Biztonsági mentést kér a közeli egységektől.",
+                    "CLASH": "A(z) {{names}} alapértelmezett kulcsa is. A FiveM minden műveletet végrehajt egy kulcson, így a {{key}} mindkettőt megtenné.",
+                    "MAX_RADIO": "Rádióbillentyűzetek tisztenként",
+                    "MAX_RADIO_HINT": "Egy tiszt hány rádióbillentyűzetet adhat hozzá a Rádió oldalon. 0 kikapcsolja őket. Azok a tisztek, akiknek már több van, csak az elsőket tartják meg."
                 }
             },
             "IN_GAME": {
@@ -3501,7 +3568,7 @@
                     "UP_DOWN": "Le / fel",
                     "SPEED": "Gyors / lassú",
                     "SAVE": "Megtakarítás",
-                    "CANCEL": "Mégsem"
+                    "CANCEL": "Mégse"
                 },
                 "DISTANCE": {
                     "BUTTON": "Megjelenítés a játékban",
@@ -3613,9 +3680,9 @@
             "ITEMS": {
                 "BROWSE": "Böngésszen az elemek között",
                 "CHANGE": "Változás",
-                "BROWSE_TITLE": "Elemek",
-                "BROWSE_DESCRIPTION": "A készlet minden elemét ismeri. Kattintson valamelyikre a hozzáadáshoz vagy eltávolításhoz.",
-                "BROWSE_DESCRIPTION_SINGLE": "A készlet minden elemét ismeri. Kattintson a használni kívántra.",
+                "BROWSE_TITLE": "Tételek",
+                "BROWSE_DESCRIPTION": "Minden elemet ismer a készlete. Kattintson valamelyikre a hozzáadáshoz vagy eltávolításhoz.",
+                "BROWSE_DESCRIPTION_SINGLE": "Minden elemet ismer a készlete. Kattintson a használni kívántra.",
                 "SEARCH": "Keresés név vagy címke alapján",
                 "UNKNOWN": "A készletében nincs ilyen nevű cikk, így ez addig nem fog működni, amíg hozzá nem adja."
             },
@@ -3627,11 +3694,12 @@
                 "PULSE": "Pulzusgyűrű",
                 "PULSE_HINT": "Gyűrű a marker alatt (ha az impulzusgyűrű be van kapcsolva).",
                 "ENTITY": "Kövesd a tisztet",
-                "ENTITY_HINT": "Hívásokra a tiszt emel: a jelző velük együtt mozog.",
+                "ENTITY_HINT": "A tiszt emelése esetén a jelző velük együtt mozog.",
                 "RADIUS": "Keresési terület",
                 "RADIUS_HINT": "Egy kör a hívás körül a gombostű helyett.",
                 "SUMMARY": "ikon {{sprite}}, szín: {{colour}}",
-                "SAME_AS_OTHERS": "Ugyanolyan, mint a többi"
+                "SAME_AS_OTHERS": "Ugyanolyan, mint a többi",
+                "COLOUR_BY_PRIORITY": "A szín követi a hívás prioritását. Ha itt szeretne kiválasztani egyet, kapcsolja ki a „Szín prioritás szerint” funkciót a Térképjelzőben."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Frissítés",
@@ -3728,7 +3796,7 @@
                     "TITLE": "Egységek hívás közben",
                     "DESCRIPTION": "Hogyan reagálnak az egységek a hívásokra, és milyen állapotokat állít be számukra az MDT.",
                     "WHOLE_UNIT": "Egységként válaszoljon",
-                    "WHOLE_UNIT_HINT": "Be: egy hívásra való reagálás (vagy hozzárendelés) az egység minden ügyeletes tagját bekapcsolja.",
+                    "WHOLE_UNIT_HINT": "Be: a hívásra való reagálás (vagy hozzárendelés) az egység minden ügyeletes tagját bekapcsolja.",
                     "RESPONDING": "Állapot válasz közben",
                     "RESPONDING_HINT": "Állítsa be, amikor egy egység hívásba kerül.",
                     "ARRIVED": "Állapot érkezéskor",
@@ -3752,7 +3820,7 @@
                 },
                 "ZONES": {
                     "TITLE": "Zónák",
-                    "DESCRIPTION": "Beats egységek választhatnak. Opcionális: egy egységnek sem kell egyben lennie, és a tábla megmutatja, hogy melyik zónában hiányzik az egység.",
+                    "DESCRIPTION": "Beats egységek választhatnak. Opcionális: egy egységnek sem kell egyben lennie, és a tábla megmutatja, hogy mely zónákban hiányzik az egység.",
                     "ENABLED": "Használjon zónákat",
                     "ENABLED_HINT": "Ki: a zónák mindenhol el vannak rejtve.",
                     "LIST": "Zónák",
@@ -3832,6 +3900,13 @@
             "RECORDING": {
                 "MAX_DURATION": "Elérte a leghosszabb felvételt, a klip mentése",
                 "MAX_SIZE": "Elérte a legnagyobb felvételi méretet, a klip elmentve"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "A kamera megsemmisült",
+                "HACKED": "Feed elfogva",
+                "OFFLINE": "Kamera offline",
+                "BODYCAM": "Bodycam offline",
+                "DASHCAM": "Dashcam offline"
             }
         },
         "GIZMO": {
@@ -4025,9 +4100,6 @@
                 "ACTIVE_WARRANTS": "Aktív warrantok",
                 "STOLEN": "Lopott",
                 "OPEN_RECORD": "Rekord megnyitása",
-                "OCCUPANTS_OUT": "Rendeld ki a lakókat",
-                "OCCUPANTS_ORDERED_one": "{{count}} lakost rendeltek ki",
-                "OCCUPANTS_ORDERED_other": "{{count}} utast kirendelt",
                 "SEARCH_TRUNK": "Keresés törzs",
                 "IMPOUND": "Lefoglal",
                 "IMPOUNDED": "{{plate}} lefoglalva"
@@ -4088,7 +4160,7 @@
                     "CONCRETE": "Beton akadály",
                     "BARRICADE": "Barikád",
                     "FLARE": "Útfáklya",
-                    "WORKLIGHT": "Munka lámpa"
+                    "WORKLIGHT": "Munkalámpa"
                 }
             },
             "K9": {
@@ -4217,7 +4289,7 @@
             },
             "DESCRIPTIONS": {
                 "PLACE": "Repüljön a helyszínre, és célozzon egy falra, mennyezetre vagy padlóra. A kamera rátapad, vízszintesen és függőlegesen.",
-                "ADJUST": "Nézd meg kívülről, és finomhangold, hogy hol ül.",
+                "ADJUST": "Nézze meg kívülről, és finomítsa el, hol ül.",
                 "GIZMO": "Szabad mozgás a gizmoval. Amikor elhagyja, visszapattan a legközelebbi felületre.",
                 "AIM": "Pontosan úgy lát át a lencsén, mint a takarmányon. Állítsa be, hogy hol álljon, és mennyivel fordulhatnak a kezelők és nagyíthatják.",
                 "REVIEW": "Próbálja ki a hírcsatornát úgy, ahogy az operátor fogja. A mentés során az első előnézet az objektíven keresztül történik."
@@ -4384,7 +4456,7 @@
                 "BACK": "Vissza",
                 "CONFIRM": "Megtakarítás",
                 "HELP": "Segítség",
-                "CANCEL": "Mégsem"
+                "CANCEL": "Mégse"
             },
             "TUTORIAL": {
                 "PROGRESS": "{{current}}/{{total}}",
@@ -4419,7 +4491,7 @@
                 "AIM": {
                     "EDITING": {
                         "TITLE": "Egyszerre egy beállítás",
-                        "BODY": "Ezen változtatsz most. Q / E válthat a beállítások között, az egér megváltoztatja az értéket, és a nézet pontosan azt az élt mutatja, miközben ezt teszi."
+                        "BODY": "Ezen változtatsz most. Q / E váltson a beállítások között, az egér megváltoztatja az értéket, és a nézet pontosan azt az élt mutatja, miközben ezt teszi."
                     },
                     "DIAGRAMS": {
                         "TITLE": "Az egész tartomány egy pillantásra",
@@ -4433,7 +4505,7 @@
                     },
                     "SAVE": {
                         "TITLE": "Megtakarítás",
-                        "BODY": "Amikor minden pipa zöld vagy borostyánsárga színű, az Enter elmenti a kamerát, és az első előnézetet átveszi az objektíven."
+                        "BODY": "Ha minden pipa zöld vagy borostyánsárga, az Enter elmenti a kamerát, és az első előnézetet az objektíven keresztül látja el."
                     }
                 }
             }
@@ -4453,6 +4525,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Témák és színek."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "Játékon belül",
+                    "DESCRIPTION": "Hogyan viselkedik a karaktered az MDT és a rádió használata közben."
                 }
             },
             "SECTIONS": {
@@ -4461,7 +4537,9 @@
                 "UNITS_NUMBERS": "Egységek és számok",
                 "SEE_THROUGH": "Átlátszó mód",
                 "SEE_THROUGH_DESCRIPTION": "Távolítsa el az MDT-t az útból, hogy bezárása nélkül nézhesse a mögötte zajló játékot.",
-                "DISPLAY": "Kijelző"
+                "DISPLAY": "Kijelző",
+                "RADIO": "Rádió",
+                "KEYBINDS": "Billentyűzetek"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4523,13 +4601,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Értesítési hangok",
                     "DESCRIPTION": "Hangot játsszon le a bejövő hívásokhoz és a csevegési megemlítésekhez"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Beszélő animáció",
+                    "DESCRIPTION": "Mit csinál a karaktered, miközben beszélsz a rádióban",
+                    "PREVIEW": "Előnézet a karakteredről"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Nyomj meg egy gombot…",
-                "LISTENING_HINT": "Esc a megszakításhoz · Backspace a törléshez",
                 "UNBOUND": "Nem kötve",
                 "CUSTOM": "Szokás"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "Az MDT billentyűk. Kattintson egy billentyűre, és nyomja meg az újat a módosításához.",
+                "NONE": "Ez a szerver nem rendelkezik MDT-billentyűkkel.",
+                "OVERLAP": "Ugyanaz a kulcs, mint a(z) {{names}}. A FiveM minden műveletet lefuttat egy billentyűn, így a gomb megnyomása mindegyiket futtatja.",
+                "OPEN_SETTINGS": "Módosítsa a billentyűket a FiveM kulcs-összerendeléseiben",
+                "HINT": "A lecserélt kulcs azonnal leáll, de a FiveM kulcs-összerendelései között szerepel, amíg újra nem csatlakozik. Az egérgombokat és a vezérlőket ott lehet beállítani."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Fény",
@@ -4587,7 +4675,14 @@
                 "HINT": "Tekintse meg az értesítést a fenti pozícióban és időtartamban",
                 "BUTTON": "Értesítés előnézete"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Előnézet – mennyire halványnak tűnik az MDT ezen a szinten"
+            "SEE_THROUGH_PREVIEW_HINT": "Előnézet – mennyire halványnak tűnik az MDT ezen a szinten",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Szerver alapértelmezett ({{style}})",
+                "NONE": "Egyik sem",
+                "CHEST": "Váll mikrofon",
+                "EAR": "Fülhallgató",
+                "HANDHELD": "Kézi rádió"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "Témák",
@@ -4623,7 +4718,7 @@
             },
             "SORT_OPTIONS": {
                 "TOP_RATED": "Legjobbra értékelt",
-                "MOST_USED": "Leggyakrabban használt",
+                "MOST_USED": "Legtöbbször használt",
                 "NEWEST": "Legújabb"
             },
             "EDITOR": {
@@ -4642,7 +4737,7 @@
                     "SAND": "Homok",
                     "DAYLIGHT": "Napfény"
                 },
-                "ACCENT": "Kiemelő szín",
+                "ACCENT": "Kiemelt szín",
                 "CUSTOM_COLOR": "Válasszon bármilyen színt",
                 "SURFACES": "Felületek",
                 "SURFACES_HINT": "Ezek megváltoztatása újjáépíti a felület és a szöveg színeit. Finomítsa az egyes színeket alább.",
@@ -4658,7 +4753,7 @@
                     "COOL": "Hűvös",
                     "COOL_HINT": "Szürke árnyalatú kékkel",
                     "WARM": "Meleg",
-                    "WARM_HINT": "Szürke árnyalatú barna árnyalattal",
+                    "WARM_HINT": "Szürke árnyalatú barnával",
                     "TINTED": "Színezett",
                     "TINTED_HINT": "Kiemelő színnel színezett szürkék"
                 },
@@ -4685,7 +4780,7 @@
                 "PASTE_TAB": "JSON beillesztése",
                 "COMMUNITY_TAB": "Közösség",
                 "PASTE_HINT": "Illesszen be egy témát, amelyet Ön vagy bárki más exportált ebből az MDT-ből.",
-                "INVALID_JSON": "Érvénytelen JSON téma. Győződjön meg róla, hogy beillesztett egy teljes témaexportálást.",
+                "INVALID_JSON": "Érvénytelen JSON téma. Győződjön meg arról, hogy egy teljes témaexportálást illesztett be.",
                 "PREVIEW_LABEL": "Előnézet",
                 "PREVIEW_EMPTY": "Illesszen be egy témát az előnézethez",
                 "SEARCH_PLACEHOLDER": "Keresés név szerint…",
@@ -4787,6 +4882,8 @@
             "license_revoke": "Licenc visszavonva",
             "citizen_image_change": "Citizen Photo megváltozott",
             "charges_issued": "Díjak kiállítva",
+            "prisoner_released": "A fogoly szabadult",
+            "prisoner_sentence_changed": "Mondat megváltozott",
             "note_added": "Megjegyzés hozzáadva",
             "note_removed": "Megjegyzés eltávolítva",
             "employee_grade_change": "Módosult az évfolyam",
@@ -4854,7 +4951,7 @@
             "OPERATION_PLAN_UPDATED": "Frissített működési terv #{{id}}",
             "OPERATION_PLAN_DELETED": "{{id}}. számú műveleti terv törölve",
             "OPERATION_PLAN_STARTED": "Elindította a(z) {{id}}. számú hadműveleti terv küldetését",
-            "OPERATION_PLAN_ENDED": "Befejeződött a(z) {{id}}. számú műveleti terv küldetése",
+            "OPERATION_PLAN_ENDED": "Befejeződött a(z) {{id}}. számú hadműveleti terv küldetése",
             "INCIDENT_STATUS": "A #{{id}}. esemény állapotának beállítása {{status}}-ra",
             "INCIDENT_UPDATED": "Frissített esemény #{{id}}",
             "WARRANT_CREATED": "Létrehozva: {{id}}.",
@@ -4871,6 +4968,8 @@
             "LICENSE_REVOKE": "A(z) {{type}} licenc visszavonva a következőtől: {{identifier}}",
             "CITIZEN_IMAGE_CHANGE": "Frissített profilkép a következőhöz: {{identifier}}",
             "CHARGES_ISSUED": "{{count}} terhelés kibocsátása ekkor: {{entityType}} #{{id}}",
+            "PRISONER_RELEASED": "Szabadon engedett fogoly {{identifier}} (ok: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "A(z) {{identifier}} fennmaradó mondatát állítsa {{time}}-re (ok: {{reason}})",
             "NOTE_ADDED": "Jegyzet hozzáadva a következőhöz: {{entityType}} #{{entityId}}",
             "NOTE_REMOVED": "Jegyzet eltávolítva innen: {{entityType}} #{{entityId}}",
             "EMPLOYEE_GRADE_CHANGE": "{{identifier}} osztályzatának beállítása erre: {{grade}}",
@@ -4983,7 +5082,7 @@
             "AREAS_COUNT_other": "{{count}} terület"
         },
         "HINTS": {
-            "DRAFT": "A terv vázlat marad mindaddig, amíg legalább egy területet nem rajzol hozzá a térképen.",
+            "DRAFT": "A terv vázlat marad mindaddig, amíg legalább egy területet nem rajzol neki a térképen.",
             "EDITING": "Válasszon egy területtípust, és rajzoljon a térkép bal felső sarkában található eszköztárral. Ctrl+Z visszavon egy lépést. A módosításokat a rendszer menti, amikor befejezi a szerkesztést.",
             "SELECTED": "Területei a térképen láthatók."
         },
@@ -5096,7 +5195,7 @@
             "TITLE": "Átviteli előzmények",
             "EMPTY": "Nincs nyilvántartott tulajdonjog átruházás",
             "CURRENT_LABEL": "Jelenlegi",
-            "DESCRIPTION": "Mindenki, akinek ez a fegyvere volt, a legrégebbi az első."
+            "DESCRIPTION": "Mindenki, akinek ez a fegyvere volt, először a legidősebb."
         }
     },
     "WEAPONS": {
@@ -5352,13 +5451,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Keressen egy személyt vagy járművet. Az új BOLO-k piszkozatként indulnak."
+            "DESCRIPTION": "Keressen egy személyt vagy járművet. A piszkozatok nem jelölik meg a témát, amíg nem aktiválják őket."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Fegyveres gyanúsított egy fekete Sultan RS-ben",
             "DESCRIPTION_PLACEHOLDER": "Hol látták utoljára, hogyan néznek ki és miért keresik őket",
             "EXPIRES_LABEL": "Lejár:",
             "EXPIRES_PLACEHOLDER": "Alapértelmezés szerint 7 nap",
+            "SUBJECTS_TITLE": "Tantárgyak",
+            "CITIZENS_PLACEHOLDER": "Válasszon személyeket",
             "TOASTS": {
                 "CREATED": "BOLO létrehozta"
             }
@@ -5398,6 +5499,7 @@
             "CONFIRM_DESCRIPTION": "Ez megerősíti, hogy {{subject}} megtalálta, és bezárja a kilátót.",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "az alany",
+            "CONFIRM_DESCRIPTION_MANY": "Ez megerősíti, hogy mind a(z) {{count}} alanyt megtalálták, és bezárja a kilátót.",
             "TOASTS": {
                 "MARKING": "A BOLO hely megjelölése…",
                 "MARKED": "BOLO megjelölve található"
@@ -5416,6 +5518,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Nincs kategorizálva",
         "INDEX": {
             "HEADING": "Jogszabályok és Büntető Törvénykönyv",
             "SUBHEADING": "A bűncselekmények, a pénzügyi szankciók és a bírói megbízások hivatalos kodifikációja",
@@ -5477,8 +5580,8 @@
                 "MAX_HOURS_BELOW_DEFAULT": "A közösségi szolgáltatás maximális értéke nem lehet alacsonyabb az alapértelmezett feladatoknál",
                 "MIN_BAIL_ABOVE_DEFAULT": "A minimális óvadék nem lehet magasabb, mint az alapértelmezett óvadék",
                 "MAX_BAIL_BELOW_DEFAULT": "A maximális óvadék nem lehet alacsonyabb az alapértelmezett óvadéknál",
-                "MIN_POINTS_ABOVE_DEFAULT": "A minimumpontok nem lehetnek magasabbak az alapértelmezett pontoknál",
-                "MAX_POINTS_BELOW_DEFAULT": "A maximális pontszám nem lehet alacsonyabb az alapértelmezett pontoknál",
+                "MIN_POINTS_ABOVE_DEFAULT": "Minimum pont nem lehet magasabb, mint az alapértelmezett pont",
+                "MAX_POINTS_BELOW_DEFAULT": "A maximális pont nem lehet alacsonyabb az alapértelmezett pontoknál",
                 "LICENSE_REQUIRED": "Válassza ki, hogy ez a szabálysértés melyik licencet függeszti fel"
             },
             "JAIL_LABEL": "Börtön (hónap)",
@@ -5571,6 +5674,54 @@
                 "PROCESSING": "Büntetés feldolgozása…",
                 "SUCCESS": "Büntetés feldolgozva: {{name}}",
                 "FAILED": "A büntetés feldolgozása nem sikerült"
+            }
+        }
+    },
+    "PRISONERS": {
+        "SUBHEADING": "Mindenki jelenleg börtönben van, és meddig van még hátra",
+        "SUBHEADING_ONLINE_ONLY": "Foglyok, akik jelenleg online vannak. A börtön forgatókönyve nem jelent offline foglyokat",
+        "SEARCH_PLACEHOLDER": "Keresés név vagy azonosító alapján…",
+        "EMPTY": "Senki sincs börtönben",
+        "NOT_SUPPORTED": "A börtön forgatókönyve nem tud foglyokat felsorolni",
+        "COLUMNS": {
+            "REMAINING": "Többi",
+            "RECORD": "Rekord",
+            "SENTENCED_BY": "Elítélte",
+            "SINCE": "Mivel"
+        },
+        "REMAINING_OF": "{{remaining}}/{{total}}",
+        "UNKNOWN_REMAINING": "A börtön forgatókönyve nem közölte",
+        "JAILED_OUTSIDE_MDT": "Börtönben az MDT-n kívül",
+        "RECORD_LABEL": "{{type}} #{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Büntetés",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Profil megnyitása",
+        "REASON_LABEL": "Ok (nem kötelező)",
+        "RELEASE": {
+            "TRIGGER": "Kiadás",
+            "TITLE": "Szabadítsd ki a foglyot",
+            "CONFIRM": "{{name}} most szabadul, és a büntetését lezárják.",
+            "REASON_PLACEHOLDER": "A büntetést a bíróság mérsékelte",
+            "BUTTON": "Kiadás",
+            "NEEDS_ONLINE": "A börtönszkripted csak azokat a foglyokat engedheti szabadon, akik online vannak.",
+            "TOASTS": {
+                "PROCESSING": "A fogoly szabadon bocsátása…",
+                "SUCCESS": "Megjelent: {{name}}",
+                "FAILED": "Nem sikerült elengedni a foglyot"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Változtasd meg a mondatot",
+            "TITLE": "Változtasd meg a mondatot",
+            "TIME_LABEL": "Kiszolgálásig hátralévő idő (hónap)",
+            "REASON_PLACEHOLDER": "Jó viselkedés",
+            "BUTTON": "Beállítás erre: {{duration}}",
+            "TOASTS": {
+                "PROCESSING": "Mondatmódosítás…",
+                "SUCCESS": "{{name}} mondata most {{duration}}",
+                "FAILED": "Nem sikerült megváltoztatni a mondatot"
             }
         }
     },
@@ -5722,6 +5873,8 @@
         },
         "INDEX": {
             "UNNAMED": "Névtelen állampolgár",
+            "JAILED": "Bebörtönzött",
+            "JAILED_REMAINING": "Bebörtönzött · {{duration}} maradt",
             "SUBHEADING": "Állampolgári azonosító",
             "TOASTS": {
                 "SAVING_IMAGE": "Kép mentése…",
@@ -5798,7 +5951,7 @@
                 "SEARCH": "Beszélgetések keresése",
                 "NO_MATCHES": "Egyetlen beszélgetés sem egyezik",
                 "NO_MATCHES_HINT": "Próbálkozzon másik névvel, számmal vagy szóval.",
-                "TRUNCATED": "A(z) {{total}} közül a(z) {{shown}} legutóbbi megjelenítése"
+                "TRUNCATED": "{{total}} közül a(z) {{shown}} legutóbbi megjelenítése"
             },
             "OPEN_PROFILE": "Profil megnyitása"
         },
@@ -5818,6 +5971,24 @@
                 "SERVICE": "Szolgáltatás"
             },
             "SUMMARY_TITLE": "Összesített büntetés"
+        },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Börtöntörténet",
+            "EMPTY": "Nincsenek nyilvántartott börtönbüntetések",
+            "COLUMNS": {
+                "OUTCOME": "Eredmény",
+                "ENDED": "Véget ért"
+            },
+            "STATUS": {
+                "ACTIVE": "Szolgáló",
+                "SERVED": "Kiszolgált",
+                "RELEASED": "Korán megjelent",
+                "REPLACED": "Új mondat váltja fel"
+            },
+            "RELEASED_BY": "szerző: {{name}}",
+            "VIEW_ALL_one": "Az összes {{formatted}} mondat megtekintése",
+            "VIEW_ALL_other": "Mind a(z) {{formatted}} mondat megtekintése",
+            "DIALOG_TITLE": "{{name}} börtöntörténete"
         },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Nyisson meg egy grafikont az ehhez a polgárhoz kapcsolódó rekordokról, járművekről és személyekről",
@@ -5973,7 +6144,7 @@
             "13": "Matt szürke",
             "14": "Matt világosszürke",
             "15": "Util Black",
-            "16": "Util Black Poly",
+            "16": "Használja a Black Poly-t",
             "17": "Util Dark Silver",
             "18": "Util Silver",
             "19": "Util Gun Metal",
@@ -6121,7 +6292,7 @@
         }
     },
     "ANNOUNCEMENTS": {
-        "SUBHEADING": "Osztályszintű értesítések, utasítások és figyelmeztetések",
+        "SUBHEADING": "Osztályszintű közlemények, utasítások és figyelmeztetések",
         "EMPTY_TITLE": "Még nincsenek bejelentések",
         "EMPTY_SUBTITLE": "Itt jelennek meg az egész osztályra vonatkozó közlemények",
         "LIST": {
@@ -6371,7 +6542,7 @@
             "SUSPECTS_INFO": "Az emberek azt hitték, hogy ezt használták vagy elhagyták, mint például a lövész, akinek ezek a burkolatai.",
             "VICTIMS_INFO": "Azok az emberek, akik ellen használták, vagy akiktől elvették.",
             "OWNERS_INFO": "Kié, hibáztatás nélkül. Például egy lefoglalt telefon tulajdonosa vagy az üzlet, amely átadta a CCTV-t.",
-            "ITEMS_LABEL": "Elemek",
+            "ITEMS_LABEL": "Tételek",
             "TOASTS": {
                 "CREATED": "A bizonyítékok naplózva"
             }
@@ -6658,7 +6829,7 @@
             "PICK_TYPE": "Mit szeretnél megosztani?",
             "DESCRIPTIONS": {
                 "CITIZENS": "Kapcsolja össze egy állampolgár profilját",
-                "VEHICLES": "Hivatkozzon egy regisztrált járműre",
+                "VEHICLES": "Hivatkozzon regisztrált járműre",
                 "WARRANTS": "Csatolja az aktív parancsot",
                 "BOLOS": "Hivatkozzon egy figyelemfelkeltőre",
                 "INCIDENTS": "Kapcsoljon egy ügyfájlt",
@@ -6860,10 +7031,10 @@
         },
         "INVITE_DIALOG": {
             "TITLE": "Hívja meg a tiszteket",
-            "DESCRIPTION": "Válasszon ki egy online tisztviselőt, aki közvetlenül meghívja őt erre az ülésre.",
+            "DESCRIPTION": "Válasszon ki egy online tisztet, aki közvetlenül meghívja őt erre az ülésre.",
             "ONLINE_OFFICERS_LABEL": "Online tisztek",
             "EMPTY": "Nincs más tiszt az interneten",
-            "INVITED": "Meghívva",
+            "INVITED": "Meghívott",
             "SENT_TOAST": "Meghívó elküldve",
             "FAILED_TOAST": "Nem sikerült elküldeni a meghívót"
         },
@@ -6913,9 +7084,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Bodycam felszerelt",
-        "LOST": "Megszakadt a kapcsolat a testkamerával",
         "MISSING": "Nincs testkamerád",
-        "OFFLINE": "A tiszt testkamerája offline állapotba került",
         "REMOVED": "Bodycam eltávolítva",
         "UNREACHABLE": "Nem sikerült elérni a testkamerát"
     },
@@ -6923,7 +7092,6 @@
         "ARMED": "Dashcam élesítve",
         "DISARMED": "A műszerkamera hatástalanított",
         "NEEDS_PATROL_VEHICLE": "Az engedélyezőlistán szereplő járőrjárműben kell ülnie",
-        "OFFLINE": "A jármű műszerkamerája offline állapotba került",
         "SEAT_RESTRICTED": "Csak a vezető vagy az első utas vezérelheti a műszerkamerát",
         "UNAVAILABLE": "A műszerkamera nem elérhető",
         "UNREACHABLE": "Nem sikerült elérni a műszer kamerát"

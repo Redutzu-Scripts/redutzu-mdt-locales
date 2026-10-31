@@ -20,6 +20,7 @@
         "MANAGEMENT": "Management",
         "CONFIG": "Configuration",
         "PENALTIES": "Penalties",
+        "PRISONERS": "Prisoners",
         "ASSETS": "Assets",
         "OPERATIONS": "Operations",
         "RECORDS": "Records",
@@ -528,6 +529,8 @@
                 "FINE_ASC": "Fine: Low → High",
                 "JAIL_DESC": "Jail time: High → Low",
                 "JAIL_ASC": "Jail time: Low → High",
+                "REMAINING_ASC": "Releasing soonest",
+                "REMAINING_DESC": "Most time left",
                 "AGE_DESC": "Age: Oldest first",
                 "AGE_ASC": "Age: Youngest first",
                 "RECORDS_DESC": "Records: Most first",
@@ -678,10 +681,20 @@
             "MESSAGE_COPIED": "Message copied",
             "IMAGE_LINK_COPIED": "Image link copied",
             "LINK_COPIED": "Link copied"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "Click, then press a key",
+            "CHANGE_KEY": "Click to change",
+            "LISTENING": "Press a key…",
+            "LISTENING_HINT": "Esc or click outside to cancel",
+            "CUSTOM": "Custom",
+            "TAKEN": "{{key}} is already used by {{name}}. Pick another key, or both would run."
         }
     },
     "ERRORS": {
         "REQUIRED": "This field is required",
+        "KEYBIND_UNSUPPORTED_KEY": "This key can't be used for a keybind",
+        "KEYBIND_LIMIT": "You can have up to {{max}} radio keybinds",
         "NO_PERMISSION": "You don't have permission to do that",
         "INVALID_DATA": "Some of the submitted data is invalid",
         "INVALID_CHARGES": "One or more charges are invalid — check the amounts against the penal code",
@@ -698,6 +711,7 @@
         "VEHICLE_TOO_FAR": "Get closer to the vehicle",
         "NO_VEHICLE_SELECTED": "No vehicle selected",
         "NO_SUSPECT_SELECTED": "No suspect selected",
+        "NO_SUBJECT_SELECTED": "Add at least one person or vehicle",
         "NO_VEHICLE_NEARBY": "No vehicle nearby",
         "TRUNK_SEARCH_UNAVAILABLE": "Trunk search isn't available for your inventory setup yet",
         "INVALID_MODEL": "That model isn't available",
@@ -743,6 +757,7 @@
             "INVALID_VALUE": "That value isn't valid for this setting",
             "MIN": "Must be at least {{min}}",
             "MAX": "Must be at most {{max}}",
+            "PRINTED_MARKERS": "Between 1 and {{max}}: the numbered marker models only go up to {{max}}",
             "NOT_AN_OPTION": "That isn't one of the options",
             "EMPTY": "Can't be empty",
             "TOO_LONG": "Must be at most {{max}} characters",
@@ -802,8 +817,10 @@
         "PROP_PLACER_INTERRUPTED": "Prop placement was interrupted",
         "VEHICLE_OCCUPIED": "Get everyone out of the vehicle first",
         "IMPOUND_DISABLED": "Impounding from the Interactions menu is turned off on this server",
-        "VEHICLE_EMPTY": "No one to order out",
+        "IMPOUND_NOT_IMPLEMENTED": "Impounding isn't set up on this server",
         "NOT_SUPPORTED": "This isn't available on this server",
+        "PRISONER_OFFLINE": "The prisoner needs to be online for this",
+        "PRISON_ACTION_FAILED": "The prison script couldn't do that",
         "NO_ACCESS": "Your job can't use this",
         "UNKNOWN_FREQUENCY": "No channel on this frequency",
         "MARKER_LIMIT": "You've reached your evidence marker limit",
@@ -823,7 +840,7 @@
         "CANNOT_MANAGE_SELF": "You can't do this to yourself",
         "GRADE_TOO_HIGH": "You can only manage officers below your own grade",
         "AMOUNT_TOO_HIGH": "That amount is over the limit for one transaction",
-        "INVALID_FREQUENCY": "Use a frequency like 450.100",
+        "INVALID_FREQUENCY": "This frequency doesn't match the allowed format",
         "UNIT_FULL": "That unit has no free seat",
         "UNIT_NEEDS_LEAD": "Make someone else lead first",
         "UNIT_OFF_DUTY": "Nobody in that unit is on duty",
@@ -1058,7 +1075,6 @@
             "EDIT_DESCRIPTION": "Update this channel's name or frequency.",
             "NAME_PLACEHOLDER": "SWAT Command",
             "FREQUENCY_FIELD": "Frequency (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498.510",
             "SUBMIT": "Create channel",
             "TOASTS": {
                 "CREATED": "Channel \"{{name}}\" created",
@@ -1098,19 +1114,24 @@
             "PTT": "PTT"
         },
         "KEYBINDS_DIALOG": {
-            "TITLE": "Radio Keybinds",
-            "DESCRIPTION": "Bind a keyboard key to instantly transmit on a specific channel.",
-            "EMPTY": "No keybinds configured yet.",
-            "ADD_NEW": "Add New Keybind",
-            "ADD_DESCRIPTION": "Choose a name, press a key to capture it, then pick the target channel.",
+            "TITLE": "Radio keybinds",
+            "DESCRIPTION": "Tune your radio to a channel with one key, even with the MDT closed.",
+            "OFF": "Radio keybinds are turned off on this server.",
+            "EMPTY": "No radio keybinds yet.",
+            "ADD": "Add keybind",
+            "ADD_TITLE": "New radio keybind",
+            "EDIT_TITLE": "Edit radio keybind",
+            "FORM_DESCRIPTION": "Name it, pick a channel and press the key that tunes your radio to it.",
             "NAME_PLACEHOLDER": "Main channel",
-            "KEY_LABEL": "Key",
-            "LISTENING": "Listening…",
-            "CLICK_TO_CAPTURE": "Click to capture a key",
-            "CAPTURING_HINT": "Press any key — Escape to cancel.",
-            "CLICK_HINT": "Click the field above and press any key.",
             "CHANNEL_PLACEHOLDER": "Select a channel",
-            "SAVE": "Save Keybind"
+            "KEY_LABEL": "Key",
+            "KEY_HINT": "Single keys only. You can also change it later in Settings > Key Bindings > FiveM.",
+            "CHANNEL_REMOVED": "This channel no longer exists",
+            "SETTINGS_HINT": "Keys can also be changed in Settings > Key Bindings > FiveM. A removed or changed key stops working right away but stays listed there until you reconnect.",
+            "DELETE": "Delete keybind",
+            "SAVE": "Save keybind",
+            "TUNED": "Radio tuned to {{name}}",
+            "ROW_NAME": "Radio: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "New Radio Code",
@@ -2152,6 +2173,9 @@
                 "PENALCODE_VIEW": "Read the penal code.",
                 "PENALCODE_CREATE": "Add penal code entries.",
                 "PENALCODE_UPDATE": "Edit penal code entries.",
+                "PRISONERS_VIEW": "See who is in prison and how long they have left.",
+                "PRISONERS_RELEASE": "Release prisoners before their sentence ends.",
+                "PRISONERS_EDIT": "Change how long a prisoner still has to serve.",
                 "PENALCODE_DELETE": "Remove penal code entries.",
                 "OPERATIONPLANS_VIEW": "Read operation plans.",
                 "OPERATIONPLANS_CREATE": "Draft new operation plans.",
@@ -2827,6 +2851,12 @@
                     "DESCRIPTION": "What lands in the bell on the dashboard. Personal ones wait for officers who are offline; department-wide ones only reach officers online at the time.",
                     "RETENTION": "Keep notifications for",
                     "RETENTION_HINT": "Notifications older than this are deleted, right away when you lower it. 0 keeps them forever."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Radio animation",
+                    "DESCRIPTION": "What officers' characters do while they talk on the radio. Each officer can pick their own on the Configuration page; this is what everyone else gets.",
+                    "DEFAULT": "Default animation",
+                    "DEFAULT_HINT": "With pma-voice, its own radio animation is turned off unless this is None. With another voice resource, turn its animation off in its own config."
                 }
             },
             "DISPATCH": {
@@ -3002,6 +3032,33 @@
                     "AUTO_LOCK": "Lock the plate on a match",
                     "AUTO_LOCK_HINT": "The radar locks the plate that matched, so the officer doesn't lose it.",
                     "DESCRIPTION": "With a radar resource (wk_wars2x), every plate the radar reads is checked against BOLOs and warrants, and the officer is warned on a match."
+                },
+                "SCENE": {
+                    "TITLE": "Crime scenes",
+                    "DESCRIPTION": "How officers place crime-scene tape and evidence markers: from the Scene page of the interactions menu, by using an inventory item, or either one. Items are not used up.",
+                    "METHODS": {
+                        "MENU": "Scene page",
+                        "ITEM": "Using the item",
+                        "BOTH": "Scene page or item"
+                    },
+                    "TAPE_METHOD": "How officers place tape",
+                    "TAPE_METHOD_HINT": "From the Scene page, by using the tape item, or either one.",
+                    "TAPE_ITEM": "Tape item",
+                    "TAPE_ITEM_HINT": "The inventory item officers use to place crime-scene tape.",
+                    "MARKER_METHOD": "How officers place evidence markers",
+                    "MARKER_METHOD_HINT": "From the Scene page, by using the marker item, or either one.",
+                    "MARKER_ITEM": "Evidence marker item",
+                    "MARKER_ITEM_HINT": "The inventory item officers use to place evidence markers.",
+                    "RADIUS": "Scene size",
+                    "RADIUS_HINT": "Tape, markers and props placed this close to a scene join it. Further away, they start a new scene.",
+                    "MAX_MARKERS_SCENE": "Evidence markers per scene",
+                    "MAX_MARKERS_SCENE_HINT": "Markers are numbered from 1 in each scene. 0 = unlimited, only when the markers don't use the numbered models.",
+                    "MAX_MARKERS_OFFICER": "Evidence markers per officer",
+                    "MAX_MARKERS_OFFICER_HINT": "How many markers one officer can have out at once, across every scene. 0 = unlimited.",
+                    "TAPE_LENGTH": "Longest tape line",
+                    "TAPE_LENGTH_HINT": "The furthest apart the two ends of one tape line can be tied.",
+                    "MAX_TAPE_OFFICER": "Tape lines per officer",
+                    "MAX_TAPE_OFFICER_HINT": "How many tape lines one officer can have up at once. 0 = unlimited."
                 }
             },
             "CAMERAS": {
@@ -3162,7 +3219,8 @@
                     "BOTH": "Item or command",
                     "WAYS": {
                         "ITEM": "Inventory item",
-                        "COMMAND": "Chat command"
+                        "COMMAND": "Chat command",
+                        "MENU": "Scene page"
                     }
                 },
                 "REPAIR": {
@@ -3183,7 +3241,13 @@
                     "SIGNAL": "Signal strength changes",
                     "SIGNAL_HINT": "Cosmetic: the signal bars on the camera grid move a little over time. Off: they stay still.",
                     "AUDIO_RADIUS": "Hearing range",
-                    "AUDIO_RADIUS_HINT": "Officers watching a feed hear players talking this close to the camera."
+                    "AUDIO_RADIUS_HINT": "Officers watching a feed hear players talking this close to the camera.",
+                    "ON_FEED_LOST": "When the camera goes down",
+                    "ON_FEED_LOST_HINT": "What happens for officers watching a CCTV camera that gets destroyed, hacked or disabled, after its cut-out plays.",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Switch to the next camera",
+                        "CLOSE": "Close the feed"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Auto-detect",
@@ -3479,7 +3543,7 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "Default keybinds",
-                    "DESCRIPTION": "The key each action starts on. FiveM saves a player's keys the first time they join, so a change here reaches new players and anyone who never had this key yet. Everyone can still change their own keys in Settings > Key Bindings > FiveM.",
+                    "DESCRIPTION": "The key each action starts on. FiveM saves a player's keys the first time they join, so a change here reaches new players and anyone who never had this key yet. Everyone can still change their own keys on the MDT's Configuration page or in Settings > Key Bindings > FiveM.",
                     "OPEN_MDT": "Open the MDT",
                     "OPEN_MDT_HINT": "Turned off, officers open it with the command or the item.",
                     "INTERACTIONS": "Interactions menu",
@@ -3491,7 +3555,10 @@
                     "PANIC_BUTTON": "Panic button",
                     "PANIC_BUTTON_HINT": "Sends a panic alert with the officer's location.",
                     "REQUEST_BACKUP": "Request backup",
-                    "REQUEST_BACKUP_HINT": "Asks nearby units for backup."
+                    "REQUEST_BACKUP_HINT": "Asks nearby units for backup.",
+                    "CLASH": "Also the default key of {{names}}. FiveM runs every action on a key, so {{key}} would do both.",
+                    "MAX_RADIO": "Radio keybinds per officer",
+                    "MAX_RADIO_HINT": "How many radio keybinds each officer can add on the Radio page. 0 turns them off. Officers who already have more keep only their first ones."
                 }
             },
             "IN_GAME": {
@@ -3631,7 +3698,8 @@
                 "RADIUS": "Search area",
                 "RADIUS_HINT": "A circle around the call instead of only a pin.",
                 "SUMMARY": "icon {{sprite}}, color {{colour}}",
-                "SAME_AS_OTHERS": "Same as the others"
+                "SAME_AS_OTHERS": "Same as the others",
+                "COLOUR_BY_PRIORITY": "The color follows the call's priority. Turn off \"Color by priority\" in Map blips to pick one here."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Refresh",
@@ -3832,6 +3900,13 @@
             "RECORDING": {
                 "MAX_DURATION": "Longest recording reached, saving the clip",
                 "MAX_SIZE": "Largest recording size reached, saving the clip"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "Camera destroyed",
+                "HACKED": "Feed intercepted",
+                "OFFLINE": "Camera offline",
+                "BODYCAM": "Bodycam offline",
+                "DASHCAM": "Dashcam offline"
             }
         },
         "GIZMO": {
@@ -4025,9 +4100,6 @@
                 "ACTIVE_WARRANTS": "Active warrants",
                 "STOLEN": "Stolen",
                 "OPEN_RECORD": "Open record",
-                "OCCUPANTS_OUT": "Order occupants out",
-                "OCCUPANTS_ORDERED_one": "Ordered {{count}} occupant out",
-                "OCCUPANTS_ORDERED_other": "Ordered {{count}} occupants out",
                 "SEARCH_TRUNK": "Search trunk",
                 "IMPOUND": "Impound",
                 "IMPOUNDED": "{{plate}} impounded"
@@ -4453,6 +4525,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Themes and colors."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "In-game",
+                    "DESCRIPTION": "How your character behaves while you use the MDT and the radio."
                 }
             },
             "SECTIONS": {
@@ -4461,7 +4537,9 @@
                 "UNITS_NUMBERS": "Units & Numbers",
                 "SEE_THROUGH": "See-Through Mode",
                 "SEE_THROUGH_DESCRIPTION": "Fade the MDT out of the way to watch the game behind it, without closing it.",
-                "DISPLAY": "Display"
+                "DISPLAY": "Display",
+                "RADIO": "Radio",
+                "KEYBINDS": "Keybinds"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4523,13 +4601,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Notification sounds",
                     "DESCRIPTION": "Play a sound for incoming dispatch calls and chat mentions"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Talking animation",
+                    "DESCRIPTION": "What your character does while you talk on the radio",
+                    "PREVIEW": "Preview on your character"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Press a key…",
-                "LISTENING_HINT": "Esc to cancel · Backspace to clear",
                 "UNBOUND": "Not bound",
                 "CUSTOM": "Custom"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "Your MDT keybinds. Click a key and press a new one to change it.",
+                "NONE": "This server has no MDT keybinds.",
+                "OVERLAP": "Same key as {{names}}. FiveM runs every action on a key, so pressing it runs them all.",
+                "OPEN_SETTINGS": "Change keys in FiveM's key bindings",
+                "HINT": "A key you replace stops working right away, but stays listed in FiveM's key bindings until you reconnect. Mouse buttons and controllers can be set there."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Light",
@@ -4587,7 +4675,14 @@
                 "HINT": "Preview a notification at the position and duration above",
                 "BUTTON": "Preview notification"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Preview — how faded the MDT looks at this level"
+            "SEE_THROUGH_PREVIEW_HINT": "Preview — how faded the MDT looks at this level",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Server default ({{style}})",
+                "NONE": "None",
+                "CHEST": "Shoulder mic",
+                "EAR": "Earpiece",
+                "HANDHELD": "Handheld radio"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "Themes",
@@ -4787,6 +4882,8 @@
             "license_revoke": "License Revoked",
             "citizen_image_change": "Citizen Photo Changed",
             "charges_issued": "Charges Issued",
+            "prisoner_released": "Prisoner Released",
+            "prisoner_sentence_changed": "Sentence Changed",
             "note_added": "Note Added",
             "note_removed": "Note Removed",
             "employee_grade_change": "Grade Changed",
@@ -4871,6 +4968,8 @@
             "LICENSE_REVOKE": "Revoked {{type}} license from {{identifier}}",
             "CITIZEN_IMAGE_CHANGE": "Updated profile picture for {{identifier}}",
             "CHARGES_ISSUED": "Issued {{count}} charge(s) on {{entityType}} #{{id}}",
+            "PRISONER_RELEASED": "Released prisoner {{identifier}} (reason: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "Set the remaining sentence of {{identifier}} to {{time}} (reason: {{reason}})",
             "NOTE_ADDED": "Added a note to {{entityType}} #{{entityId}}",
             "NOTE_REMOVED": "Removed a note from {{entityType}} #{{entityId}}",
             "EMPLOYEE_GRADE_CHANGE": "Set {{identifier}}'s grade to {{grade}}",
@@ -5352,13 +5451,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Issue a lookout for a person or vehicle. New BOLOs start as drafts."
+            "DESCRIPTION": "Issue a lookout for a person or vehicle. Drafts don't flag the subject until they are activated."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Armed suspect in a black Sultan RS",
             "DESCRIPTION_PLACEHOLDER": "Where they were last seen, what they look like and why they are wanted",
             "EXPIRES_LABEL": "Expires at",
             "EXPIRES_PLACEHOLDER": "Defaults to 7 days",
+            "SUBJECTS_TITLE": "Subjects",
+            "CITIZENS_PLACEHOLDER": "Select people",
             "TOASTS": {
                 "CREATED": "BOLO created"
             }
@@ -5398,6 +5499,7 @@
             "CONFIRM_DESCRIPTION": "This confirms{{subject}} has been located and closes the lookout.",
             "SUBJECT_NAME": " {{name}}",
             "SUBJECT_FALLBACK": " the subject",
+            "CONFIRM_DESCRIPTION_MANY": "This confirms all {{count}} subjects have been located and closes the lookout.",
             "TOASTS": {
                 "MARKING": "Marking BOLO located…",
                 "MARKED": "BOLO marked located"
@@ -5416,6 +5518,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Uncategorized",
         "INDEX": {
             "HEADING": "Legal Statutes & Penal Code",
             "SUBHEADING": "Official codification of offenses, financial sanctions, and judicial mandates",
@@ -5574,6 +5677,54 @@
             }
         }
     },
+    "PRISONERS": {
+        "SUBHEADING": "Everyone in prison right now and how long they have left",
+        "SUBHEADING_ONLINE_ONLY": "Prisoners who are online right now. Your prison script does not report offline prisoners",
+        "SEARCH_PLACEHOLDER": "Search by name or identifier…",
+        "EMPTY": "Nobody is in prison",
+        "NOT_SUPPORTED": "Your prison script can't list prisoners",
+        "COLUMNS": {
+            "REMAINING": "Remaining",
+            "RECORD": "Record",
+            "SENTENCED_BY": "Sentenced by",
+            "SINCE": "Since"
+        },
+        "REMAINING_OF": "{{remaining}} of {{total}}",
+        "UNKNOWN_REMAINING": "Not reported by the prison script",
+        "JAILED_OUTSIDE_MDT": "Jailed outside the MDT",
+        "RECORD_LABEL": "{{type}} #{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Penalty",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Open profile",
+        "REASON_LABEL": "Reason (optional)",
+        "RELEASE": {
+            "TRIGGER": "Release",
+            "TITLE": "Release prisoner",
+            "CONFIRM": "{{name}} will be released now and their sentence closed.",
+            "REASON_PLACEHOLDER": "Sentence reduced by the court",
+            "BUTTON": "Release",
+            "NEEDS_ONLINE": "Your prison script can only release prisoners who are online.",
+            "TOASTS": {
+                "PROCESSING": "Releasing prisoner…",
+                "SUCCESS": "Released {{name}}",
+                "FAILED": "Failed to release the prisoner"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Change sentence",
+            "TITLE": "Change sentence",
+            "TIME_LABEL": "Time left to serve (months)",
+            "REASON_PLACEHOLDER": "Good behavior",
+            "BUTTON": "Set to {{duration}}",
+            "TOASTS": {
+                "PROCESSING": "Changing sentence…",
+                "SUCCESS": "{{name}}'s sentence is now {{duration}}",
+                "FAILED": "Failed to change the sentence"
+            }
+        }
+    },
     "CITIZENS": {
         "REGISTER_DIALOG": {
             "TRIGGER": "Register Citizen",
@@ -5722,6 +5873,8 @@
         },
         "INDEX": {
             "UNNAMED": "Unnamed citizen",
+            "JAILED": "Jailed",
+            "JAILED_REMAINING": "Jailed · {{duration}} left",
             "SUBHEADING": "Citizen ID",
             "TOASTS": {
                 "SAVING_IMAGE": "Saving image…",
@@ -5818,6 +5971,24 @@
                 "SERVICE": "Service"
             },
             "SUMMARY_TITLE": "Penalty totals"
+        },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Jail History",
+            "EMPTY": "No jail sentences on record",
+            "COLUMNS": {
+                "OUTCOME": "Outcome",
+                "ENDED": "Ended"
+            },
+            "STATUS": {
+                "ACTIVE": "Serving",
+                "SERVED": "Served",
+                "RELEASED": "Released early",
+                "REPLACED": "Replaced by a new sentence"
+            },
+            "RELEASED_BY": "by {{name}}",
+            "VIEW_ALL_one": "View all {{formatted}} sentence",
+            "VIEW_ALL_other": "View all {{formatted}} sentences",
+            "DIALOG_TITLE": "Jail history of {{name}}"
         },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Open a graph of the records, vehicles and people linked to this citizen",
@@ -6916,9 +7087,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Bodycam equipped",
-        "LOST": "Lost connection to that bodycam",
         "MISSING": "You don't have a bodycam",
-        "OFFLINE": "That officer's bodycam went offline",
         "REMOVED": "Bodycam removed",
         "UNREACHABLE": "Could not reach that bodycam"
     },
@@ -6926,7 +7095,6 @@
         "ARMED": "Dashcam armed",
         "DISARMED": "Dashcam disarmed",
         "NEEDS_PATROL_VEHICLE": "You need to be in a whitelisted patrol vehicle",
-        "OFFLINE": "That vehicle's dashcam went offline",
         "SEAT_RESTRICTED": "Only the driver or front passenger can control the dashcam",
         "UNAVAILABLE": "Dashcam unavailable",
         "UNREACHABLE": "Could not reach that dashcam"

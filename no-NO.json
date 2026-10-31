@@ -20,6 +20,7 @@
         "MANAGEMENT": "Ledelse",
         "CONFIG": "Konfigurasjon",
         "PENALTIES": "Straffer",
+        "PRISONERS": "Fanger",
         "ASSETS": "Eiendeler",
         "OPERATIONS": "Drift",
         "RECORDS": "Rekorder",
@@ -193,7 +194,7 @@
             "NO_RESULTS": "Ingen resultater",
             "SEVERITY_LABEL": "Alvorlighetsgrad:",
             "SCALE_ALL_TITLE": "Skaler alle ladninger",
-            "SCALE_ALL_DESCRIPTION": "Justerer alle ladningers alvorlighetsgrad sammen.",
+            "SCALE_ALL_DESCRIPTION": "Justerer hver ladnings alvorlighetsgrad sammen.",
             "APPLY_TO_LABEL": "Søk på",
             "SCOPE": {
                 "FINE": "fin",
@@ -226,7 +227,7 @@
         },
         "CHARGE_DIALOG": {
             "TITLE": "Utstedelsesgebyr – {{name}}",
-            "DESCRIPTION": "Sitere straffelovartikler mot {{name}}. Beløpet forblir avventende til de utstedes.",
+            "DESCRIPTION": "Siter artikler om straffelov mot {{name}}. Beløpet forblir avventende til de utstedes.",
             "SAVING": "Lagrer kostnader …",
             "SAVED": "Kostnader lagret",
             "SAVE_CHARGES": "Spar kostnader"
@@ -528,6 +529,8 @@
                 "FINE_ASC": "Fin: Lav → Høy",
                 "JAIL_DESC": "Fengselstid: Høy → Lav",
                 "JAIL_ASC": "Fengselstid: Lav → Høy",
+                "REMAINING_ASC": "Slippes snarest",
+                "REMAINING_DESC": "Mest tid igjen",
                 "AGE_DESC": "Alder: Eldst først",
                 "AGE_ASC": "Alder: Yngst først",
                 "RECORDS_DESC": "Rekorder: De fleste først",
@@ -614,7 +617,7 @@
             "YOU": "Du",
             "ON_DUTY": "På vakt",
             "ACTIVE": "Aktiv",
-            "LINKS": "Lenker",
+            "LINKS": "Linker",
             "LINKED_INCIDENTS": "Tilknyttede hendelser",
             "NOTIFICATIONS": "Varsler",
             "DATE": "Dato",
@@ -678,10 +681,20 @@
             "MESSAGE_COPIED": "Meldingen er kopiert",
             "IMAGE_LINK_COPIED": "Bildelinken er kopiert",
             "LINK_COPIED": "Linken er kopiert"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "Klikk og trykk deretter på en tast",
+            "CHANGE_KEY": "Klikk for å endre",
+            "LISTENING": "Trykk på en tast...",
+            "LISTENING_HINT": "Esc eller klikk utenfor for å avbryte",
+            "CUSTOM": "Skikk",
+            "TAKEN": "{{key}} brukes allerede av {{name}}. Velg en annen nøkkel, eller begge vil kjøre."
         }
     },
     "ERRORS": {
         "REQUIRED": "Dette feltet er obligatorisk",
+        "KEYBIND_UNSUPPORTED_KEY": "Denne nøkkelen kan ikke brukes til en nøkkelbinding",
+        "KEYBIND_LIMIT": "Du kan ha opptil {{max}} radiotastebindinger",
         "NO_PERMISSION": "Du har ikke tillatelse til å gjøre det",
         "INVALID_DATA": "Noen av de innsendte dataene er ugyldige",
         "INVALID_CHARGES": "En eller flere siktelser er ugyldige — sjekk beløpene mot straffeloven",
@@ -698,6 +711,7 @@
         "VEHICLE_TOO_FAR": "Kom nærmere kjøretøyet",
         "NO_VEHICLE_SELECTED": "Ingen kjøretøy er valgt",
         "NO_SUSPECT_SELECTED": "Ingen mistenkt valgt",
+        "NO_SUBJECT_SELECTED": "Legg til minst én person eller kjøretøy",
         "NO_VEHICLE_NEARBY": "Ingen kjøretøy i nærheten",
         "TRUNK_SEARCH_UNAVAILABLE": "Trunk-søk er ikke tilgjengelig for beholdningsoppsettet ditt ennå",
         "INVALID_MODEL": "Den modellen er ikke tilgjengelig",
@@ -743,6 +757,7 @@
             "INVALID_VALUE": "Denne verdien er ikke gyldig for denne innstillingen",
             "MIN": "Må være minst {{min}}",
             "MAX": "Må maksimalt være {{max}}",
+            "PRINTED_MARKERS": "Mellom 1 og {{max}}: de nummererte markørmodellene går bare opp til {{max}}",
             "NOT_AN_OPTION": "Det er ikke et av alternativene",
             "EMPTY": "Kan ikke være tom",
             "TOO_LONG": "Må være på maksimalt {{max}} tegn",
@@ -798,12 +813,14 @@
         "PROP_LIMIT": "Du har nådd rekvisittgrensen",
         "PROP_LIMIT_TOTAL": "For mange rekvisitter er ute på serveren",
         "PROP_TOO_FAR": "Det stedet er for langt unna deg",
-        "PROP_PLACER_BUSY": "Du plasserer allerede noe",
+        "PROP_PLACER_BUSY": "Du har allerede plassert noe",
         "PROP_PLACER_INTERRUPTED": "Prop plassering ble avbrutt",
         "VEHICLE_OCCUPIED": "Få alle ut av kjøretøyet først",
         "IMPOUND_DISABLED": "Beslaglegging fra interaksjonsmenyen er slått av på denne serveren",
-        "VEHICLE_EMPTY": "Ingen å bestille ut",
+        "IMPOUND_NOT_IMPLEMENTED": "Beslaglegging er ikke satt opp på denne serveren",
         "NOT_SUPPORTED": "Dette er ikke tilgjengelig på denne serveren",
+        "PRISONER_OFFLINE": "Fangen må være online for dette",
+        "PRISON_ACTION_FAILED": "Fengselsmanuset kunne ikke gjøre det",
         "NO_ACCESS": "Jobben din kan ikke bruke dette",
         "UNKNOWN_FREQUENCY": "Ingen kanal på denne frekvensen",
         "MARKER_LIMIT": "Du har nådd grensen for bevismarkør",
@@ -823,7 +840,7 @@
         "CANNOT_MANAGE_SELF": "Du kan ikke gjøre dette mot deg selv",
         "GRADE_TOO_HIGH": "Du kan bare administrere offiserer under din egen karakter",
         "AMOUNT_TOO_HIGH": "Dette beløpet er over grensen for én transaksjon",
-        "INVALID_FREQUENCY": "Bruk en frekvens som 450.100",
+        "INVALID_FREQUENCY": "Denne frekvensen samsvarer ikke med det tillatte formatet",
         "UNIT_FULL": "Den enheten har ikke noe ledig sete",
         "UNIT_NEEDS_LEAD": "Få noen andre til å lede først",
         "UNIT_OFF_DUTY": "Ingen i den enheten er på vakt",
@@ -1058,7 +1075,6 @@
             "EDIT_DESCRIPTION": "Oppdater denne kanalens navn eller frekvens.",
             "NAME_PLACEHOLDER": "SWAT-kommando",
             "FREQUENCY_FIELD": "Frekvens (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498.510",
             "SUBMIT": "Opprett kanal",
             "TOASTS": {
                 "CREATED": "Kanalen «{{name}}» er opprettet",
@@ -1087,7 +1103,7 @@
         },
         "CATEGORY_SECTION": {
             "DRAG_TITLE": "Dra for å omorganisere kategorier",
-            "ADD_CHANNEL_TITLE": "Legg til en kanal i denne kategorien",
+            "ADD_CHANNEL_TITLE": "Legg til kanal i denne kategorien",
             "DELETE": "Slett kategori",
             "DROP_HERE": "Slipp for å flytte hit",
             "NO_CHANNELS": "Ingen kanaler ennå",
@@ -1098,19 +1114,24 @@
             "PTT": "PTT"
         },
         "KEYBINDS_DIALOG": {
-            "TITLE": "Radio Keybinds",
-            "DESCRIPTION": "Bind en tastaturtast for å sende umiddelbart på en bestemt kanal.",
-            "EMPTY": "Ingen nøkkelbindinger er konfigurert ennå.",
-            "ADD_NEW": "Legg til ny nøkkelbinding",
-            "ADD_DESCRIPTION": "Velg et navn, trykk på en tast for å fange det, og velg deretter målkanalen.",
+            "TITLE": "Radiotastebindinger",
+            "DESCRIPTION": "Still inn radioen til en kanal med én tast, selv med MDT lukket.",
+            "OFF": "Radionøkkelbindinger er slått av på denne serveren.",
+            "EMPTY": "Ingen radiotastebindinger ennå.",
+            "ADD": "Legg til tastebinding",
+            "ADD_TITLE": "Ny radionøkkelbinding",
+            "EDIT_TITLE": "Rediger radiotastebinding",
+            "FORM_DESCRIPTION": "Gi den et navn, velg en kanal og trykk på tasten som stiller inn radioen på den.",
             "NAME_PLACEHOLDER": "Hovedkanal",
-            "KEY_LABEL": "Nøkkel",
-            "LISTENING": "Lytter …",
-            "CLICK_TO_CAPTURE": "Klikk for å fange en nøkkel",
-            "CAPTURING_HINT": "Trykk på en hvilken som helst tast — Escape for å avbryte.",
-            "CLICK_HINT": "Klikk på feltet ovenfor og trykk på en tast.",
             "CHANNEL_PLACEHOLDER": "Velg en kanal",
-            "SAVE": "Lagre nøkkelbind"
+            "KEY_LABEL": "Nøkkel",
+            "KEY_HINT": "Kun enkeltnøkler. Du kan også endre det senere i Innstillinger > Nøkkelbindinger > FiveM.",
+            "CHANNEL_REMOVED": "Denne kanalen eksisterer ikke lenger",
+            "SETTINGS_HINT": "Nøkler kan også endres i Innstillinger > Nøkkelbindinger > FiveM. En fjernet eller endret nøkkel slutter å virke med en gang, men forblir oppført der til du kobler til igjen.",
+            "DELETE": "Slett tastebinding",
+            "SAVE": "Lagre tastebinding",
+            "TUNED": "Radio innstilt på {{name}}",
+            "ROW_NAME": "Radio: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "Ny radiokode",
@@ -1247,33 +1268,33 @@
                 "SHARP_LEFT": "Skarpt til venstre",
                 "SLIGHT_RIGHT": "Hold til høyre",
                 "RIGHT": "Ta til høyre",
-                "SHARP_RIGHT": "Skarpt til høyre",
+                "SHARP_RIGHT": "",
                 "U_TURN": "Snu deg rundt"
             },
             "NAVIGATING_TO": "Navigerer til {{title}}",
             "STOP_NAVIGATING": "Slutt å navigere",
             "CALCULATING": "Beregner rute …",
             "ARRIVED": "Du har kommet",
-            "NO_ROUTE": "Ingen rute funnet",
+            "NO_ROUTE": "",
             "NOW": "nå",
             "IN_DISTANCE": "i {{distance}}",
             "THEN_TURN": "Deretter {{turn}}",
             "DISTANCE_ETA": "{{distance}} totalt · ETA {{eta}} min"
         },
         "QUICK_ALERTS": {
-            "PANIC_BUTTON": "Panikkknapp",
-            "REQUEST_BACKUP_BUTTON": "Be om sikkerhetskopiering",
+            "PANIC_BUTTON": "",
+            "REQUEST_BACKUP_BUTTON": "",
             "PANIC": {
                 "TITLE": "Offiser trenger hjelp",
                 "DESCRIPTION": "Panikkalarm utløst - betjent krever øyeblikkelig hjelp."
             },
             "BACKUP": {
-                "TITLE": "Sikkerhetskopiering forespurt",
+                "TITLE": "",
                 "DESCRIPTION": "Offiser har bedt om flere enheter til deres plassering."
             }
         },
         "QUICK_ACTIONS": {
-            "RESPONDING": "Svarer til {{code}} · {{title}}",
+            "RESPONDING": "Responding to {{code}} · {{title}}",
             "NO_CALLS": "Ingen utsendelsesanrop å svare på",
             "FAILED": "Kunne ikke fullføre sendingshandlingen",
             "ERRORS": {
@@ -1290,36 +1311,36 @@
             "UNASSIGNED_ONLY": "Bare ikke tildelt",
             "MY_CALLS": "Mine samtaler",
             "HISTORY": "Anropslogg",
-            "LIVE": "Live samtaler",
-            "HISTORY_EMPTY_TITLE": "Ingen lukkede samtaler",
+            "LIVE": "",
+            "HISTORY_EMPTY_TITLE": "",
             "HISTORY_EMPTY_DESCRIPTION": "Løste og utløpte anrop vises her.",
             "EMPTY": {
                 "NO_CALLS_TITLE": "Ingen nylige anrop",
-                "NOT_ON_ANY_TITLE": "Du er ikke på noen samtaler",
-                "NO_UNASSIGNED_TITLE": "Ingen utilordnede anrop",
+                "NOT_ON_ANY_TITLE": "",
+                "NO_UNASSIGNED_TITLE": "",
                 "NO_CALLS_DESCRIPTION": "Innkommende utsendelsesanrop vises her etter hvert som de kommer inn.",
                 "NOT_ON_ANY_DESCRIPTION": "Svar på et anrop for å se det her.",
                 "NO_UNASSIGNED_DESCRIPTION": "Alt som vises for øyeblikket har en enhet tilknyttet."
             },
-            "RESPONDING": "Reagerer",
+            "RESPONDING": "",
             "RESPOND": "Svare",
-            "UNACKNOWLEDGE": "Avbekreft",
+            "UNACKNOWLEDGE": "",
             "ACKNOWLEDGE": "Bekrefte",
-            "STOP_ROUTING": "Stopp ruting",
-            "GET_DIRECTIONS": "Få veibeskrivelse",
+            "STOP_ROUTING": "",
+            "GET_DIRECTIONS": "",
             "SET_WAYPOINT": "Sett veipunkt",
-            "WAYPOINT_SET": "Veipunkt satt på GPS-en",
-            "TIMELINE_AND_NOTES": "Tidslinje og notater",
+            "WAYPOINT_SET": "",
+            "TIMELINE_AND_NOTES": "",
             "VIEW_LIVE": "Bo",
             "VIEW_HISTORY": "Historie",
-            "FILTER": "Filtrer og sorter",
+            "FILTER": "",
             "SHOW": "Vise",
             "ALL_CALLS": "Alle samtaler",
             "LEAVE_CALL": "Forlat samtalen"
         },
         "TIMELINE_NOTES": {
             "TITLE": "Tidslinje",
-            "EMPTY": "Ingen arrangementer ennå.",
+            "EMPTY": "",
             "NOTE_PLACEHOLDER": "Legg til et notat...",
             "EVENTS": {
                 "CREATED": "Samtale opprettet",
@@ -1482,7 +1503,7 @@
         "SEARCH_PLACEHOLDER": "Søk etter navn eller statsborger-ID...",
         "ONLINE_COUNT_one": "{{count}} online",
         "ONLINE_COUNT_other": "{{count}} online",
-        "EMPTY": "Ingen offiserer funnet",
+        "EMPTY": "",
         "BODYCAM": {
             "NO_PREVIEW": "Ingen forhåndsvisning",
             "LIVE": "Bo",
@@ -1507,43 +1528,43 @@
             },
             "MAKE_ROLE": {
                 "lead": "Lag bly",
-                "member": "Bli medlem",
-                "trainee": "Gjør trainee"
+                "member": "",
+                "trainee": ""
             },
             "ACTIONS": {
-                "SHOW_ON_MAP": "Vis på kart",
+                "SHOW_ON_MAP": "",
                 "ATTACH_CALL": "Sett på en samtale",
-                "PAGE": "Sideenhet …",
-                "SET_STATUS": "Still inn status",
-                "SET_ZONE": "Still inn sone",
-                "MERGE": "Slå sammen til",
-                "JOIN": "Bli med i enheten",
-                "LEAVE": "Forlat enheten",
+                "PAGE": "",
+                "SET_STATUS": "",
+                "SET_ZONE": "",
+                "MERGE": "",
+                "JOIN": "",
+                "LEAVE": "",
                 "DISBAND": "Oppløse"
             },
             "MERGE_HINT": "Flytt alle i {{name}} til",
-            "STALE": "Ingen oppdatering",
+            "STALE": "",
             "STALE_HINT": "Status uendret i over {{minutes}} minutter",
             "CHECK_BY": "Spurt av {{by}}",
-            "CHECK_OVERDUE": "Ikke noe svar",
-            "ON_CHANNEL": "På kanalen",
+            "CHECK_OVERDUE": "",
+            "ON_CHANNEL": "",
             "WAYPOINT_SET": "Veipunkt satt til {{name}}",
             "STATUS_CHECK_SENT": "Statussjekk sendt til {{name}}",
-            "STATUS_CHECK_ALL": "Statussjekk alle",
+            "STATUS_CHECK_ALL": "",
             "STATUS_CHECK_ALL_SENT_one": "Statussjekk sendt til {{count}} enhet",
             "STATUS_CHECK_ALL_SENT_other": "Statussjekk sendt til {{count}} enheter",
             "ZONE_SHORT": "Under minimum {{min}} enheter",
             "SEARCH_PLACEHOLDER": "Søk etter enheter, offiserer, skilt...",
             "GROUP_NONE": {
                 "STATUS": "Fritid",
-                "ZONE": "Ingen sone",
+                "ZONE": "",
                 "TYPE": "Ingen type"
             },
             "PAGE": {
                 "TITLE": "Side {{name}}",
                 "DESCRIPTION": "Vist i spillet til alle på vakt medlem av enheten.",
                 "PLACEHOLDER": "f.eks. Gå tilbake til Mission Row for briefing",
-                "SEND": "Send side",
+                "SEND": "",
                 "SENT": "Side sendt til {{name}}"
             },
             "ADD_OFFICER": "Legg til offiser",
@@ -1601,7 +1622,7 @@
     },
     "EMPLOYEE": {
         "HEADING": "Ansatt",
-        "SUBHEADING": "Personalrekord",
+        "SUBHEADING": "",
         "SUBHEADING_WITH_DEPT": "{{department}} · personaljournal",
         "NO_CALLSIGN": "ingen kallesignal",
         "BADGE_PREFIX": "Merke #",
@@ -1635,51 +1656,51 @@
             },
             "ACHIEVEMENTS": "Prestasjoner",
             "EARNED": "Opptjent",
-            "VIEW_PROGRESS": "Neste opp",
+            "VIEW_PROGRESS": "",
             "VIEW_ALL": "Alle",
             "NO_ACHIEVEMENTS": "Ingen prestasjoner satt opp for denne avdelingen",
             "RANK_HISTORY": "Ranger historie",
-            "RECORDS_FILED": "Registreringer arkivert",
+            "RECORDS_FILED": "",
             "CERTIFICATIONS": "Sertifiseringer",
-            "NO_CERTIFICATIONS": "Ingen sertifiseringer holdt"
+            "NO_CERTIFICATIONS": ""
         },
         "RECORDS_TAB": {
             "TITLE": "Rekorder",
-            "SEARCH_PLACEHOLDER": "Søk etter tittel...",
+            "SEARCH_PLACEHOLDER": "",
             "INVOLVED_HINT": "{{value}} som en involvert offiser",
-            "AS_LEAD": "{{value}} som hovedansvarlig",
-            "COLLECTED_HINT": "{{value}} samlet seg selv",
-            "EXECUTED_HINT": "{{value}} utført",
+            "AS_LEAD": "{{value}} as lead officer",
+            "COLLECTED_HINT": "{{value}} collected themselves",
+            "EXECUTED_HINT": "{{value}} executed",
             "PEOPLE_CHARGED_one": "Til {{formatted}} person",
-            "PEOPLE_CHARGED_other": "Til {{formatted}} personer",
-            "RECORDS_PER_DAY": "Rekorder per dag",
-            "RECORDS_PER_WEEK": "Rekorder per uke",
+            "PEOPLE_CHARGED_other": "To {{formatted}} people",
+            "RECORDS_PER_DAY": "",
+            "RECORDS_PER_WEEK": "",
             "EMPTY": "Ingen poster i denne perioden.",
             "NO_MATCHES": "Ingen poster samsvarer med dette filteret.",
             "ROLES": {
-                "LEAD": "Ledende offiser",
-                "INVOLVED": "Involvert offiser",
-                "COLLECTED": "Samlet",
-                "REQUESTED": "Forespurt",
-                "EXECUTED": "Henrettet",
+                "LEAD": "",
+                "INVOLVED": "",
+                "COLLECTED": "",
+                "REQUESTED": "",
+                "EXECUTED": "",
                 "ISSUED": "Utstedt"
             }
         },
         "PERFORMANCE_TAB": {
-            "TITLE": "Peer Anmeldelser",
-            "AVERAGE_SCORE": "Gjennomsnittlig poengsum",
-            "REVIEW_COUNT_one": "{{formatted}} anmeldelse",
-            "REVIEW_COUNT_other": "{{formatted}} anmeldelser",
-            "FROM_REVIEWERS_one": "{{reviews}} fra {{formatted}} offiser",
-            "FROM_REVIEWERS_other": "{{reviews}} fra {{formatted}} offiserer",
-            "LATEST_SCORE": "Siste poengsum",
-            "ABOVE_AVERAGE": "{{value}} over gjennomsnittet",
-            "BELOW_AVERAGE": "{{value}} under gjennomsnittet",
+            "TITLE": "",
+            "AVERAGE_SCORE": "",
+            "REVIEW_COUNT_one": "{{formatted}} review",
+            "REVIEW_COUNT_other": "{{formatted}} reviews",
+            "FROM_REVIEWERS_one": "{{reviews}} from {{formatted}} officer",
+            "FROM_REVIEWERS_other": "{{reviews}} from {{formatted}} officers",
+            "LATEST_SCORE": "",
+            "ABOVE_AVERAGE": "{{value}} above their average",
+            "BELOW_AVERAGE": "{{value}} below their average",
             "SAME_AS_AVERAGE": "På linje med deres gjennomsnitt",
-            "ONLY_REVIEW": "Deres eneste anmeldelse så langt",
-            "LAST_REVIEW": "Siste anmeldelse",
-            "BY_REVIEWER": "Av {{name}}",
-            "STRONGEST": "Det sterkeste området",
+            "ONLY_REVIEW": "",
+            "LAST_REVIEW": "",
+            "BY_REVIEWER": "By {{name}}",
+            "STRONGEST": "",
             "WEAKEST": "Det svakeste området",
             "RATING_VALUE": "{{value}} / 5",
             "NO_REVIEWS_YET": "Ingen anmeldelser ennå",
@@ -2152,6 +2173,9 @@
                 "PENALCODE_VIEW": "Les straffeloven.",
                 "PENALCODE_CREATE": "Legg til straffekodeoppføringer.",
                 "PENALCODE_UPDATE": "Rediger straffekodeoppføringer.",
+                "PRISONERS_VIEW": "Se hvem som sitter i fengsel og hvor lenge de har igjen.",
+                "PRISONERS_RELEASE": "Slipp fanger løs før dommen er over.",
+                "PRISONERS_EDIT": "Endre hvor lenge en fange fortsatt må sone.",
                 "PENALCODE_DELETE": "Fjern straffekodeoppføringer.",
                 "OPERATIONPLANS_VIEW": "Les operasjonsplaner.",
                 "OPERATIONPLANS_CREATE": "Utkast til nye driftsplaner.",
@@ -2258,7 +2282,7 @@
         "INDEX": {
             "PROPERTY_DETAILS_LABEL": "Eiendomsdetaljer",
             "VIEW_LINKS_HINT": "Åpne en graf over postene, personene og kjøretøyene knyttet til denne egenskapen",
-            "WAYPOINT_SET": "Veipunkt satt på GPS-en",
+            "WAYPOINT_SET": "",
             "FIELDS": {
                 "OWNED_SINCE": "Eid siden",
                 "FEATURES": "Funksjoner"
@@ -2280,7 +2304,7 @@
         }
     },
     "DASHBOARD": {
-        "SUBHEADING": "Skiftet ditt, varsler og avdelingsaktivitet på et øyeblikk",
+        "SUBHEADING": "Skift, varsler og avdelingsaktivitet på et øyeblikk",
         "FEATURED_ANNOUNCEMENT_EMPTY": "Ingen kunngjøringer",
         "START_COLLAB_BUTTON": "Start samarbeid",
         "ALERTS": {
@@ -2334,7 +2358,7 @@
             },
             "DIALOG": {
                 "TITLE": "Bevisstam",
-                "DESCRIPTION": "Dra elementer fra inventaret ditt til bevispanelet, eller dobbeltklikk på dem.",
+                "DESCRIPTION": "Dra elementer fra inventaret inn i bevispanelet, eller dobbeltklikk på dem.",
                 "INVENTORY": "Inventar",
                 "SELECTED": "Utvalgte bevis",
                 "DROP_HINT": "Dra elementer hit",
@@ -2412,7 +2436,7 @@
                     "ADD": "Legg til jobb",
                     "EMPTY": "Ingen jobber er hvitelistet - ingen kan åpne MDT.",
                     "ADD_TITLE": "Legg til en jobb",
-                    "ADD_DESCRIPTION": "Velg en jobb fra rammeverket ditt for å gi MDT tilgang.",
+                    "ADD_DESCRIPTION": "Velg en jobb fra rammeverket ditt for å gi MDT-tilgang.",
                     "JOB_LABEL": "Jobb",
                     "JOB_PLACEHOLDER": "Velg en jobb",
                     "SEED_LABEL": "Start tillatelsene fra",
@@ -2457,7 +2481,7 @@
                     "DESCRIPTION": "Med flere avdelinger (politi, lensmann, rangers...) kan du bestemme hvem som skal se hvilke poster. Skrudd av ser hver avdeling alt.",
                     "EXAMPLE": {
                         "TITLE": "Hvem ser en rekord",
-                        "HINT": "De tre synlighetene, og hvem som kan åpne et rekordsett til hver. Den uthevede er hva nye rekorder får.",
+                        "HINT": "De tre synlighetene, og hvem som kan åpne et rekordsett til hver. Den fremhevede er hva nye rekorder får.",
                         "DEFAULT": "Misligholde",
                         "OWN": "Avdelingen som har laget det",
                         "PICKED": "Avdelingene valgte det",
@@ -2527,7 +2551,7 @@
                     "HIDDEN_JOBS_HINT": "Jobboffiserer ser aldri på innbyggere, som gjenger. Medlemmer viser jobben nedenfor i stedet, og Citizens-filteret kan ikke finne dem ved det.",
                     "HIDDEN_JOBS_PLACEHOLDER": "Velg en jobb",
                     "HIDDEN_JOBS_SHOWN_AS": "Vis skjulte jobber som",
-                    "HIDDEN_JOBS_SHOWN_AS_HINT": "Jobben medlemmene av en skjult jobb ser ut til å ha, vanligvis rammeverkets arbeidsledige jobb."
+                    "HIDDEN_JOBS_SHOWN_AS_HINT": "Jobben medlemmene av en skjult jobb ser ut til å ha, vanligvis din rammes arbeidsledige jobb."
                 },
                 "LIMITS": {
                     "TITLE": "Grenser",
@@ -2544,7 +2568,7 @@
                     "HOSTS": "Tillatte bildesider",
                     "HOSTS_HINT": "Bare lenker fra disse nettstedene (og deres underdomener) godtas. La det stå tomt for å tillate et hvilket som helst nettsted. Hvis du limer inn en fullstendig lenke, legger du bare til nettstedet.",
                     "HOSTS_PLACEHOLDER": "f.eks. r2.fivemanage.com",
-                    "DESCRIPTION": "Regler for bildelenker som offiserer knytter til arkiver (mugshots, bevisbilder, gallerier).",
+                    "DESCRIPTION": "Regler for bildelenker som offiserer knytter til poster (mugshots, bevisbilder, gallerier).",
                     "TESTER": {
                         "TITLE": "Prøv en lenke",
                         "HINT": "Lim inn en bildelenke for å se om offiserer kan legge den ved med gjeldende regler.",
@@ -2604,7 +2628,7 @@
                     "NUMBER": "Tallformat",
                     "NUMBER_HINT": "Om tusenvis er atskilt med komma eller prikker.",
                     "MEASUREMENT": "Enheter",
-                    "MEASUREMENT_HINT": "Imperial (fot, miles, pund) eller metrisk (meter, kilometer, kilo) for avstander, høyder og vekter.",
+                    "MEASUREMENT_HINT": "Imperial (fot, miles, pund) eller metrisk (meter, kilometer, kilogram) for avstander, høyder og vekter.",
                     "TEMPERATURE": "Temperatur",
                     "TEMPERATURE_HINT": "Fahrenheit eller Celsius.",
                     "PHONE_PREVIEW": "5551234567 ser slik ut:",
@@ -2665,7 +2689,7 @@
                     "SELF_EDIT": "Offiserer kan endre sine egne",
                     "SELF_EDIT_HINT": "Av: bare ledere (employees.manage) kan endre kallesignaler, fra Ansatte-siden.",
                     "ASSIGN_HIRE": "Tildel ved ansatt",
-                    "ASSIGN_HIRE_HINT": "Nye rekrutter får neste gratis kallesignal av sin rang.",
+                    "ASSIGN_HIRE_HINT": "Nye rekrutter får neste gratis kallesignal i sin rang.",
                     "ASSIGN_RANK": "Tilordne på nytt ved opprykk eller degradering",
                     "ASSIGN_RANK_HINT": "En offiser hvis kallesignal ikke passer til den nye rangens format, får den neste gratis av den.",
                     "ASSIGN_DUTY": "Tildel når du skal på vakt",
@@ -2734,7 +2758,7 @@
             "EVIDENCE": {
                 "STASH": {
                     "TITLE": "Lagring av bevis",
-                    "DESCRIPTION": "Gjenstander som en offiser logger på en bevispost, flyttes ut av beholdningen til et lager laget for den posten. Endringer gjelder for lagringer som opprettes etter at du har lagret.",
+                    "DESCRIPTION": "Gjenstander en offiser logger på en bevispost flyttes ut av beholdningen til et lager laget for den posten. Endringer gjelder for lagringer som opprettes etter at du har lagret.",
                     "LABEL": "Lagringsnavn",
                     "LABEL_HINT": "Hva lageret heter i inventaret. %s erstattes med bevisnummeret og må stå i navnet én gang.",
                     "SLOTS": "spilleautomater",
@@ -2776,8 +2800,8 @@
                 },
                 "EVENTS": {
                     "TITLE": "Automatiske innlegg",
-                    "DESCRIPTION": "Ting MDT legger ut til en chat-kanal på egen hånd, så ingen går glipp av dem. Velg kanalen for hver, eller slå den av.",
-                    "OFFICER_PANIC": "Panikkknapp",
+                    "DESCRIPTION": "Ting MDT legger ut på en chat-kanal på egen hånd, så ingen går glipp av dem. Velg kanalen for hver, eller slå den av.",
+                    "OFFICER_PANIC": "",
                     "BACKUP_REQUESTED": "Sikkerhetskopiering forespurt",
                     "BOLO_CREATED": "Ny BOLO",
                     "BOLO_LOCATED": "BOLO ligger",
@@ -2827,6 +2851,12 @@
                     "DESCRIPTION": "Det som lander i klokken på dashbordet. Personlige venter på offiserer som er offline; Avdelingsomfattende når kun offiserer online på det tidspunktet.",
                     "RETENTION": "Hold varsler for",
                     "RETENTION_HINT": "Varsler som er eldre enn dette, slettes umiddelbart når du senker den. 0 holder dem for alltid."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Radio animasjon",
+                    "DESCRIPTION": "Hva offiserers karakterer gjør mens de snakker på radio. Hver offiser kan velge sin egen på konfigurasjonssiden; dette er hva alle andre får.",
+                    "DEFAULT": "Standard animasjon",
+                    "DEFAULT_HINT": "Med pma-voice er dens egen radioanimasjon slått av med mindre dette er Ingen. Med en annen stemmeressurs slår du av animasjonen i sin egen konfigurasjon."
                 }
             },
             "DISPATCH": {
@@ -2841,14 +2871,14 @@
                     "LIFETIME": "Lukk ubesvarte anrop etter",
                     "LIFETIME_HINT": "En samtale ingen svarer på lukkes av seg selv etter så lang tid. Ran og ran har sin egen, lengre tid i config.lua.",
                     "HISTORY": "Lukkede samtaler beholdes",
-                    "HISTORY_HINT": "Hvor mange lukkede anrop forblir i ekspedisjonsloggen. 0 beholder ingen.",
+                    "HISTORY_HINT": "Hvor mange lukkede samtaler forblir i ekspedisjonsloggen. 0 beholder ingen.",
                     "FLOOR": "Minimum tid mellom varsler",
                     "FLOOR_HINT": "Minste tid mellom to automatiske varsler fra samme spiller, uansett type. Beskytter mot spam varsel."
                 },
                 "ESCALATION": {
                     "TITLE": "Eskalering",
                     "ENABLED": "Eskalere ubesvarte anrop",
-                    "ENABLED_HINT": "Av: en samtale beholder prioriteten den ble opprettet med.",
+                    "ENABLED_HINT": "Av: et anrop beholder prioritet det ble opprettet med.",
                     "LOW": "Lav blir middels etter",
                     "LOW_HINT": "Hvor lenge venter en lavprioritet samtale før den blir middels.",
                     "MEDIUM": "Middels blir høy etterpå",
@@ -2894,7 +2924,7 @@
                     "PULSE_UNTIL_ASSIGNED": "Bare inntil en enhet er festet",
                     "PULSE_UNTIL_ASSIGNED_HINT": "Ringen forsvinner når noen tar samtalen.",
                     "FLASH": "Flash nye samtaler",
-                    "FLASH_HINT": "Hvor lenge en ny samtales markør blinker. 0 betyr at den ikke blinker.",
+                    "FLASH_HINT": "Hvor lenge et nytt anrops markør blinker. 0 betyr at den ikke blinker.",
                     "FADE_EXPIRY": "Dim før lukking",
                     "FADE_EXPIRY_HINT": "En samtale som ingen tok, dimmer over dette lenge før den lukkes av seg selv. 0 slår den av.",
                     "FADE": "Fade ut når den er lukket",
@@ -3000,8 +3030,35 @@
                         "CRITICAL": "Kritisk"
                     },
                     "AUTO_LOCK": "Lås platen på en fyrstikk",
-                    "AUTO_LOCK_HINT": "Radaren låser platen som matchet, slik at betjenten ikke mister den.",
+                    "AUTO_LOCK_HINT": "Radaren låser platen som matchet, så offiseren ikke mister den.",
                     "DESCRIPTION": "Med en radarressurs (wk_wars2x), blir hver plate radaren leser sjekket mot BOLOer og warrants, og offiseren blir advart på en kamp."
+                },
+                "SCENE": {
+                    "TITLE": "Krimscener",
+                    "DESCRIPTION": "Hvordan offiserer plasserer bånd og bevismarkører fra åstedet: fra scenesiden i interaksjonsmenyen, ved å bruke et inventarelement, eller en av dem. Varene er ikke brukt opp.",
+                    "METHODS": {
+                        "MENU": "Sceneside",
+                        "ITEM": "Bruker elementet",
+                        "BOTH": "Sceneside eller element"
+                    },
+                    "TAPE_METHOD": "Hvordan offiserer plasserer tape",
+                    "TAPE_METHOD_HINT": "Fra scenesiden, ved å bruke båndelementet, eller en av dem.",
+                    "TAPE_ITEM": "Tape element",
+                    "TAPE_ITEM_HINT": "Inventarobjektet offiserer bruker til å plassere kriminalitetstape.",
+                    "MARKER_METHOD": "Hvordan offiserer plasserer bevismarkører",
+                    "MARKER_METHOD_HINT": "Fra scenesiden, ved å bruke markørelementet, eller en av dem.",
+                    "MARKER_ITEM": "Bevismarkørelement",
+                    "MARKER_ITEM_HINT": "Inventarelementet offiserer bruker til å plassere bevismarkører.",
+                    "RADIUS": "Scenestørrelse",
+                    "RADIUS_HINT": "Tape, markører og rekvisitter plassert i nærheten av en scene blir med. Lenger unna starter de en ny scene.",
+                    "MAX_MARKERS_SCENE": "Bevismarkører per scene",
+                    "MAX_MARKERS_SCENE_HINT": "Markører er nummerert fra 1 i hver scene. 0 = ubegrenset, bare når markørene ikke bruker de nummererte modellene.",
+                    "MAX_MARKERS_OFFICER": "Bevismarkører per offiser",
+                    "MAX_MARKERS_OFFICER_HINT": "Hvor mange markører en offiser kan ha ute på en gang, på tvers av hver scene. 0 = ubegrenset.",
+                    "TAPE_LENGTH": "Lengste båndlinje",
+                    "TAPE_LENGTH_HINT": "Lengst fra hverandre kan de to endene av en tapelinje bindes.",
+                    "MAX_TAPE_OFFICER": "Tape linjer per offiser",
+                    "MAX_TAPE_OFFICER_HINT": "Hvor mange båndlinjer en offiser kan ha opp på en gang. 0 = ubegrenset."
                 }
             },
             "CAMERAS": {
@@ -3109,7 +3166,7 @@
                 "CAPTURE": {
                     "TITLE": "Bilder og forhåndsvisninger",
                     "ENABLED": "Koble kameraer til samtaler",
-                    "ENABLED_HINT": "Et automatisk varsel i nærheten av et fungerende kamera er koblet til det, slik at offiserer kan åpne feeden fra samtalen.",
+                    "ENABLED_HINT": "Et automatisk varsel nær et fungerende kamera er koblet til det, slik at offiserer kan åpne feeden fra samtalen.",
                     "SCREENSHOT": "Legg ved et bilde av scenen",
                     "SCREENSHOT_HINT": "Samtalen får også et bilde av øyeblikket.",
                     "PREVIEW": "Forhåndsvisninger av kamera",
@@ -3162,7 +3219,8 @@
                     "BOTH": "Element eller kommando",
                     "WAYS": {
                         "ITEM": "Inventarvare",
-                        "COMMAND": "Chat kommando"
+                        "COMMAND": "Chat kommando",
+                        "MENU": "Sceneside"
                     }
                 },
                 "REPAIR": {
@@ -3171,7 +3229,7 @@
                     "ENABLED": "Spillere kan reparere kameraer",
                     "ENABLED_HINT": "Av: ødelagte kameraer forblir ødelagte til et skript reparerer dem.",
                     "METHOD": "Hvordan en reparasjon starter",
-                    "METHOD_HINT": "Bruk reparasjonssettet, skriv reparasjonskommandoen, eller en av dem. Varen må eksistere i lagerressursen din.",
+                    "METHOD_HINT": "Bruk reparasjonssettet, skriv inn reparasjonskommandoen, eller en av dem. Varen må eksistere i lagerressursen din.",
                     "ITEM": "Reparasjonssett element",
                     "ITEM_HINT": "Inventarelementet spillere bruker til å reparere et kamera."
                 },
@@ -3183,7 +3241,13 @@
                     "SIGNAL": "Signalstyrken endres",
                     "SIGNAL_HINT": "Kosmetisk: signallinjene på kameranettet beveger seg litt over tid. Av: de holder seg stille.",
                     "AUDIO_RADIUS": "Hørselsområde",
-                    "AUDIO_RADIUS_HINT": "Offiserer som ser på en feed hører spillere snakke så nært kameraet."
+                    "AUDIO_RADIUS_HINT": "Offiserer som ser på en feed hører spillere snakke så nært kameraet.",
+                    "ON_FEED_LOST": "Når kameraet går ned",
+                    "ON_FEED_LOST_HINT": "Hva skjer for offiserer som ser på et CCTV-kamera som blir ødelagt, hacket eller deaktivert, etter at det er avbrutt.",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Bytt til neste kamera",
+                        "CLOSE": "Lukk feeden"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Automatisk gjenkjenning",
@@ -3198,7 +3262,7 @@
                 "BODYCAM": {
                     "TITLE": "Bodycams",
                     "METHOD": "Hvordan offiserer slår det på",
-                    "METHOD_HINT": "Ved å bruke bodycam-elementet, skrive kommandoen, eller en av dem. Kommandoen trenger fortsatt varen i inventaret.",
+                    "METHOD_HINT": "Bruke bodycam-elementet, skriv inn kommandoen eller en av dem. Kommandoen trenger fortsatt varen i inventaret.",
                     "STREAM_RADIUS": "Synlig område",
                     "STREAM_RADIUS_HINT": "Mens noen ser på et kroppskamera, forblir spillere og kjøretøy så nær brukeren synlige i feeden. Større viser mer, men synkroniserer flere spillere til seeren.",
                     "ITEM": "Bodycam element",
@@ -3312,7 +3376,7 @@
                 "CHARACTERS": "tegn",
                 "ENTRIES": "maks",
                 "HEALTH": "HP",
-                "POINTS": "pkt",
+                "POINTS": "poeng",
                 "SLOTS": "spor",
                 "TIMES": "×",
                 "DEGREES": "°"
@@ -3348,7 +3412,7 @@
                 },
                 "NOTIFICATIONS_RETENTION": {
                     "TITLE": "Vil du slette eldre varsler?",
-                    "DESCRIPTION": "Varsler som er eldre enn {{value}} vil bli slettet med en gang og kan ikke gjenopprettes."
+                    "DESCRIPTION": "Varsler eldre enn {{value}} slettes umiddelbart og kan ikke gjenopprettes."
                 }
             },
             "RESET_SECTION": {
@@ -3479,7 +3543,7 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "Standard tastebindinger",
-                    "DESCRIPTION": "Nøkkelen hver handling starter på. FiveM lagrer en spillers nøkler første gang de blir med, så en endring her når nye spillere og alle som aldri har hatt denne nøkkelen ennå. Alle kan fortsatt endre sine egne nøkler i Innstillinger > Nøkkelbindinger > FiveM.",
+                    "DESCRIPTION": "Nøkkelen hver handling starter på. FiveM lagrer en spillers nøkler første gang de blir med, så en endring her når nye spillere og alle som aldri har hatt denne nøkkelen ennå. Alle kan fortsatt endre sine egne nøkler på MDTs konfigurasjonsside eller i Innstillinger > Nøkkelbindinger > FiveM.",
                     "OPEN_MDT": "Åpne MDT",
                     "OPEN_MDT_HINT": "Avslått åpner offiserer den med kommandoen eller gjenstanden.",
                     "INTERACTIONS": "Interaksjonsmeny",
@@ -3488,10 +3552,13 @@
                     "DISPATCH_HINT": "Viser eller skjuler det lille ekspedisjonspanelet.",
                     "RESPOND_TO_CALL": "Svar på anrop",
                     "RESPOND_TO_CALL_HINT": "Svarer på det nyeste anropet og setter et veipunkt til det.",
-                    "PANIC_BUTTON": "Panikkknapp",
+                    "PANIC_BUTTON": "",
                     "PANIC_BUTTON_HINT": "Sender et panikkvarsel med betjentens plassering.",
-                    "REQUEST_BACKUP": "Be om sikkerhetskopiering",
-                    "REQUEST_BACKUP_HINT": "Ber enheter i nærheten om backup."
+                    "REQUEST_BACKUP": "",
+                    "REQUEST_BACKUP_HINT": "Ber enheter i nærheten om backup.",
+                    "CLASH": "Også standardnøkkelen til {{names}}. FiveM kjører hver handling på en nøkkel, så {{key}} ville gjøre begge deler.",
+                    "MAX_RADIO": "Radionøkkelbindinger per offiser",
+                    "MAX_RADIO_HINT": "Hvor mange radionøkkelbindinger hver offiser kan legge til på Radio-siden. 0 slår dem av. Offiserer som allerede har flere beholder bare de første."
                 }
             },
             "IN_GAME": {
@@ -3631,7 +3698,8 @@
                 "RADIUS": "Søkeområde",
                 "RADIUS_HINT": "En sirkel rundt samtalen i stedet for bare en nål.",
                 "SUMMARY": "ikon {{sprite}}, farge {{colour}}",
-                "SAME_AS_OTHERS": "Samme som de andre"
+                "SAME_AS_OTHERS": "Samme som de andre",
+                "COLOUR_BY_PRIORITY": "Fargen følger samtalens prioritet. Slå av «Farge etter prioritet» i kartblipper for å velge en her."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Forfriske",
@@ -3741,7 +3809,7 @@
                     "STALE": "Advare etter ingen oppdatering for",
                     "STALE_HINT": "Et enhetskort viser en advarsel når statusen ikke har endret seg så lenge. 0 = aldri.",
                     "CHECK_TIMEOUT": "Statussjekk svartid",
-                    "CHECK_TIMEOUT_HINT": "Etter så lang tid uten svar, vises en statussjekk som forsinket."
+                    "CHECK_TIMEOUT_HINT": "Etter så lenge uten svar, vises en statussjekk som forsinket."
                 },
                 "VEHICLES": {
                     "TITLE": "Kjøretøy",
@@ -3823,7 +3891,7 @@
                 "FLAGGED": "Flagget",
                 "NORMAL_STATUS": "Klar",
                 "NOT_REGISTERED": "Ikke registrert",
-                "NOT_REGISTERED_HINT": "Ingen kjøretøy registrert med denne skiltet.",
+                "NOT_REGISTERED_HINT": "Ingen kjøretøy registrert med dette skilt.",
                 "NO_RECORD_HINT": "Ingen MDT-post for denne personen.",
                 "UNKNOWN": "Ukjent",
                 "UNIDENTIFIED": "Uidentifisert",
@@ -3832,6 +3900,13 @@
             "RECORDING": {
                 "MAX_DURATION": "Lengste opptak nådd, lagrer klippet",
                 "MAX_SIZE": "Største opptaksstørrelse nådd, lagrer klippet"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "Kamera ødelagt",
+                "HACKED": "Fôr fanget opp",
+                "OFFLINE": "Kamera offline",
+                "BODYCAM": "Bodycam offline",
+                "DASHCAM": "Dashcam offline"
             }
         },
         "GIZMO": {
@@ -4025,9 +4100,6 @@
                 "ACTIVE_WARRANTS": "Aktive tegningsretter",
                 "STOLEN": "Stjålet",
                 "OPEN_RECORD": "Åpne posten",
-                "OCCUPANTS_OUT": "Bestill beboerne ut",
-                "OCCUPANTS_ORDERED_one": "Bestilte {{count}} beboer ut",
-                "OCCUPANTS_ORDERED_other": "Bestilte {{count}} beboere ut",
                 "SEARCH_TRUNK": "Søk bagasjerommet",
                 "IMPOUND": "Beslaglagt",
                 "IMPOUNDED": "{{plate}} beslaglagt"
@@ -4038,18 +4110,18 @@
                 "ON_DUTY": "På vakt",
                 "STATUS": "Status",
                 "UNIT": "Enhet",
-                "LEAVE_UNIT": "Forlat enheten",
+                "LEAVE_UNIT": "",
                 "NO_UNITS": "Ingen enheter i avdelingen din",
                 "MEMBERS": "Medlemmer",
                 "VEHICLE": "Kjøretøy",
                 "BODYCAM": "Bodycam",
-                "BACKUP": "Be om sikkerhetskopiering",
+                "BACKUP": "",
                 "PANIC": "Panikk",
                 "ANSWER_CHECK": "Kontroll av svarstatus",
                 "CHECK_ANSWERED": "Statussjekk besvart",
                 "UNIT_RADIO": "Bli med enhetsradio",
                 "ZONE": "Sone",
-                "NO_ZONE": "Ingen sone"
+                "NO_ZONE": ""
             },
             "RADIO": {
                 "MEMBERS": "Medlemmer",
@@ -4305,11 +4377,11 @@
                 },
                 "LEFT": {
                     "LABEL": "Panorer til venstre",
-                    "HELP": "Hvor langt operatører kan dreie den til venstre. Flytt musen til venstre eller høyre."
+                    "HELP": "Hvor langt operatører kan snu den til venstre. Flytt musen til venstre eller høyre."
                 },
                 "RIGHT": {
                     "LABEL": "Panorer til høyre",
-                    "HELP": "Hvor langt operatører kan dreie den til høyre. Flytt musen til venstre eller høyre."
+                    "HELP": "Hvor langt operatører kan snu den til høyre. Flytt musen til venstre eller høyre."
                 },
                 "UP": {
                     "LABEL": "Vipp opp",
@@ -4453,6 +4525,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Temaer og farger."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "I spillet",
+                    "DESCRIPTION": "Hvordan karakteren din oppfører seg mens du bruker MDT og radio."
                 }
             },
             "SECTIONS": {
@@ -4461,7 +4537,9 @@
                 "UNITS_NUMBERS": "Enheter og tall",
                 "SEE_THROUGH": "Gjennomsiktsmodus",
                 "SEE_THROUGH_DESCRIPTION": "Tok MDT ut av veien for å se spillet bak den, uten å lukke den.",
-                "DISPLAY": "Utstilling"
+                "DISPLAY": "Utstilling",
+                "RADIO": "Radio",
+                "KEYBINDS": "Keybinds"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4481,7 +4559,7 @@
                     "DESCRIPTION": "12-timers eller 24-timers klokke"
                 },
                 "WEEK_START": {
-                    "LABEL": "Uken starter kl",
+                    "LABEL": "Uken starter på",
                     "DESCRIPTION": "Første dag i uken i kalendervisninger"
                 },
                 "NUMBER_FORMAT": {
@@ -4523,13 +4601,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Varslingslyder",
                     "DESCRIPTION": "Spill av en lyd for innkommende sendingsanrop og chat-omtaler"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Talende animasjon",
+                    "DESCRIPTION": "Hva karakteren din gjør mens du snakker på radio",
+                    "PREVIEW": "Forhåndsvisning av karakteren din"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Trykk på en tast...",
-                "LISTENING_HINT": "Esc for å avbryte · Tilbake for å fjerne",
                 "UNBOUND": "Ikke bundet",
                 "CUSTOM": "Skikk"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "Din MDT-tastebinding. Klikk på en tast og trykk på en ny for å endre den.",
+                "NONE": "Denne serveren har ingen MDT-nøkkelbindinger.",
+                "OVERLAP": "Samme nøkkel som {{names}}. FiveM kjører hver handling på en tast, så å trykke på den kjører dem alle.",
+                "OPEN_SETTINGS": "Endre nøkler i FiveMs nøkkelbindinger",
+                "HINT": "En nøkkel du erstatter slutter å fungere med en gang, men forblir oppført i FiveMs nøkkelbindinger til du kobler til igjen. Museknapper og kontroller kan stilles inn der."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Lys",
@@ -4587,7 +4675,14 @@
                 "HINT": "Forhåndsvis et varsel ved posisjonen og varigheten ovenfor",
                 "BUTTON": "Forhåndsvisningsvarsling"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Forhåndsvisning — hvor falmet MDT ser ut på dette nivået"
+            "SEE_THROUGH_PREVIEW_HINT": "Forhåndsvisning — hvor falmet MDT ser ut på dette nivået",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Serverstandard ({{style}})",
+                "NONE": "Ingen",
+                "CHEST": "Skuldermikrofon",
+                "EAR": "Ørestykke",
+                "HANDHELD": "Håndholdt radio"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "Temaer",
@@ -4724,7 +4819,7 @@
                 "ROW_3_META": "Alex Kim i går",
                 "WANTED": "Etterlyst",
                 "DETAILS": "Detaljer",
-                "OFFICER": "Ledende offiser",
+                "OFFICER": "",
                 "OFFICER_VALUE": "Sgt. Maria Ruiz",
                 "STATUS": "Status",
                 "STATUS_VALUE": "Under etterforskning",
@@ -4787,6 +4882,8 @@
             "license_revoke": "Lisens opphevet",
             "citizen_image_change": "Citizen Photo Endret",
             "charges_issued": "Avgifter utstedt",
+            "prisoner_released": "Fange løslatt",
+            "prisoner_sentence_changed": "Setning endret",
             "note_added": "Merknad lagt til",
             "note_removed": "Merk fjernet",
             "employee_grade_change": "Karakter endret",
@@ -4871,6 +4968,8 @@
             "LICENSE_REVOKE": "Opphevet {{type}}-lisens fra {{identifier}}",
             "CITIZEN_IMAGE_CHANGE": "Oppdatert profilbilde for {{identifier}}",
             "CHARGES_ISSUED": "Utstedte {{count}} belastning(er) den {{entityType}} #{{id}}",
+            "PRISONER_RELEASED": "Frigitt fange {{identifier}} (årsak: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "Sett den gjenværende setningen av {{identifier}} til {{time}} ​​(årsak: {{reason}})",
             "NOTE_ADDED": "Lagt til en merknad til {{entityType}} #{{entityId}}",
             "NOTE_REMOVED": "Fjernet et notat fra {{entityType}} #{{entityId}}",
             "EMPLOYEE_GRADE_CHANGE": "Sett karakteren til {{identifier}} til {{grade}}",
@@ -4912,7 +5011,7 @@
             "SUSPECT_CUFFED": "Fikk håndjern på en mistenkt",
             "SUSPECT_UNCUFFED": "Løsne håndjern på en mistenkt",
             "SUSPECT_SEARCHED": "Søkte etter en mistenkt",
-            "VEHICLE_SEARCHED": "Søkte et kjøretøy",
+            "VEHICLE_SEARCHED": "Søkte etter et kjøretøy",
             "ADMIN_SETTING_CHANGED": "Endret innstilling {{key}} til {{value}}",
             "ADMIN_SETTING_RESET": "Tilbakestill innstillingen {{key}} til standardinnstillingen",
             "CAMERA_CREATED": "Plassert CCTV-kamera #{{id}}",
@@ -5352,13 +5451,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Utsted en utkikk etter en person eller kjøretøy. Nye BOLO-er starter som utkast."
+            "DESCRIPTION": "Utsted en utkikk etter en person eller kjøretøy. Utkast flagger ikke emnet før de er aktivert."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Væpnet mistenkt i en svart Sultan RS",
             "DESCRIPTION_PLACEHOLDER": "Hvor de sist ble sett, hvordan de ser ut og hvorfor de er etterlyst",
             "EXPIRES_LABEL": "Utløper kl",
             "EXPIRES_PLACEHOLDER": "Standard er 7 dager",
+            "SUBJECTS_TITLE": "Emner",
+            "CITIZENS_PLACEHOLDER": "Velg personer",
             "TOASTS": {
                 "CREATED": "BOLO opprettet"
             }
@@ -5398,6 +5499,7 @@
             "CONFIRM_DESCRIPTION": "Dette bekrefter at{{subject}} er funnet og lukker utkikksposten.",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "emnet",
+            "CONFIRM_DESCRIPTION_MANY": "Dette bekrefter at alle {{count}} emner er funnet, og lukker utkikksposten.",
             "TOASTS": {
                 "MARKING": "Merker BOLO plassert...",
                 "MARKED": "BOLO merket lokalisert"
@@ -5416,6 +5518,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Ukategorisert",
         "INDEX": {
             "HEADING": "Lovvedtekter og straffelov",
             "SUBHEADING": "Offisiell kodifisering av lovbrudd, økonomiske sanksjoner og rettsmandater",
@@ -5423,10 +5526,10 @@
             "CATEGORY_DIALOG_DESCRIPTION": "Legg til en ny juridisk kategori for å organisere artikler og lovbrudd i straffeloven.",
             "ARTICLE_BUTTON": "Artikkel",
             "ARTICLE_DIALOG_TITLE": "Ny artikkel",
-            "ARTICLE_DIALOG_DESCRIPTION": "Definer en ny lovovertredelse, inkludert klassifisering, bøtebeløp og retningslinjer for straffeutmåling.",
+            "ARTICLE_DIALOG_DESCRIPTION": "Definer en ny lovovertredelse, inkludert klassifisering, bøtebeløp og retningslinjer for straffutmåling.",
             "CATEGORY_EDIT_DESCRIPTION": "Oppdater nummer, navn og beskrivelse av denne kategorien.",
             "ARTICLE_EDIT_TITLE": "Rediger artikkelen",
-            "ARTICLE_EDIT_DESCRIPTION": "Oppdater klassifisering, bøtebeløp og straffeutmålingsretningslinjer for denne lovbruddet.",
+            "ARTICLE_EDIT_DESCRIPTION": "Oppdater klassifisering, bøtebeløp og straffeutmålingsretningslinjer for dette lovbruddet.",
             "SEARCH_PLACEHOLDER": "Søk etter artikkelkode eller navn...",
             "NO_MATCH": "Ingen artikler samsvarer med søket ditt.",
             "EMPTY": "Fant ingen artikler om straffeloven.",
@@ -5483,7 +5586,7 @@
             },
             "JAIL_LABEL": "Fengsel (måneder)",
             "BAIL_ELIGIBLE_DESCRIPTION": "Den mistenkte kan betale kausjon i stedet for å sone fengselsstraffen.",
-            "CAN_SUSPEND_LICENSE_DESCRIPTION": "Offiserer kan suspendere lisensen nedenfor når de anklager dette lovbruddet.",
+            "CAN_SUSPEND_LICENSE_DESCRIPTION": "Offiserer kan suspendere lisensen nedenfor når de anklager denne lovbruddet.",
             "LICENSE_PLACEHOLDER": "Velg en lisens",
             "SUBMIT": "Lag artikkel",
             "SECTIONS": {
@@ -5571,6 +5674,54 @@
                 "PROCESSING": "Behandler straff …",
                 "SUCCESS": "Straffe behandlet for {{name}}",
                 "FAILED": "Kunne ikke behandle straffen"
+            }
+        }
+    },
+    "PRISONERS": {
+        "SUBHEADING": "Alle i fengsel akkurat nå og hvor lenge de har igjen",
+        "SUBHEADING_ONLINE_ONLY": "Fanger som er online akkurat nå. Fengselsmanuset ditt rapporterer ikke frakoblede fanger",
+        "SEARCH_PLACEHOLDER": "Søk etter navn eller identifikator...",
+        "EMPTY": "Ingen sitter i fengsel",
+        "NOT_SUPPORTED": "Fengselsmanuset ditt kan ikke liste fanger",
+        "COLUMNS": {
+            "REMAINING": "Gjenværende",
+            "RECORD": "Rekord",
+            "SENTENCED_BY": "Dømt av",
+            "SINCE": "Siden"
+        },
+        "REMAINING_OF": "{{remaining}} av {{total}}",
+        "UNKNOWN_REMAINING": "Ikke rapportert av fengselsmanus",
+        "JAILED_OUTSIDE_MDT": "Fengslet utenfor MDT",
+        "RECORD_LABEL": "{{type}} #{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Straff",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Åpne profil",
+        "REASON_LABEL": "Årsak (valgfritt)",
+        "RELEASE": {
+            "TRIGGER": "Utgivelse",
+            "TITLE": "Slipp fangen fri",
+            "CONFIRM": "{{name}} vil bli løslatt nå og dommen stengt.",
+            "REASON_PLACEHOLDER": "Straffen nedsatt av retten",
+            "BUTTON": "Utgivelse",
+            "NEEDS_ONLINE": "Fengselsmanuset ditt kan bare løslate fanger som er online.",
+            "TOASTS": {
+                "PROCESSING": "Slipper fange...",
+                "SUCCESS": "Utgitt {{name}}",
+                "FAILED": "Klarte ikke å løslate fangen"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Endre setning",
+            "TITLE": "Endre setning",
+            "TIME_LABEL": "Tid igjen til servering (måneder)",
+            "REASON_PLACEHOLDER": "God oppførsel",
+            "BUTTON": "Sett til {{duration}}",
+            "TOASTS": {
+                "PROCESSING": "Endrer setning …",
+                "SUCCESS": "{{name}} sin setning er nå {{duration}}",
+                "FAILED": "Kunne ikke endre setningen"
             }
         }
     },
@@ -5722,6 +5873,8 @@
         },
         "INDEX": {
             "UNNAMED": "Ukjent borger",
+            "JAILED": "Fengslet",
+            "JAILED_REMAINING": "Fengslet · {{duration}} igjen",
             "SUBHEADING": "Statsborger ID",
             "TOASTS": {
                 "SAVING_IMAGE": "Lagrer bildet …",
@@ -5819,12 +5972,30 @@
             },
             "SUMMARY_TITLE": "Totalt straffe"
         },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Fengselshistorie",
+            "EMPTY": "Ingen fengselsstraff registrert",
+            "COLUMNS": {
+                "OUTCOME": "Utfall",
+                "ENDED": "Avsluttet"
+            },
+            "STATUS": {
+                "ACTIVE": "Servering",
+                "SERVED": "Serveres",
+                "RELEASED": "Utgitt tidlig",
+                "REPLACED": "Erstattet av en ny setning"
+            },
+            "RELEASED_BY": "av {{name}}",
+            "VIEW_ALL_one": "Vis alle {{formatted}} setninger",
+            "VIEW_ALL_other": "Vis alle {{formatted}} setninger",
+            "DIALOG_TITLE": "Fengselshistorikk for {{name}}"
+        },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Åpne en graf over postene, kjøretøyene og personene knyttet til denne borgeren",
             "PHONE_RECORDS_HINT": "Se telefonoppføringer",
             "WANTED": "Etterlyst",
             "TITLE": "Innbyggerdetaljer",
-            "VIEW_LINKS": "Lenker",
+            "VIEW_LINKS": "Linker",
             "DATE_OF_BIRTH": "Fødselsdato",
             "YEARS_OLD": "{{age}} år gammel",
             "PHONE_NUMBER": "Telefonnummer",
@@ -6153,7 +6324,7 @@
             "TITLE": "Godkjent av",
             "EMPTY": "Ingen anerkjennelser ennå",
             "ACKNOWLEDGE": "Bekrefte",
-            "UNACKNOWLEDGE": "Avbekreft",
+            "UNACKNOWLEDGE": "",
             "TOASTS": {
                 "LOADING": "Erkjenner …",
                 "SUCCESS": "Kunngjøring erkjent",
@@ -6224,8 +6395,8 @@
             "EMPTY": "Ingen uregistrerte tegn funnet"
         },
         "recruits": {
-            "PLACEHOLDER": "Søk arbeidsledige borgere etter navn eller ID...",
-            "EMPTY": "Ingen arbeidsløse borgere funnet"
+            "PLACEHOLDER": "Søk etter arbeidsledige borgere etter navn eller ID...",
+            "EMPTY": "Ingen arbeidsledige borgere funnet"
         },
         "vehicles": {
             "PLACEHOLDER": "Søk etter plate, modell eller eier...",
@@ -6261,7 +6432,7 @@
         },
         "officers": {
             "PLACEHOLDER": "Søk etter offiserer ved navn eller kallesignal...",
-            "EMPTY": "Ingen offiserer funnet"
+            "EMPTY": ""
         },
         "penal_category": {
             "PLACEHOLDER": "Søk kapitler etter ID eller navn...",
@@ -6294,7 +6465,7 @@
             "TITLE": "Warrantdetaljer",
             "VIEW_LINKS_HINT": "Åpne en graf over postene, personene og bevisene knyttet til denne arrestordren",
             "REQUESTED_BY": "Forespurt av",
-            "REQUESTED": "Forespurt",
+            "REQUESTED": "",
             "NOT_SERVED": "Ikke servert ennå",
             "TOASTS": {
                 "SAVING_REASON": "Lagrer grunn …",
@@ -6913,9 +7084,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Bodycam utstyrt",
-        "LOST": "Mistet forbindelsen til det kameraet",
         "MISSING": "Du har ikke bodycam",
-        "OFFLINE": "Den offiserens bodycam gikk offline",
         "REMOVED": "Bodycam fjernet",
         "UNREACHABLE": "Kunne ikke nå det kameraet"
     },
@@ -6923,7 +7092,6 @@
         "ARMED": "Dashcam væpnet",
         "DISARMED": "Dashcam deaktivert",
         "NEEDS_PATROL_VEHICLE": "Du må være i en hvitelistet patruljebil",
-        "OFFLINE": "Det kjøretøyets dashcam gikk offline",
         "SEAT_RESTRICTED": "Bare sjåføren eller passasjeren foran kan styre dashbordet",
         "UNAVAILABLE": "Dashcam utilgjengelig",
         "UNREACHABLE": "Kunne ikke nå det dashcamet"
@@ -6953,7 +7121,7 @@
     "SCENE_TARGET": {
         "PICK_UP_PROP": "Plukk opp",
         "PICK_UP_MARKER": "Ta opp markør",
-        "REMOVE_TAPE": "Fjern tapen",
+        "REMOVE_TAPE": "Fjern tape",
         "MOVE": "Flytte",
         "MOVE_HINT": "[{{confirm}}] Lagre · [{{cancel}}] Avbryt · [W] Flytt · [R] Roter · [Q] World/Local"
     },

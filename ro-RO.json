@@ -20,6 +20,7 @@
         "MANAGEMENT": "management",
         "CONFIG": "Configurare",
         "PENALTIES": "Penalize",
+        "PRISONERS": "Prizonieri",
         "ASSETS": "Active",
         "OPERATIONS": "Operațiuni",
         "RECORDS": "Înregistrări",
@@ -47,7 +48,7 @@
         },
         "traffic": {
             "LABEL": "Oprirea Traficului",
-            "DESCRIPTION": "Polițistul a inițiat o oprire în trafic și se află cu un vehicul."
+            "DESCRIPTION": "Ofițerul a inițiat o oprire în trafic și se află cu un vehicul."
         },
         "transporting": {
             "LABEL": "Transportul",
@@ -203,9 +204,9 @@
             "SCOPE": {
                 "FINE": "amenda",
                 "JAIL": "izolarea",
-                "JAIL_HINT": "„Confinement” mărește timpul de închisoare și serviciul în folosul comunității, indiferent de ceea ce conține un articol."
+                "JAIL_HINT": "„Confinement” mărește timpul de închisoare și serviciul în folosul comunității – oricare ar fi un articol."
             },
-            "EMPTY_STATE": "Alege articole din codul penal din stânga pentru a le taxa aici.",
+            "EMPTY_STATE": "Alegeți articole din codul penal din stânga pentru a le taxa aici.",
             "PRESETS": {
                 "LENIENT": "Îngăduitor",
                 "STRICT": "Strict"
@@ -245,7 +246,7 @@
             "COUNT_one": "{{count}} taxă",
             "COUNT_few": "{{count}} taxe",
             "COUNT_other": "{{count}} taxe",
-            "DIALOG_DESCRIPTION": "Răsfoiți articole și ajustați amenzile, pedeapsa cu închisoarea și alte sancțiuni."
+            "DIALOG_DESCRIPTION": "Răsfoiți articole și ajustați amenzile, închisoarea și alte sancțiuni."
         },
         "IMAGE_DIALOG": {
             "DEFAULT_DESCRIPTION": "Inserați o adresă URL sau faceți o fotografie în joc.",
@@ -276,7 +277,7 @@
             "REMOVE_PICTURE": "Eliminați imaginea",
             "REMOVE_CONFIRM_TITLE": "Eliminați fotografia?",
             "REMOVE_CONFIRM_DESCRIPTION": "Aceasta elimină fotografia de profil din înregistrare. Poate fi setat din nou în orice moment.",
-            "DIALOG_DESCRIPTION": "Adăugați un link sau faceți o poză direct în joc."
+            "DIALOG_DESCRIPTION": "Adăugați un link sau faceți o fotografie direct în joc."
         },
         "RECORD_GRAPH": {
             "TITLE": "Graficul relației",
@@ -313,7 +314,7 @@
             "RECORDS_one": "{{count}} înregistrare",
             "RECORDS_few": "{{count}} înregistrări",
             "RECORDS_other": "{{count}} înregistrări",
-            "HINT": "Derulați pentru a mări · trageți pentru a deplasa · faceți clic pe o înregistrare pentru a-i urmări traseul",
+            "HINT": "Derulați pentru a mări · trage pentru a deplasa · faceți clic pe o înregistrare pentru a-i urmări traseul",
             "FIT": "Potrivit pentru vizualizare",
             "EXPAND_ALL": "Afișați următorul nivel de conexiuni",
             "RESET": "Resetați graficul",
@@ -540,6 +541,8 @@
                 "FINE_ASC": "Fine: Scăzut → Ridicat",
                 "JAIL_DESC": "Timp de închisoare: Ridicat → Scăzut",
                 "JAIL_ASC": "Timp de închisoare: scăzut → ridicat",
+                "REMAINING_ASC": "Eliberarea cel mai repede",
+                "REMAINING_DESC": "A mai rămas cel mai mult timp",
                 "AGE_DESC": "Vârsta: mai întâi cel mai în vârstă",
                 "AGE_ASC": "Vârsta: Cel mai tânăr mai întâi",
                 "RECORDS_DESC": "Înregistrări: Cele mai întâi",
@@ -691,10 +694,20 @@
             "MESSAGE_COPIED": "Mesaj copiat",
             "IMAGE_LINK_COPIED": "Linkul imaginii a fost copiat",
             "LINK_COPIED": "Link copiat"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "Faceți clic, apoi apăsați o tastă",
+            "CHANGE_KEY": "Faceți clic pentru a schimba",
+            "LISTENING": "Apăsați o tastă...",
+            "LISTENING_HINT": "Esc sau faceți clic afară pentru a anula",
+            "CUSTOM": "Personalizat",
+            "TAKEN": "{{key}} este deja folosit de {{name}}. Alegeți altă cheie, sau ambele vor rula."
         }
     },
     "ERRORS": {
         "REQUIRED": "Acest câmp este obligatoriu",
+        "KEYBIND_UNSUPPORTED_KEY": "Această cheie nu poate fi folosită pentru o combinare de taste",
+        "KEYBIND_LIMIT": "Puteți avea până la {{max}} combinații de taste radio",
         "NO_PERMISSION": "Nu ai permisiunea să faci asta",
         "INVALID_DATA": "Unele dintre datele trimise sunt nevalide",
         "INVALID_CHARGES": "Una sau mai multe taxe sunt nevalide - verificați sumele în raport cu codul penal",
@@ -711,6 +724,7 @@
         "VEHICLE_TOO_FAR": "Apropiați-vă de vehicul",
         "NO_VEHICLE_SELECTED": "Niciun vehicul selectat",
         "NO_SUSPECT_SELECTED": "Niciun suspect selectat",
+        "NO_SUBJECT_SELECTED": "Adăugați cel puțin o persoană sau un vehicul",
         "NO_VEHICLE_NEARBY": "Niciun vehicul în apropiere",
         "TRUNK_SEARCH_UNAVAILABLE": "Căutarea trunchiului nu este încă disponibilă pentru configurarea inventarului dvs",
         "INVALID_MODEL": "Acest model nu este disponibil",
@@ -756,6 +770,7 @@
             "INVALID_VALUE": "Această valoare nu este validă pentru această setare",
             "MIN": "Trebuie să fie cel puțin {{min}}",
             "MAX": "Trebuie să fie cel mult {{max}}",
+            "PRINTED_MARKERS": "Între 1 și {{max}}: modelele marcatoare numerotate urcă doar până la {{max}}",
             "NOT_AN_OPTION": "Asta nu este una dintre opțiuni",
             "EMPTY": "Nu poate fi gol",
             "TOO_LONG": "Trebuie să aibă maximum {{max}} caractere",
@@ -815,8 +830,10 @@
         "PROP_PLACER_INTERRUPTED": "Amplasarea prop a fost întreruptă",
         "VEHICLE_OCCUPIED": "Scoateți pe toți mai întâi din vehicul",
         "IMPOUND_DISABLED": "Sechestrarea din meniul Interacțiuni este dezactivată pe acest server",
-        "VEHICLE_EMPTY": "Nimeni care să comandă",
+        "IMPOUND_NOT_IMPLEMENTED": "Confișarea nu este configurată pe acest server",
         "NOT_SUPPORTED": "Acest lucru nu este disponibil pe acest server",
+        "PRISONER_OFFLINE": "Prizonierul trebuie să fie online pentru asta",
+        "PRISON_ACTION_FAILED": "Scenariul închisorii nu a putut face asta",
         "NO_ACCESS": "Slujba ta nu poate folosi asta",
         "UNKNOWN_FREQUENCY": "Niciun canal pe această frecvență",
         "MARKER_LIMIT": "Ați atins limita marcatorului de dovezi",
@@ -836,7 +853,7 @@
         "CANNOT_MANAGE_SELF": "Nu poți să-ți faci asta",
         "GRADE_TOO_HIGH": "Puteți gestiona doar ofițeri sub propriul grad",
         "AMOUNT_TOO_HIGH": "Această sumă depășește limita pentru o tranzacție",
-        "INVALID_FREQUENCY": "Utilizați o frecvență ca 450.100",
+        "INVALID_FREQUENCY": "Această frecvență nu se potrivește cu formatul permis",
         "UNIT_FULL": "Acea unitate nu are loc liber",
         "UNIT_NEEDS_LEAD": "Fă pe altcineva să conducă primul",
         "UNIT_OFF_DUTY": "Nimeni din acea unitate nu este de serviciu",
@@ -1074,7 +1091,6 @@
             "EDIT_DESCRIPTION": "Actualizați numele sau frecvența acestui canal.",
             "NAME_PLACEHOLDER": "Comanda SWAT",
             "FREQUENCY_FIELD": "Frecvență (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498.510",
             "SUBMIT": "Creați canal",
             "TOASTS": {
                 "CREATED": "Canalul „{{name}}” a fost creat",
@@ -1115,18 +1131,23 @@
         },
         "KEYBINDS_DIALOG": {
             "TITLE": "Legături de taste radio",
-            "DESCRIPTION": "Legați o tastă de la tastatură pentru a transmite instantaneu pe un anumit canal.",
-            "EMPTY": "Încă nu au fost configurate combinații de taste.",
-            "ADD_NEW": "Adăugați o nouă combinație de taste",
-            "ADD_DESCRIPTION": "Alegeți un nume, apăsați o tastă pentru a-l captura, apoi alegeți canalul țintă.",
+            "DESCRIPTION": "Acordați radioul la un canal cu o singură tastă, chiar și cu MDT închis.",
+            "OFF": "Legăturile de taste radio sunt dezactivate pe acest server.",
+            "EMPTY": "Nicio combinație de taste radio încă.",
+            "ADD": "Adăugați combinația de taste",
+            "ADD_TITLE": "Nouă combinație de taste radio",
+            "EDIT_TITLE": "Editați combinația de taste radio",
+            "FORM_DESCRIPTION": "Denumiți-i, alegeți un canal și apăsați tasta care acordă radioul la acesta.",
             "NAME_PLACEHOLDER": "Canalul principal",
-            "KEY_LABEL": "Cheie",
-            "LISTENING": "Ascultare…",
-            "CLICK_TO_CAPTURE": "Faceți clic pentru a captura o cheie",
-            "CAPTURING_HINT": "Apăsați orice tastă — Escape pentru a anula.",
-            "CLICK_HINT": "Faceți clic pe câmpul de mai sus și apăsați orice tastă.",
             "CHANNEL_PLACEHOLDER": "Selectați un canal",
-            "SAVE": "Salvați combinarea tastelor"
+            "KEY_LABEL": "Cheie",
+            "KEY_HINT": "Doar chei simple. De asemenea, îl puteți modifica mai târziu în Setări > Legături de taste > FiveM.",
+            "CHANNEL_REMOVED": "Acest canal nu mai există",
+            "SETTINGS_HINT": "Cheile pot fi modificate și în Setări > Legături de taste > FiveM. O cheie eliminată sau schimbată nu mai funcționează imediat, dar rămâne listată acolo până când vă reconectați.",
+            "DELETE": "Ștergeți combinația de taste",
+            "SAVE": "Salvați combinarea tastelor",
+            "TUNED": "Radioul acordat la {{name}}",
+            "ROW_NAME": "Radio: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "Cod radio nou",
@@ -1346,7 +1367,7 @@
                 "REOCCURRED": "Raportat din nou în apropiere"
             },
             "ACTIONS": {
-                "ATTACHED": "răspunse",
+                "ATTACHED": "a răspuns",
                 "DETACHED": "a fost nealocat",
                 "ACKNOWLEDGED": "recunoscut",
                 "NOTE": "a adăugat o notă",
@@ -1373,8 +1394,8 @@
             "WANTED_PLATE": "Placă dorită detectată"
         },
         "BUMPED": "A ajuns la {{priority}}",
-        "CAMERA_DESTROYED_DESC": "O cameră CCTV lângă {{location}} s-a întunecat după ce a fost distrusă.",
-        "CAMERA_HACKED_DESC": "O cameră CCTV de lângă {{location}} a fost piratată de la distanță și luată offline.",
+        "CAMERA_DESTROYED_DESC": "O cameră CCTV de lângă {{location}} sa întunecat după ce a fost distrusă.",
+        "CAMERA_HACKED_DESC": "O cameră CCTV lângă {{location}} a fost piratată de la distanță și luată offline.",
         "REPORTED_AGAIN": "Raportat din nou în apropiere — {{count}} apariții",
         "UNKNOWN_LOCATION": "o locație necunoscută",
         "FOLLOWING": "Urmărind {{name}}",
@@ -1422,7 +1443,7 @@
         },
         "TAG_TOKENS": {
             "INSERT_HINT": "Introduceți un substituent",
-            "TO_INSERT_HINT": "a insera",
+            "TO_INSERT_HINT": "a introduce",
             "POPOVER": {
                 "TYPE_DESCRIPTIONS": {
                     "array": "Devine o listă separată prin virgulă.",
@@ -1488,7 +1509,7 @@
             "MEASURE": "Măsurați distanța",
             "UNDO": "Anulați (Ctrl+Z)",
             "REDO": "Repet (Ctrl+Y)",
-            "ROAD_UNAVAILABLE": "Traseu rutier (încă se încarcă harta rutieră)",
+            "ROAD_UNAVAILABLE": "Traseu rutier (foaia rutieră încă se încarcă)",
             "ROAD_HINT_START": "Faceți clic de unde începe traseul",
             "ROAD_HINT_NEXT": "Faceți clic pentru a adăuga o oprire · dublu clic sau Enter pentru a finaliza · Backspace elimină ultima oprire",
             "ROTATE": "Rotiți formele",
@@ -1802,7 +1823,7 @@
             "REMOVE": "Eliminați greva",
             "EMPTY": "Fără greve în dosar.",
             "DIALOG_TITLE": "Adăugați o grevă",
-            "DIALOG_DESCRIPTION": "Înregistrați o grevă disciplinară pentru {{name}}. Acest lucru nu le declanșează niciodată automat - ați face în continuare acest lucru singur din meniul Gestionați.",
+            "DIALOG_DESCRIPTION": "Înregistrați o grevă disciplinară pentru {{name}}. Acest lucru nu le declanșează niciodată automat - ați face acest lucru singur din meniul Gestionați.",
             "REASON_PLACEHOLDER": "Ce s-a întâmplat…",
             "TOASTS": {
                 "ADDING": "Se adaugă avertisment...",
@@ -2027,7 +2048,7 @@
                 "SAVED": "Eticheta actualizată",
                 "DELETING": "Se șterge eticheta…",
                 "DELETED": "{{name}} șterse",
-                "COPYING": "Se copiază etichetele…",
+                "COPYING": "Se copiază etichetele...",
                 "COPIED": "{{name}} a fost copiat în {{type}}",
                 "COPY_EXISTS": "{{type}} are deja {{name}}"
             },
@@ -2153,10 +2174,10 @@
                 "CITIZENS_LICENSE_GRANT": "Acordați licențe cetățenilor.",
                 "CITIZENS_LICENSE_REVOKE": "Revocați licențele cetățenilor.",
                 "CITIZENS_LICENSE_POINTS": "Adăugați sau eliminați puncte de licență.",
-                "CITIZENS_PHONE_RECORDS": "Citiți înregistrările telefonice ale cetățeanului.",
+                "CITIZENS_PHONE_RECORDS": "Citiți înregistrările telefonice ale unui cetățean.",
                 "SUSPECT_INTERACT": "Utilizați interacțiuni suspecte, cum ar fi manșeta, căutarea și escorta.",
                 "GALLERY_EDIT": "Adăugați și eliminați imaginile din galerie.",
-                "NOTES_DELETE": "Ștergeți notele scrise de alți ofițeri în înregistrări și notele de HR pe care alți manageri le-au depus. Ofițerii le pot șterge oricând pe ale lor.",
+                "NOTES_DELETE": "Ștergeți notele scrise de alți ofițeri în înregistrări și notele de HR pe care le-au depus alți manageri. Ofițerii le pot șterge oricând pe ale lor.",
                 "VEHICLES_VIEW": "Căutați vehicule și citiți detaliile acestora.",
                 "VEHICLES_REGISTER": "Înregistrați vehicule noi.",
                 "VEHICLES_EDIT": "Editați detaliile vehiculului și steagurile.",
@@ -2188,6 +2209,9 @@
                 "PENALCODE_VIEW": "Citiți codul penal.",
                 "PENALCODE_CREATE": "Adăugați intrări de cod penal.",
                 "PENALCODE_UPDATE": "Editați intrările codului penal.",
+                "PRISONERS_VIEW": "Vezi cine este în închisoare și cât timp au mai rămas.",
+                "PRISONERS_RELEASE": "Eliberați prizonierii înainte de încheierea sentinței lor.",
+                "PRISONERS_EDIT": "Schimbați cât mai are de executat un prizonier.",
                 "PENALCODE_DELETE": "Eliminați intrările codului penal.",
                 "OPERATIONPLANS_VIEW": "Citiți planurile de operare.",
                 "OPERATIONPLANS_CREATE": "Elaborarea de noi planuri de operare.",
@@ -2401,7 +2425,7 @@
             "ISSUE_NOW_HINT": "Opriți doar pentru a le înregistra; un ofițer le poate emite ulterior.",
             "OVERWRITE_DIALOG": {
                 "TITLE": "Suprascrieți taxele individuale?",
-                "DESCRIPTION_one": "În prezent, suspecții au acuzații diferite. Trecerea la „La fel pentru toți” înlocuiește taxele tuturor cu lista lui {{name}} (debit {{count}}) — taxele individuale ale celorlalți se vor pierde.",
+                "DESCRIPTION_one": "În prezent, suspecții au acuzații diferite. Trecerea la „La fel pentru toți” înlocuiește taxele tuturor cu lista lui {{name}} (debitul {{count}}) — taxele individuale ale celorlalți se vor pierde.",
                 "DESCRIPTION_few": "În prezent, suspecții au acuzații diferite. Trecerea la „La fel pentru toți” înlocuiește taxele tuturor cu lista lui {{name}} ({{count}} taxe) — taxele individuale ale celorlalți se vor pierde.",
                 "DESCRIPTION_other": "În prezent, suspecții au acuzații diferite. Trecerea la „La fel pentru toți” înlocuiește taxele tuturor cu lista lui {{name}} ({{count}} taxe) — taxele individuale ale celorlalți se vor pierde.",
                 "CANCEL": "Păstrați taxe separate",
@@ -2457,7 +2481,7 @@
                     "ADD": "Adăugați un loc de muncă",
                     "EMPTY": "Nicio slujbă nu este inclusă pe lista albă — nimeni nu poate deschide MDT-ul.",
                     "ADD_TITLE": "Adăugați un loc de muncă",
-                    "ADD_DESCRIPTION": "Alegeți o lucrare din cadrul dvs. pentru a oferi acces MDT.",
+                    "ADD_DESCRIPTION": "Alegeți un job din cadrul dvs. pentru a oferi acces MDT.",
                     "JOB_LABEL": "Post",
                     "JOB_PLACEHOLDER": "Selectați un loc de muncă",
                     "SEED_LABEL": "Începeți permisiunile de la",
@@ -2628,7 +2652,7 @@
             "GENERAL": {
                 "REGION": {
                     "TITLE": "Limbă și formate",
-                    "DESCRIPTION": "Valori implicite ale serverului. Fiecare ofițer își poate alege în continuare propria limbă, moneda și formatele în setările MDT; acestea sunt ceea ce primește cineva înainte de a face.",
+                    "DESCRIPTION": "Valori implicite ale serverului. Fiecare ofițer își poate alege în continuare limba, moneda și formatele în setările MDT; acestea sunt ceea ce primește cineva înainte de a face.",
                     "SUPPORTED_LOCALES": "Limbi disponibile",
                     "SUPPORTED_LOCALES_HINT": "Ofițerii de limbi pot alege în setările lor MDT. Pot fi adăugate numai limbile cu un fișier de traducere în nui/dist/locales.",
                     "SUPPORTED_LOCALES_CHOICES_HINT": "Îți lipsește o limbă? Puneți fișierul în nui/dist/locales (numit ca fi-FI.json) și reporniți MDT-ul.",
@@ -2638,7 +2662,7 @@
                     "LOCALE_HINT": "Folosit pentru mesajele afișate în joc (notificări, camere) și jurnalele și ca limbaj MDT pentru ofițerii care nu au ales unul.",
                     "CURRENCY_HINT": "Amenzile valutare, soldurile bancare și fondurile departamentului sunt afișate în.",
                     "PHONE": "Formatul numărului de telefon",
-                    "PHONE_HINT": "Un șablon pentru numere de telefon: {3} înseamnă „3 cifre merg aici”, orice altceva este afișat ca scris. ({3}) {3}-{4} transformă 5551234567 în (555) 123-4567.",
+                    "PHONE_HINT": "Un șablon pentru numere de telefon: {3} înseamnă „3 cifre merg aici”, orice altceva este afișat ca tastat. ({3}) {3}-{4} transformă 5551234567 în (555) 123-4567.",
                     "CURRENCY": "Valută",
                     "DATE": "Formatul datei",
                     "DATE_HINT": "Cum sunt scrise datele peste tot în MDT.",
@@ -2684,7 +2708,7 @@
                         "DISABLED_HINT": "Ofițerii nu o pot alege. Ofițerii care îl folosesc sunt mutați la starea implicită."
                     },
                     "DEFAULT": "Stare implicită",
-                    "DEFAULT_HINT": "Statutul pe care îl obține un ofițer atunci când intră în serviciu, iar acel ofițer la care revin atunci când al lor este dezactivat.",
+                    "DEFAULT_HINT": "Statutul pe care un ofițer îl obține atunci când intră în serviciu și acel ofițer la care revin atunci când al lor este dezactivat.",
                     "DESCRIPTION": "Statuturile pe care ofițerii le pot stabili singuri (disponibile, ocupate, la fața locului...), afișate tuturor de pe listă și pe hartă."
                 },
                 "CALLSIGNS": {
@@ -2724,8 +2748,8 @@
                     }
                 },
                 "NATIONALITIES": {
-                    "TITLE": "Naţionalităţi",
-                    "LIST": "Naţionalităţi",
+                    "TITLE": "Naționalități",
+                    "LIST": "Naționalități",
                     "DESCRIPTION": "Folosit în două locuri: filtrul Naționalitate de pe pagina Cetățeni și câmpul Naționalitate atunci când un ofițer înregistrează manual un cetățean (doar când „Listați pe toți din baza de date” este dezactivat). Cu ea activată, naționalitatea unui cetățean provine din caracterul său în cadrul tău. Caracterele ESX nu au niciunul, așa că câmpul și filtrul sunt ascunse acolo.",
                     "PLACEHOLDER": "Adăugați o naționalitate",
                     "LIST_HINT": "Eliminarea unuia nu schimbă cetățenii care îl au deja, pur și simplu nu mai pot fi filtrați de el.",
@@ -2757,7 +2781,7 @@
                     "WINDOW_HINT": "Contează doar punctele din taxe în această perioadă. Punctele mai vechi expiră de la sine.",
                     "THRESHOLD": "Suspenda la",
                     "THRESHOLD_HINT": "O licență este suspendată odată ce punctele sale ating acest total.",
-                    "DESCRIPTION": "Taxele de trafic pot adăuga puncte la permisul de conducere al unui cetățean. Prea multe puncte în perioada de numărare și licența este suspendată.",
+                    "DESCRIPTION": "Taxele de trafic pot adăuga puncte la permisul de conducere al unui cetățean. Prea multe puncte în perioada de numărare și licența arată ca fiind suspendată.",
                     "PRESETS": {
                         "STRICT": "Strict",
                         "STRICT_HINT": "8 puncte în 2 ani",
@@ -2817,7 +2841,7 @@
                     "ENABLED": "Permite mesaje directe",
                     "ENABLED_HINT": "Ofițerii pot avea conversații private 1-la-1. Numai ei doi le pot citi.",
                     "CROSS_JOB": "Pe departamente",
-                    "CROSS_JOB_HINT": "Activat: ofițerii pot trimite mesaje oricui are acces MDT. Off: numai colegi cu același loc de muncă."
+                    "CROSS_JOB_HINT": "Activat: ofițerii pot trimite mesaje oricui are acces MDT. Off: doar colegii cu același loc de muncă."
                 },
                 "EVENTS": {
                     "TITLE": "Postări automate",
@@ -2872,6 +2896,12 @@
                     "DESCRIPTION": "Ce aterizează în clopoțelul de pe tabloul de bord. Cele personale așteaptă ofițerii care sunt offline; cele la nivel de departament ajung doar la ofițeri online la momentul respectiv.",
                     "RETENTION": "Păstrați notificările pentru",
                     "RETENTION_HINT": "Notificările mai vechi decât aceasta sunt șterse, imediat când o reduceți. 0 le păstrează pentru totdeauna."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Animație radio",
+                    "DESCRIPTION": "Ce fac personajele ofițerilor în timp ce vorbesc la radio. Fiecare ofițer își poate alege pe pagina Configurare; asta primesc toți ceilalți.",
+                    "DEFAULT": "Animație implicită",
+                    "DEFAULT_HINT": "Cu pma-voice, propria animație radio este dezactivată, cu excepția cazului în care aceasta este Nimic. Cu o altă resursă vocală, dezactivați animația acesteia în propria configurație."
                 }
             },
             "DISPATCH": {
@@ -2925,7 +2955,7 @@
                     "SHORT_RANGE": "Afișează doar semnalele din apropiere",
                     "SHORT_RANGE_HINT": "Markerii apar doar pe minimahartă când sunt aproape de ofițer.",
                     "COLOUR": "Colorează după prioritate",
-                    "COLOUR_HINT": "Marcatorii iau culoarea priorității de mai jos în loc de culoarea propriei tip de apel.",
+                    "COLOUR_HINT": "Marcatorii iau culoarea priorității de mai jos în loc de culoarea tipului de apel.",
                     "DEFAULT": "Marcator implicit",
                     "DEFAULT_HINT": "Folosit de tipurile de apeluri fără un marcator propriu (apeluri din alte scripturi, tipuri noi).",
                     "PRIORITY_HIGH": "Prioritate mare",
@@ -2965,7 +2995,7 @@
                     "SCALE": "Dimensiunea blipului",
                     "SCALE_HINT": "1 este dimensiunea normală a jocului.",
                     "COLOUR": "Culoare",
-                    "COLOUR_HINT": "Culoarea fiecărui departament care nu are propria ei mai jos.",
+                    "COLOUR_HINT": "Culoarea fiecărui departament care nu are propriul său dedesubt.",
                     "JOB_COLOURS": "Culoare pe departament",
                     "JOB_COLOURS_HINT": "Dați unui departament propria culoare, astfel încât ofițerii să poată deosebi unitățile."
                 },
@@ -3004,7 +3034,7 @@
                     },
                     "SIMULATOR": {
                         "TITLE": "Simulator",
-                        "HINT": "Configurați o infracțiune pentru a vedea cât de probabil este să fie raportată cu setările curente.",
+                        "HINT": "Configurați o crimă pentru a vedea cât de probabil este să fie raportată cu setările curente.",
                         "WITNESSES": "martori",
                         "NIGHT": "Timp de noapte",
                         "SILENCED": "Armă suprimată",
@@ -3048,6 +3078,33 @@
                     "AUTO_LOCK": "Blocați farfuria pe un chibrit",
                     "AUTO_LOCK_HINT": "Radarul blochează placa care se potrivea, astfel încât ofițerul să nu o piardă.",
                     "DESCRIPTION": "Cu o resursă radar (wk_wars2x), fiecare placă pe care o citește radarul este verificată împotriva BOLO-urilor și a mandatelor, iar ofițerul este avertizat cu privire la un meci."
+                },
+                "SCENE": {
+                    "TITLE": "Scene ale crimei",
+                    "DESCRIPTION": "Cum plasează ofițerii caseta și marcajele dovezilor pentru scena crimei: din pagina Scenă a meniului de interacțiuni, folosind un articol de inventar sau oricare dintre ele. Articolele nu sunt epuizate.",
+                    "METHODS": {
+                        "MENU": "Pagina de scenă",
+                        "ITEM": "Utilizarea articolului",
+                        "BOTH": "Pagina sau elementul scenei"
+                    },
+                    "TAPE_METHOD": "Cum plasează ofițerii caseta",
+                    "TAPE_METHOD_HINT": "Din pagina Scenă, folosind elementul de bandă sau oricare dintre ele.",
+                    "TAPE_ITEM": "Articol de bandă",
+                    "TAPE_ITEM_HINT": "Articolele de inventar pe care ofițerii le folosesc pentru a plasa banda de pe scena crimei.",
+                    "MARKER_METHOD": "Cum plasează ofițerii marcajele de probe",
+                    "MARKER_METHOD_HINT": "Din pagina Scenă, folosind elementul marcator sau oricare dintre ele.",
+                    "MARKER_ITEM": "Element de marcare a dovezilor",
+                    "MARKER_ITEM_HINT": "Ofițerii de obiecte de inventar le folosesc pentru a plasa marcajele de dovezi.",
+                    "RADIUS": "Dimensiunea scenei",
+                    "RADIUS_HINT": "Banda, markere și elemente de recuzită plasate aproape de o scenă se alătură acesteia. Mai departe, încep o nouă scenă.",
+                    "MAX_MARKERS_SCENE": "Markeri de probă per scenă",
+                    "MAX_MARKERS_SCENE_HINT": "Markerii sunt numerotați de la 1 în fiecare scenă. 0 = nelimitat, numai atunci când marcajele nu folosesc modelele numerotate.",
+                    "MAX_MARKERS_OFFICER": "Marcatori de probă per ofițer",
+                    "MAX_MARKERS_OFFICER_HINT": "Câte marcaje poate avea un ofițer deodată, în fiecare scenă. 0 = nelimitat.",
+                    "TAPE_LENGTH": "Cea mai lungă linie de bandă",
+                    "TAPE_LENGTH_HINT": "Cel mai îndepărtat, cele două capete ale unei linii de bandă pot fi legate.",
+                    "MAX_TAPE_OFFICER": "Linii de bandă pentru fiecare ofițer",
+                    "MAX_TAPE_OFFICER_HINT": "Câte linii de bandă poate avea un ofițer deodată. 0 = nelimitat."
                 }
             },
             "CAMERAS": {
@@ -3158,7 +3215,7 @@
                 "CAPTURE": {
                     "TITLE": "Fotografii și previzualizări",
                     "ENABLED": "Conectați camerele la apeluri",
-                    "ENABLED_HINT": "O alertă automată lângă o cameră care funcționează este legată de aceasta, astfel încât ofițerii să poată deschide fluxul de la apel.",
+                    "ENABLED_HINT": "O alertă automată lângă o cameră care funcționează este legată de aceasta, astfel încât ofițerii pot deschide fluxul de la apel.",
                     "SCREENSHOT": "Atașați o fotografie a scenei",
                     "SCREENSHOT_HINT": "Apelul primește și o fotografie a momentului.",
                     "PREVIEW": "Previzualizări ale camerei",
@@ -3211,7 +3268,8 @@
                     "BOTH": "Element sau comandă",
                     "WAYS": {
                         "ITEM": "Articol de inventar",
-                        "COMMAND": "Comanda de chat"
+                        "COMMAND": "Comanda de chat",
+                        "MENU": "Pagina de scenă"
                     }
                 },
                 "REPAIR": {
@@ -3232,7 +3290,13 @@
                     "SIGNAL": "Se modifică puterea semnalului",
                     "SIGNAL_HINT": "Cosmetic: barele de semnal de pe grila camerei se mișcă puțin în timp. Off: ei rămân nemișcați.",
                     "AUDIO_RADIUS": "Interval de auz",
-                    "AUDIO_RADIUS_HINT": "Ofițerii care urmăresc un flux aud jucători vorbind atât de aproape de cameră."
+                    "AUDIO_RADIUS_HINT": "Ofițerii care urmăresc un flux aud jucători vorbind atât de aproape de cameră.",
+                    "ON_FEED_LOST": "Când camera se lasă în jos",
+                    "ON_FEED_LOST_HINT": "Ce se întâmplă cu ofițerii care urmăresc o cameră CCTV care este distrusă, piratată sau dezactivată, după redarea ei decupată.",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Comutați la următoarea cameră",
+                        "CLOSE": "Închideți fluxul"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Detectare automată",
@@ -3535,7 +3599,7 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "Legături de taste implicite",
-                    "DESCRIPTION": "Cheia cu care începe fiecare acțiune. FiveM salvează cheile unui jucător prima dată când acesta se alătură, așa că o schimbare aici ajunge la noi jucători și oricine nu a avut încă această cheie. Toată lumea își poate schimba în continuare propriile chei în Setări > Legături de taste > FiveM.",
+                    "DESCRIPTION": "Cheia cu care începe fiecare acțiune. FiveM salvează cheile unui jucător prima dată când acesta se alătură, așa că o schimbare aici ajunge la noi jucători și oricine nu a avut încă această cheie. Toată lumea își poate schimba în continuare propriile chei pe pagina de configurare a MDT-ului sau în Setări > Legături de taste > FiveM.",
                     "OPEN_MDT": "Deschideți MDT-ul",
                     "OPEN_MDT_HINT": "Dezactivat, ofițerii îl deschid cu comanda sau elementul.",
                     "INTERACTIONS": "Meniul de interacțiuni",
@@ -3547,7 +3611,10 @@
                     "PANIC_BUTTON": "Buton de panică",
                     "PANIC_BUTTON_HINT": "Trimite o alertă de panică cu locația ofițerului.",
                     "REQUEST_BACKUP": "Solicitați backup",
-                    "REQUEST_BACKUP_HINT": "Solicită rezervă unităților din apropiere."
+                    "REQUEST_BACKUP_HINT": "Solicită rezervă unităților din apropiere.",
+                    "CLASH": "De asemenea, cheia implicită a lui {{names}}. FiveM execută fiecare acțiune pe o cheie, așa că {{key}} ar face ambele.",
+                    "MAX_RADIO": "Legături radio pentru fiecare ofițer",
+                    "MAX_RADIO_HINT": "Câte combinații de taste radio poate adăuga fiecare ofițer pe pagina Radio. 0 le oprește. Ofițerii care au deja mai mulți își păstrează doar primii."
                 }
             },
             "IN_GAME": {
@@ -3638,7 +3705,7 @@
                     "ORBIT": "Uită-te de la",
                     "LEGEND": "Alb: lentilă. Verde: unde arată. Chihlimbar: limite de înclinare. Cyan: limite de viraj. Albastru: câmp vizual.",
                     "LENS_HINT": "Fluxul așa cum îl văd ofițerii. Editarea unei limite indică vederea către aceasta.",
-                    "TRY": "Încercați singur",
+                    "TRY": "Încercați-l singur",
                     "TRYING": "Folosește camera ca un ofițer, cu limitele acestui model.",
                     "KEYS": {
                         "TURN": "Întoarce-te",
@@ -3689,7 +3756,8 @@
                 "RADIUS": "Zona de căutare",
                 "RADIUS_HINT": "Un cerc în jurul apelului în loc de doar un ac.",
                 "SUMMARY": "pictograma {{sprite}}, culoare {{colour}}",
-                "SAME_AS_OTHERS": "La fel ca și celelalte"
+                "SAME_AS_OTHERS": "La fel ca și celelalte",
+                "COLOUR_BY_PRIORITY": "Culoarea urmează prioritatea apelului. Dezactivează „Colorează după prioritate” în Hărți pentru a alege unul aici."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Reîmprospăta",
@@ -3780,7 +3848,7 @@
                     "LIST_HINT": "Adăugați-vă propria sau modificați orice tip. Un tip de unități salvate încă folosit nu poate fi eliminat.",
                     "LIST_FIELDS": {
                         "NAME_HINT": "Numai litere mici, cifre, _ și -.",
-                        "LABEL_HINT": "Ce văd ofițerii. Lăsați-l gol pe un tip încorporat pentru a-și păstra numele tradus.",
+                        "LABEL_HINT": "Ce văd ofițerii. Lăsați-l gol pe un tip încorporat pentru a păstra numele tradus.",
                         "ICON_HINT": "Orice nume de pictogramă Lucide din lucide.dev/icons, de ex. mașină, câine sau avion.",
                         "SEATS": "Scaune",
                         "SEATS_HINT": "Majoritatea membrilor simultan. 0 = fără limită."
@@ -3794,7 +3862,7 @@
                     "WHOLE_UNIT": "Răspundeți ca unitate",
                     "WHOLE_UNIT_HINT": "Activat: răspunsul la (sau alocarea) unui apel pune fiecare membru de serviciu al unității pe acesta.",
                     "RESPONDING": "Stare când răspundeți",
-                    "RESPONDING_HINT": "Setați când o unitate este supusă unui apel.",
+                    "RESPONDING_HINT": "Setați când o unitate este pusă la un apel.",
                     "ARRIVED": "Starea la sosire",
                     "ARRIVED_HINT": "Setați când un membru ajunge pe distanța de sosire a apelului.",
                     "CLEARED": "Stare când este șters",
@@ -3825,7 +3893,7 @@
                         "NAME_HINT": "Numai litere mici, cifre, _ și -.",
                         "LABEL_HINT": "Ce văd ofițerii.",
                         "MINUNITS": "Unități minime",
-                        "MINUNITS_HINT": "Sub aceasta, zona se arată ca cu personal insuficient. 0 = niciodată."
+                        "MINUNITS_HINT": "Sub aceasta, zona se arată ca lipsită de personal. 0 = niciodată."
                     }
                 },
                 "STATS": {
@@ -3850,7 +3918,7 @@
                 "TAKING_SCREENSHOT": "Se fac captură de ecran...",
                 "SCREENSHOT_SAVED": "Captură de ecran salvată: {{url}}",
                 "SCREENSHOT_ERROR": "A apărut o eroare",
-                "STOP_RECORDING_FIRST": "Opriți înregistrarea înainte de a schimba camerele",
+                "STOP_RECORDING_FIRST": "Opriți înregistrarea înainte de a schimba camera",
                 "CURSOR_HINT": "Apăsați pe {{key}} pentru a utiliza cursorul",
                 "AUTO_DETECT_ENABLED": "Detectarea automată este activată",
                 "AUTO_DETECT_DISABLED": "Detectarea automată este dezactivată"
@@ -3896,6 +3964,13 @@
             "RECORDING": {
                 "MAX_DURATION": "S-a ajuns la cea mai lungă înregistrare, salvând clipul",
                 "MAX_SIZE": "S-a atins cea mai mare dimensiune de înregistrare, salvând clipul"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "Camera distrusă",
+                "HACKED": "Furaj interceptat",
+                "OFFLINE": "Aparat foto offline",
+                "BODYCAM": "Bodycam offline",
+                "DASHCAM": "Dashcam offline"
             }
         },
         "GIZMO": {
@@ -3973,17 +4048,17 @@
             }
         },
         "TAPE_PLACER": {
-            "TITLE": "Casetă pentru scena crimei",
+            "TITLE": "Casetă de la scena crimei",
             "COUNT": "{{placed}}/{{limit}} linii",
             "COUNT_UNLIMITED": "{{placed}} linii",
             "NO_TARGET": "Țintește un perete, stâlp sau suport",
             "TYING": "Legând-o…",
             "LINE_NEW": "Următorul punct începe o nouă linie",
-            "LINE_GOING": "Continuați din ultimul punct",
+            "LINE_GOING": "Continuați de la ultimul punct",
             "CHECKS_TITLE": "Cecuri",
             "STATUS": {
                 "OK": "Gata de legat",
-                "WARNING": "Poate lega, verifică articolele de chihlimbar",
+                "WARNING": "Poate lega, verifica articolele de chihlimbar",
                 "ERROR": "Nu o pot lega aici"
             },
             "HINTS": {
@@ -4090,10 +4165,6 @@
                 "ACTIVE_WARRANTS": "Mandate active",
                 "STOLEN": "Furat",
                 "OPEN_RECORD": "Deschide înregistrarea",
-                "OCCUPANTS_OUT": "Comanda ocupanților să iasă",
-                "OCCUPANTS_ORDERED_one": "S-a comandat să iasă {{count}} ocupant",
-                "OCCUPANTS_ORDERED_few": "S-au comandat {{count}} ocupanți",
-                "OCCUPANTS_ORDERED_other": "S-au comandat {{count}} ocupanți",
                 "SEARCH_TRUNK": "Caută portbagaj",
                 "IMPOUND": "Confișare",
                 "IMPOUNDED": "{{plate}} confiscate"
@@ -4105,7 +4176,7 @@
                 "STATUS": "Stare",
                 "UNIT": "Unitate",
                 "LEAVE_UNIT": "Părăsiți unitatea",
-                "NO_UNITS": "Nu există unități în departamentul dvs",
+                "NO_UNITS": "Nu există unități în departamentul tău",
                 "MEMBERS": "Membrii",
                 "VEHICLE": "Vehicul",
                 "BODYCAM": "Cameră corporală",
@@ -4144,7 +4215,7 @@
                 "CLEARED_one": "S-a eliminat {{formatted}} articol",
                 "CLEARED_few": "S-au eliminat {{formatted}} articole",
                 "CLEARED_other": "S-au eliminat {{formatted}} articole",
-                "TAPE": "Casetă pentru scena crimei",
+                "TAPE": "Casetă de la scena crimei",
                 "PLACE_TAPE": "Banda de cravată",
                 "REMOVE_TAPE": "Scoateți banda cea mai apropiată",
                 "TAPE_HINT": "Țintește spre pereți, stâlpi sau recuzită. Nimeni nu trece prin bandă",
@@ -4297,7 +4368,7 @@
                 "PLACE": "Derularea transformă vizualizarea înainte de a o plasa. Faceți clic stânga când conturul este verde.",
                 "ADJUST": "F îl așează pe suprafață, R îl îndreaptă. Țineți mouse-ul drept pentru a privi în jur.",
                 "AIM": "Q / E alegeți ceea ce schimbați, mouse-ul îl schimbă. X redă toată gama.",
-                "REVIEW": "Mutați mouse-ul și derulați: exact așa se va simți. R revine la vizualizarea implicită."
+                "REVIEW": "Mișcați mouse-ul și derulați: exact așa se va simți. R revine la vizualizarea implicită."
             },
             "NO_TARGET": "Îndreptați spre un perete, tavan sau podea",
             "OUT_OF_RANGE": "Rămâneți în intervalul dvs. de plasare",
@@ -4393,7 +4464,7 @@
                 },
                 "ZOOM_IN": {
                     "LABEL": "Cel mai apropiat zoom",
-                    "HELP": "Cât de departe pot mări operatorii. Derulați sau mutați mouse-ul în sus sau în jos."
+                    "HELP": "Cât de mult pot mări operatorii. Derulați sau mutați mouse-ul în sus sau în jos."
                 },
                 "ZOOM_OUT": {
                     "LABEL": "Vedere cea mai largă",
@@ -4471,7 +4542,7 @@
                     },
                     "CHECKS": {
                         "TITLE": "Verificări live",
-                        "BODY": "Tot ce ar putea merge prost este verificat pe măsură ce vă deplasați: pereții, obiectivul, vederea, distanța. Verdele este bine, chihlimbarul merită privit, roșul trebuie remediat înainte de a salva."
+                        "BODY": "Tot ce ar putea merge prost este verificat pe măsură ce vă deplasați: pereții, obiectivul, vederea, distanța. Verdele este bine, chihlimbarul merită aruncat o privire, roșul trebuie remediat înainte de a salva."
                     },
                     "KEYS": {
                         "TITLE": "Cheile pentru acest pas",
@@ -4491,7 +4562,7 @@
                 "AIM": {
                     "EDITING": {
                         "TITLE": "O setare la un moment dat",
-                        "BODY": "Aceasta este ceea ce schimbi acum. Q / E comută între setări, mouse-ul schimbă valoarea și vizualizarea arată acea margine exactă în timp ce faci."
+                        "BODY": "Asta este ceea ce schimbi acum. Q / E comută între setări, mouse-ul schimbă valoarea și vizualizarea arată acea margine exactă în timp ce faci."
                     },
                     "DIAGRAMS": {
                         "TITLE": "Întreaga gamă dintr-o privire",
@@ -4525,6 +4596,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Teme și culori."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "În joc",
+                    "DESCRIPTION": "Cum se comportă personajul tău în timp ce folosești MDT-ul și radioul."
                 }
             },
             "SECTIONS": {
@@ -4533,7 +4608,9 @@
                 "UNITS_NUMBERS": "Unități și numere",
                 "SEE_THROUGH": "Modul transparent",
                 "SEE_THROUGH_DESCRIPTION": "Îndepărtați MDT-ul pentru a urmări meciul din spatele lui, fără a-l închide.",
-                "DISPLAY": "Afişa"
+                "DISPLAY": "Afişa",
+                "RADIO": "Radio",
+                "KEYBINDS": "Legături de taste"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4595,13 +4672,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Sunete de notificare",
                     "DESCRIPTION": "Redați un sunet pentru apelurile de trimitere primite și mențiunile de chat"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Animație vorbitoare",
+                    "DESCRIPTION": "Ce face personajul tău în timp ce vorbești la radio",
+                    "PREVIEW": "Previzualizare despre personajul tău"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Apăsați o tastă...",
-                "LISTENING_HINT": "Esc pentru a anula · Backspace pentru a șterge",
                 "UNBOUND": "Nu legat",
                 "CUSTOM": "Personalizat"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "MDT-ul dvs. se combină. Faceți clic pe o tastă și apăsați una nouă pentru a o schimba.",
+                "NONE": "Acest server nu are legături de taste MDT.",
+                "OVERLAP": "Aceeași cheie ca și {{names}}. FiveM execută fiecare acțiune pe o tastă, așa că apăsarea acesteia le execută pe toate.",
+                "OPEN_SETTINGS": "Schimbați cheile în legăturile de taste FiveM",
+                "HINT": "O cheie pe care o înlocuiți nu mai funcționează imediat, dar rămâne listată în legăturile de chei FiveM până când vă reconectați. Butoanele mouse-ului și controlerele pot fi setate acolo."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Aprinde",
@@ -4660,7 +4747,14 @@
                 "HINT": "Previzualizează o notificare la poziția și durata de mai sus",
                 "BUTTON": "Previzualizare notificare"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Previzualizare — cât de decolorat arată MDT-ul la acest nivel"
+            "SEE_THROUGH_PREVIEW_HINT": "Previzualizare — cât de decolorat arată MDT-ul la acest nivel",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Server prestabilit ({{style}})",
+                "NONE": "Nici unul",
+                "CHEST": "Microfon de umăr",
+                "EAR": "Cască",
+                "HANDHELD": "Radio de mână"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "Teme",
@@ -4703,7 +4797,7 @@
                 "NAME_PLACEHOLDER": "Numele temei",
                 "ROUNDNESS_LABEL": "Rotunjime",
                 "SCENE_HINT": "Treceți cu mouse-ul pe orice parte a previzualizării pentru a-i vedea culoarea, faceți clic pe ea pentru a o schimba.",
-                "SCENE_CLICK": "Faceți clic pentru a-l schimba. Tot ceea ce este conturat folosește această culoare.",
+                "SCENE_CLICK": "Faceți clic pentru a-l schimba. Tot ceea ce este subliniat folosește această culoare.",
                 "START_FROM": "Începe de la",
                 "PRESETS": {
                     "DEFAULT": "Implicit",
@@ -4718,7 +4812,7 @@
                 "ACCENT": "Culoare de accent",
                 "CUSTOM_COLOR": "Alege orice culoare",
                 "SURFACES": "Suprafețe",
-                "SURFACES_HINT": "Schimbarea acestora reconstruiește culorile suprafeței și ale textului. Ajustați mai jos culorile individuale după aceea.",
+                "SURFACES_HINT": "Schimbarea acestora reconstruiește culorile suprafeței și ale textului. Ajustați culorile individuale mai jos după aceea.",
                 "MODE": "Modul",
                 "MODES": {
                     "DARK": "Întuneric",
@@ -4784,7 +4878,7 @@
             },
             "PREVIEW": {
                 "BRAND": "MDT",
-                "SUBHEADING": "Fiecare raport depus de departamentul dvs",
+                "SUBHEADING": "Fiecare raport depus de departamentul dumneavoastră",
                 "SECONDARY": "Export",
                 "PRIMARY": "Incident nou",
                 "SEARCH": "Caută incidente...",
@@ -4860,6 +4954,8 @@
             "license_revoke": "Licență revocată",
             "citizen_image_change": "Poza cetățeanului a fost schimbată",
             "charges_issued": "Taxe emise",
+            "prisoner_released": "Prizonier eliberat",
+            "prisoner_sentence_changed": "Propoziție schimbată",
             "note_added": "Notă adăugată",
             "note_removed": "Notă eliminată",
             "employee_grade_change": "Nota schimbată",
@@ -4944,6 +5040,8 @@
             "LICENSE_REVOKE": "Licență {{type}} revocată de la {{identifier}}",
             "CITIZEN_IMAGE_CHANGE": "Poza de profil actualizată pentru {{identifier}}",
             "CHARGES_ISSUED": "Au fost emise {{count}} taxe pe {{entityType}} #{{id}}",
+            "PRISONER_RELEASED": "Deţinut eliberat {{identifier}} (motiv: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "Setați propoziția rămasă din {{identifier}} la {{time}} (motiv: {{reason}})",
             "NOTE_ADDED": "S-a adăugat o notă la {{entityType}} #{{entityId}}",
             "NOTE_REMOVED": "S-a eliminat o notă din {{entityType}} #{{entityId}}",
             "EMPLOYEE_GRADE_CHANGE": "Setați nota lui {{identifier}} la {{grade}}",
@@ -5096,7 +5194,7 @@
             "GRID": "Grila sectorială",
             "GRID_HINT": "Împarte zona în sectoare numite (A1, B2...) pentru a le distribui echipelor.",
             "CONE": "Con de vedere",
-            "CONE_HINT": "Selectați marcatorul de pe hartă și trageți mânerul rotund pentru a îndrepta conul și a-i stabili raza de acțiune.",
+            "CONE_HINT": "Selectați marcatorul de pe hartă și trageți mânerul rotund pentru a îndrepta conul și pentru a-i stabili raza de acțiune.",
             "DEGREES": "{{value}}°",
             "RINGS": "Inele de gamă",
             "STEP": "Numărul pasului",
@@ -5165,7 +5263,7 @@
         },
         "DETAILS_CARD": {
             "TITLE": "Detalii despre armă",
-            "VIEW_LINKS_HINT": "Deschideți un grafic al înregistrărilor, persoanelor și incidentelor legate de această armă"
+            "VIEW_LINKS_HINT": "Deschideți un grafic cu înregistrările, oamenii și incidentele legate de această armă"
         },
         "TRANSFER_HISTORY": {
             "TITLE": "Istoricul transferurilor",
@@ -5427,13 +5525,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Emite o viză pentru o persoană sau un vehicul. Noile BOLO încep ca draft."
+            "DESCRIPTION": "Emite o viză pentru o persoană sau un vehicul. Schițele nu semnalează subiectul până când nu sunt activate."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Suspect înarmat într-un Sultan RS negru",
             "DESCRIPTION_PLACEHOLDER": "Unde au fost văzuți ultima dată, cum arată și de ce sunt căutați",
             "EXPIRES_LABEL": "Expiră la",
             "EXPIRES_PLACEHOLDER": "Implicit la 7 zile",
+            "SUBJECTS_TITLE": "Subiecte",
+            "CITIZENS_PLACEHOLDER": "Selectați oameni",
             "TOASTS": {
                 "CREATED": "BOLO creat"
             }
@@ -5473,6 +5573,7 @@
             "CONFIRM_DESCRIPTION": "Aceasta confirmă că{{subject}} a fost localizat și închide punctul de vedere.",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "subiectul",
+            "CONFIRM_DESCRIPTION_MANY": "Acest lucru confirmă că toți cei {{count}} subiecți au fost localizați și închide observația.",
             "TOASTS": {
                 "MARKING": "Marcarea BOLO situată...",
                 "MARKED": "BOLO marcat localizat"
@@ -5491,6 +5592,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Necategorizat",
         "INDEX": {
             "HEADING": "Statutele legale și Codul Penal",
             "SUBHEADING": "Codificarea oficială a infracțiunilor, sancțiunilor financiare și mandatelor judiciare",
@@ -5550,7 +5652,7 @@
                 "MIN_JAIL_ABOVE_DEFAULT": "Timpul minim de închisoare nu poate fi mai mare decât timpul implicit de închisoare",
                 "MAX_JAIL_BELOW_DEFAULT": "Timpul maxim de închisoare nu poate fi mai mic decât timpul implicit de închisoare",
                 "MIN_HOURS_ABOVE_DEFAULT": "Serviciul minim în folosul comunității nu poate fi mai mare decât sarcinile implicite",
-                "MAX_HOURS_BELOW_DEFAULT": "Serviciul maxim în folosul comunității nu poate fi mai mic decât sarcinile implicite",
+                "MAX_HOURS_BELOW_DEFAULT": "Serviciul maxim în comunitate nu poate fi mai mic decât sarcinile implicite",
                 "MIN_BAIL_ABOVE_DEFAULT": "Cauțiunea minimă nu poate fi mai mare decât cauțiunea implicită",
                 "MAX_BAIL_BELOW_DEFAULT": "Cauțiunea maximă nu poate fi mai mică decât cauțiunea implicită",
                 "MIN_POINTS_ABOVE_DEFAULT": "Punctele minime nu pot fi mai mari decât punctele implicite",
@@ -5647,6 +5749,54 @@
                 "PROCESSING": "Procesare penalizare...",
                 "SUCCESS": "Penalizare procesată pentru {{name}}",
                 "FAILED": "Nu s-a procesat pedeapsa"
+            }
+        }
+    },
+    "PRISONERS": {
+        "SUBHEADING": "Toți sunt în închisoare acum și cât timp au mai rămas",
+        "SUBHEADING_ONLINE_ONLY": "Prizonieri care sunt online chiar acum. Scriptul dvs. de închisoare nu raportează prizonierii offline",
+        "SEARCH_PLACEHOLDER": "Căutați după nume sau identificator...",
+        "EMPTY": "Nimeni nu este în închisoare",
+        "NOT_SUPPORTED": "Scenariul tău de închisoare nu poate enumera prizonierii",
+        "COLUMNS": {
+            "REMAINING": "Rămânând",
+            "RECORD": "Înregistra",
+            "SENTENCED_BY": "Condamnat de",
+            "SINCE": "Din moment ce"
+        },
+        "REMAINING_OF": "{{remaining}} din {{total}}",
+        "UNKNOWN_REMAINING": "Nu este raportat de scenariul închisorii",
+        "JAILED_OUTSIDE_MDT": "Închis în fața MDT-ului",
+        "RECORD_LABEL": "{{type}} #{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Penalizare",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Deschide profilul",
+        "REASON_LABEL": "Motiv (opțional)",
+        "RELEASE": {
+            "TRIGGER": "Eliberare",
+            "TITLE": "Eliberați prizonierul",
+            "CONFIRM": "{{name}} vor fi eliberați acum și sentința lor va fi închisă.",
+            "REASON_PLACEHOLDER": "Pedeapsa redusa de instanta",
+            "BUTTON": "Eliberare",
+            "NEEDS_ONLINE": "Scenariul dvs. de închisoare poate elibera numai prizonierii care sunt online.",
+            "TOASTS": {
+                "PROCESSING": "Eliberarea prizonierului...",
+                "SUCCESS": "Lansat {{name}}",
+                "FAILED": "Nu s-a eliberat prizonierul"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Schimba propozitia",
+            "TITLE": "Schimba propozitia",
+            "TIME_LABEL": "Timp rămas pentru servire (luni)",
+            "REASON_PLACEHOLDER": "Comportament bun",
+            "BUTTON": "Setați la {{duration}}",
+            "TOASTS": {
+                "PROCESSING": "Se schimbă propoziția...",
+                "SUCCESS": "Propoziția lui {{name}} este acum {{duration}}",
+                "FAILED": "Nu s-a putut schimba propoziția"
             }
         }
     },
@@ -5800,6 +5950,8 @@
         },
         "INDEX": {
             "UNNAMED": "Cetățean fără nume",
+            "JAILED": "Închis",
+            "JAILED_REMAINING": "Închis · {{duration}} au rămas",
             "SUBHEADING": "ID de cetățean",
             "TOASTS": {
                 "SAVING_IMAGE": "Se salvează imaginea…",
@@ -5900,6 +6052,25 @@
                 "SERVICE": "Serviciu"
             },
             "SUMMARY_TITLE": "Totalul penalităților"
+        },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Istoria închisorii",
+            "EMPTY": "Fără sentințe de închisoare înregistrate",
+            "COLUMNS": {
+                "OUTCOME": "Rezultat",
+                "ENDED": "Încheiat"
+            },
+            "STATUS": {
+                "ACTIVE": "Servire",
+                "SERVED": "Servit",
+                "RELEASED": "Lansat mai devreme",
+                "REPLACED": "Înlocuit cu o nouă propoziție"
+            },
+            "RELEASED_BY": "de {{name}}",
+            "VIEW_ALL_one": "Vedeți toate cele {{formatted}} propoziții",
+            "VIEW_ALL_few": "Vedeți toate cele {{formatted}} propoziții",
+            "VIEW_ALL_other": "Vedeți toate cele {{formatted}} propoziții",
+            "DIALOG_TITLE": "Istoricul închisorii pentru {{name}}"
         },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Deschideți un grafic al înregistrărilor, vehiculelor și persoanelor legate de acest cetățean",
@@ -6380,7 +6551,7 @@
             "REQUESTED": "Solicitat",
             "NOT_SERVED": "Nu a fost servit încă",
             "TOASTS": {
-                "SAVING_REASON": "Se salvează motivul...",
+                "SAVING_REASON": "Se salvează motivul…",
                 "REASON_UPDATED": "Motivul a fost actualizat"
             },
             "REASON_PLACEHOLDER": "De ce este nevoie de acest mandat? Descrieți cauza probabilă..."
@@ -6568,7 +6739,7 @@
         },
         "DELETE_BUTTON": {
             "CONFIRM_TITLE": "Ștergeți această înregistrare a dovezilor?",
-            "CONFIRM_DESCRIPTION": "Acest lucru elimină definitiv înregistrarea dovezilor, link-urile, etichetele, galeria, notele și jurnalul de activitate. Acest lucru nu poate fi anulat.",
+            "CONFIRM_DESCRIPTION": "Acest lucru elimină definitiv înregistrarea dovezilor, linkurile, etichetele, galeria, notele și jurnalul de activitate. Acest lucru nu poate fi anulat.",
             "TOASTS": {
                 "LOADING": "Se șterg dovezile...",
                 "SUCCESS": "Dovezile au fost șterse"
@@ -6640,7 +6811,7 @@
             "digital": "Digital (Telefon / CCTV)",
             "document": "Documente",
             "clothing": "Îmbrăcăminte",
-            "tool": "Instrumente/Arme (non-armă de foc)",
+            "tool": "Instrumente / Arme (non-armă de foc)",
             "vehicle": "Proba vehiculului",
             "other": "Alte"
         },
@@ -6956,7 +7127,7 @@
             "FAILED_TOAST": "Trimiterea invitației a eșuat"
         },
         "INVITES": {
-            "SUBTITLE": "V-am invitat să colaborați la un raport",
+            "SUBTITLE": "V-a invitat să colaborați la un raport",
             "ACCEPT": "Accepta",
             "DECLINE": "Declin"
         }
@@ -7001,9 +7172,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Echipat cu camera de corp",
-        "LOST": "Am pierdut conexiunea cu camera aia",
         "MISSING": "Nu ai bodycam",
-        "OFFLINE": "Camera acelui ofițer a fost offline",
         "REMOVED": "Camera corporală a fost eliminată",
         "UNREACHABLE": "Nu am putut ajunge la camera de corp"
     },
@@ -7011,7 +7180,6 @@
         "ARMED": "Dashcam armat",
         "DISARMED": "Dashcam dezarmat",
         "NEEDS_PATROL_VEHICLE": "Trebuie să fii într-un vehicul de patrulare inclus pe lista albă",
-        "OFFLINE": "Camera de bord a vehiculului a fost offline",
         "SEAT_RESTRICTED": "Doar șoferul sau pasagerul din față poate controla camera de bord",
         "UNAVAILABLE": "Cameră de bord indisponibilă",
         "UNREACHABLE": "Nu am putut ajunge la camera de bord"

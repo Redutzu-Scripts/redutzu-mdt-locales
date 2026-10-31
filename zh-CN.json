@@ -20,6 +20,7 @@
         "MANAGEMENT": "管理",
         "CONFIG": "配置",
         "PENALTIES": "处罚",
+        "PRISONERS": "囚犯",
         "ASSETS": "资产",
         "OPERATIONS": "运营",
         "RECORDS": "记录",
@@ -114,7 +115,7 @@
             "INCIDENT": "事件",
             "WARRANT": "保证",
             "EVIDENCE": "证据",
-            "BOLO": "波罗",
+            "BOLO": "波洛",
             "WEAPON": "武器",
             "VEHICLE": "车辆",
             "PROPERTY": "财产",
@@ -308,7 +309,7 @@
             "CENTER": "中心记录",
             "NO_CONNECTIONS": "没有记录连接",
             "NO_MORE": "没有进一步的联系。",
-            "TRUNCATED": "该记录的连接数超过了一次可以显示的连接数。",
+            "TRUNCATED": "该记录的连接数多于一次可以显示的连接数。",
             "LIMIT_REACHED": "已达到图表限制（{{count}} 条记录）。重置重新开始。",
             "LOAD_FAILED": "无法加载连接。",
             "RELATIONS": {
@@ -338,7 +339,7 @@
             },
             "CUSTOM_PLACEHOLDER": "选择日期和时间",
             "EXPIRES_IN": "过期时间：{{time}}",
-            "POSTED": "发布了{{time}}",
+            "POSTED": "已发布{{time}}",
             "COUNT_other": "{{formatted}} 条笔记"
         },
         "SUBJECT_CARD": {
@@ -516,6 +517,8 @@
                 "FINE_ASC": "精细：低→高",
                 "JAIL_DESC": "入狱时间：高→低",
                 "JAIL_ASC": "入狱时间：低→高",
+                "REMAINING_ASC": "最快发布",
+                "REMAINING_DESC": "剩下的大部分时间",
                 "AGE_DESC": "年龄：年龄最大的优先",
                 "AGE_ASC": "年龄：最小的优先",
                 "RECORDS_DESC": "记录：最多第一",
@@ -665,10 +668,20 @@
             "MESSAGE_COPIED": "消息已复制",
             "IMAGE_LINK_COPIED": "图片链接已复制",
             "LINK_COPIED": "链接已复制"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "单击，然后按某个键",
+            "CHANGE_KEY": "点击更改",
+            "LISTENING": "按一个键...",
+            "LISTENING_HINT": "Esc 或单击外部取消",
+            "CUSTOM": "风俗",
+            "TAKEN": "{{key}} 已被 {{name}} 使用。选择另一个键，否则两者都会运行。"
         }
     },
     "ERRORS": {
         "REQUIRED": "此字段是必需的",
+        "KEYBIND_UNSUPPORTED_KEY": "该键不能用于键绑定",
+        "KEYBIND_LIMIT": "您最多可以有 {{max}} 个单选键绑定",
         "NO_PERMISSION": "您无权这样做",
         "INVALID_DATA": "部分提交的数据无效",
         "INVALID_CHARGES": "一项或多项指控无效——根据刑法检查金额",
@@ -685,6 +698,7 @@
         "VEHICLE_TOO_FAR": "靠近车辆",
         "NO_VEHICLE_SELECTED": "未选择车辆",
         "NO_SUSPECT_SELECTED": "没有选择嫌疑人",
+        "NO_SUBJECT_SELECTED": "添加至少一个人或一辆车",
         "NO_VEHICLE_NEARBY": "附近没有车辆",
         "TRUNK_SEARCH_UNAVAILABLE": "您的库存设置尚不支持主干搜索",
         "INVALID_MODEL": "该型号不可用",
@@ -730,6 +744,7 @@
             "INVALID_VALUE": "该值对此设置无效",
             "MIN": "必须至少为 {{min}}",
             "MAX": "最多必须为 {{max}}",
+            "PRINTED_MARKERS": "1 到 {{max}} 之间：编号标记模型最多只能达到 {{max}}",
             "NOT_AN_OPTION": "这不是选项之一",
             "EMPTY": "不能为空",
             "TOO_LONG": "最多只能有 {{max}} 个字符",
@@ -789,8 +804,10 @@
         "PROP_PLACER_INTERRUPTED": "道具放置被中断",
         "VEHICLE_OCCUPIED": "首先让所有人下车",
         "IMPOUND_DISABLED": "此服务器上已关闭从“交互”菜单中扣押",
-        "VEHICLE_EMPTY": "无人订购",
+        "IMPOUND_NOT_IMPLEMENTED": "此服务器上未设置扣押",
         "NOT_SUPPORTED": "这在此服务器上不可用",
+        "PRISONER_OFFLINE": "为此，囚犯需要联网",
+        "PRISON_ACTION_FAILED": "监狱剧本做不到这一点",
         "NO_ACCESS": "你的工作不能使用这个",
         "UNKNOWN_FREQUENCY": "该频率没有频道",
         "MARKER_LIMIT": "您已达到证据标记限制",
@@ -810,7 +827,7 @@
         "CANNOT_MANAGE_SELF": "你不能这样对自己",
         "GRADE_TOO_HIGH": "只能管理自己级别以下的军官",
         "AMOUNT_TOO_HIGH": "该金额超出了一笔交易的限额",
-        "INVALID_FREQUENCY": "使用 450.100 等频率",
+        "INVALID_FREQUENCY": "该频率与允许的格式不匹配",
         "UNIT_FULL": "该单位没有空闲座位",
         "UNIT_NEEDS_LEAD": "让别人先带头",
         "UNIT_OFF_DUTY": "该单位无人值班",
@@ -858,7 +875,7 @@
         "UNLINKED_RECORD": "取消链接 {{kind}} {{name}}",
         "EVIDENCE_STORED": "将其预订到存储位置：{{location}}",
         "EVIDENCE_CHECKED_OUT_LAB": "将此检查给 {{name}} 进行实验室分析",
-        "EVIDENCE_CHECKED_OUT_COURT": "请向 {{name}} 向法庭查看此内容",
+        "EVIDENCE_CHECKED_OUT_COURT": "请向 {{name}} 向法庭查看此信息",
         "EVIDENCE_CHECKED_OUT_INVESTIGATION": "将此问题交给 {{name}} 进行调查",
         "EVIDENCE_CHECKED_OUT_OTHER": "将此信息查看到 {{name}}",
         "EVIDENCE_RETURNED_TO": "将其返回至位于 {{location}} 的存储",
@@ -1042,7 +1059,6 @@
             "EDIT_DESCRIPTION": "更新该频道的名称或频率。",
             "NAME_PLACEHOLDER": "特警指挥",
             "FREQUENCY_FIELD": "频率（兆赫）",
-            "FREQUENCY_PLACEHOLDER": "498.510",
             "SUBMIT": "创建频道",
             "TOASTS": {
                 "CREATED": "频道“{{name}}”已创建",
@@ -1083,18 +1099,23 @@
         },
         "KEYBINDS_DIALOG": {
             "TITLE": "无线电按键绑定",
-            "DESCRIPTION": "绑定键盘按键即可立即在特定通道上传输。",
-            "EMPTY": "尚未配置按键绑定。",
-            "ADD_NEW": "添加新的按键绑定",
-            "ADD_DESCRIPTION": "选择一个名称，按一个键捕获它，然后选择目标通道。",
+            "DESCRIPTION": "即使 MDT 关闭，也可以一键将收音机调谐到某个频道。",
+            "OFF": "此服务器上的无线电按键绑定已关闭。",
+            "EMPTY": "还没有无线电按键绑定。",
+            "ADD": "添加按键绑定",
+            "ADD_TITLE": "新的无线电按键绑定",
+            "EDIT_TITLE": "编辑无线电按键绑定",
+            "FORM_DESCRIPTION": "命名它，选择一个频道，然后按下将收音机调谐到该频道的键。",
             "NAME_PLACEHOLDER": "主频道",
-            "KEY_LABEL": "钥匙",
-            "LISTENING": "正在听……",
-            "CLICK_TO_CAPTURE": "单击以捕获密钥",
-            "CAPTURING_HINT": "按任意键 — Esc 键取消。",
-            "CLICK_HINT": "单击上面的字段并按任意键。",
             "CHANNEL_PLACEHOLDER": "选择频道",
-            "SAVE": "保存按键绑定"
+            "KEY_LABEL": "钥匙",
+            "KEY_HINT": "仅单键。您也可以稍后在“设置”>“按键绑定”>“FiveM”中更改它。",
+            "CHANNEL_REMOVED": "该频道已不存在",
+            "SETTINGS_HINT": "还可以在“设置”>“按键绑定”>“FiveM”中更改按键。删除或更改的密钥会立即停止工作，但会保留在那里列出，直到您重新连接。",
+            "DELETE": "删除按键绑定",
+            "SAVE": "保存按键绑定",
+            "TUNED": "收音机调至{{name}}",
+            "ROW_NAME": "电台：{{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "新无线电代码",
@@ -1310,7 +1331,7 @@
                 "REOCCURRED": "附近再次举报"
             },
             "ACTIONS": {
-                "ATTACHED": "回应了",
+                "ATTACHED": "回复了",
                 "DETACHED": "未分配",
                 "ACKNOWLEDGED": "承认",
                 "NOTE": "添加了注释",
@@ -1707,7 +1728,7 @@
             "DELETE_CONFIRM_TITLE": "删除此 HR 注释吗？",
             "DELETE_CONFIRM_DESCRIPTION": "该注释及其后续内容将从 {{name}} 的文件中删除。这无法撤消。",
             "WRITTEN_BY": "作者：{{author}}",
-            "WRITTEN_BY_EDITED": "撰写者：{{author}} · 最后编辑者：{{editor}}",
+            "WRITTEN_BY_EDITED": "作者：{{author}} · 最后编辑者：{{editor}}",
             "FOLLOW_UPS": "后续行动",
             "NEW_DIALOG_TITLE": "新人力资源说明",
             "NEW_DIALOG_DESCRIPTION": "添加 {{name}} 的机构记录。",
@@ -1946,7 +1967,7 @@
             "HOLDERS": "支架",
             "CREATE_BUTTON": "创建认证",
             "EMPTY": "尚无认证类型 - 创建一个即可开始。",
-            "NAME_PLACEHOLDER": "例如K9 处理机",
+            "NAME_PLACEHOLDER": "例如K9 处理程序",
             "DELETE_CONFIRM_DESCRIPTION": "这将删除认证类型并撤销持有该认证类型的任何人。它无法撤消。",
             "TOASTS": {
                 "CREATING": "创建认证...",
@@ -2032,7 +2053,7 @@
             "FROM_RANK": "{{rank}} 及以上",
             "MIXED": "混合",
             "LOWEST_RANK": "具有访问权限的最低级别",
-            "SET_ALL": "全部设定",
+            "SET_ALL": "全部设置",
             "SET_GROUP": "{{group}} 中的所有权限",
             "RANK_ACCESS": "排名访问",
             "RANK_ACCESS_DESCRIPTION": "一个等级可以做和不能做的一切。",
@@ -2116,6 +2137,9 @@
                 "PENALCODE_VIEW": "阅读刑法。",
                 "PENALCODE_CREATE": "添加刑法条目。",
                 "PENALCODE_UPDATE": "编辑刑法条目。",
+                "PRISONERS_VIEW": "查看谁在监狱中以及他们还剩多久。",
+                "PRISONERS_RELEASE": "在刑期结束前释放囚犯。",
+                "PRISONERS_EDIT": "更改囚犯仍需服刑的时间。",
                 "PENALCODE_DELETE": "删除刑法条目。",
                 "OPERATIONPLANS_VIEW": "阅读操作计划。",
                 "OPERATIONPLANS_CREATE": "起草新的运营计划。",
@@ -2239,7 +2263,7 @@
         }
     },
     "DASHBOARD": {
-        "SUBHEADING": "您的轮班、警报和部门活动一目了然",
+        "SUBHEADING": "您的班次、警报和部门活动一目了然",
         "FEATURED_ANNOUNCEMENT_EMPTY": "没有公告",
         "START_COLLAB_BUTTON": "开始协作",
         "ALERTS": {
@@ -2782,6 +2806,12 @@
                     "DESCRIPTION": "什么落在仪表板上的铃声中。私人等待离线的官员；部门范围内的信息只能在当时在线联系到官员。",
                     "RETENTION": "保留通知",
                     "RETENTION_HINT": "当您降低它时，早于此的通知将立即被删除。 0 永远保留它们。"
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "广播动画",
+                    "DESCRIPTION": "军官们在广播中讲话时会做什么。每位军官可以在配置页面选择自己的；这是其他人得到的。",
+                    "DEFAULT": "默认动画",
+                    "DEFAULT_HINT": "使用 pma-voice，它自己的无线电动画将被关闭，除非这是 None。对于另一个语音资源，在其自己的配置中关闭其动画。"
                 }
             },
             "DISPATCH": {
@@ -2872,7 +2902,7 @@
                     "SPRITE_HELICOPTER_HINT": "随直升机转动。",
                     "SPRITE_BOAT": "船上的图标",
                     "SPRITE_BOAT_HINT": "随船而转。",
-                    "SCALE": "光点尺寸",
+                    "SCALE": "光点大小",
                     "SCALE_HINT": "1是游戏的正常大小。",
                     "COLOUR": "颜色",
                     "COLOUR_HINT": "下面没有自己的每个部门的颜色。",
@@ -2956,6 +2986,33 @@
                     "AUTO_LOCK": "将盘子锁在火柴上",
                     "AUTO_LOCK_HINT": "雷达会锁定匹配的车牌，这样警察就不会丢失它。",
                     "DESCRIPTION": "借助雷达资源 (wk_wars2x)，雷达读取的每个车牌都会根据 BOLO 和搜查令进行检查，并在比赛中向军官发出警告。"
+                },
+                "SCENE": {
+                    "TITLE": "犯罪现场",
+                    "DESCRIPTION": "警官如何放置犯罪现场磁带和证据标记：从交互菜单的场景页面，使用库存物品，或其中之一。物品没有用完。",
+                    "METHODS": {
+                        "MENU": "场景页面",
+                        "ITEM": "使用该项目",
+                        "BOTH": "场景页面或项目"
+                    },
+                    "TAPE_METHOD": "警员如何放置胶带",
+                    "TAPE_METHOD_HINT": "在“场景”页面中，使用磁带项或其中之一。",
+                    "TAPE_ITEM": "胶带项目",
+                    "TAPE_ITEM_HINT": "警官用来放置犯罪现场磁带的库存物品。",
+                    "MARKER_METHOD": "警察如何放置证据标记",
+                    "MARKER_METHOD_HINT": "在“场景”页面中，使用标记项或其中之一。",
+                    "MARKER_ITEM": "证据标记项目",
+                    "MARKER_ITEM_HINT": "官员用来放置证据标记的库存物品。",
+                    "RADIUS": "场景尺寸",
+                    "RADIUS_HINT": "放置在靠近场景的磁带、标记和道具将其连接起来。更远的地方，他们开始了新的场景。",
+                    "MAX_MARKERS_SCENE": "每个场景的证据标记",
+                    "MAX_MARKERS_SCENE_HINT": "每个场景中的标记从 1 开始编号。 0 = 无限制，仅当标记不使用编号模型时。",
+                    "MAX_MARKERS_OFFICER": "每个官员的证据标记",
+                    "MAX_MARKERS_OFFICER_HINT": "一名警官可以在每个场景中同时放置多少个标记。 0 = 无限制。",
+                    "TAPE_LENGTH": "最长的胶带线",
+                    "TAPE_LENGTH_HINT": "可以将一根胶带线的两端相距最远的距离绑起来。",
+                    "MAX_TAPE_OFFICER": "每位警官的胶带线",
+                    "MAX_TAPE_OFFICER_HINT": "一名警官可以同时拉起多少条警戒线。 0 = 无限制。"
                 }
             },
             "CAMERAS": {
@@ -3113,7 +3170,8 @@
                     "BOTH": "项目或命令",
                     "WAYS": {
                         "ITEM": "库存项目",
-                        "COMMAND": "聊天命令"
+                        "COMMAND": "聊天命令",
+                        "MENU": "场景页面"
                     }
                 },
                 "REPAIR": {
@@ -3134,7 +3192,13 @@
                     "SIGNAL": "信号强度变化",
                     "SIGNAL_HINT": "外观：随着时间的推移，相机网格上的信号条会稍微移动。关闭：他们保持静止。",
                     "AUDIO_RADIUS": "听力范围",
-                    "AUDIO_RADIUS_HINT": "观看直播的警官听到球员在离摄像机这么近的地方说话。"
+                    "AUDIO_RADIUS_HINT": "观看直播的警官听到球员在离摄像机这么近的地方说话。",
+                    "ON_FEED_LOST": "当相机下降时",
+                    "ON_FEED_LOST_HINT": "当警察观看闭路电视摄像机被毁坏、被黑客入侵或瘫痪后，在剪辑播放后会发生什么？",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "切换到下一个摄像头",
+                        "CLOSE": "关闭提要"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "自动检测",
@@ -3241,7 +3305,7 @@
                 "DISPATCH": "犯罪行为如何转变为调度呼叫、呼叫的行为方式以及警察在地图上看到的内容。",
                 "FIELD": "车牌读取器（雷达）和警犬。",
                 "CAMERAS": "闭路电视摄像机、随身摄像机和行车记录仪：损坏、维修、黑客攻击、声音、录音以及玩家如何打开它们。",
-                "INTEGRATIONS": "MDT 使用服务器的哪些资源。只读：它们是在 config.lua 中选择的。",
+                "INTEGRATIONS": "MDT 使用服务器的哪些资源。只读：它们是在 config.lua 中选取的。",
                 "INTERFACE": "MDT 的外观如何适合每个人：默认主题和侧边栏中您自己的页面。",
                 "CAMERA_MANAGER": "每个放置的闭路电视摄像机，无论其部门如何：在地图上找到一个，传送到它，编辑或移动它，并在服务器之间复制摄像机布局。",
                 "OFFICER_UNITS": "单位类型、呼叫自动状态、车辆、区域和调度统计数据。"
@@ -3423,7 +3487,7 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "默认按键绑定",
-                    "DESCRIPTION": "每个动作开始的键。 FiveM 会在玩家第一次加入时保存他们的密钥，因此这里的更改适用于新玩家和从未拥有此密钥的任何人。每个人仍然可以在“设置”>“按键绑定”>“FiveM”中更改自己的按键。",
+                    "DESCRIPTION": "每个动作开始的键。 FiveM 会在玩家第一次加入时保存他们的密钥，因此这里的更改适用于新玩家和从未拥有此密钥的任何人。每个人仍然可以在 MDT 的配置页面或设置 > 按键绑定 > FiveM 中更改自己的按键。",
                     "OPEN_MDT": "打开MDT",
                     "OPEN_MDT_HINT": "关闭后，警官用命令或物品打开它。",
                     "INTERACTIONS": "互动菜单",
@@ -3435,7 +3499,10 @@
                     "PANIC_BUTTON": "紧急按钮",
                     "PANIC_BUTTON_HINT": "发送带有警官位置的恐慌警报。",
                     "REQUEST_BACKUP": "请求备份",
-                    "REQUEST_BACKUP_HINT": "请求附近单位支援。"
+                    "REQUEST_BACKUP_HINT": "请求附近单位支援。",
+                    "CLASH": "也是默认键 {{names}}。 FiveM 对某个键运行每个操作，因此 {{key}} 会同时执行这两项操作。",
+                    "MAX_RADIO": "每个军官的无线电按键绑定",
+                    "MAX_RADIO_HINT": "每个军官可以在无线电页面上添加多少个无线电按键绑定。 0 将其关闭。已经拥有更多的官员只保留他们的第一批。"
                 }
             },
             "IN_GAME": {
@@ -3573,7 +3640,8 @@
                 "RADIUS": "搜索范围",
                 "RADIUS_HINT": "通话周围有一个圆圈，而不仅仅是一个图钉。",
                 "SUMMARY": "图标 {{sprite}}，颜色 {{colour}}",
-                "SAME_AS_OTHERS": "和其他人一样"
+                "SAME_AS_OTHERS": "和其他人一样",
+                "COLOUR_BY_PRIORITY": "颜色遵循呼叫的优先级。关闭地图光点中的“按优先级颜色”以在此处选择一个。"
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "刷新",
@@ -3647,7 +3715,7 @@
             "OFFICER_UNITS": {
                 "TYPES": {
                     "TITLE": "单位类型",
-                    "DESCRIPTION": "军官可以组成的部队类型，每种都有其图标和席位数量。",
+                    "DESCRIPTION": "部队军官可以组成的类型，每种都有其图标和席位数量。",
                     "LIST": "类型",
                     "LIST_HINT": "添加您自己的或更改任何类型。无法删除仍在使用的已保存单位类型。",
                     "LIST_FIELDS": {
@@ -3768,6 +3836,13 @@
             "RECORDING": {
                 "MAX_DURATION": "已达到最长录制时间，正在保存剪辑",
                 "MAX_SIZE": "已达到最大录制尺寸，正在保存剪辑"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "相机被毁",
+                "HACKED": "饲料被拦截",
+                "OFFLINE": "相机离线",
+                "BODYCAM": "随身摄像机离线",
+                "DASHCAM": "行车记录仪离线"
             }
         },
         "GIZMO": {
@@ -3944,7 +4019,7 @@
             "VEHICLE": {
                 "NO_TARGET": "范围内没有车辆",
                 "NO_TARGET_HINT": "看一辆车，或者开到一辆车后面",
-                "BOLO": "波罗",
+                "BOLO": "波洛",
                 "OCCUPIED": "占领",
                 "LOCKED": "锁定",
                 "RUN_PLATE": "跑板",
@@ -3960,8 +4035,6 @@
                 "ACTIVE_WARRANTS": "有效认股权证",
                 "STOLEN": "被盗",
                 "OPEN_RECORD": "打开记录",
-                "OCCUPANTS_OUT": "命令居住者离开",
-                "OCCUPANTS_ORDERED_other": "命令 {{count}} 名居住者离开",
                 "SEARCH_TRUNK": "搜索主干",
                 "IMPOUND": "扣押",
                 "IMPOUNDED": "{{plate}}被扣押"
@@ -4381,6 +4454,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "主题和颜色。"
+                },
+                "GAMEPLAY": {
+                    "LABEL": "游戏内",
+                    "DESCRIPTION": "当您使用 MDT 和收音机时，您的角色如何表现。"
                 }
             },
             "SECTIONS": {
@@ -4389,7 +4466,9 @@
                 "UNITS_NUMBERS": "单位和数字",
                 "SEE_THROUGH": "透视模式",
                 "SEE_THROUGH_DESCRIPTION": "将 MDT 淡出以观看其后面的比赛，而无需关闭它。",
-                "DISPLAY": "展示"
+                "DISPLAY": "展示",
+                "RADIO": "收音机",
+                "KEYBINDS": "按键绑定"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4451,13 +4530,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "通知声音",
                     "DESCRIPTION": "为传入的调度呼叫和聊天提及播放声音"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "说话的动画",
+                    "DESCRIPTION": "当你在广播中讲话时，你的角色会做什么",
+                    "PREVIEW": "预览你的角色"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "按一个键...",
-                "LISTENING_HINT": "Esc 取消 · Backspace 清除",
                 "UNBOUND": "未绑定",
                 "CUSTOM": "风俗"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "您的 MDT 键绑定。单击一个键并按一个新键即可更改它。",
+                "NONE": "该服务器没有 MDT 键绑定。",
+                "OVERLAP": "与 {{names}} 相同的键。 FiveM 运行某个键上的所有操作，因此按下该键即可运行所有操作。",
+                "OPEN_SETTINGS": "更改 FiveM 按键绑定中的按键",
+                "HINT": "您更换的按键会立即停止工作，但会保留在 FiveM 的按键绑定中，直到您重新连接为止。可以在那里设置鼠标按钮和控制器。"
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "光",
@@ -4514,7 +4603,14 @@
                 "HINT": "在上面的位置和持续时间预览通知",
                 "BUTTON": "预览通知"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "预览 — MDT 在这个级别看起来有多褪色"
+            "SEE_THROUGH_PREVIEW_HINT": "预览 — MDT 在这个级别看起来有多褪色",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "服务器默认值 ({{style}})",
+                "NONE": "没有任何",
+                "CHEST": "肩麦克风",
+                "EAR": "听筒",
+                "HANDHELD": "手持收音机"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "主题",
@@ -4714,6 +4810,8 @@
             "license_revoke": "许可证被吊销",
             "citizen_image_change": "公民照片已更改",
             "charges_issued": "已发出收费",
+            "prisoner_released": "囚犯获释",
+            "prisoner_sentence_changed": "句子改变",
             "note_added": "添加注释",
             "note_removed": "注释已删除",
             "employee_grade_change": "等级变更",
@@ -4798,6 +4896,8 @@
             "LICENSE_REVOKE": "已吊销 {{identifier}} 的 {{type}} 许可证",
             "CITIZEN_IMAGE_CHANGE": "更新了{{identifier}}的个人资料照片",
             "CHARGES_ISSUED": "已于 {{entityType}} #{{id}} 发出 {{count}} 笔费用",
+            "PRISONER_RELEASED": "释放囚犯{{identifier}}（原因：{{reason}}）",
+            "PRISONER_SENTENCE_CHANGED": "将{{identifier}}的剩余句子设置为{{time}}（原因：{{reason}}）",
             "NOTE_ADDED": "向 {{entityType}} #{{entityId}} 添加了注释",
             "NOTE_REMOVED": "删除了 {{entityType}} #{{entityId}} 中的注释",
             "EMPLOYEE_GRADE_CHANGE": "将{{identifier}}的成绩设置为{{grade}}",
@@ -5277,13 +5377,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "监视人员或车辆。新的 BOLO 以草稿形式开始。"
+            "DESCRIPTION": "监视人员或车辆。草稿在激活之前不会标记主题。"
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "驾驶黑色 Sultan RS 的武装嫌疑人",
             "DESCRIPTION_PLACEHOLDER": "他们最后一次出现在哪里、他们长什么样以及为什么被通缉",
             "EXPIRES_LABEL": "到期日",
             "EXPIRES_PLACEHOLDER": "默认为 7 天",
+            "SUBJECTS_TITLE": "科目",
+            "CITIZENS_PLACEHOLDER": "选择人员",
             "TOASTS": {
                 "CREATED": "波洛创建"
             }
@@ -5323,6 +5425,7 @@
             "CONFIRM_DESCRIPTION": "这确认了{{subject}}已被找到并关闭了望台。",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "主题",
+            "CONFIRM_DESCRIPTION_MANY": "这确认已找到所有 {{count}} 个对象并关闭监视。",
             "TOASTS": {
                 "MARKING": "标记 BOLO 位于…",
                 "MARKED": "BOLO 标记位于"
@@ -5341,6 +5444,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "未分类",
         "INDEX": {
             "HEADING": "法律法规和刑法",
             "SUBHEADING": "犯罪、经济制裁和司法授权的正式编纂",
@@ -5498,6 +5602,54 @@
             }
         }
     },
+    "PRISONERS": {
+        "SUBHEADING": "现在每个人都在监狱里，他们还剩下多久",
+        "SUBHEADING_ONLINE_ONLY": "现在在线的囚犯。您的监狱脚本不会报告离线囚犯",
+        "SEARCH_PLACEHOLDER": "按名称或标识符搜索...",
+        "EMPTY": "没有人在监狱里",
+        "NOT_SUPPORTED": "您的监狱脚本无法列出囚犯",
+        "COLUMNS": {
+            "REMAINING": "其余的",
+            "RECORD": "记录",
+            "SENTENCED_BY": "被判刑的",
+            "SINCE": "自从"
+        },
+        "REMAINING_OF": "第 {{remaining}} 个（共 {{total}} 个）",
+        "UNKNOWN_REMAINING": "监狱剧本没有报道",
+        "JAILED_OUTSIDE_MDT": "在 MDT 之外入狱",
+        "RECORD_LABEL": "{{type}}#{{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "惩罚",
+            "MDT": "多学科治疗"
+        },
+        "OPEN_PROFILE": "打开个人资料",
+        "REASON_LABEL": "原因（可选）",
+        "RELEASE": {
+            "TRIGGER": "发布",
+            "TITLE": "释放囚犯",
+            "CONFIRM": "{{name}} 现已获释，刑期已结。",
+            "REASON_PLACEHOLDER": "法院减刑",
+            "BUTTON": "发布",
+            "NEEDS_ONLINE": "你的监狱脚本只能释放在线的囚犯。",
+            "TOASTS": {
+                "PROCESSING": "释放囚犯...",
+                "SUCCESS": "已发布{{name}}",
+                "FAILED": "未能释放囚犯"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "改变句子",
+            "TITLE": "改变句子",
+            "TIME_LABEL": "剩余任职时间（月）",
+            "REASON_PLACEHOLDER": "良好的行为",
+            "BUTTON": "设置为{{duration}}",
+            "TOASTS": {
+                "PROCESSING": "改变句子...",
+                "SUCCESS": "{{name}}的句子现在是{{duration}}",
+                "FAILED": "修改句子失败"
+            }
+        }
+    },
     "CITIZENS": {
         "REGISTER_DIALOG": {
             "TRIGGER": "注册公民",
@@ -5612,7 +5764,7 @@
                 "CONFIRM_TEXT": "暂停该公民的 <0>{{license}}</0> 许可证？"
             },
             "TOASTS": {
-                "GRANTING": "授予许可...",
+                "GRANTING": "授予许可证...",
                 "GRANTED": "已授予许可",
                 "GRANT_FAILED": "未能授予许可",
                 "SUSPENDING": "吊销执照...",
@@ -5644,6 +5796,8 @@
         },
         "INDEX": {
             "UNNAMED": "未透露姓名的公民",
+            "JAILED": "入狱",
+            "JAILED_REMAINING": "入狱 · 还剩 {{duration}}",
             "SUBHEADING": "公民身份证",
             "TOASTS": {
                 "SAVING_IMAGE": "正在保存图像...",
@@ -5736,6 +5890,23 @@
                 "SERVICE": "服务"
             },
             "SUMMARY_TITLE": "处罚总数"
+        },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "监狱历史",
+            "EMPTY": "没有入狱记录",
+            "COLUMNS": {
+                "OUTCOME": "结果",
+                "ENDED": "结束"
+            },
+            "STATUS": {
+                "ACTIVE": "服务",
+                "SERVED": "服务",
+                "RELEASED": "提前发布",
+                "REPLACED": "替换为新句子"
+            },
+            "RELEASED_BY": "由{{name}}",
+            "VIEW_ALL_other": "查看全部 {{formatted}} 句话",
+            "DIALOG_TITLE": "{{name}} 的入狱史"
         },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "打开与该公民相关的记录、车辆和人员的图表",
@@ -5952,7 +6123,7 @@
             "75": "实用深蓝色",
             "76": "实用午夜蓝",
             "77": "实用蓝",
-            "78": "乌提尔海泡沫蓝",
+            "78": "乌提尔海泡沫蓝色",
             "79": "乌尔闪电蓝",
             "80": "毛伊岛蓝聚",
             "81": "实用亮蓝色",
@@ -6665,7 +6836,7 @@
             "UNIT_10_97": "{{callsign}} 为 10-97（现场）",
             "BOLO_CREATED": "{{callsign}} 发出了 BOLO — {{title}}",
             "BOLO_LOCATED": "{{callsign}} 找到了一个 BOLO 主题 — {{title}}",
-            "WARRANT_CREATED": "{{callsign}}发出了逮捕令 — {{title}}",
+            "WARRANT_CREATED": "{{callsign}} 发出了逮捕令 — {{title}}",
             "WARRANT_SERVED": "{{callsign}} 发出逮捕令 — {{title}}",
             "RADAR_PLATE_HIT": "{{callsign}}在{{vehicle}}上被击中"
         }
@@ -6825,9 +6996,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "配备随身摄像头",
-        "LOST": "与随身摄像机失去连接",
         "MISSING": "你没有随身摄像机",
-        "OFFLINE": "那位警官的随身摄像头离线了",
         "REMOVED": "随身摄像头已移除",
         "UNREACHABLE": "无法到达该随身摄像头"
     },
@@ -6835,7 +7004,6 @@
         "ARMED": "行车记录仪武装",
         "DISARMED": "行车记录仪已解除武装",
         "NEEDS_PATROL_VEHICLE": "您需要乘坐列入白名单的巡逻车",
-        "OFFLINE": "那辆车的行车记录仪离线了",
         "SEAT_RESTRICTED": "只有驾驶员或前排乘客可以控制行车记录仪",
         "UNAVAILABLE": "行车记录仪不可用",
         "UNREACHABLE": "无法连接到行车记录仪"

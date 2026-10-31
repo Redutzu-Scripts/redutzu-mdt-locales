@@ -20,6 +20,7 @@
         "MANAGEMENT": "Řízení",
         "CONFIG": "Konfigurace",
         "PENALTIES": "Penalty",
+        "PRISONERS": "Vězni",
         "ASSETS": "Aktiva",
         "OPERATIONS": "Operace",
         "RECORDS": "Evidence",
@@ -421,7 +422,7 @@
                 "TICKET": "Vývojář otevře lístek",
                 "TICKET_DESCRIPTION": "Pokud to nevyřešíte, váš vývojář otevře lístek podpory",
                 "SOLUTION": "Nabízíme řešení",
-                "SOLUTION_DESCRIPTION": "Náš tým to prošetřuje a v brzké době provede opravu"
+                "SOLUTION_DESCRIPTION": "Náš tým prošetřuje a v krátké době podá opravu"
             }
         },
         "UPDATING_STATUS": "Aktualizace stavu…",
@@ -552,6 +553,8 @@
                 "FINE_ASC": "Jemná: Nízká → Vysoká",
                 "JAIL_DESC": "Doba vězení: Vysoká → Nízká",
                 "JAIL_ASC": "Doba vězení: Nízká → Vysoká",
+                "REMAINING_ASC": "Vydání co nejdříve",
+                "REMAINING_DESC": "Zbývá nejvíce času",
                 "AGE_DESC": "Věk: Nejdříve nejstarší",
                 "AGE_ASC": "Věk: Nejdříve nejmladší",
                 "RECORDS_DESC": "Rekordy: Většina první",
@@ -704,10 +707,20 @@
             "MESSAGE_COPIED": "Zpráva zkopírována",
             "IMAGE_LINK_COPIED": "Odkaz na obrázek zkopírován",
             "LINK_COPIED": "Odkaz zkopírován"
+        },
+        "KEY_CAPTURE": {
+            "PRESS_KEY": "Klikněte a poté stiskněte klávesu",
+            "CHANGE_KEY": "Klikněte pro změnu",
+            "LISTENING": "Stiskněte klávesu…",
+            "LISTENING_HINT": "Esc nebo klikněte mimo pro zrušení",
+            "CUSTOM": "Zvyk",
+            "TAKEN": "{{key}} již používá {{name}}. Vyberte jiný klíč, nebo se spustí oba."
         }
     },
     "ERRORS": {
         "REQUIRED": "Toto pole je povinné",
+        "KEYBIND_UNSUPPORTED_KEY": "Tento klíč nelze použít pro klíčenku",
+        "KEYBIND_LIMIT": "Můžete mít až {{max}} radiových klávesnic",
         "NO_PERMISSION": "Nemáte k tomu povolení",
         "INVALID_DATA": "Některé zaslané údaje jsou neplatné",
         "INVALID_CHARGES": "Jeden nebo více poplatků je neplatných – zkontrolujte částky podle trestního zákoníku",
@@ -724,6 +737,7 @@
         "VEHICLE_TOO_FAR": "Přibližte se k vozidlu",
         "NO_VEHICLE_SELECTED": "Není vybráno žádné vozidlo",
         "NO_SUSPECT_SELECTED": "Nebyl vybrán žádný podezřelý",
+        "NO_SUBJECT_SELECTED": "Přidejte alespoň jednu osobu nebo vozidlo",
         "NO_VEHICLE_NEARBY": "Žádné vozidlo poblíž",
         "TRUNK_SEARCH_UNAVAILABLE": "Vyhledávání kmenů pro vaše nastavení inventáře zatím není k dispozici",
         "INVALID_MODEL": "Tento model není k dispozici",
@@ -743,7 +757,7 @@
         "WEAPON_NOT_REGISTERED": "Tato zbraň ještě nebyla registrována v MDT",
         "EVIDENCE_NOT_FOUND": "Tento důkazní záznam již neexistuje",
         "TEMPLATE_NOT_FOUND": "Tato šablona již neexistuje",
-        "EVIDENCE_DISPOSED": "Tyto důkazy byly uvolněny nebo zničeny a nelze je již měnit",
+        "EVIDENCE_DISPOSED": "Tyto důkazy byly uvolněny nebo zničeny a nelze je již změnit",
         "EVIDENCE_ANALYSIS_COMPLETED": "Pro tuto analýzu již byl zaznamenán výsledek",
         "DUPLICATE_NUMBER": "Kategorie s tímto číslem již existuje",
         "DUPLICATE_CODE": "Článek s tímto kódem již existuje",
@@ -769,6 +783,7 @@
             "INVALID_VALUE": "Tato hodnota není pro toto nastavení platná",
             "MIN": "Musí být alespoň {{min}}",
             "MAX": "Musí být maximálně {{max}}",
+            "PRINTED_MARKERS": "Mezi 1 a {{max}}: číslované modely značek dosahují pouze {{max}}",
             "NOT_AN_OPTION": "To není jedna z možností",
             "EMPTY": "Nemůže být prázdný",
             "TOO_LONG": "Musí mít maximálně {{max}} znaků",
@@ -828,8 +843,10 @@
         "PROP_PLACER_INTERRUPTED": "Umístění rekvizit bylo přerušeno",
         "VEHICLE_OCCUPIED": "Nejprve všechny vystupte z vozidla",
         "IMPOUND_DISABLED": "Zabavení z nabídky Interakce je na tomto serveru vypnuto",
-        "VEHICLE_EMPTY": "Nikdo, kdo by si to objednal",
+        "IMPOUND_NOT_IMPLEMENTED": "Zabavení není na tomto serveru nastaveno",
         "NOT_SUPPORTED": "Toto není na tomto serveru dostupné",
+        "PRISONER_OFFLINE": "K tomu musí být vězeň online",
+        "PRISON_ACTION_FAILED": "To vězeňský scénář nedokázal",
         "NO_ACCESS": "Vaše práce to nemůže použít",
         "UNKNOWN_FREQUENCY": "Na této frekvenci není žádný kanál",
         "MARKER_LIMIT": "Dosáhli jste limitu počtu důkazů",
@@ -849,7 +866,7 @@
         "CANNOT_MANAGE_SELF": "Nemůžeš to udělat sám sobě",
         "GRADE_TOO_HIGH": "Můžete řídit pouze důstojníky pod vaší vlastní třídou",
         "AMOUNT_TOO_HIGH": "Tato částka přesahuje limit pro jednu transakci",
-        "INVALID_FREQUENCY": "Použijte frekvenci jako 450,100",
+        "INVALID_FREQUENCY": "Tato frekvence neodpovídá povolenému formátu",
         "UNIT_FULL": "Tato jednotka nemá volné místo",
         "UNIT_NEEDS_LEAD": "Nechte někoho jiného vést jako první",
         "UNIT_OFF_DUTY": "Nikdo v té jednotce není ve službě",
@@ -896,7 +913,7 @@
         "LINKED_RECORD": "propojeno {{kind}} {{name}}",
         "UNLINKED_RECORD": "odpojeno {{kind}} {{name}}",
         "EVIDENCE_STORED": "zarezervoval to do úložiště v {{location}}",
-        "EVIDENCE_CHECKED_OUT_LAB": "to odeslali na {{name}} pro laboratorní analýzu",
+        "EVIDENCE_CHECKED_OUT_LAB": "odesílal to {{name}} pro laboratorní analýzu",
         "EVIDENCE_CHECKED_OUT_COURT": "předal to {{name}} k soudu",
         "EVIDENCE_CHECKED_OUT_INVESTIGATION": "zkontroloval to {{name}} k prošetření",
         "EVIDENCE_CHECKED_OUT_OTHER": "zkontroloval to na {{name}}",
@@ -921,7 +938,7 @@
             "CAMERAS_many": "{{count}} kamer po celém městě",
             "CAMERAS_other": "{{count}} kamer po celém městě"
         },
-        "SEARCH_PLACEHOLDER": "Hledat podle jména nebo umístění…",
+        "SEARCH_PLACEHOLDER": "Hledat podle jména nebo místa…",
         "STATUSES": {
             "ALL": "Vše",
             "ONLINE": "Online",
@@ -1090,7 +1107,6 @@
             "EDIT_DESCRIPTION": "Aktualizujte název nebo frekvenci tohoto kanálu.",
             "NAME_PLACEHOLDER": "Příkaz SWAT",
             "FREQUENCY_FIELD": "Frekvence (MHz)",
-            "FREQUENCY_PLACEHOLDER": "498,510",
             "SUBMIT": "Vytvořit kanál",
             "TOASTS": {
                 "CREATED": "Kanál „{{name}}“ byl vytvořen",
@@ -1131,18 +1147,23 @@
         },
         "KEYBINDS_DIALOG": {
             "TITLE": "Rádiové klávesy",
-            "DESCRIPTION": "Svažte klávesu klávesnice pro okamžité vysílání na konkrétním kanálu.",
-            "EMPTY": "Zatím nejsou nakonfigurovány žádné klávesové zkratky.",
-            "ADD_NEW": "Přidat novou klávesnici",
-            "ADD_DESCRIPTION": "Vyberte název, stisknutím klávesy jej zachyťte a poté vyberte cílový kanál.",
+            "DESCRIPTION": "Nalaďte si rádio na kanál jedním tlačítkem, a to i se zavřeným MDT.",
+            "OFF": "Rádiové klávesy jsou na tomto serveru vypnuté.",
+            "EMPTY": "Zatím žádné rádiové klávesy.",
+            "ADD": "Přidat klíčenku",
+            "ADD_TITLE": "Nová rádiová klávesnice",
+            "EDIT_TITLE": "Upravit rádiovou klávesnici",
+            "FORM_DESCRIPTION": "Pojmenujte jej, vyberte kanál a stiskněte klávesu, která na něj naladí vaše rádio.",
             "NAME_PLACEHOLDER": "Hlavní kanál",
-            "KEY_LABEL": "Klíč",
-            "LISTENING": "Naslouchání…",
-            "CLICK_TO_CAPTURE": "Kliknutím zachytíte klíč",
-            "CAPTURING_HINT": "Stiskněte libovolnou klávesu — Escape pro zrušení.",
-            "CLICK_HINT": "Klikněte na pole výše a stiskněte libovolnou klávesu.",
             "CHANNEL_PLACEHOLDER": "Vyberte kanál",
-            "SAVE": "Uložit Keybind"
+            "KEY_LABEL": "Klíč",
+            "KEY_HINT": "Pouze jednotlivé klíče. Můžete to také později změnit v Nastavení > Klávesové zkratky > FiveM.",
+            "CHANNEL_REMOVED": "Tento kanál již neexistuje",
+            "SETTINGS_HINT": "Klávesy lze také změnit v Nastavení > Vazby kláves > FiveM. Odstraněný nebo změněný klíč přestane okamžitě fungovat, ale zůstane tam uveden, dokud se znovu nepřipojíte.",
+            "DELETE": "Smazat klíčenku",
+            "SAVE": "Uložit klíčenku",
+            "TUNED": "Rádio naladěno na {{name}}",
+            "ROW_NAME": "Rádio: {{name}}"
         },
         "CODE_DIALOG": {
             "CREATE_TITLE": "Nový rádiový kód",
@@ -1161,7 +1182,7 @@
             "ENTRIES_many": "Počet záznamů: {{count}}",
             "ENTRIES_other": "Počet záznamů: {{count}}",
             "EMPTY": "Zatím žádné kódy.",
-            "EMPTY_HINT": "K přidání nového kódu použijte Nový kód.",
+            "EMPTY_HINT": "Pro přidání nového kódu použijte Nový kód.",
             "NEW_CODE": "Nový kód",
             "DELETE_CONFIRM_TITLE": "Smazat {{code}}?",
             "DELETE_CONFIRM_DESCRIPTION": "Tím se odstraní kód rádia pro všechny. Nelze to vrátit zpět."
@@ -1208,7 +1229,7 @@
             "SHOW_HEATMAP": "Zobrazit teplotní mapu hustoty hovorů",
             "HIDE_OFFICERS": "Skryjte ostatní důstojníky",
             "SHOW_OFFICERS": "Ukažte ostatním důstojníkům",
-            "HIDE_CALLS": "Skryjte blizky dispečerského volání",
+            "HIDE_CALLS": "Skryjte signály dispečerského volání",
             "SHOW_CALLS": "Zobrazit blips dispečerského volání",
             "HIDE_CAMERAS": "Skryjte CCTV kamery",
             "SHOW_CAMERAS": "Zobrazit CCTV kamery",
@@ -1574,7 +1595,7 @@
             "STATUS_CHECK_ALL_SENT_few": "Kontrola stavu odeslána do {{count}} jednotek",
             "STATUS_CHECK_ALL_SENT_many": "Kontrola stavu odeslána do {{count}} jednotek",
             "STATUS_CHECK_ALL_SENT_other": "Kontrola stavu odeslána do {{count}} jednotek",
-            "ZONE_SHORT": "Pod minimálním počtem jednotek {{min}}",
+            "ZONE_SHORT": "Pod minimálním počtem {{min}} jednotek",
             "SEARCH_PLACEHOLDER": "Prohledejte jednotky, důstojníky, talíře…",
             "GROUP_NONE": {
                 "STATUS": "Mimo službu",
@@ -2192,7 +2213,7 @@
                 "CITIZENS_PHONE_RECORDS": "Přečtěte si telefonní záznamy občana.",
                 "SUSPECT_INTERACT": "Použijte podezřelé interakce, jako je manžeta, hledání a eskorta.",
                 "GALLERY_EDIT": "Přidat a odebrat obrázky galerie.",
-                "NOTES_DELETE": "Odstraňte poznámky, které do záznamů napsali jiní důstojníci, a poznámky HR zapsané jinými manažery. Důstojníci mohou své vlastní vždy smazat.",
+                "NOTES_DELETE": "Odstraňte poznámky, které ostatní důstojníci napsali do záznamů, a poznámky HR, které zařadili jiní manažeři. Důstojníci mohou své vlastní vždy smazat.",
                 "VEHICLES_VIEW": "Prohledejte vozidla a přečtěte si jejich podrobnosti.",
                 "VEHICLES_REGISTER": "Registrace nových vozidel.",
                 "VEHICLES_EDIT": "Upravte podrobnosti o vozidle a vlajky.",
@@ -2224,6 +2245,9 @@
                 "PENALCODE_VIEW": "Přečtěte si trestní zákoník.",
                 "PENALCODE_CREATE": "Přidejte záznamy trestního kódu.",
                 "PENALCODE_UPDATE": "Upravit záznamy trestního kódu.",
+                "PRISONERS_VIEW": "Podívejte se, kdo je ve vězení a jak dlouho ještě zůstal.",
+                "PRISONERS_RELEASE": "Propusťte vězně před koncem jejich trestu.",
+                "PRISONERS_EDIT": "Změňte, jak dlouho musí vězeň ještě sloužit.",
                 "PENALCODE_DELETE": "Odstraňte záznamy trestního kódu.",
                 "OPERATIONPLANS_VIEW": "Přečtěte si operační plány.",
                 "OPERATIONPLANS_CREATE": "Návrh nových operačních plánů.",
@@ -2246,7 +2270,7 @@
                 "CAMERAS_TOGGLE": "Zapínání a vypínání kamer.",
                 "CHAT_PIN": "Připnout chatové zprávy.",
                 "CHAT_MENTION_EVERYONE": "Zmínit všechny v chatu.",
-                "CHAT_COMMAND_POST": "Zveřejňujte oznámení pomocí příkazů chatu.",
+                "CHAT_COMMAND_POST": "Posílejte oznámení pomocí příkazů chatu.",
                 "PROPS_USE": "Umístěte důstojnické rekvizity (kužele, zábrany...) a seberte kteroukoli z nich zpět.",
                 "UNITS_JOIN": "Připojte se, odejděte a spusťte jednotky a nastavte zónu své jednotky.",
                 "K9_USE": "Ovládejte svůj vlastní K9 na kartě K9 v nabídce Interakce.",
@@ -2254,7 +2278,7 @@
             }
         },
         "OVERVIEW": {
-            "NO_ACCESS": "Nemáte přístup k úspěchům nebo certifikacím."
+            "NO_ACCESS": "Nemáte přístup k úspěchům ani certifikacím."
         },
         "ON_DUTY": {
             "TITLE": "Ve službě",
@@ -2606,11 +2630,11 @@
                 "DATA": {
                     "TITLE": "Občané a vozidla",
                     "AUTO_POPULATE": "Seznam všech z databáze",
-                    "AUTO_POPULATE_HINT": "Zapnuto: Stránky Občané a Vozidla zobrazují každého hráče a vozidlo ve vašem rámci. Vypnuto: nic se nezobrazí, dokud to důstojník ručně nezaregistruje (pro servery s přísnými rolemi).",
+                    "AUTO_POPULATE_HINT": "Zapnuto: Stránky Občané a Vozidla zobrazují všechny hráče a vozidla ve vašem rámci. Vypnuto: nic se nezobrazí, dokud to důstojník ručně nezaregistruje (pro servery s přísnými rolemi).",
                     "BANK": "Ukažte bankovní údaje občanů",
                     "BANK_HINT": "Zobrazuje číslo bankovního účtu každého občana a zůstatek v jeho záznamu. Funguje pouze v případě, že to váš framework adaptér podporuje.",
                     "PHONE_RECORDS": "Ukažte telefonní záznamy občanů",
-                    "PHONE_RECORDS_HINT": "Zobrazuje tlačítko telefonních záznamů (hovorů a zpráv) u telefonního čísla občana. Vypněte, pokud váš server nechce, aby úředníci četli telefonní data.",
+                    "PHONE_RECORDS_HINT": "Zobrazuje tlačítko telefonních záznamů (hovorů a zpráv) u telefonního čísla občana. Vypněte, pokud váš server nechce, aby policisté četli telefonní data.",
                     "RESIDENTS": "Ukažte, kdo v nemovitosti bydlí",
                     "RESIDENTS_HINT": "Zobrazuje nájemníky a spoluvlastníky v evidenci majetku, kdy je váš zdroj bydlení poskytuje.",
                     "HIDDEN_JOBS": "Skrytá zaměstnání",
@@ -2903,7 +2927,7 @@
                     "LIST_HINT": "Kanál, na který jde příspěvek z automatického chatu (níže), je třeba nejprve přesunout, než jej lze smazat.",
                     "LIST_FIELDS": {
                         "ID": "Interní název",
-                        "ID_HINT": "Pod ním se ukládají zprávy. Pouze malá písmena, čísla, _ a -.",
+                        "ID_HINT": "Pod ním se ukládají zprávy. Pouze malá písmena, číslice, _ a -.",
                         "NAME": "Název kanálu",
                         "NAME_HINT": "Co policisté vidí na kartě, zobrazeno jako #jméno.",
                         "JOBS": "oddělení",
@@ -2917,13 +2941,19 @@
                     "DESCRIPTION": "Co přistane ve zvonku na palubní desce. Osobní čekají na důstojníky, kteří jsou offline; ty z celého oddělení se v tu chvíli dostanou k důstojníkům pouze online.",
                     "RETENTION": "Uchovávejte oznámení pro",
                     "RETENTION_HINT": "Oznámení starší než toto jsou smazána, jakmile je snížíte. 0 je uchovává navždy."
+                },
+                "RADIO_ANIMATION": {
+                    "TITLE": "Rozhlasová animace",
+                    "DESCRIPTION": "Co dělají postavy důstojníků, když mluví v rádiu. Každý důstojník si může vybrat svůj vlastní na stránce Konfigurace; tohle dostanou všichni ostatní.",
+                    "DEFAULT": "Výchozí animace",
+                    "DEFAULT_HINT": "S pma-voice je vlastní animace rádia vypnuta, pokud není nastavena žádná. U jiného hlasového prostředku vypněte jeho animaci v jeho vlastní konfiguraci."
                 }
             },
             "DISPATCH": {
                 "CALLS": {
                     "TITLE": "Odeslání hovorů",
                     "REQUIRE_DUTY": "Telefonáty dostávají pouze policisté ve službě",
-                    "REQUIRE_DUTY_HINT": "Zapnuto: nové hovory se dostanou pouze k důstojníkům, kteří jsou ve službě. Vypnuto: Každý důstojník s přístupem MDT je ​​dostane.",
+                    "REQUIRE_DUTY_HINT": "Zapnuto: nové hovory se dostanou pouze k důstojníkům, kteří jsou ve službě. Vypnuto: každý důstojník s přístupem MDT je ​​dostane.",
                     "EXTERNAL": "Upozornit na volání jiných skriptů",
                     "EXTERNAL_HINT": "S jiným prostředkem pro odeslání (ps-dispatch, cd_dispatch...), také zobrazit vlastní vyskakovací okno a zvuk MDT pro volání, která odesílá. Vypnuto: zobrazí se pouze v MDT a na mapě.",
                     "DURATION": "Čas vyskakovacího okna",
@@ -3094,6 +3124,33 @@
                     "AUTO_LOCK": "Zamkněte talíř na zápalku",
                     "AUTO_LOCK_HINT": "Radar uzamkne štítek, který se shodoval, takže ho důstojník neztratí.",
                     "DESCRIPTION": "S radarovým zdrojem (wk_wars2x) je každý štítek, který radar přečte, zkontrolován proti BOLO a rozkazům a důstojník je varován při shodě."
+                },
+                "SCENE": {
+                    "TITLE": "Místa činu",
+                    "DESCRIPTION": "Jak důstojníci umísťují pásku na místo činu a značky důkazů: ze stránky Scéna v nabídce interakcí pomocí položky inventáře nebo jedné. Položky nejsou spotřebovány.",
+                    "METHODS": {
+                        "MENU": "Stránka scény",
+                        "ITEM": "Použití položky",
+                        "BOTH": "Stránka nebo položka scény"
+                    },
+                    "TAPE_METHOD": "Jak důstojníci umísťují pásku",
+                    "TAPE_METHOD_HINT": "Ze stránky Scéna pomocí položky pásky nebo jedné z nich.",
+                    "TAPE_ITEM": "Pásková položka",
+                    "TAPE_ITEM_HINT": "Položky inventáře používají důstojníci k umístění pásky z místa činu.",
+                    "MARKER_METHOD": "Jak policisté umísťují důkazní značky",
+                    "MARKER_METHOD_HINT": "Ze stránky Scéna pomocí položky značky nebo jedné z nich.",
+                    "MARKER_ITEM": "Položka evidenční značky",
+                    "MARKER_ITEM_HINT": "Důstojníci inventárních položek používají k umístění značek důkazů.",
+                    "RADIUS": "Velikost scény",
+                    "RADIUS_HINT": "Páska, značky a rekvizity umístěné takto blízko ke scéně se k ní připojují. Dále začínají novou scénu.",
+                    "MAX_MARKERS_SCENE": "Důkazní značky na scénu",
+                    "MAX_MARKERS_SCENE_HINT": "Značky jsou očíslovány od 1 v každé scéně. 0 = neomezeno, pouze pokud značky nepoužívají očíslované modely.",
+                    "MAX_MARKERS_OFFICER": "Evidenční značky na důstojníka",
+                    "MAX_MARKERS_OFFICER_HINT": "Kolik značek může mít jeden důstojník najednou, napříč každou scénou. 0 = neomezeně.",
+                    "TAPE_LENGTH": "Nejdelší páska",
+                    "TAPE_LENGTH_HINT": "Nejdále od sebe lze svázat dva konce jedné čáry pásky.",
+                    "MAX_TAPE_OFFICER": "Páskové čáry na důstojníka",
+                    "MAX_TAPE_OFFICER_HINT": "Kolik pásek může mít jeden důstojník najednou. 0 = neomezeně."
                 }
             },
             "CAMERAS": {
@@ -3198,7 +3255,7 @@
                     "HITS_many": "{{hits}} požadavků",
                     "HITS_other": "{{hits}} požadavků",
                     "GROUP_OFF": "Skupina {{group}} je vypnutá, takže tato zbraň nemůže poškodit kamery.",
-                    "UNKNOWN": "Není to zbraň GTA ani zbraň ve vašem inventáři. Zkontrolujte, zda je název správný.",
+                    "UNKNOWN": "Není to zbraň GTA nebo zbraň ve vašem inventáři. Zkontrolujte, zda je název správný.",
                     "COUNT_one": "{{value}} zbraň",
                     "COUNT_few": "{{value}} zbraní",
                     "COUNT_many": "{{value}} zbraní",
@@ -3234,14 +3291,14 @@
                     "STREAM_RADIUS": "Viditelná oblast",
                     "STREAM_RADIUS_HINT": "Zatímco někdo sleduje palubní kameru, hráči a vozidla takto blízko auta zůstávají viditelní v informačním kanálu. Větší zobrazuje více, ale synchronizuje více hráčů s prohlížečem.",
                     "ITEM": "Předmět Dashcam",
-                    "ITEM_HINT": "Důstojníci inventární položky používají k zapnutí palubní kamery."
+                    "ITEM_HINT": "Policisté používají inventář k zapnutí palubní kamery."
                 },
                 "HACKING": {
                     "TITLE": "Hackování",
                     "DISTANCE": "Vzdálenost hacků",
                     "DISTANCE_HINT": "Jak blízko musí hráč stát, aby hacknul kameru a odpojil ji.",
                     "COMMAND": "Hack příkaz",
-                    "COMMAND_HINT": "Hráči mohou zadat příkaz hack poblíž kamery a přepnout ji do režimu offline. Vypnuto: pouze vaše vlastní skripty mohou hackovat kamery."
+                    "COMMAND_HINT": "Hráči mohou zadat příkaz hack poblíž kamery, aby ji přepnuli do režimu offline. Vypnuto: pouze vaše vlastní skripty mohou hackovat kamery."
                 },
                 "RECORDING": {
                     "TITLE": "Nahrávky",
@@ -3250,7 +3307,7 @@
                     "SIZE": "Největší záznam",
                     "SIZE_HINT": "Nahrávky se zastaví a uloží, když dosáhnou této velikosti, a větší uploady jsou odmítnuty.",
                     "VOICES": "Nahrávejte hlasy v okolí",
-                    "VOICES_HINT": "Nahrávky zahrnují hráče, kteří mluví v blízkosti kamery. Každý z těchto hráčů dostane výzvu k mikrofonu FiveM jednou. Zvuky hry se nikdy nenahrávají.",
+                    "VOICES_HINT": "Nahrávky zahrnují hráče, kteří mluví v blízkosti kamery. Každý z těchto hráčů jednou dostane výzvu k mikrofonu FiveM. Zvuky hry se nikdy nenahrávají.",
                     "VOICE_RADIUS": "Hlasový rozsah",
                     "VOICE_RADIUS_HINT": "Hráči mluvící takto blízko kamery jsou zaznamenáni."
                 },
@@ -3260,12 +3317,13 @@
                     "BOTH": "Položka nebo příkaz",
                     "WAYS": {
                         "ITEM": "Položka zásob",
-                        "COMMAND": "Příkaz chatu"
+                        "COMMAND": "Příkaz chatu",
+                        "MENU": "Stránka scény"
                     }
                 },
                 "REPAIR": {
                     "TITLE": "Opravy",
-                    "DESCRIPTION": "Hráči opraví rozbitou kameru tak, že se postaví vedle ní a projdou krátkou kontrolou dovedností. Vaše vlastní oprava může používat export RepairCamera, i když je vypnutá.",
+                    "DESCRIPTION": "Hráči opraví rozbitou kameru tak, že se postaví vedle ní a absolvují krátkou kontrolu dovedností. Vaše vlastní oprava může používat export RepairCamera, i když je vypnutá.",
                     "ENABLED": "Hráči mohou opravit kamery",
                     "ENABLED_HINT": "Vypnuto: Rozbité kamery zůstanou rozbité, dokud je skript neopraví.",
                     "METHOD": "Jak začíná oprava",
@@ -3281,7 +3339,13 @@
                     "SIGNAL": "Síla signálu se mění",
                     "SIGNAL_HINT": "Kosmetika: pruhy signálu na mřížce kamery se v průběhu času trochu pohybují. Vypnuto: zůstávají v klidu.",
                     "AUDIO_RADIUS": "Rozsah sluchu",
-                    "AUDIO_RADIUS_HINT": "Důstojníci, kteří sledují kanál, slyší hráče mluvit takto blízko kamery."
+                    "AUDIO_RADIUS_HINT": "Důstojníci, kteří sledují kanál, slyší hráče mluvit takto blízko kamery.",
+                    "ON_FEED_LOST": "Když kamera spadne",
+                    "ON_FEED_LOST_HINT": "Co se stane s důstojníky sledujícími CCTV kameru, která je zničena, hacknuta nebo deaktivována po jejím vystřižení.",
+                    "ON_FEED_LOST_OPTIONS": {
+                        "NEXT": "Přepněte na další fotoaparát",
+                        "CLOSE": "Zavřete zdroj"
+                    }
                 },
                 "DETECTION": {
                     "TITLE": "Automatická detekce",
@@ -3310,7 +3374,7 @@
                     "ADMIN_MAX_DISTANCE": "Admin pohybující se rozsah",
                     "ADMIN_MAX_DISTANCE_HINT": "Jak daleko může správce přesunout kameru od místa, kde se nachází.",
                     "CAPTURE_PREVIEW": "Při ukládání si udělejte náhled",
-                    "CAPTURE_PREVIEW_HINT": "Uložením fotoaparátu dojde k jeho prvnímu náhledu přes objektiv. Vyžaduje náhledy fotoaparátu a metodu snímku obrazovky."
+                    "CAPTURE_PREVIEW_HINT": "Uložením fotoaparátu se provede jeho první náhled přes objektiv. Vyžaduje náhledy fotoaparátu a metodu snímku obrazovky."
                 }
             },
             "INTEGRATIONS": {
@@ -3481,7 +3545,7 @@
                 "EXPORTED_many": "{{count}} změnil nastavení zkopírované do schránky",
                 "EXPORTED_other": "{{count}} změnil nastavení zkopírované do schránky",
                 "IMPORT_TITLE": "Importovat nastavení",
-                "IMPORT_DESCRIPTION": "Vložte nastavení exportovaná z tohoto panelu (na tomto nebo jiném serveru). Než se cokoliv uloží, uvidíte každou změnu, a pokud je jedna hodnota neplatná, neuloží se nic.",
+                "IMPORT_DESCRIPTION": "Vložit nastavení exportovaná z tohoto panelu (na tomto nebo jiném serveru). Než se cokoliv uloží, uvidíte každou změnu a pokud je jedna hodnota neplatná, neuloží se nic.",
                 "INVALID": "To není platný export. Vložte celý text, který jste zkopírovali pomocí Exportu.",
                 "SUMMARY": "{{changes}} ke změně · {{same}} je již stejné · {{unknown}} není na tomto serveru (přeskočeno)",
                 "STATUS": {
@@ -3522,13 +3586,13 @@
                 "JOBS_SOME": "Může jej použít pouze {{jobs}}.",
                 "ALL_JOBS": "Všechny práce",
                 "GRADES_ALL": "Nic není vybráno: každý stupeň.",
-                "GRADES_SOME": "Pouze známky {{grades}}.",
+                "GRADES_SOME": "Pouze hodnocení {{grades}}.",
                 "ALL_GRADES": "Všechny ročníky",
                 "GRADES_LIST": "Známky {{grades}}",
                 "NO_PERMISSION": "Není potřeba žádné povolení",
                 "DELETE_TITLE": "Smazat „{{name}}“?",
                 "DELETE_DESCRIPTION": "Všem to hned zmizí.",
-                "DELETE_DESCRIPTION_DISABLE": "Všem to hned zmizí. Pokud jej záznamy již používají, smazání je odmítnuto: místo toho jej vypněte přepínačem, aby si jej staré záznamy ponechaly.",
+                "DELETE_DESCRIPTION_DISABLE": "Všem to hned zmizí. Pokud jej záznamy již používají, smazání je odmítnuto: místo toho jej vypněte jeho přepínačem, takže staré záznamy si jej ponechají.",
                 "ENABLED_HINT": "Zapnuto: důstojníci si to mohou vybrat. Vypnutím zastavíte nové používání, aniž byste se dotkli starých záznamů.",
                 "DISABLED_HINT": "Vypnuto: důstojníci to nemohou vybrat pro nové záznamy, staré záznamy to stále ukazují."
             },
@@ -3591,7 +3655,7 @@
                 },
                 "KEYBINDS": {
                     "TITLE": "Výchozí klávesové zkratky",
-                    "DESCRIPTION": "Klíč každé akce začíná. FiveM ukládá klíče hráče při prvním připojení, takže změna se dostane k novým hráčům a všem, kteří tento klíč ještě nikdy neměli. Každý si stále může změnit své vlastní klíče v Nastavení > Key Bindings > FiveM.",
+                    "DESCRIPTION": "Klíč každé akce začíná. FiveM ukládá klíče hráče při prvním připojení, takže změna se dostane k novým hráčům a všem, kteří tento klíč ještě nikdy neměli. Každý si stále může změnit své vlastní klíče na konfigurační stránce MDT nebo v Nastavení > Key Bindings > FiveM.",
                     "OPEN_MDT": "Otevřete MDT",
                     "OPEN_MDT_HINT": "Když je vypnutý, důstojníci ho otevřou příkazem nebo předmětem.",
                     "INTERACTIONS": "Nabídka interakcí",
@@ -3603,7 +3667,10 @@
                     "PANIC_BUTTON": "Panické tlačítko",
                     "PANIC_BUTTON_HINT": "Odešle panickou výstrahu s polohou důstojníka.",
                     "REQUEST_BACKUP": "Požádejte o zálohu",
-                    "REQUEST_BACKUP_HINT": "Požádá okolní jednotky o zálohu."
+                    "REQUEST_BACKUP_HINT": "Požádá okolní jednotky o zálohu.",
+                    "CLASH": "Také výchozí klíč {{names}}. FiveM spustí každou akci na klíči, takže {{key}} udělá obojí.",
+                    "MAX_RADIO": "Rádiové klíče na důstojníka",
+                    "MAX_RADIO_HINT": "Kolik rádiových klávesnic může každý důstojník přidat na stránku Rádio. 0 je vypne. Důstojníci, kteří už mají více, si nechávají jen své první."
                 }
             },
             "IN_GAME": {
@@ -3747,7 +3814,8 @@
                 "RADIUS": "Oblast hledání",
                 "RADIUS_HINT": "Kruh kolem hovoru namísto pouhého špendlíku.",
                 "SUMMARY": "ikona {{sprite}}, barva {{colour}}",
-                "SAME_AS_OTHERS": "Stejně jako ostatní"
+                "SAME_AS_OTHERS": "Stejně jako ostatní",
+                "COLOUR_BY_PRIORITY": "Barva odpovídá prioritě hovoru. Vypněte \"Barva podle priority\" ve výřezech mapy a vyberte si zde."
             },
             "CAMERA_MANAGER": {
                 "REFRESH": "Obnovit",
@@ -3960,6 +4028,13 @@
             "RECORDING": {
                 "MAX_DURATION": "Bylo dosaženo nejdelšího záznamu, klip se ukládá",
                 "MAX_SIZE": "Dosažena největší velikost záznamu, klip se uloží"
+            },
+            "FEED_LOST": {
+                "DESTROYED": "Kamera zničena",
+                "HACKED": "Zdroj zachycen",
+                "OFFLINE": "Fotoaparát je offline",
+                "BODYCAM": "Bodycam offline",
+                "DASHCAM": "Dashcam offline"
             }
         },
         "GIZMO": {
@@ -4008,7 +4083,7 @@
             },
             "CHECKS": {
                 "SURFACE": {
-                    "NONE": "Nic na čem stát",
+                    "NONE": "Nic, na čem by se dalo stát",
                     "GROUND": "Na pevné zemi",
                     "PED": "Na člověka",
                     "VEHICLE": "Na vozidle",
@@ -4155,11 +4230,6 @@
                 "ACTIVE_WARRANTS": "Aktivní záruky",
                 "STOLEN": "Ukradený",
                 "OPEN_RECORD": "Otevřete záznam",
-                "OCCUPANTS_OUT": "Vykažte obyvatele",
-                "OCCUPANTS_ORDERED_one": "Nařízeno opuštění {{count}} cestujícího",
-                "OCCUPANTS_ORDERED_few": "Objednal {{count}} cestujících ven",
-                "OCCUPANTS_ORDERED_many": "Objednal {{count}} cestujících ven",
-                "OCCUPANTS_ORDERED_other": "Objednal {{count}} cestujících ven",
                 "SEARCH_TRUNK": "Vyhledat kmen",
                 "IMPOUND": "Zabavit",
                 "IMPOUNDED": "{{plate}} zabaveno"
@@ -4290,7 +4360,7 @@
                 "MODES": {
                     "IDLE": "Líný",
                     "FOLLOWING": "Následující",
-                    "SIDEBYSIDE": "Podpatek",
+                    "SIDEBYSIDE": "Podpatky",
                     "LEADING": "Vedoucí",
                     "SITTING": "Zasedání",
                     "LAYING": "Vleže",
@@ -4371,8 +4441,8 @@
                 "REVIEW": "Pohybujte myší a posouvejte: přesně tak to budete cítit. R se vrátí do výchozího zobrazení."
             },
             "NO_TARGET": "Zamiřte na zeď, strop nebo podlahu",
-            "OUT_OF_RANGE": "Zůstaňte ve svém dosahu umístění",
-            "EDGE": "Hrana povrchu nebo mimo dosah",
+            "OUT_OF_RANGE": "Zůstaňte ve svém rozmístění",
+            "EDGE": "Okraj povrchu nebo mimo dosah",
             "TEST_DRIVE": "Testovací jízda",
             "MOUNTS": {
                 "WALL": "Zeď",
@@ -4597,6 +4667,10 @@
                 },
                 "APPEARANCE": {
                     "DESCRIPTION": "Motivy a barvy."
+                },
+                "GAMEPLAY": {
+                    "LABEL": "Ve hře",
+                    "DESCRIPTION": "Jak se vaše postava chová, když používáte MDT a rádio."
                 }
             },
             "SECTIONS": {
@@ -4605,7 +4679,9 @@
                 "UNITS_NUMBERS": "Jednotky a čísla",
                 "SEE_THROUGH": "Průhledný režim",
                 "SEE_THROUGH_DESCRIPTION": "Vybledněte MDT, abyste mohli sledovat hru za ním, aniž byste jej zavírali.",
-                "DISPLAY": "Zobrazit"
+                "DISPLAY": "Zobrazit",
+                "RADIO": "Rádio",
+                "KEYBINDS": "Klávesnice"
             },
             "ROWS": {
                 "LANGUAGE": {
@@ -4658,7 +4734,7 @@
                 },
                 "TRANSPARENCY_LEVEL": {
                     "LABEL": "Průhledná úroveň",
-                    "DESCRIPTION": "Jak vybledlo MDT v průhledném režimu"
+                    "DESCRIPTION": "Jak vybledl MDT v průhledném režimu"
                 },
                 "INTERFACE_SCALE": {
                     "LABEL": "Měřítko rozhraní",
@@ -4667,13 +4743,23 @@
                 "SOUND_ENABLED": {
                     "LABEL": "Zvuky upozornění",
                     "DESCRIPTION": "Přehrajte zvuk pro příchozí dispečerské hovory a zmínky v chatu"
+                },
+                "RADIO_ANIMATION": {
+                    "LABEL": "Mluvící animace",
+                    "DESCRIPTION": "Co dělá vaše postava, když mluvíte v rádiu",
+                    "PREVIEW": "Náhled na svou postavu"
                 }
             },
             "KEYBIND": {
-                "LISTENING": "Stiskněte klávesu…",
-                "LISTENING_HINT": "Esc pro zrušení · Backspace pro vymazání",
                 "UNBOUND": "Není vázán",
                 "CUSTOM": "Zvyk"
+            },
+            "KEYBIND_LIST": {
+                "DESCRIPTION": "Vaše MDT klávesy. Klikněte na klíč a stisknutím nového jej změňte.",
+                "NONE": "Tento server nemá žádné MDT klávesové zkratky.",
+                "OVERLAP": "Stejný klíč jako {{names}}. FiveM spustí každou akci na klávese, takže její stisknutí spustí všechny.",
+                "OPEN_SETTINGS": "Změňte klíče ve vázání kláves FiveM",
+                "HINT": "Klíč, který vyměníte, přestane okamžitě fungovat, ale zůstane uveden ve vazbách kláves FiveM, dokud se znovu nepřipojíte. Lze tam nastavit tlačítka myši a ovladače."
             },
             "TRANSPARENCY_LEVELS": {
                 "LIGHT": "Světlo",
@@ -4733,7 +4819,14 @@
                 "HINT": "Náhled oznámení na výše uvedené pozici a trvání",
                 "BUTTON": "Náhled oznámení"
             },
-            "SEE_THROUGH_PREVIEW_HINT": "Náhled – jak vybledlé vypadá MDT na této úrovni"
+            "SEE_THROUGH_PREVIEW_HINT": "Náhled – jak vybledlé vypadá MDT na této úrovni",
+            "RADIO_ANIMATIONS": {
+                "SERVER_DEFAULT": "Výchozí nastavení serveru ({{style}})",
+                "NONE": "Žádný",
+                "CHEST": "Ramenní mikrofon",
+                "EAR": "Sluchátko",
+                "HANDHELD": "Ruční rádio"
+            }
         },
         "THEME": {
             "SECTION_TITLE": "Témata",
@@ -4775,7 +4868,7 @@
             "EDITOR": {
                 "NAME_PLACEHOLDER": "Název motivu",
                 "ROUNDNESS_LABEL": "Kulatost",
-                "SCENE_HINT": "Umístěním kurzoru na libovolnou část náhledu zobrazíte jeho barvu, kliknutím na něj ji změníte.",
+                "SCENE_HINT": "Umístěním kurzoru na kteroukoli část náhledu zobrazíte jeho barvu, kliknutím na něj ji změníte.",
                 "SCENE_CLICK": "Kliknutím jej změníte. Vše, co je uvedeno, používá tuto barvu.",
                 "START_FROM": "Začít od",
                 "PRESETS": {
@@ -4881,7 +4974,7 @@
         }
     },
     "SUSPECT": {
-        "INVALID_TARGET": "Tento podezřelý již není dostupný",
+        "INVALID_TARGET": "Tento podezřelý již není k dispozici",
         "TARGET_TOO_FAR": "Přibližte se k podezřelému",
         "MUST_BE_CUFFED": "Podezřelý musí být nejprve spoutaný",
         "SEARCH_UNAVAILABLE": "Vyhledávání pro vaše nastavení inventáře zatím není k dispozici",
@@ -4933,6 +5026,8 @@
             "license_revoke": "Licence odvolána",
             "citizen_image_change": "Občanská fotografie změněna",
             "charges_issued": "Poplatky vystaveny",
+            "prisoner_released": "Vězeň propuštěn",
+            "prisoner_sentence_changed": "Věta změněna",
             "note_added": "Poznámka Přidána",
             "note_removed": "Poznámka Odebráno",
             "employee_grade_change": "Známka změněna",
@@ -5017,6 +5112,8 @@
             "LICENSE_REVOKE": "Odvolána licence {{type}} od {{identifier}}",
             "CITIZEN_IMAGE_CHANGE": "Aktualizovaný profilový obrázek pro {{identifier}}",
             "CHARGES_ISSUED": "Poplatek (počet: {{count}}) dne {{entityType}} č. {{id}}",
+            "PRISONER_RELEASED": "Propuštěn vězeň {{identifier}} (důvod: {{reason}})",
+            "PRISONER_SENTENCE_CHANGED": "Nastavit zbývající větu z {{identifier}} na {{time}} (důvod: {{reason}})",
             "NOTE_ADDED": "Přidána poznámka k {{entityType}} č. {{entityId}}",
             "NOTE_REMOVED": "Odebrána poznámka z {{entityType}} #{{entityId}}",
             "EMPLOYEE_GRADE_CHANGE": "Nastavit hodnocení uživatele {{identifier}} na {{grade}}",
@@ -5038,7 +5135,7 @@
             "HR_NOTE_UPDATED": "Upravená poznámka HR č. {{id}}",
             "HR_NOTE_DELETED": "Smazána HR poznámka č. {{id}} pro {{identifier}}",
             "FUNDS_ADJUSTED": "Upravené prostředky {{job}} ({{type}}: {{amount}})",
-            "PERMISSION_RANK_CHANGED": "Změnilo hodnocení požadované pro {{permission}}",
+            "PERMISSION_RANK_CHANGED": "Změnila hodnost požadovaná pro {{permission}}",
             "DISPATCH_CREATED": "Byl vytvořen dispečerský hovor {{code}}",
             "DISPATCH_RESOLVED": "Vyřešen dispečink {{code}}",
             "CAMERA_CONNECT": "Připojeno k CCTV kameře",
@@ -5057,7 +5154,7 @@
             "TAG_DELETED": "Smazán štítek č. {{id}}",
             "SUSPECT_CUFFED": "Spoutali podezřelého",
             "SUSPECT_UNCUFFED": "Bez pout podezřelého",
-            "SUSPECT_SEARCHED": "Hledali podezřelého",
+            "SUSPECT_SEARCHED": "Hledal podezřelého",
             "VEHICLE_SEARCHED": "Hledal vozidlo",
             "ADMIN_SETTING_CHANGED": "Změněno nastavení {{key}} na {{value}}",
             "ADMIN_SETTING_RESET": "Obnovit výchozí nastavení {{key}}",
@@ -5065,13 +5162,13 @@
             "CAMERA_UPDATED": "Upravená CCTV kamera č. {{id}}",
             "CAMERA_DELETED": "Smazaná CCTV kamera č. {{id}}",
             "CAMERAS_IMPORTED": "Počet importovaných kamer CCTV: {{count}}",
-            "CAMERAS_IMPORTED_REPLACED": "Všechny CCTV kamery byly nahrazeny importovanými {{count}} kamerami",
+            "CAMERAS_IMPORTED_REPLACED": "Všechny CCTV kamery byly nahrazeny importovanými {{count}}",
             "VEHICLE_IMPOUNDED": "Zabavené vozidlo {{plate}}"
         }
     },
     "OPERATIONS": {
         "HEADING": "Operační plány",
-        "SUBHEADING": "Koordinujte taktické operace a řiďte aktivní nasazení",
+        "SUBHEADING": "Koordinujte taktické operace a spravujte aktivní nasazení",
         "LIST_TITLE": "Operační plány",
         "STARTED_AGO": "Začalo před {{time}}",
         "STARTS_IN": "Začíná za {{time}}",
@@ -5095,7 +5192,7 @@
         },
         "FILTER_ALL": "Všechny plány",
         "EDIT_DIALOG_TITLE": "Upravit operační plán",
-        "EDIT_DIALOG_DESCRIPTION": "Změňte načasování operace, poznámky, oddělení nebo rozkaz.",
+        "EDIT_DIALOG_DESCRIPTION": "Změňte načasování operace, instruktážní poznámky, oddělení nebo rozkaz.",
         "TOASTS": {
             "CREATING": "Vytváření plánu…",
             "CREATED": "Plán vytvořen",
@@ -5218,7 +5315,7 @@
             "DONE": "Potvrdil jste brífink",
             "SUCCESS": "Briefing potvrzen",
             "PENDING": "Ještě ne",
-            "EMPTY": "Brífinku zatím nikdo nepřiznal.",
+            "EMPTY": "Brífinku zatím nikdo neuznal.",
             "COUNT_one": "{{value}} důstojník",
             "COUNT_few": "{{value}} důstojníků",
             "COUNT_many": "{{value}} důstojníků",
@@ -5246,7 +5343,7 @@
             "TITLE": "Historie převodů",
             "EMPTY": "Žádné zaznamenané převody vlastnictví",
             "CURRENT_LABEL": "Proud",
-            "DESCRIPTION": "Každý, kdo vlastnil tuto zbraň, nejstarší."
+            "DESCRIPTION": "Každý, kdo tuto zbraň vlastnil, nejstarší."
         }
     },
     "WEAPONS": {
@@ -5502,13 +5599,15 @@
     },
     "BOLOS": {
         "FORM_DIALOG": {
-            "DESCRIPTION": "Vydejte hlídku pro osobu nebo vozidlo. Nové BOLO začínají jako koncepty."
+            "DESCRIPTION": "Vydejte hlídku pro osobu nebo vozidlo. Koncepty neoznačí předmět, dokud nejsou aktivovány."
         },
         "FORM": {
             "TITLE_PLACEHOLDER": "Ozbrojený podezřelý v černém Sultan RS",
             "DESCRIPTION_PLACEHOLDER": "Kde byli naposledy viděni, jak vypadají a proč jsou hledaní",
             "EXPIRES_LABEL": "Platnost vyprší v",
             "EXPIRES_PLACEHOLDER": "Výchozí hodnota je 7 dní",
+            "SUBJECTS_TITLE": "Předměty",
+            "CITIZENS_PLACEHOLDER": "Vyberte lidi",
             "TOASTS": {
                 "CREATED": "BOLO vytvořeno"
             }
@@ -5548,6 +5647,7 @@
             "CONFIRM_DESCRIPTION": "Tím se potvrzuje, že {{subject}} byl nalezen, a zavře se rozhledna.",
             "SUBJECT_NAME": "{{name}}",
             "SUBJECT_FALLBACK": "předmět",
+            "CONFIRM_DESCRIPTION_MANY": "Tím se potvrzuje, že všech {{count}} subjektů bylo nalezeno, a rozhledna se zavře.",
             "TOASTS": {
                 "MARKING": "Označení BOLO se nachází…",
                 "MARKED": "BOLO označeno umístěno"
@@ -5566,6 +5666,7 @@
         }
     },
     "PENAL": {
+        "UNCATEGORIZED": "Nezařazené",
         "INDEX": {
             "HEADING": "Právní řád a trestní zákoník",
             "SUBHEADING": "Oficiální kodifikace přestupků, finančních sankcí a soudních mandátů",
@@ -5590,7 +5691,7 @@
         },
         "ARTICLE_FORM": {
             "CODE_PLACEHOLDER": "PO.6.05",
-            "NAME_PLACEHOLDER": "Únikající policisté (pěšky)",
+            "NAME_PLACEHOLDER": "Únikající důstojníci (pěšky)",
             "DESCRIPTION_PLACEHOLDER": "Útěk před mírovým důstojníkem pěšky.",
             "CLASS_LABEL": "Třída",
             "MIN_FINE_LABEL": "Min",
@@ -5631,7 +5732,7 @@
                 "MAX_BAIL_BELOW_DEFAULT": "Maximální kauce nemůže být nižší než výchozí kauce",
                 "MIN_POINTS_ABOVE_DEFAULT": "Minimální počet bodů nemůže být vyšší než výchozí body",
                 "MAX_POINTS_BELOW_DEFAULT": "Maximální počet bodů nemůže být nižší než výchozí body",
-                "LICENSE_REQUIRED": "Vyberte, kterou licenci tento trestný čin pozastavuje"
+                "LICENSE_REQUIRED": "Vyberte, kterou licenci tento přestupek pozastavuje"
             },
             "JAIL_LABEL": "Vězení (měsíce)",
             "BAIL_ELIGIBLE_DESCRIPTION": "Podezřelý může místo výkonu trestu zaplatit kauci.",
@@ -5723,6 +5824,54 @@
                 "PROCESSING": "Zpracování trestu…",
                 "SUCCESS": "Zpracována penalta pro {{name}}",
                 "FAILED": "Nepodařilo se zpracovat trest"
+            }
+        }
+    },
+    "PRISONERS": {
+        "SUBHEADING": "Všichni jsou právě teď ve vězení a jak dlouho zbývají",
+        "SUBHEADING_ONLINE_ONLY": "Vězni, kteří jsou právě online. Váš vězeňský skript nehlásí offline vězně",
+        "SEARCH_PLACEHOLDER": "Hledat podle jména nebo identifikátoru…",
+        "EMPTY": "Nikdo není ve vězení",
+        "NOT_SUPPORTED": "Váš vězeňský scénář nemůže obsahovat seznam vězňů",
+        "COLUMNS": {
+            "REMAINING": "Zbývající",
+            "RECORD": "Záznam",
+            "SENTENCED_BY": "Odsouzeno",
+            "SINCE": "Od"
+        },
+        "REMAINING_OF": "{{remaining}} z {{total}}",
+        "UNKNOWN_REMAINING": "Vězeňský scénář neuvádí",
+        "JAILED_OUTSIDE_MDT": "Uvězněn mimo MDT",
+        "RECORD_LABEL": "{{type}} č. {{id}}",
+        "RECORD_TYPES": {
+            "PENALTY": "Trest",
+            "MDT": "MDT"
+        },
+        "OPEN_PROFILE": "Otevřít profil",
+        "REASON_LABEL": "Důvod (volitelné)",
+        "RELEASE": {
+            "TRIGGER": "Uvolnění",
+            "TITLE": "Propustit vězně",
+            "CONFIRM": "{{name}} bude nyní propuštěn a jejich trest bude uzavřen.",
+            "REASON_PLACEHOLDER": "Soud snížil trest",
+            "BUTTON": "Uvolnění",
+            "NEEDS_ONLINE": "Váš vězeňský skript může propustit pouze vězně, kteří jsou online.",
+            "TOASTS": {
+                "PROCESSING": "Propuštění vězně…",
+                "SUCCESS": "Vydáno {{name}}",
+                "FAILED": "Nepodařilo se propustit vězně"
+            }
+        },
+        "SENTENCE": {
+            "TRIGGER": "Změňte větu",
+            "TITLE": "Změňte větu",
+            "TIME_LABEL": "Čas zbývající do zobrazení (měsíce)",
+            "REASON_PLACEHOLDER": "Dobré chování",
+            "BUTTON": "Nastavit na {{duration}}",
+            "TOASTS": {
+                "PROCESSING": "Změna věty…",
+                "SUCCESS": "Věta uživatele {{name}} je nyní {{duration}}",
+                "FAILED": "Nepodařilo se změnit větu"
             }
         }
     },
@@ -5878,6 +6027,8 @@
         },
         "INDEX": {
             "UNNAMED": "Nejmenovaný občan",
+            "JAILED": "Uvězněn",
+            "JAILED_REMAINING": "Uvězněn · {{duration}} odešel",
             "SUBHEADING": "Občanský průkaz",
             "TOASTS": {
                 "SAVING_IMAGE": "Ukládání obrázku…",
@@ -5982,6 +6133,26 @@
                 "SERVICE": "Servis"
             },
             "SUMMARY_TITLE": "Celkové pokuty"
+        },
+        "JAIL_HISTORY_CARD": {
+            "TITLE": "Historie vězení",
+            "EMPTY": "Nejsou zaznamenány žádné tresty odnětí svobody",
+            "COLUMNS": {
+                "OUTCOME": "Výsledek",
+                "ENDED": "Skončilo"
+            },
+            "STATUS": {
+                "ACTIVE": "Porce",
+                "SERVED": "Servírováno",
+                "RELEASED": "Vydáno brzy",
+                "REPLACED": "Nahrazeno novou větou"
+            },
+            "RELEASED_BY": "autor: {{name}}",
+            "VIEW_ALL_one": "Zobrazit všechny {{formatted}} věty",
+            "VIEW_ALL_few": "Zobrazit všechny věty ({{formatted}}).",
+            "VIEW_ALL_many": "Zobrazit všechny věty ({{formatted}}).",
+            "VIEW_ALL_other": "Zobrazit všechny věty ({{formatted}}).",
+            "DIALOG_TITLE": "Historie vězení {{name}}"
         },
         "DETAILS_CARD": {
             "VIEW_LINKS_HINT": "Otevřete graf záznamů, vozidel a osob spojených s tímto občanem",
@@ -6479,7 +6650,7 @@
             "MISSING_TITLE": "Chybí: {{items}}",
             "SERVE_WARRANT": "Servírovací příkaz",
             "CONFIRM_TITLE": "Sloužit tento příkaz?",
-            "CONFIRM_DESCRIPTION": "Tím se příkaz označí jako doručený{{against}}, vydá se každý nevyřízený poplatek a případ se uzavře. Tuto akci nelze vrátit zpět.",
+            "CONFIRM_DESCRIPTION": "Tím se příkaz označí jako doručený{{against}}, vystaví se každý nevyřízený poplatek a případ se uzavře. Tuto akci nelze vrátit zpět.",
             "AGAINST": "proti {{name}}",
             "TOASTS": {
                 "SERVING": "Doručovací příkaz…",
@@ -6507,7 +6678,7 @@
     "WARRANTS": {
         "INDEX": {
             "SUBHEADING": "Procházet a spravovat všechny záruky",
-            "CREATE_TRIGGER": "Vytvořte rozkaz",
+            "CREATE_TRIGGER": "Vytvořit příkaz",
             "CREATE_TITLE": "Vytvořte příkaz",
             "CREATE_DESCRIPTION": "Vyžádejte si prohlídku nebo zatykač proti občanovi, vozidlu nebo majetku.",
             "EMPTY": "Nebyly nalezeny žádné opční listy",
@@ -6534,9 +6705,9 @@
             "NAME_PLACEHOLDER": "Na místě činu nalezena pistole",
             "STORAGE_PLACEHOLDER": "Skříňka B12",
             "DESCRIPTION_PLACEHOLDER": "Kde a jak byl nalezen a v jakém je stavu",
-            "SUSPECTS_INFO": "Lidé věřili, že to použili nebo opustili, jako střelec, jehož obaly to jsou.",
+            "SUSPECTS_INFO": "Lidé věřili, že to použili nebo opustili, jako střelec, jehož pouzdra to jsou.",
             "VICTIMS_INFO": "Lidé, proti kterým to bylo použito nebo jim bylo odebráno.",
-            "OWNERS_INFO": "Komu patří, aniž by je obviňoval. Například majitel zabaveného telefonu nebo obchodu, který předal svůj CCTV.",
+            "OWNERS_INFO": "Komu patří, aniž by je obviňoval. Například majitel zabaveného telefonu nebo obchod, který předal svůj CCTV.",
             "ITEMS_LABEL": "Položky",
             "TOASTS": {
                 "CREATED": "Zaprotokolované důkazy"
@@ -7089,9 +7260,7 @@
     },
     "BODYCAM": {
         "EQUIPPED": "Vybavena bodycam",
-        "LOST": "Ztratilo se spojení s tou bodycam",
         "MISSING": "Nemáte bodycam",
-        "OFFLINE": "Kamera toho důstojníka se odpojila",
         "REMOVED": "Bodycam odstraněn",
         "UNREACHABLE": "Nelze dosáhnout na tuto kameru"
     },
@@ -7099,7 +7268,6 @@
         "ARMED": "Dashcam ozbrojený",
         "DISARMED": "Autokamera odzbrojena",
         "NEEDS_PATROL_VEHICLE": "Musíte být v hlídkovém vozidle na seznamu povolených",
-        "OFFLINE": "Palubní kamera toho vozidla se odpojila",
         "SEAT_RESTRICTED": "Palubní kameru může ovládat pouze řidič nebo spolujezdec",
         "UNAVAILABLE": "Autokamera není k dispozici",
         "UNREACHABLE": "Nelze dosáhnout na tuto kameru"
@@ -7107,7 +7275,7 @@
     "MDT": {
         "LOADING": "MDT se stále načítá",
         "PLAYER_NOT_LOADED": "Vaše postava ještě není načtena",
-        "VIEWING_CAMERA": "Prohlížíte si kameru",
+        "VIEWING_CAMERA": "Díváte se na kameru",
         "PLACING_CAMERA": "Umístíte kameru"
     },
     "CAMERA_CREATOR": {
